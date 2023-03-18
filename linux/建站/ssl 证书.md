@@ -18,8 +18,7 @@ apt install -y curl
 apt install -y socat
 
 # 安装 Acme 脚本
-curl https://get.acme.sh | sh
-~/.acme.sh/acme.sh --register-account -m your@email.com
+curl https://get.acme.sh | sh -s email=example@mail.com
 ```
 
 ### 方式一：80 端口空闲的验证申请
