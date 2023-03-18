@@ -20,4 +20,3 @@ systemctl
 ## 系统
 
 ip addr
-

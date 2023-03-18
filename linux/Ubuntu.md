@@ -2,6 +2,8 @@
 
 ## 安装 Ubuntu
 
+## 初始化配置
+
 ### 基本流程
 
 流程比较简单，基本就是根据提示下一步即可。仅记录常见操作：
@@ -18,6 +20,23 @@
 > **tips**:
 >
 > - `ip addr` 可查看当前网络。
+
+### 使用 root 登录
+
+初次需要给 root 设置密码。
+
+```bash
+sudo passwd root # 1.修改 root 密码
+# 2.根据提示，输入当前用户的密码
+# 3.根据提示，定义 root 密码
+# 4.根据提示，确认 root 密码
+```
+
+提示成功之后，就可以切换到 root 了。
+
+```bash
+su - root
+```
 
 ## 基本命令
 
@@ -38,14 +57,13 @@ reboot # 重启
 
 ```bash
 apt install app1          # 安装一个包
-apt install app1 app2 ... # 安装多个包
 ```
 
 - **删除包**
 
 ```bash
 apt remove app1          # 删除一个包
-apt remove app1 app2 ... # 删除多个包
+apt purge app1          # 删除一个包及其配置文件
 ```
 
 添加 `--purge` 选项时，`apt remove` 也会删除包配置文件。

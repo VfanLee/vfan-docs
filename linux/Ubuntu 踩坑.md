@@ -1,0 +1,9 @@
+# Ubuntu 踩坑记录
+
+## dpkg: error processing package *** (--configure)
+
+```bash
+mv /var/lib/dpkg/info/ /var/lib/dpkg/info_old/
+mkdir /var/lib/dpkg/info/
+apt update
+```
