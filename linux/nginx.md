@@ -41,10 +41,20 @@ server {
 ### 自动重定向
 
 ```conf
-# http 自动跳转
+# http => https
 server {
 	listen 80;
-	server_name test.example.com;
-	rewrite ^ https://$http_host$request_uri? permanent;
+	server_name ~^(?:www\.)?(.+)$;
+	return 301 https://$1$request_uri;
+}
+
+# www.example.com => example.com
+server {
+	listen 443 ssl;
+	server_name www.example.com;
+	ssl_certificate /root/ssl_example.com/www/cert.crt;
+	ssl_certificate_key /root/ssl_example.com/www/private.key;
+
+	return 301 https://example.com;
 }
 ```
