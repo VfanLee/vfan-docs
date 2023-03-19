@@ -2,50 +2,67 @@
 
 ## 安装 Ubuntu
 
-## 初始化配置
+- Ubuntu 镜像下载地址：https://cn.ubuntu.com/download
+- Rufus写盘工具：https://rufus.ie/zh/
+- 在虚拟机（如：[VMware Workstation](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)）中，需要开启桥接模式，不然局域网内无法通过 ssh 连接。
+- ssh 工具推荐使用 [finalshell](http://www.hostbuf.com/)
 
-### 基本流程
+流程比较简单，根据提示下一步即可。
 
-流程比较简单，基本就是根据提示下一步即可。仅记录常见操作：
+### 桌面版
+
+断网安装，不然默认下载文件花费时间很长。
+
+### 服务器版
 
 1. 默认不会分配所有磁盘空间，剩余部分可自行分配。
 2. 由于在国内，切记更换镜像地址，如：`http://mirrors.163.com/ubuntu`（若有代理可忽略），不然在安装过程中非常慢。
 3. 需要开启 ssh 服务，便于以后通过 ssh 客户端连接。
 
-### 网络配置
+### 初次安装需要做的一些事
 
-1. 虚拟机软件例如：`VirtualBox`、`VMware` …… 需要开启桥接模式，不然局域网内无法通过 ssh 连接。
-2. 由于 DHCP 会随机分配 ip，ip 会经常变化，为了稳定方便，需要指定一个固定 ip。
+todo1: 配置国内 apt 源。
 
-> **tips**:
->
-> - `ip addr` 可查看当前网络。
-
-### 使用 root 登录
-
-初次需要给 root 设置密码。
+todo2: 初次 root 密码是随机的，需要重新定义。
 
 ```bash
-sudo passwd root # 1.修改 root 密码
+# 1.修改 root 密码
+sudo passwd root 
 # 2.根据提示，输入当前用户的密码
 # 3.根据提示，定义 root 密码
 # 4.根据提示，确认 root 密码
-```
-
-提示成功之后，就可以切换到 root 了。
-
-```bash
+# 5.切换到 root
 su - root
 ```
 
-## 基本命令
+todo3: 安装常用依赖
 
 ```bash
-poweroff # 关机
-reboot # 重启
+apt update -y
+apt install -y vim
 ```
 
-## apt
+## linux 命令
+
+linux 命令速查：https://wangchujiang.com/linux-command/
+
+### 打包/压缩
+
+`tar` 是 linux 中的打包命令。
+
+```bash
+# tar格式（该格式仅仅打包，不压缩）
+tar -cvf [目标文件名].tar [原文件名/目录名] # 打包
+tar -xvf [原文件名].tar                   # 解包
+
+# tar.gz格式
+tar -zcvf [目标文件名].tar.gz [原文件名/目录名] # 打包并压缩
+tar -zxvf [原文件名].tar.gz                   # 解压并解包
+```
+
+## Ubuntu 命令
+
+### apt
 
 `apt` 是 **Ubuntu** 的包管理工具。
 
@@ -84,7 +101,7 @@ apt update
 
 apt 的命令操作记录在 `var/log/dpkg.log` 日志文件中。
 
-## ufw
+### ufw
 
 `ufw` 是 **Ubuntu** 默认的防火墙组件。
 
