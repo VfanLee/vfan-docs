@@ -1,15 +1,11 @@
-# nginx
+# Nginx
 
 ## 基本使用
 
-nginx 配置文件路径：`/etc/nginx/nginx.conf`
-重新加载配置文件：`nginx -s reload`
-
-### 基本使用
+- nginx 配置文件路径：`/etc/nginx/nginx.conf`
+- 重新加载配置文件：`nginx -s reload`
 
 ### server_name 匹配规则
-
-server_name 匹配规则
 
 ```conf
 # 单个匹配
