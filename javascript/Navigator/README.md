@@ -18,8 +18,3 @@
 - readText()：
 - write()：
 - writeText()：
-
-
-## 实例方法
-
-> 暂未接触
