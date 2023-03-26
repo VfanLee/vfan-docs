@@ -43,13 +43,3 @@ npm ls -g --depth=0
 <!-- tab:npx -->
 `npx create-<package-spec>`
 <!-- tabs:end -->
-
-## 3. node.js 版本控制工具 - nvm
-
-https://github.com/coreybutler/nvm-windows
-
-## 4. awesome
-
-- [nrm](https://github.com/Pana/nrm) npm 镜像管理
-- [nodemon](https://nodemon.io/) node 程序自动更新
-- [anywhere](https://github.com/JacksonTian/anywhere#readme) 随启随用的静态文件服务器

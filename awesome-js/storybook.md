@@ -3,7 +3,7 @@
 > 文档：https://storybook.js.org/docs/vue/get-started/introduction  
 > 当前版本：6.5.16
 
-## 安装
+## 1. 安装
 
 > - node.js v16
 > - vue.js v2.6
@@ -13,7 +13,7 @@
 npx storybook init
 ```
 
-## 目录介绍
+## 2. 目录介绍
 
 ```txt
 |-- .storybook
@@ -24,7 +24,7 @@ npx storybook init
   |-- *.stories.js
 ```
 
-### main.js
+### 2.1. main.js
 
 ```js
 module.exports = {
@@ -38,7 +38,7 @@ module.exports = {
 }
 ```
 
-### preview.js
+### 2.2. preview.js
 
 ```js
 import Vue from 'vue'
@@ -53,9 +53,9 @@ export const parameters = {
 }
 ```
 
-## 插件
+## 3. 插件
 
-### scss 支持
+### 3.1. scss 支持
 
 <!-- tabs:start -->
 <!-- tab:安装 -->
@@ -74,7 +74,7 @@ module.exports = {
 ```
 <!-- tabs:end -->
 
-### 可访问性
+### 3.2. 可访问性
 
 <!-- tabs:start -->
 <!-- tab:安装 -->
@@ -93,7 +93,7 @@ module.exports = {
 ```
 <!-- tabs:end -->
 
-### design-token
+### 3.3. design-token
 
 <!-- tabs:start -->
 <!-- tab:安装 -->

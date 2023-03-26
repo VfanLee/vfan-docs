@@ -3,13 +3,13 @@
 > 文档：https://github.com/jackocnr/intl-tel-input#readme  
 > 当前版本：17.0.19
 
-## 安装
+## 1. 安装
 
 ```sh
 npm i intl-tel-input
 ```
 
-## 基本使用
+## 2. 基本使用
 
 <!-- tabs:start -->
 <!-- tab:HTML -->

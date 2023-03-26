@@ -3,13 +3,13 @@
 > 文档：https://hondrytravis.com/x-spreadsheet-doc/doc/  
 > 当前版本：1.1.9
 
-## 安装
+## 1. 安装
 
 ```sh
 npm i x-data-spreadsheet less-loader@7
 ```
 
-## 基本使用
+## 2. 基本使用
 
 <!-- tabs:start -->
 <!-- tab:HTML -->
@@ -27,7 +27,7 @@ const s = new Spreadsheet("#x-spreadsheet-demo", {})
 ```
 <!-- tabs:end -->
 
-## 国际化
+## 3. 国际化
 
 ```js
 import 'x-data-spreadsheet/dist/locale/zh-cn'
@@ -36,7 +36,7 @@ import 'x-data-spreadsheet/dist/locale/zh-cn'
 Spreadsheet.locale('zh-cn')
 ```
 
-## 结合 SheetJS 使用
+## 4. 结合 SheetJS 使用
 
 需要两个工具方法：https://cdn.sheetjs.com/xspreadsheet/xlsxspread.js
 
@@ -165,7 +165,7 @@ function xtos(sdata) {
 }
 ```
 
-### 导入
+### 4.1. 导入
 
 将 `Sheet workbook` 转换成 `x-spreadsheet data`，并渲染到 `s` 容器中。
 
@@ -173,7 +173,7 @@ function xtos(sdata) {
 s.loadData(stox(XLSX.read(data)))
 ```
 
-### 导出
+### 4.2. 导出
 
 将 `x-spreadsheet data` 转换成 `Sheet workbook`，并导出为 `Sheet.xlsx`。
 

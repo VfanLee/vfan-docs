@@ -2,6 +2,8 @@
 
 ## 1. session
 
+> express-session 参考文档：https://github.com/expressjs/session#readme
+
 1. `npm i express-session`
 2. 使用
 
@@ -32,6 +34,9 @@ app.get('/logout', (req, res) => {
 ```
 
 ## 2. jwt
+
+> jsonwebtoken 参考文档：https://github.com/auth0/node-jsonwebtoken#readme
+> express-jwt 参考文档：https://github.com/auth0/express-jwt#readme
 
 1. `npm i jsonwebtoken express-jwt`
 2. 使用
