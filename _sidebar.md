@@ -4,11 +4,17 @@
   - [文件处理](javascript/file/上传文件.md)
 
 - Vue
-  - [基本使用](vue/基本使用.md)
+  - [介绍](vue3/)
+  - [基本使用](vue3/基本使用.md)
+  
   - Vue Router
-    - [路由模式](vue/router/路由模式.md)
+    - [路由模式](vue3/router/路由模式.md)
+  
   - Pinia
-    - [pinia](vue/pinia/基本使用.md)
+    - [基本使用](vue3/pinia/基本使用.md)
+  
+  - Vue I18n
+    - [基本使用](vue3/vue-i18n/基本使用.md)
 
 - 构建工具
   - [vite](build/vite.md)
