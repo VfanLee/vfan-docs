@@ -17,17 +17,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css"
     />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.css" />
   </head>
   <body>
     <div id="app"></div>
     <script>
       window.$docsify = {
         el: "#app",
-        repo: "https://github.com/VfanLee",
-        coverpage: true,
+        repo: "https://github.com/VfanLee/vfan-docs",
+        coverpage: false, // 封面
         name: "vfan-docs",
-        nameLink: window.location.pathname,
+        nameLink: location.pathname,
         alias: {
           "/.*/_sidebar.md": "/_sidebar.md",
         },
