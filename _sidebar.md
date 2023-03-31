@@ -15,15 +15,12 @@
   - Vue I18n
     - [基本使用](vue3/vue-i18n/基本使用.md)
 
-- 构建工具
-  - [vite](build/vite.md)
-  - [webpack](build/webpack.md)
-
 - Awesome-JS
-  - [Google Analytics](awesome-js/google-analytics.md)
-  - [国际电话号码](awesome-js/intl-tel-input.md)
-  - [电子表格导入/导出](awesome-js/sheetjs.md)
-  - [电子表格在线预览](awesome-js/x-spreadsheet.md)
+  - [vite](awesome-js/vite.md)
+  - [webpack](awesome-js/webpack.md)
+  - [sheetjs](awesome-js/sheetjs.md)
+  - [x-spreadsheet](awesome-js/x-spreadsheet.md)
+  - [intl-tel-input](awesome-js/intl-tel-input.md)
   - [Storybook](awesome-js/storybook.md)
 
 - Node.js
