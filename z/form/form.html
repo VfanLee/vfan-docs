@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Example Form</h1>
+    <form action="./test.html" method="post" enctype="multipart/form-data">
+      <p>
+        <label for="username">用户名</label>
+        <input type="text" name="username" id="username" value="ikun" placeholder="请输入用户名" autofocus />
+      </p>
+
+      <p>
+        <label for="password">密码</label>
+        <input type="password" name="password" id="password" value="ikun" placeholder="请输入密码" />
+      </p>
+
+      <p>
+        <span>性别</span>
+        <input type="radio" name="gender" id="male" value="男" checked />
+        <label for="male">男</label>
+        <input type="radio" name="gender" id="female" value="女" />
+        <label for="female">女</label>
+      </p>
+
+      <p>
+        <span>爱好</span>
+        <input type="checkbox" name="hobby" id="sing" value="sing" checked />
+        <label for="sing">唱</label>
+        <input type="checkbox" name="hobby" id="dance" value="dance" />
+        <label for="dance">跳</label>
+        <input type="checkbox" name="hobby" id="rap" value="rap" checked />
+        <label for="rap">rap</label>
+        <input type="checkbox" name="hobby" id="basketball" value="basketball" />
+        <label for="basketball">篮球</label>
+      </p>
+
+      <p>
+        <label for="city">城市</label>
+        <select name="city" id="city">
+          <optgroup label="一线城市">
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
+            <option value="广州">广州</option>
+            <option value="深圳">深圳</option>
+          </optgroup>
+          <optgroup label="二线城市">
+            <option value="成都">成都</option>
+            <option value="重庆">重庆</option>
+            <option value="杭州">杭州</option>
+            <option value="西安">西安</option>
+            <option value="武汉">武汉</option>
+          </optgroup>
+        </select>
+      </p>
+
+      <p>
+        <label>
+          附件
+          <input type="file" name="annex" />
+        </label>
+      </p>
+
+      <p>
+        <label for="remark">备注</label>
+        <textarea name="remark" id="remark" cols="30" rows="10" placeholder="请输入备注">全名制作人们 大家好</textarea>
+      </p>
+
+      <p>
+        <input type="image" src="https://github.githubassets.com/images/mona-loading-default.gif" alt="图片提交" />
+        <input type="submit" value="input:submit 提交按钮" />
+        <input type="reset" value="input:reset 重置" />
+        <input type="button" value="input:button 普通按钮" />
+      </p>
+
+      <p>
+        <button type="submit">button:submit 提交按钮</button>
+        <button type="reset">button:reset 重置</button>
+        <button type="button">button:button 普通按钮</button>
+      </p>
+    </form>
+  </body>
+</html>

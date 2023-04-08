@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      let option = {
+        series: {
+          type: 'gauge', // gauge 为仪表盘
+          // 数据，每一个对象代表一个指针
+          data: [
+            {
+              value: 97,
+              // 指针样式
+              itemStyle: {
+                color: 'pink' // 指针颜色
+              }
+            },
+            {
+              value: 110,
+              itemStyle: {
+                color: 'green'
+              }
+            }
+          ],
+          // 仪表盘数值范围
+          min: 50,
+          max: 120
+        }
+      }
+      echarts.init(document.querySelector('#main')).setOption(option)
+    </script>
+  </body>
+</html>

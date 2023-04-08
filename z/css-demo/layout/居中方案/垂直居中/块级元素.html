@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* ------ 默认 ------ */
+      .container {
+        position: relative;
+        height: 200px;
+        border: 1px solid black;
+      }
+
+      .container .item {
+        width: 200px;
+        height: 50px;
+        background-color: pink;
+      }
+      /* ------ 默认 ------ */
+
+      /* ------ 方案1 ------
+        对于垂直居中的情况，通常需要借助于“定位”来辅助完成，核心思路：
+          1.首先使自身相对于父容器偏移 50%
+          2.再使自身相对于自己偏移 50%
+       */
+      .container--center .item {
+        position: absolute;
+
+        /* 定位偏移使用 calc()一步计算（需要知道自身大小） */
+        /* top: calc(50% - 25px); */
+
+        /* margin 偏移（需要知道自身大小） */
+        /* top: 50%;
+        margin-top: -25px; */
+
+        /* 定位偏移 + margin: auto; */
+        /* top: 0;
+        bottom: 0;
+        margin: auto; */
+
+        /* transform 偏移 */
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>垂直居中 - 块级元素</h1>
+    <div class="container container--center">
+      <div class="item">这是一段文字</div>
+    </div>
+  </body>
+</html>

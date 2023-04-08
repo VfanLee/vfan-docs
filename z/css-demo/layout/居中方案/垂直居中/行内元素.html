@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* ------ 默认 ------ */
+      .container {
+        position: relative;
+        height: 200px;
+        border: 1px solid black;
+      }
+
+      .container .item {
+        width: 200px;
+        height: 50px;
+        background-color: pink;
+      }
+      /* ------ 默认 ------ */
+
+      /* 方案1：最佳方案 */
+      /* 使"行内元素"的父容器的 height === line-height */
+      .container--center {
+        line-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>垂直居中 - 行内元素</h1>
+    <div class="container container--center">
+      <span class="item">这是一段文字</span>
+    </div>
+  </body>
+</html>

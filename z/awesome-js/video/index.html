@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video.js</title>
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+  </head>
+  <body>
+    <video id="video-player" class="video-js"></video>
+
+    <script>
+      const player = videojs(
+        document.querySelector('#video-player'),
+        {
+          controls: true, // 交互控件
+          autoplay: false, // 立即播放
+          loop: false, // 循环播放
+          muted: false, // 静音
+          aspectRatio: '16:9', // 比例
+          playbackRates: [0.5, 1, 1.5, 2, 3, 4], // 速率
+          // poster: '', // 封面
+        },
+        function () {
+          this.src('https://d2zihajmogu5jn.cloudfront.net/big-buck-bunny/master.m3u8')
+        }
+      )
+    </script>
+  </body>
+</html>

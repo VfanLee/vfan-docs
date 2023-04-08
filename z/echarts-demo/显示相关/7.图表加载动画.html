@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      let mCharts = echarts.init(document.querySelector('#main'))
+      mCharts.showLoading() // 在获取数据之前, 显示加载动画
+      $.get('../data/test_data.json', function (res) {
+        mCharts.hideLoading() // 当服务器数据获取成功之后, 隐藏加载动画
+        let axisData = res.map(({ height, weight }) => [height, weight])
+        let option = {
+          xAxis: {
+            type: 'value',
+            scale: true
+          },
+          yAxis: {
+            type: 'value',
+            scale: true
+          },
+          series: [
+            {
+              type: 'effectScatter',
+              showEffectOn: 'emphasis',
+              rippleEffect: {
+                scale: 3
+              },
+              data: axisData,
+              symbolSize(arg) {
+                let height = arg[0] / 100
+                let weight = arg[1]
+                // bmi = 体重kg/(身高m * 身高m)
+                let bmi = weight / (height * height)
+                if (bmi >= 24) {
+                  return 15
+                } else if (bmi < 18.5) {
+                  return 5
+                } else {
+                  return 10
+                }
+              },
+              itemStyle: {
+                color(arg) {
+                  let height = arg.data[0] / 100
+                  let weight = arg.data[1]
+                  let bmi = weight / (height * height)
+                  if (bmi >= 24 || bmi < 18.5) {
+                    return 'red'
+                  } else {
+                    return 'green'
+                  }
+                }
+              }
+            }
+          ]
+        }
+        mCharts.setOption(option)
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      let option = {
+        title: {
+          text: '饼图测试',
+          // 控制标题文字样式
+          textStyle: {
+            color: 'blue'
+          }
+        },
+        series: [
+          {
+            type: 'pie',
+            data: [
+              {
+                value: 11231,
+                name: '淘宝',
+                itemStyle: {
+                  color: 'skyblue' // 淘宝区域颜色
+                },
+                label: {
+                  color: 'pink' // 淘宝文字颜色
+                },
+                // 高亮样式
+                emphasis: {
+                  itemStyle: {
+                    color: 'blue'
+                  },
+                  label: {
+                    color: 'red'
+                  }
+                }
+              },
+              {
+                value: 22673,
+                name: '京东'
+              },
+              {
+                value: 6123,
+                name: '唯品会'
+              },
+              {
+                value: 8989,
+                name: '1号店'
+              },
+              {
+                value: 6700,
+                name: '聚美优品'
+              }
+            ]
+          }
+        ]
+      }
+      echarts.init(document.querySelector('#main')).setOption(option)
+    </script>
+  </body>
+</html>

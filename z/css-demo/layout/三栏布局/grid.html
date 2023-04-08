@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --left-width: 200px;
+        --right-width: 100px;
+        --left-background: #1abc9c;
+        --mid-background: #3498db;
+        --right-background: #2ecc71;
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: var(--left-width) 1fr var(--right-width);
+        grid-template-rows: 300px;
+        min-width: calc(var(--left-width) + 300px + var(--right-width));
+        background-color: #95a5a6;
+      }
+
+      .left {
+        background-color: var(--left-background);
+      }
+
+      .mid {
+        background-color: var(--mid-background);
+      }
+
+      .right {
+        background-color: var(--right-background);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="left">left</div>
+      <div class="mid">mid</div>
+      <div class="right">right</div>
+    </section>
+  </body>
+</html>

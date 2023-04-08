@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      let xDataArr = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二妞', '大强']
+      let yDataArr = [88, 92, 63, 77, 94, 80, 72, 86]
+      let option = {
+        // 动画是否开启
+        animation: true,
+        // 动画时长
+        // animationDuration: 7000,
+        animationDuration(arg) {
+          console.log(arg)
+          // arg分三类：平均线、最大/最小值、柱状图中的“柱”
+          return 1000 * (arg + 1)
+        },
+        // 动画缓动效果
+        animationEasing: 'bounceOut',
+        // 动画阈值。单种形式的元素数量大于这个阈值时会关闭动画
+        animationThreshold: 8,
+        xAxis: {
+          type: 'category',
+          data: xDataArr
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            type: 'bar',
+            data: yDataArr,
+            markPoint: {
+              data: [
+                {
+                  type: 'max',
+                  name: '最大值'
+                },
+                {
+                  type: 'min',
+                  name: '最小值'
+                }
+              ]
+            },
+            markLine: {
+              data: [
+                {
+                  type: 'average',
+                  name: '平均值'
+                }
+              ]
+            },
+            label: {
+              show: true,
+              rotate: 60
+            },
+            barWidth: '30%'
+          }
+        ]
+      }
+      echarts.init(document.querySelector('div')).setOption(option)
+    </script>
+  </body>
+</html>

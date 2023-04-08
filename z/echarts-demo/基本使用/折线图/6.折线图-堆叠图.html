@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      // 模拟数据
+      let xData = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+      let yData1 = [120, 132, 101, 134, 90, 230, 210]
+      let yData2 = [20, 82, 191, 94, 290, 330, 310]
+
+      // 配置
+      let option = {
+        xAxis: {
+          type: 'category',
+          data: xData
+        },
+        yAxis: {
+          type: 'value'
+        },
+        // series中的每一个对象配置相同的 stack 值, 这个all可以任意写
+        series: [
+          // 折线 1
+          {
+            type: 'line',
+            data: yData1,
+            stack: 'all'
+          },
+          // 折线 2
+          {
+            type: 'line',
+            data: yData2,
+            stack: 'all'
+          }
+        ]
+      }
+      echarts.init(document.querySelector('#main')).setOption(option)
+    </script>
+  </body>
+</html>

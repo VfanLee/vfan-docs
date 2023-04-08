@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px; border: 1px solid red"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      $.get('../../data/china.json', function (res) {
+        console.log(res)
+        echarts.registerMap('chinaMap', res)
+        let option = {
+          geo: {
+            type: 'map',
+            map: 'chinaMap',
+            roam: true, // 设置允许缩放、拖放效果
+            // 图形上的文本标签
+            label: {
+              show: true // 展示文字
+            },
+            zoom: 1, // 初始放大
+            center: [114.298572, 30.584355] // （湖北省）当前视角的中心点，默认使用原始坐标（经纬度）
+          }
+        }
+        echarts.init(document.querySelector('#main')).setOption(option)
+      })
+    </script>
+  </body>
+</html>

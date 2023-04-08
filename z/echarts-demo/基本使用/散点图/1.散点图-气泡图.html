@@ -1,0 +1,86 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      $.get('../../data/test_data.json', function (res) {
+        // 图表展示数据
+        let axisData = []
+        axisData = res.map(({ height, weight }) => [height, weight])
+        console.log(axisData)
+        let option = {
+          xAxis: {
+            type: 'value',
+            scale: true
+          },
+          yAxis: {
+            type: 'value',
+            scale: true
+          },
+          series: [
+            {
+              type: 'effectScatter', // scatter 为散点图、effectScatter 为涟波图
+              showEffectOn: 'emphasis', // 配置何时显示特效：render、emphasis
+              // 涟漪特效相关配置
+              rippleEffect: {
+                scale: 3 // 缩放比例
+              },
+              data: axisData,
+              /**
+               * 散点大小
+               * 1.可以设置成诸如 10 这样单一的数字
+               * 2.也可以用数组分开表示宽和高，例如 [20, 10] 表示标记宽为20，高为10。
+               * 3.如果需要每个数据的图形大小不一样，可以设置为如下格式的回调函数
+               */
+              symbolSize(arg) {
+                let height = arg[0] / 100
+                let weight = arg[1]
+                // bmi = 体重kg/(身高m * 身高m)
+                let bmi = weight / (height * height)
+                // 过于胖
+                if (bmi >= 24) {
+                  return 15
+                }
+                // 过于瘦
+                else if (bmi < 18.5) {
+                  return 5
+                }
+                // 正常
+                else {
+                  return 10
+                }
+              },
+              // 散点样式
+              itemStyle: {
+                // 散点颜色
+                color(arg) {
+                  let height = arg.data[0] / 100
+                  let weight = arg.data[1]
+                  // bmi = 体重kg/(身高m * 身高m)
+                  let bmi = weight / (height * height)
+                  // 过于胖 or 过于瘦
+                  if (bmi >= 24 || bmi < 18.5) {
+                    return 'red'
+                  }
+                  // 正常
+                  else {
+                    return 'green'
+                  }
+                }
+              }
+            }
+          ]
+        }
+        echarts.init(document.querySelector('#main')).setOption(option)
+      })
+    </script>
+  </body>
+</html>

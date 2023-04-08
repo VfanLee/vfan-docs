@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --left-width: 200px;
+        --right-width: 100px;
+        --left-background: #1abc9c;
+        --mid-background: #3498db;
+        --right-background: #2ecc71;
+      }
+
+      .clearfix::after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        min-width: calc(var(--left-width) + 300px + var(--right-width));
+      }
+
+      .header,
+      .footer {
+        height: 50px;
+        background-color: #95a5a6;
+      }
+
+      .container {
+        position: relative;
+        padding: 0 var(--right-width) 0 var(--left-width);
+        height: calc(100% - 50px - 50px);
+      }
+
+      .column {
+        position: relative;
+        float: left;
+        height: 100%;
+      }
+
+      .mid {
+        width: 100%;
+        background-color: var(--mid-background);
+      }
+
+      .left {
+        left: calc(-1 * var(--left-width));
+        width: var(--left-width);
+        margin-left: -100%;
+        background-color: var(--left-background);
+      }
+
+      .right {
+        right: calc(-1 * var(--right-width));
+        width: var(--right-width);
+        margin-left: calc(-1 * var(--right-width));
+        background-color: var(--right-background);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">header</div>
+    <div class="container clearfix">
+      <div class="column mid">mid</div>
+      <div class="column left">left</div>
+      <div class="column right">right</div>
+    </div>
+    <div class="footer">footer</div>
+  </body>
+</html>

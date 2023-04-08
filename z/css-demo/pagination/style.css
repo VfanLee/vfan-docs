@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #20b2aa;
+}
+
+.pagination ul {
+  display: flex;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 50px;
+  user-select: none;
+}
+
+.pagination ul li {
+  color: #20b2aa;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 45px;
+  list-style: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination ul li.num {
+  margin: 0 3px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.pagination ul li.dots {
+  font-size: 22px;
+  cursor: default;
+}
+
+.pagination ul li.btn {
+  padding: 0 20px;
+}
+
+.pagination ul li.prev {
+  border-radius: 25px 5px 5px 25px;
+}
+
+.pagination ul li.next {
+  border-radius: 5px 25px 25px 5px;
+}
+
+.pagination ul li.active,
+.pagination ul li.num:hover,
+.pagination ul li.btn:hover {
+  background-color: #20b2aa;
+  color: #fff;
+}

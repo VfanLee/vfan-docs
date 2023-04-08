@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      let xData = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二妞', '大强']
+      let yData = [88, 92, 63, 77, 94, 80, 72, 86]
+      let option = {
+        xAxis: {
+          type: 'category',
+          data: xData
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            type: 'bar',
+            data: yData,
+            // 图形样式
+            itemStyle: {
+              // color: {
+              //   type: 'linear', // 线性渐变
+              //   x: 0,
+              //   y: 0,
+              //   x2: 0,
+              //   y2: 1,
+              //   colorStops: [
+              //     {
+              //       offset: 0,
+              //       color: 'red' // 0% 处的颜色
+              //     },
+              //     {
+              //       offset: 1,
+              //       color: 'blue' // 100% 处的颜色
+              //     }
+              //   ],
+              //   globalCoord: false
+              // }
+              color: {
+                type: 'radial', // 径向渐变
+                x: 0.5,
+                y: 0.5,
+                r: 0.5,
+                colorStops: [
+                  {
+                    offset: 0,
+                    color: 'red'
+                  },
+                  {
+                    offset: 1,
+                    color: 'blue'
+                  }
+                ],
+                globalCoord: false
+              }
+            }
+          }
+        ]
+      }
+      echarts.init(document.querySelector('#main')).setOption(option)
+    </script>
+  </body>
+</html>
