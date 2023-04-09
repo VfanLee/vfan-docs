@@ -1,4 +1,4 @@
-# 正则表达式（JavaScript）
+# RegExp
 
 ## 1. 创建正则表达式
 
@@ -14,7 +14,11 @@ const reg = /foo/g
 const reg = new RegExp('foo', 'g')
 ```
 
-## 2. 正则方法
+## 属性
+
+- [lastIndex](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)
+
+## 方法
 
 - [test](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
 - [exec](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
