@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        First name:
+        <strong data-bind="text: firstName"></strong>
+      </p>
+      <p>
+        Last name:
+        <strong data-bind="text: lastName"></strong>
+      </p>
+
+      <p>
+        Full name:
+        <strong data-bind="text: fullName"></strong>
+      </p>
+
+      <p>
+        First name:
+        <input type="text" data-bind="value: firstName" />
+      </p>
+      <p>
+        Last name:
+        <input type="text" data-bind="textInput: lastName" />
+      </p>
+
+      <button data-bind="click: capitalizeLastName">Go caps</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/knockout@3.5.1/build/output/knockout-latest.min.js"></script>
+    <script>
+      const app = document.querySelector('#app')
+
+      function AppViewModel() {
+        const self = this
+
+        // 观察者模式
+        self.firstName = ko.observable('foo')
+        self.lastName = ko.observable('bar')
+
+        // 计算属性
+        self.fullName = ko.computed(function () {
+          return self.firstName() + ' ' + self.lastName()
+        })
+
+        // 绑定点击事件
+        self.capitalizeLastName = function () {
+          const currentVal = this.lastName() // 读取 lastName 值
+          this.lastName(currentVal.toUpperCase()) // 更改 lastName 值
+        }
+      }
+
+      ko.applyBindings(new AppViewModel(), app)
+    </script>
+  </body>
+</html>
