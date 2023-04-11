@@ -2,13 +2,13 @@
 
 教程：https://svnbucket.com/posts/svn-tutorial/
 
-## svn 安装
+## 1. svn 安装
 
 下载地址：https://tortoisesvn.net/downloads.zh.html
 
 安装 TortoiseSVN，并勾选上 `command line client tools` 选项。
 
-## svn 目录管理
+## 2. svn 目录管理
 
 ```txt
 branches：【树枝】并行开发：定制版本、修复bug。

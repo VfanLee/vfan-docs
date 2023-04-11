@@ -5,7 +5,7 @@
 - 在虚拟机（如：[VMware Workstation](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)）中，需要开启桥接模式，不然局域网内无法通过 ssh 连接。
 - ssh 工具推荐使用 [finalshell](http://www.hostbuf.com/)
 
-## 服务器版
+## 1. 服务器版
 
 注意事项：
 
@@ -13,7 +13,7 @@
 2. 更换镜像地址，如：`http://mirrors.163.com/ubuntu`（若有代理可忽略）。
 3. 开启 ssh 服务，便于以后通过 ssh 客户端连接。
 
-## 桌面版
+## 2. 桌面版
 
 注意事项：
 
