@@ -1,6 +1,16 @@
 - 计算机基础
   - [计算机基本组成](计算机基础/计算机基本组成.md)
 
+- 计算机网络
+  - [协议](计算机网络/协议)
+
+- Linux
+  - [快捷操作](linux/快捷操作.md)
+  - [文件系统](linux/文件系统.md)
+  - [打包压缩](linux/打包压缩.md)
+  - Docker
+    - [安装](linux/docker/安装.md)
+
 - HTML
   - [字符实体](html/字符实体.md)
   - [表单](html/form.md)
@@ -39,12 +49,12 @@
     - [element UI](vue/vue2/elementui.md)
 
 - Awesome-JS
-  - [vite](awesome-js/vite.md)
-  - [webpack](awesome-js/webpack.md)
-  - [sheetjs](awesome-js/sheetjs.md)
-  - [x-spreadsheet](awesome-js/x-spreadsheet.md)
-  - [intl-tel-input](awesome-js/intl-tel-input.md)
-  - [Storybook](awesome-js/storybook.md)
+  - [vite](z/awesome/notes/vite.md)
+  - [webpack](z/awesome/notes/webpack.md)
+  - [sheetjs](z/awesome/notes/sheetjs.md)
+  - [x-spreadsheet](z/awesome/notes/x-spreadsheet.md)
+  - [intl-tel-input](z/awesome/notes/intl-tel-input.md)
+  - [Storybook](z/awesome/notes/storybook.md)
 
 - Node.js
   - [npm](nodejs/npm.md)
@@ -54,11 +64,11 @@
 
 - 数据库
   - MySQL
-    - [DDL](计算机基础/数据库/MySQL/DDL.md)
-    - [DQL](计算机基础/数据库/MySQL/DQL.md)
-    - [DML](计算机基础/数据库/MySQL/DML.md)
-    - [TCL](计算机基础/数据库/MySQL/TCL.md)
-    - [函数](计算机基础/数据库/MySQL/函数.md)
-    - [变量](计算机基础/数据库/MySQL/变量.md)
-    - [存储过程](计算机基础/数据库/MySQL/存储过程.md)
-    - [流程控制结构](计算机基础/数据库/MySQL/流程控制结构.md)
+    - [DDL](数据库/MySQL/DDL.md)
+    - [DQL](数据库/MySQL/DQL.md)
+    - [DML](数据库/MySQL/DML.md)
+    - [TCL](数据库/MySQL/TCL.md)
+    - [函数](数据库/MySQL/函数.md)
+    - [变量](数据库/MySQL/变量.md)
+    - [存储过程](数据库/MySQL/存储过程.md)
+    - [流程控制结构](数据库/MySQL/流程控制结构.md)
