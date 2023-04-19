@@ -1,17 +1,36 @@
 # Docker 网络（Network）
 
-## 常用命令
+Docker Network 是用于 Docker 容器之间的通信的机制。
+
+## 1. 常用命令
 
 ```sh
-docker network create [OPTIONS] NETWORK # 创建一个新的网络
+# List networks
+docker network ls [OPTIONS]
 
-docker network ls [OPTIONS] # 列出所有的网络
+# Display detailed information on one or more networks
+docker network inspect [OPTIONS] NETWORK [NETWORK...]
 
-docker network inspect [OPTIONS] NETWORK [NETWORK...] # 查看指定网络的详细信息
+# Create a network
+docker network create [OPTIONS] NETWORK
 
-docker network connect [OPTIONS] NETWORK CONTAINER # 将容器连接到指定网络
+# Connect a container to a network
+docker network connect [OPTIONS] NETWORK CONTAINER
 
-docker network disconnect [OPTIONS] NETWORK CONTAINER # 将容器从指定网络断开
+# Disconnect a container from a network
+docker network disconnect [OPTIONS] NETWORK CONTAINER
+
+# Remove one or more networks
+docker network rm NETWORK [NETWORK...]
+
+# Remove all unused networks
+docker network prune [OPTIONS]
 ```
 
-在使用 `docker run` 命令启动容器时，可以通过 `-p` 参数或 `--network` 参数来指定容器的端口映射和网络配置等信息。
+## 2. bride / host / none
+
+- **bridge** 网络是默认网络，它在 Docker 安装时自动创建。当容器在该网络上运行时，它们会被分配一个 IP 地址，可以通过容器名称或 IP 地址进行访问。此外，容器之间也可以相互访问。
+
+- **host** 网络允许容器与主机共享网络命名空间，这意味着容器使用主机上的 IP 地址，并且不会分配自己的 IP 地址。这使得容器可以直接与主机进行通信，而无需进行端口映射。但是，此网络无法让容器之间相互访问。
+
+- **none** 网络表示容器没有连接到任何网络。在这种情况下，容器必须使用 --network 标志显式指定网络。这通常用于某些特定的应用场景，例如在不希望容器访问外部网络的情况下使用。

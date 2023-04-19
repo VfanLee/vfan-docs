@@ -21,7 +21,7 @@
     - [Volume](linux/docker/volume.md)
     - [Network](linux/docker/network.md)
     - [Dockerfile](linux/docker/dockerfile/)
-    - [Docker Compose](linux/docker/docker_compose.md)
+    - [Docker Compose](linux/docker/docker-compose.md)
 
 - HTML
   - [字符实体](html/字符实体.md)

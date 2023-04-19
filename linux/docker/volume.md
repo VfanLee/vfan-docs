@@ -1,19 +1,22 @@
 # Docker 数据卷（Volume）
 
-数据卷（Volume）是在容器内部存储数据的一种方式。
+Docker Volume 是一个可以在Docker容器和宿主机之间共享数据的持久化存储机制。
 
-## 常用命令
+## 1. 常用命令
 
 ```sh
-docker volume create [OPTIONS] [VOLUME] # 创建一个新的 volume
+# List volumes
+docker volume ls [OPTIONS]
 
-docker volume ls [OPTIONS] # 列出所有的 volume
+# Display detailed information on one or more volumes
+docker volume inspect [OPTIONS] VOLUME [VOLUME...]
 
-docker volume inspect [OPTIONS] VOLUME [VOLUME...] # 查看指定 volume 详细信息
+# Create a volume
+docker volume create [OPTIONS] [VOLUME]
 
-docker volume rm VOLUME [VOLUME...] # 删除一个或多个 volume
+# Remove one or more volumes
+docker volume rm VOLUME [VOLUME...]
 
-docker volume prune [OPTIONS] # 删除未被使用的数据卷
+# Remove all unused local volumes
+docker volume prune [OPTIONS]
 ```
-
-在使用 `docker run` 命令启动容器时，可以通过 `-v` 参数或 `--mount` 参数来挂载数据卷。
