@@ -12,21 +12,47 @@ apt install -y docker-compose
 
 ```sh
 docker-compose [-f <arg>...] [--profile <name>...] [options] [--] [COMMAND] [ARGS...]
+docker-compose -f <file_name> <command> # 指定 docker-compose 文件
 ```
 
 ```sh
-docker-compose -v # 查看 docker-compose 版本
-docker-compose pull # 拉取 docker-compose.yml 文件中定义的所有服务（容器）的镜像。
-docker-compose build # 构建 docker-compose.yml 文件中定义的所有服务（容器）的镜像。
-docker-compose up # 创建并启动所有在 docker-compose.yml 文件中定义的服务（容器）。
-docker-compose down # 停止并删除所有在 docker-compose.yml 文件中定义的服务（容器）。
-docker-compose start # 启动所有在 docker-compose.yml 文件中定义的服务（容器）。
-docker-compose stop # 停止所有在 docker-compose.yml 文件中定义的服务（容器）。
-docker-compose restart # 重启所有在 docker-compose.yml 文件中定义的服务（容器）。
-docker-compose ps # 列出所有在 docker-compose.yml 文件中定义的服务（容器）。
-docker-compose rm # 删除所有在 docker-compose.yml 文件中定义且停止的服务（容器）。
-docker-compose logs # 显示所有在 docker-compose.yml 文件中定义的服务（容器）的日志。
-docker-compose exec # 在正在运行的服务（容器）中执行命令。
+ # 查看 docker-compose 版本
+docker-compose version
+
+# 列出所有在 docker-compose.yml 文件中定义的服务（容器）
+docker-compose ps [options] [--] [SERVICE...]
+docker-compose ps --services # Display services
+
+# 创建并启动所有在 docker-compose.yml 文件中定义的服务（容器）
+docker-compose up [options] [--scale SERVICE=NUM...] [--] [SERVICE...]
+docker-compose up -d # Detached mode: Run containers in the background,
+
+# 构建 docker-compose.yml 文件中定义的所有服务（容器）的镜像
+docker-compose build
+
+# 拉取 docker-compose.yml 文件中定义的所有服务（容器）的镜像
+docker-compose pull
+
+# 停止并删除所有在 docker-compose.yml 文件中定义的服务（容器）
+docker-compose down [options]
+
+# 删除所有在 docker-compose.yml 文件中定义且停止的服务（容器）
+docker-compose rm
+
+# 启动所有在 docker-compose.yml 文件中定义的服务（容器）
+docker-compose start
+
+# 停止所有在 docker-compose.yml 文件中定义的服务（容器）
+docker-compose stop
+
+# 重启所有在 docker-compose.yml 文件中定义的服务（容器）
+docker-compose restart
+
+# 显示所有在 docker-compose.yml 文件中定义的服务（容器）的日志
+docker-compose logs
+
+# 在正在运行的服务（容器）中执行命令
+execdocker-compose exec [options] [-e KEY=VAL...] [--] SERVICE COMMAND [ARGS...]
 ```
 
 ## 3. docker-compose 文件
@@ -38,16 +64,16 @@ version: "3.8" # docker-compose 版本
 
 services: # 定义运行的服务
   servicename: # 服务1名称
-    build: # 通过本地 Dockerfile 构建镜像
     image: # 指定要使用的 Docker 镜像名称
-    command: # 相当于 docker run <command>
+    build: # 通过本地 Dockerfile 构建镜像
+      context: # 上下文路径
+      dockerfile: # 指定构建镜像的 Dockerfile 文件名
     environment: # 相当于 docker run -e
-    networks: # 相当于 docker run --network
-    ports: # 相当于 docker run -p
     volumes: # 相当于 docker run -v
-    command: # 指定容器启动时要运行的命令
+    ports: # 相当于 docker run -p
+    networks: # 相当于 docker run --network
+    command: # 相当于 docker run <command>
   servicename2: # 服务2名称
-  servicename3: # 服务3名称
 
 volumes: # 相当于 docker volume create
 networks: # 相当于 docker network create

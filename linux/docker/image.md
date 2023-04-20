@@ -12,6 +12,9 @@ docker image ls -q # 仅列出镜像 ids
 # Display detailed information on one or more images
 docker image inspect [OPTIONS] IMAGE [IMAGE...]
 
+# Show the history of an image
+docker image history [OPTIONS] IMAGE
+
 # Download an image from a registry
 docker image pull [OPTIONS] NAME[:TAG|@DIGEST]
 
