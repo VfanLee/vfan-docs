@@ -26,6 +26,7 @@ docker-compose ps --services # Display services
 # 创建并启动所有在 docker-compose.yml 文件中定义的服务（容器）
 docker-compose up [options] [--scale SERVICE=NUM...] [--] [SERVICE...]
 docker-compose up -d # Detached mode: Run containers in the background,
+docker-compose up --build # Build images before starting containers.
 
 # 构建 docker-compose.yml 文件中定义的所有服务（容器）的镜像
 docker-compose build
