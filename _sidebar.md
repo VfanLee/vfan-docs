@@ -65,14 +65,6 @@
     - [01](vue/vue2/01.md)
     - [element UI](vue/vue2/elementui.md)
 
-- Awesome-JS
-  - [vite](z/awesome/notes/vite.md)
-  - [webpack](z/awesome/notes/webpack.md)
-  - [sheetjs](z/awesome/notes/sheetjs.md)
-  - [x-spreadsheet](z/awesome/notes/x-spreadsheet.md)
-  - [intl-tel-input](z/awesome/notes/intl-tel-input.md)
-  - [Storybook](z/awesome/notes/storybook.md)
-
 - Node.js
   - [npm](nodejs/npm.md)
   - [express](nodejs/express.md)
@@ -89,3 +81,8 @@
     - [变量](database/mysql/变量.md)
     - [存储过程](database/mysql/存储过程.md)
     - [流程控制结构](database/mysql/流程控制结构.md)
+
+- Git
+  - [基本使用](git/README.md)
+  - [GitHub Pages](git/github_pages.md)
+  - [GitHub Actions](git/github_actions.md)
