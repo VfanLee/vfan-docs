@@ -81,11 +81,11 @@
 
 - 数据库
   - MySQL
-    - [DDL](数据库/MySQL/DDL.md)
-    - [DQL](数据库/MySQL/DQL.md)
-    - [DML](数据库/MySQL/DML.md)
-    - [TCL](数据库/MySQL/TCL.md)
-    - [函数](数据库/MySQL/函数.md)
-    - [变量](数据库/MySQL/变量.md)
-    - [存储过程](数据库/MySQL/存储过程.md)
-    - [流程控制结构](数据库/MySQL/流程控制结构.md)
+    - [DDL](database/mysql/DDL.md)
+    - [DQL](database/mysql/DQL.md)
+    - [DML](database/mysql/DML.md)
+    - [TCL](database/mysql/TCL.md)
+    - [函数](database/mysql/函数.md)
+    - [变量](database/mysql/变量.md)
+    - [存储过程](database/mysql/存储过程.md)
+    - [流程控制结构](database/mysql/流程控制结构.md)

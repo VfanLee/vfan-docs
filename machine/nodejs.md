@@ -25,4 +25,4 @@ nrm use <registry_name> # 切换源
 git config --global url."https://".insteadOf "git://"
 ```
 
-最后设置好后，在 `~/Administrator/.gitconfig` 文件中可以进行查看。
+最后设置好后，在 `~/.gitconfig` 文件中可以进行查看。
