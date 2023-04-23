@@ -48,8 +48,10 @@ git commit -am "<commit message>"
 `git branch` 是 Git 的一个命令，它用于列出、创建、删除或重命名分支。
 
 ```sh
-# 列出本地分支
-git branch
+# 查看分支
+git branch      # 列出本地分支
+git branch -r   # 列出远程分支
+git branch -a   # 列出所有分支
 
 # 创建分支
 git branch <branch-name>
@@ -101,25 +103,7 @@ git remote show <remote-name>
 git remote rename <old-name> <new-name>
 ```
 
-### 1.5. git pull
-
-`git pull` 命令用于从远程仓库获取最新的提交并合并到本地分支中。
-
-```sh
-# 从远程仓库的默认分支获取最新的提交并合并到当前分支中。
-git pull
-
-# 从远程仓库的指定分支获取最新的提交并合并到当前分支中。
-# 其中，<remote-name> 是远程仓库的名字，一般是 origin，<branch-name> 是远程分支的名字。
-git pull <remote-name> <branch-name>
-
-# 获取最新的提交并重新合并到当前分支中。
-git pull --rebase
-```
-
-当执行 `git pull` 命令时，Git 会自动执行 `git fetch` 命令获取最新的提交，然后将这些提交合并到当前分支中。如果需要进行代码冲突解决等操作，可以在执行 `git pull` 命令之前先执行 `git fetch` 命令，手动获取最新的提交。
-
-### 1.6. git fetch
+### 1.5. git fetch
 
 `git fetch` 命令用于从远程仓库获取最新的提交，但不会自动合并到本地分支中，而是将这些提交保存到本地仓库中。
 
@@ -137,6 +121,24 @@ git fetch --all
 ```
 
 当执行 git fetch 命令时，Git 会从远程仓库中获取最新的提交，并将这些提交保存到本地仓库的远程跟踪分支中。这样，在执行 git merge 或 git pull 命令时，Git 就可以使用本地仓库中保存的最新提交，而不需要从远程仓库重新获取。
+
+### 1.6. git pull
+
+`git pull` 命令用于从远程仓库获取最新的提交并合并到本地分支中。
+
+```sh
+# 从远程仓库的默认分支获取最新的提交并合并到当前分支中。
+git pull
+
+# 从远程仓库的指定分支获取最新的提交并合并到当前分支中。
+# 其中，<remote-name> 是远程仓库的名字，一般是 origin，<branch-name> 是远程分支的名字。
+git pull <remote-name> <branch-name>
+
+# 获取最新的提交并重新合并到当前分支中。
+git pull --rebase
+```
+
+当执行 `git pull` 命令时，Git 会自动执行 `git fetch` 命令获取最新的提交，然后将这些提交合并到当前分支中。如果需要进行代码冲突解决等操作，可以在执行 `git pull` 命令之前先执行 `git fetch` 命令，手动获取最新的提交。
 
 ### 1.7. git push
 
