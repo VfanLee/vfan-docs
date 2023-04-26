@@ -75,6 +75,7 @@
 
 - 数据库
   - MySQL
+    - [安装](database/mysql/安装.md)
     - [DDL](database/mysql/DDL.md)
     - [DQL](database/mysql/DQL.md)
     - [DML](database/mysql/DML.md)

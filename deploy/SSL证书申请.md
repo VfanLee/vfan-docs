@@ -1,4 +1,4 @@
-# ssl 证书申请
+# SSL 证书申请
 
 ## 1. Acme 脚本申请证书
 
@@ -37,6 +37,7 @@ curl https://get.acme.sh | sh -s email=example@mail.com
 
 ```bash
 ~/.acme.sh/acme.sh --installcert -d test.example.com --key-file /root/ssl_example.com/test/private.key --fullchain-file /root/ssl_example.com/test/cert.crt
+~/.acme.sh/acme.sh --install-cert -d test.example.com --key-file /root/ssl_example.com/test/private.key --fullchain-file /root/ssl_example.com/test/cert.crt
 ```
 
 上面的 `/root/private.key` 以及 `/root/cert.crt` 是把密钥和证书安装到 `/root/test` 目录，并改名为 `private.key` 和 `cert.crt`。
