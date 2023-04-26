@@ -14,7 +14,7 @@
   - [系统管理](linux/系统管理.md)
 
 - Nginx
-  - [基本规则](nginx/基本规则.md)
+  - [安装与卸载](nginx/安装与卸载.md)
   - [实例](nginx/实例.md)
   - [变量](nginx/变量.md)
 
@@ -27,6 +27,10 @@
   - [Network](docker/network.md)
   - [Dockerfile](docker/dockerfile/)
   - [Docker Compose](docker/docker-compose.md)
+
+- 网站部署
+  - [建站准备](deploy/建站准备.md)
+  - [SSL证书申请](deploy/SSL证书申请.md)
 
 - HTML
   - [字符实体](html/字符实体.md)

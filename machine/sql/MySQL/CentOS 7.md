@@ -29,7 +29,7 @@ url: https://www.yuque.com/doublefan-tdo7d/agr25e/lkt74p0t81ophxpu
 
 ## 安装MySQL的YUM存储库
 
-```bash
+```sh
 # 通过yum下载wget命令
 yum -y install wget
 
@@ -41,7 +41,7 @@ wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
 ## 安装下载好的rpm包
 
-```bash
+```sh
 # 安装rpm包
 rpm -Uvh mysql80-community-release-el7-3.noarch.rpm
 
@@ -59,7 +59,7 @@ rpm -Uvh mysql80-community-release-el7-3.noarch.rpm
 
 - **因为默认安装的是8.0版本的Mysql，修改为5.7版本**
 
-```bash
+```sh
 # 查看默认的发行版本
 yum repolist all | grep mysql
 # 编辑/etc/yum.repos.d/mysql-community.repo文件，修改发行版本
@@ -70,7 +70,7 @@ vim /etc/yum.repos.d/mysql-community.repo
 
 - **保存后查看**
 
-```bash
+```sh
 yum repolist all | grep mysql
 ```
 
@@ -80,7 +80,7 @@ yum repolist all | grep mysql
 
 ## 安装Mysql社区版服务
 
-```bash
+```sh
 yum install -y mysql-community-server
 ```
 
@@ -88,7 +88,7 @@ yum install -y mysql-community-server
 
 ## 安装成功后启动Mysql服务，并连接
 
-```bash
+```sh
 # 启动Mysql服务
 systemctl start mysqld.service
 # 查看初始化密码
@@ -106,7 +106,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY '新密码';
 
 - **设置远程连接的登录名和密码**
 
-```bash
+```sh
 mysql> GRANT ALL PRIVILEGES ON *.* TO '登录名'@'%'IDENTIFIED BY '密码' WITH GRANT OPTION;
 mysql> FLUSH PRIVILEGES;
 ```
@@ -121,7 +121,7 @@ mysql> FLUSH PRIVILEGES;
 
 ### `my.cnf` 中添加配置
 
-```bash
+```sh
 vi /etc/my.cnf
 #在[mysql]下添加配置
 skip-grant-tables
@@ -131,7 +131,7 @@ skip-grant-tables
 
 ### 重启 mysql 服务
 
-```bash
+```sh
 systemctl restart mysqld.service
 ```
 
@@ -139,7 +139,7 @@ systemctl restart mysqld.service
 
 ### 直接输入 mysql
 
-```bash
+```sh
 mysql
 ```
 
@@ -147,7 +147,7 @@ mysql
 
 ### 选择 mysql 数据库
 
-```bash
+```sh
 mysql> user mysql;
 ```
 
@@ -155,7 +155,7 @@ mysql> user mysql;
 
 ### 修改密码
 
-```bash
+```sh
 mysql> update user set authentication_string=password('新密码') where user='root';
 ```
 

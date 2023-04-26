@@ -8,19 +8,19 @@
 
 ### 安装 shadowsocks
 
-```bash
+```sh
 apt install shadowsocks-libev
 ```
 
 ### 查看 shadowsocks 状态
 
-```bash
+```sh
 systemctl status shadowsocks-libev.service
 ```
 
 ### 编辑 shadowsocks 配置文件
 
-```bash
+```sh
 vim /etc/shadowsocks-libev/config.json
 ```
 
@@ -45,13 +45,13 @@ systemctl restart shadowsocks-libev.service
 
 ### 服务器防火墙开放端口
 
-```bash
+```sh
 ufw allow 8388
 ```
 
 ### 查看 shadowsocks 运行日志（调试）
 
-```bash
+```sh
 journalctl -u shadowsocks-libev.service -f
 ```
 
@@ -67,7 +67,7 @@ journalctl -u shadowsocks-libev.service -f
 
 ### 安装 shadowsocks 插件
 
-```bash
+```sh
 apt install shadowsocks-v2ray-plugin
 vim /etc/shadowsocks-libev/config.json
 ```

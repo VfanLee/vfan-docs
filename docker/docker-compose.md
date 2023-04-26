@@ -58,10 +58,11 @@ execdocker-compose exec [options] [-e KEY=VAL...] [--] SERVICE COMMAND [ARGS...]
 
 ## 3. docker-compose 文件
 
-> docker-compose 参考文档：https://docs.docker.com/compose/compose-file/
+> docker-compose [参考文档](https://docs.docker.com/compose/compose-file/)  
+> Compose file 版本与 Docker Engine [版本对应关系](https://docs.docker.com/compose/compose-file/compose-versioning/#compatibility-matrix)
 
 ```yml
-version: "3.8" # docker-compose 版本
+version: "3.8" # Compose file 版本
 
 services: # 定义运行的服务
   servicename: # 服务1名称

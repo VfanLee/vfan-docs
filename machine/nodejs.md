@@ -2,7 +2,7 @@
 
 ## nvm（node 版本管理）
 
-```bash
+```sh
 nvm ls # 列出已安装的 node.js
 nvm install <version_id> # 安装指定版本node
 nvm use <version_id> # 使用指定版本node

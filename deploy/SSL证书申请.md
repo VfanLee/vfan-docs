@@ -11,7 +11,7 @@
 
 ### 1.2. 安装 Acme 脚本
 
-```bash
+```sh
 # 安装前置插件
 apt update -y
 apt install -y curl
@@ -25,7 +25,7 @@ curl https://get.acme.sh | sh -s email=example@mail.com
 
 确保服务器 80 端口未被使用！
 
-```bash
+```sh
 ~/.acme.sh/acme.sh --issue -d test.example.com --standalone
 ```
 
@@ -35,7 +35,7 @@ curl https://get.acme.sh | sh -s email=example@mail.com
 
 > 没有相应文件夹时，自行创建。
 
-```bash
+```sh
 ~/.acme.sh/acme.sh --installcert -d test.example.com --key-file /root/ssl_example.com/test/private.key --fullchain-file /root/ssl_example.com/test/cert.crt
 ~/.acme.sh/acme.sh --install-cert -d test.example.com --key-file /root/ssl_example.com/test/private.key --fullchain-file /root/ssl_example.com/test/cert.crt
 ```
@@ -48,7 +48,7 @@ curl https://get.acme.sh | sh -s email=example@mail.com
 
 ### 1.6. 更新 Acme 脚本
 
-```bash
+```sh
 # 升级 acme.sh 到最新版本
 ~/.acme.sh/acme.sh --upgrade
 

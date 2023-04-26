@@ -91,7 +91,7 @@ url: https://www.yuque.com/doublefan-tdo7d/agr25e/go0qpr
 
 - **命令行测试如下命令，进入 mysql 命令行**
 
-```bash
+```sh
 mysql -uroot -p密码
 ```
 

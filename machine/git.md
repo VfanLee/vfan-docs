@@ -24,7 +24,7 @@ git config --global --unset https.proxy                   # 取消代理
 
 1. 生成 SSH 密钥
 
-    ```bash
+    ```sh
     ssh-keygen -t rsa -C GITHUB_KEY  # 紧接之后三次回车即可
     ```
 
