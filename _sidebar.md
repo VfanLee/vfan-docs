@@ -1,8 +1,8 @@
 - 计算机基础
-  - [计算机基本组成](计算机基础/计算机基本组成.md)
+  - [计算机基本组成](computer-basis/计算机基本组成.md)
 
 - 计算机网络
-  - [协议](计算机网络/协议)
+  - [协议](computer-network/协议)
 
 - Linux
   - [介绍](linux/)
@@ -39,14 +39,15 @@
 
 - JavaScript
   - [数据类型](javascript/数据类型.md)
-  - 算法
-    - [位运算](javascript/算法/位运算.md)
-  - [正则表达式](javascript/正则表达式.md)
   - 数据处理
     - [String](javascript/数据处理/String.md)
     - [Array](javascript/数据处理/Array.md)
     - [Object](javascript/数据处理/Object.md)
     - [RegExp](javascript/数据处理/RegExp.md)
+  - [模块化](javascript/模块化.md)
+  - [正则表达式](javascript/正则表达式.md)
+  - 算法
+    - [位运算](javascript/算法/位运算.md)
 
 - Vue
   - [基本使用](vue/基本使用.md)
@@ -67,6 +68,7 @@
 
 - Node.js
   - [npm](nodejs/npm.md)
+  - [模块化](nodejs/模块化.md)
   - [express](nodejs/express.md)
   - [mysql](nodejs/mysql.md)
   - [auth](nodejs/auth.md)
