@@ -1,6 +1,37 @@
 # git
 
-## 1. 常用命令
+## 1. Git 全局配置
+
+Tips:
+
+1. 安装完 Git 之后，要做的第一件事就是设置你的用户名和邮件地址。 这一点很重要，因为每一个 Git 提交都会使用这些信息，它们会写入到你的每一次提交中，不可更改。
+2. 所有的全局配置在 `~/.gitconfig` 中都可查看。
+
+```sh
+git config --global user.name "VfanLee"                   # 用户名【必须】
+git config --global user.email "fanfanfafafa@gmail.com"   # 邮箱【必须】
+git config --global https.proxy https://127.0.0.1:7890    # 设置 https 代理
+git config --global --unset https.proxy                   # 取消代理
+```
+
+### 1.1. 设置 SSH 免密登录
+
+1. 生成 SSH 密钥
+
+    ```sh
+    ssh-keygen -t rsa -C GITHUB_KEY  # 紧接之后三次回车即可
+    ```
+
+    成功执行后，会生成 `~/.ssh` 文件夹，包含公钥 `id_rsa.pub`、私钥 `id_rsa` 等文件。
+
+    ```txt
+    ├── id_rsa # 私钥
+    └── id_rsa.pub # 公钥
+    ```
+
+2. 将公钥添加至 GitHub/GitLab 中。
+
+## 2. 常用命令
 
 ```sh
 # start a working area
@@ -26,7 +57,7 @@ git pull      # Fetch from and integrate with another repository or a local bran
 git push      # Update remote refs along with associated objects
 ```
 
-### 1.1. git commit
+### 2.1. git commit
 
 `git commit` 命令用于将暂存区中的文件提交到本地仓库。
 
@@ -43,7 +74,7 @@ git commit -m "<commit message>" <file1> <file2> ...
 git commit -am "<commit message>"
 ```
 
-### 1.2. git branch
+### 2.2. git branch
 
 `git branch` 是 Git 的一个命令，它用于列出、创建、删除或重命名分支。
 
@@ -69,7 +100,7 @@ git branch -d <branch-name>
 git branch -m <old-branch-name> <new-branch-name>
 ```
 
-### 1.3. git merge
+### 2.3. git merge
 
 `git merge` 命令用于将两个或多个分支的修改合并到一个分支中。
 
@@ -78,7 +109,7 @@ git branch -m <old-branch-name> <new-branch-name>
 git merge <branch-name>
 ```
 
-### 1.4. git remote
+### 2.4. git remote
 
 `git remote` 命令用于管理远程仓库。
 
@@ -103,7 +134,7 @@ git remote show <remote-name>
 git remote rename <old-name> <new-name>
 ```
 
-### 1.5. git fetch
+### 2.5. git fetch
 
 `git fetch` 命令用于从远程仓库获取最新的提交，但不会自动合并到本地分支中，而是将这些提交保存到本地仓库中。
 
@@ -122,7 +153,7 @@ git fetch --all
 
 当执行 git fetch 命令时，Git 会从远程仓库中获取最新的提交，并将这些提交保存到本地仓库的远程跟踪分支中。这样，在执行 git merge 或 git pull 命令时，Git 就可以使用本地仓库中保存的最新提交，而不需要从远程仓库重新获取。
 
-### 1.6. git pull
+### 2.6. git pull
 
 `git pull` 命令用于从远程仓库获取最新的提交并合并到本地分支中。
 
@@ -140,7 +171,7 @@ git pull --rebase
 
 当执行 `git pull` 命令时，Git 会自动执行 `git fetch` 命令获取最新的提交，然后将这些提交合并到当前分支中。如果需要进行代码冲突解决等操作，可以在执行 `git pull` 命令之前先执行 `git fetch` 命令，手动获取最新的提交。
 
-### 1.7. git push
+### 2.7. git push
 
 `git push` 命令用于将本地的代码变更推送到远程仓库。
 
@@ -156,9 +187,9 @@ git push <remote-name> <local-branch-name>:<remote-branch-name>
 git push <remote-name> <local-branch-name>:<remote-branch-name>
 ```
 
-## 2. 实际场景
+## 3. 实际场景
 
-### 2.1. 创建一个新的库
+### 3.1. 创建一个新的库
 
 ```sh
 echo "# test" >> README.md
@@ -170,7 +201,7 @@ git remote add origin https://github.com/VfanLee/test.git
 git push -u origin main
 ```
 
-### 2.2. 导入现有库
+### 3.2. 导入现有库
 
 ```sh
 git remote add origin https://github.com/VfanLee/test.git
@@ -178,7 +209,7 @@ git branch -M main
 git push -u origin main
 ```
 
-### 2.3. 更改主分支名称后本地项目重命名
+### 3.3. 更改主分支名称后本地项目重命名
 
 ```sh
 git branch -m master main
