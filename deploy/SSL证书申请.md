@@ -7,7 +7,7 @@
 ### 1.1. 准备工作
 
 1. 申请一个域名。
-1. 将域名托管到 Cloudflare。
+2. 将域名托管到 Cloudflare。
 
 ### 1.2. 安装 Acme 脚本
 
@@ -36,7 +36,6 @@ curl https://get.acme.sh | sh -s email=example@mail.com
 > 没有相应文件夹时，自行创建。
 
 ```sh
-~/.acme.sh/acme.sh --installcert -d test.example.com --key-file /root/ssl_example.com/test/private.key --fullchain-file /root/ssl_example.com/test/cert.crt
 ~/.acme.sh/acme.sh --install-cert -d test.example.com --key-file /root/ssl_example.com/test/private.key --fullchain-file /root/ssl_example.com/test/cert.crt
 ```
 
