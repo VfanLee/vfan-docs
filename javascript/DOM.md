@@ -91,17 +91,23 @@ HTMLElement.style.backgroundColor = '#fff'
 
 ### 3.1. 获取父节点
 
-- 子元素.parentNode
-- 子元素.parentElement
+```js
+Element.parentElement
+
+Element.parentNode
+```
 
 ### 3.2. 获取子节点
 
-- 父元素.children ：返回所有的子元素节点。它只返回子元素节点，其余节点不返回
-- 父元素.firstElementChild ：返回第一个子元素节点
-- 父元素.lastElementChild ：返回最后一个子元素节点
-- 父元素.childNodes ：返回当前节点的所有子节点、包括文本节点（空格、换行）、注释节点等
-- 父元素.firstChild ：返回当前节点的第一个子节点
-- 父元素.firstChild ：返回当前节点的第一个子节点
+```js
+Element.children // 返回所有的子元素节点。它只返回子元素节点，其余节点不返回
+Element.firstElementChild
+Element.lastElementChild
+
+Element.childNodes // 返回当前节点的所有子节点、包括文本节点（空格、换行）、注释节点等
+Element.firstChild
+Element.firstChild
+```
 
 ### 3.3. 获取兄弟节点
 
