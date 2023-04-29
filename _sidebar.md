@@ -49,9 +49,9 @@
     - [Object](javascript/数据处理/Object.md)
     - [RegExp](javascript/数据处理/RegExp.md)
   - [模块化](javascript/模块化.md)
-  - [正则表达式](javascript/正则表达式.md)
-  - 算法
-    - [位运算](javascript/算法/位运算.md)
+  - [DOM 常见操作](javascript/DOM.md)
+  - [BOM 常见操作](javascript/BOM.md)
+  - [位运算](javascript/位运算.md)
 
 - Vue
   - [基本使用](vue/基本使用.md)
@@ -71,6 +71,7 @@
     - [element UI](vue/vue2/elementui.md)
 
 - Node.js
+  - [安装](nodejs/安装.md)
   - [npm](nodejs/npm.md)
   - [模块化](nodejs/模块化.md)
   - [express](nodejs/express.md)
@@ -93,3 +94,5 @@
   - [基本使用](git/README.md)
   - [GitHub Pages](git/github_pages.md)
   - [GitHub Actions](git/github_actions.md)
+
+- [正则表达式](正则表达式.md)

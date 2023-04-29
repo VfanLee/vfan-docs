@@ -1,156 +1,57 @@
-# DOM
+# DOM 常见操作
 
-## 1. 获取 DOM
+## 1. 元素选择
 
-```js
-// 通用
-document.querySelector()
-document.querySelectorAll()
+- 通过 CSS 选择器选择元素（单个）：`document.querySelector('selector')`
+- 通过 CSS 选择器选择元素（多个）：`document.querySelectorAll('selector')`
 
-// 获取 DOM 树
-document
-// 获取 doctype
-document.doctype
-// 获取 html
-document.documentElement
-// 获取 head
-document.head
-// 获取 body
-document.body
-```
+## 2. 元素遍历与查询
 
-## 2. 操作元素属性
+- 获取父元素：`element.parentElement`
+- 获取所有子元素：`element.children`
+- 获取第一个子节点：`element.firstElementChild`
+- 获取最后一个子节点：`element.lastElementChild`
+- 获取下一个兄弟元素：`element.nextElementSibling`
+- 获取上一个兄弟元素：`element.previousElementSibling`
+- 判断元素是否包含指定的子元素：`parentElement.contains(element)`
 
-### 2.1. property 的方式
+## 3. 元素属性与内容
 
-property 的方式是操作 Element 对象。
+- 获取或设置元素的文本内容：`element.textContent`、`element.innerText`
+- 获取或设置元素的 HTML 内容：`element.innerHTML`
+- 获取或设置元素属性：`element.property`
+- 获取元素的属性：`element.getAttribute('attribute')`
+- 设置元素的属性：`element.setAttribute('attribute', 'value')`
+- 删除元素的属性：`element.removeAttribute('attribute')`
+- 检查元素是否具有某个属性：`element.hasAttribute('attribute')`
 
-```js
-// 获取属性值
-Element.title
+## 4. 元素样式与类
 
-// 添加/修改属性值
-Element.title = 'foo'
-```
+- 获取或设置元素的内联样式属性：`element.style.property`
+- 获取或设置元素类名（字符串形式）：`element.className`
+- 获取或设置元素类名（数组形式）：`element.classList`
+- 添加元素的类名：`element.classList.add('classname')`
+- 移除元素的类名：`element.classList.remove('classname')`
+- 切换类名：`element.classList.toggle('classname')`
+- 替换类名：`element.classList.replace('classname', 'classname')`
+- 检查元素是否具有某个类名：`element.classList.contains('classname')`
 
-### 2.2. attribute 的方式
+## 5. 元素创建与插入
 
-attribute 的方式是操作 HTMLElement 对象。
+- 创建新的文本节点：`document.createTextNode('text')`
+- 创建新的元素节点：`document.createElement('tagname')`
+- 克隆元素：`element.cloneNode(true)`、`element.cloneNode(false)`
+- 插入元素作为子节点：`parentElement.appendChild(newElement)`
+- 在元素之前插入新元素：`parentElement.insertBefore(newElement, referenceElement)`
 
-```js
-// 获取属性值
-Element.getAttribute('title')
+## 6. 元素删除与替换
 
-// 添加/修改属性值
-Element.setAttribute('title', 'foo')
-// 自定义属性推荐写法为：data-*
-Element.setAttribute('data-foo', 'foo')
+- 删除节点：`element.remove()`
+- 移除子节点：`parentElement.removeChild(element)`
+- 替换节点：`parentElement.replaceChild(newElement, oldElement)`
 
-// 移除属性
-Element.removeAttribute('PROP')
-```
+## 7. 元素事件处理
 
-### 2.3. 操作元素 class
-
-```js
-// 获取 class（字符串形式）
-Element.className
-
-// 更改 class，会覆盖原先的类名
-Element.className = 'foo' // 会覆盖原先的类名 
-
-// 获取 class（数据形式）
-Element.classList
-
-// 添加 class
-Element.classList.add('foo')
-Element.classList.add('foo', 'bar')
-
-// 移除 class
-Element.classList.remove('foo')
-Element.classList.remove('foo', 'bar')
-
-// 替换 class
-Element.classList.replace('foo', 'bar')
-
-// 切换 class
-Element.classList.toggle('foo')
-```
-
-### 2.4. 操作元素 style
-
-```js
-// 获取元素 style 样式
-HTMLElement.style
-
-// 修改元素 style 样式
-HTMLElement.style.backgroundColor = '#fff'
-```
-
-## 3. DOM 结构操作
-
-### 3.1. 获取父节点
-
-```js
-Element.parentElement
-
-Element.parentNode
-```
-
-### 3.2. 获取子节点
-
-```js
-Element.children // 返回所有的子元素节点。它只返回子元素节点，其余节点不返回
-Element.firstElementChild
-Element.lastElementChild
-
-Element.childNodes // 返回当前节点的所有子节点、包括文本节点（空格、换行）、注释节点等
-Element.firstChild
-Element.firstChild
-```
-
-### 3.3. 获取兄弟节点
-
-- 元素.previousElementSibling 属性 ：返回当前元素上一个兄弟节点
-- 元素.nextElementSibling 属性 ：返回当前元素下一个兄弟元素节点
-- 元素.previousSibling 属性 ：表示当前节点的前一个兄弟节点
-- 元素.nextSibling 属性 ：表示当前节点的后一个兄弟节点
-
-### 3.4. 创建节点
-
-- 元素对象.innerHTML = 'xxx'：将内容写入某个 DOM 节点，不会导致页面全部重绘。innerHTML 效率要比 creatElement 高
-- document.createElement(标签名)：创建由 tagName 指定的 HTML 元素。因为这些元素原先不存在，是根据我们的需求动态生成的，所以也称为动态创建元素节点
-- document.createDocumentFragment：创建一个DOM片段 
-- document.write()：直接将内容写入页面的内容流，但是文档流执行完毕，则它会导致页面全部重绘
-- document.createTextNode()：根据文本内容创建一个文本节点对象
-
-### 3.5. 改变元素的内容
-
-- 元素对象.innerHTML
-  - 将文本内容添加/更新到任意标签位置
-  - 文本中包含的标签会被解析
-- 元素对象.innerText 
-  - 将文本内容添加/更新到任意标签位置
-  - 文本中包含的标签不会被解析
-- document.write()
-  - 只能将文本内容追加到<body>前面的位置
-  - 文本中包含的标签会被解析
-
-### 3.6. 添加节点
-
-- 父节点.appendChild(新的子节点) ：将一个节点添加到指定父节点的子节点列表 末尾。类似于 CSS 里面的 after伪元素
-- 父节点.insertBefore(新的子节点, 作为参考的子节点) ：将一个节点添加到父节点的 指定子节点前面。类似于 CSS 里面的 before伪元素
-
-### 3.7. 删除节点
-
-- 父节点.removeChild(子节点)：从 DOM 中删除一个子节点，返回删除的节点。
-
-### 3.8. 复制节点
-
-- node.cloneNode()：返回调用该方法的节点的一个副本。 也称为 克隆节点/拷贝节点
-  - 如果括号参数为 空 或者为 false ，则是 浅拷贝，即只克隆复制节点本身，不克隆里面的子节点。
-  - 如果括号参数为 true ，则是 深度拷贝，会复制节点本身以及里面所有的子节点。
-
-### 3.9. 替换节点
-
-- 父节点.replaceChild(新节点, 旧节点)
+- 添加事件监听器：`element.addEventListener('event', callback, ?option)`
+- 移除事件监听器：`element.removeEventListener('event', callback)`
+- 触发元素的事件：`element.dispatchEvent(event)`
