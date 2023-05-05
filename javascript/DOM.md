@@ -55,3 +55,7 @@
 - 添加事件监听器：`element.addEventListener('event', callback, ?option)`
 - 移除事件监听器：`element.removeEventListener('event', callback)`
 - 触发元素的事件：`element.dispatchEvent(event)`
+
+## 8. 其他
+
+- 使元素被用户可见：[`scrollIntoView()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollIntoView)
