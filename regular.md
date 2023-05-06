@@ -261,7 +261,6 @@
 "(?<=(T|t)he\s)(fat|mat)" => The <a href="javascript:;"><strong>fat</strong></a> cat sat on the <a href="javascript:;"><strong>mat</strong></a>.
 </pre>
 
-
 ### 12.3. `?!...` 负先行断言
 
 负先行断言 `?!` 用于筛选所有匹配结果，筛选条件为 其后不跟随着断言中定义的格式。  
