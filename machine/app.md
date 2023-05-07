@@ -83,13 +83,9 @@ Git 设置 SSH 免密登录
 - [ubuntu](https://ubuntu.com/download/server)
 - [网易镜像源](http://mirrors.163.com/)
 
-## 系统安装
-
-- [微PE](https://www.wepe.com.cn/download.html)
-- [Rufus 写盘工具](https://github.com/pbatard/rufus)
-
 ## Windows 工具
 
+- [微PE](https://www.wepe.com.cn/download.html)
 - [图吧工具箱](http://www.tbtool.cn/)
 - [Windows 激活](https://github.com/zbezj/HEU_KMS_Activator/releases)
 - [Win11 右键菜单](https://www.sordum.org/14479/windows-11-classic-context-menu-v1-1/)
