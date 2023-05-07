@@ -43,7 +43,13 @@ Git 设置 SSH 免密登录
 
 安装 TortoiseSVN 时，勾选上 `command line client tools` 选项。
 
-## Node.js
+## Front-End
+
+### Visual Studio Code
+
+[Visual Studio Code 官方](https://code.visualstudio.com/Download)
+
+### Node.js
 
 - [Node.js 官方](https://nodejs.org/zh-cn/download)
 - [nvm - windows 版本](https://github.com/coreybutler/nvm-windows/releases)
@@ -51,7 +57,21 @@ Git 设置 SSH 免密登录
 
 ## Java
 
+### IntelliJ IDEA
+
+[IntelliJ IDEA 官方](https://www.jetbrains.com/zh-cn/idea/download)
+
+### JDK
+
 [JDK 官方](https://www.oracle.com/java/technologies/downloads/)
+
+### Tomcat
+
+[Tomcat 官方](https://tomcat.apache.org/)
+
+### Maven
+
+[Maven 官方](https://maven.apache.org/download.cgi)
 
 ## 虚拟化技术
 
@@ -59,9 +79,8 @@ Git 设置 SSH 免密登录
 
 ## 镜像站
 
+- [I Tell You](https://msdn.itellyou.cn/) / [Next,I Tell You](https://next.itellyou.cn/Original/Index)
 - [ubuntu](https://ubuntu.com/download/server)
-- [I Tell You](https://msdn.itellyou.cn/)
-- [Next,I Tell You](https://next.itellyou.cn/Original/Index)
 - [网易镜像源](http://mirrors.163.com/)
 
 ## 系统安装
@@ -69,10 +88,10 @@ Git 设置 SSH 免密登录
 - [微PE](https://www.wepe.com.cn/download.html)
 - [Rufus 写盘工具](https://github.com/pbatard/rufus)
 
-## windows 工具
+## Windows 工具
 
 - [图吧工具箱](http://www.tbtool.cn/)
-- [windows 激活](https://github.com/zbezj/HEU_KMS_Activator/releases)
+- [Windows 激活](https://github.com/zbezj/HEU_KMS_Activator/releases)
 - [Win11 右键菜单](https://www.sordum.org/14479/windows-11-classic-context-menu-v1-1/)
 - [远程桌面](https://github.com/stascorp/rdpwrap)
 - [网盘挂载](https://github.com/alist-org/alist)

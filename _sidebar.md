@@ -1,4 +1,8 @@
-- [常用软件](app.md)
+- machine
+  - [验机步骤](machine/验机步骤.md)
+  - [Windows 系统安装](machine/系统安装/Windows.md)
+  - [Ubuntu 系统安装](machine/系统安装/Ubuntu.md)
+  - [常用软件](machine/app.md)
 
 - 计算机基础
   - [计算机基本组成](computer-basis/计算机基本组成.md)
@@ -97,4 +101,4 @@
   - [GitHub Pages](git/github_pages.md)
   - [GitHub Actions](git/github_actions.md)
 
-- [regular](regular.md)
+- [正则表达式](regular.md)
