@@ -73,6 +73,10 @@ Git 设置 SSH 免密登录
 
 [Maven 官方](https://maven.apache.org/download.cgi)
 
+## Python
+
+- [Python 官方](https://www.python.org/downloads/)
+
 ## 虚拟化技术
 
 [VMware Workstation](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
