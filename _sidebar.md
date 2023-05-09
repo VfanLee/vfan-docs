@@ -61,20 +61,18 @@
 
 - Vue
   - [基本使用](vue/基本使用.md)
-  
   - Vue Router
     - [基本使用](vue/vue-router/基本使用.md)
     - [路由模式](vue/vue-router/路由模式.md)
-  
   - Pinia
     - [基本使用](vue/pinia/基本使用.md)
-  
   - Vue I18n
     - [基本使用](vue/vue-i18n/基本使用.md)
-
-  - Vue2 记录
-    - [01](vue/vue2/01.md)
-    - [element UI](vue/vue2/elementui.md)
+  - Vue3 踩坑
+    - [01](vue/vue3-notes/01.md)
+  - Vue2 踩坑
+    - [01](vue/vue2-notes/01.md)
+    - [Element UI](vue/vue2/elementui.md)
 
 - Node.js
   - [安装](nodejs/安装.md)
