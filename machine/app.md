@@ -65,14 +65,6 @@ Git 设置 SSH 免密登录
 
 [JDK 官方](https://www.oracle.com/java/technologies/downloads/)
 
-### Tomcat
-
-[Tomcat 官方](https://tomcat.apache.org/)
-
-### Maven
-
-[Maven 官方](https://maven.apache.org/download.cgi)
-
 ## Python
 
 - [Python 官方](https://www.python.org/downloads/)

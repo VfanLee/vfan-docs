@@ -34,10 +34,6 @@
   - [Dockerfile](docker/dockerfile/)
   - [Docker Compose](docker/docker-compose.md)
 
-- 网站部署
-  - [建站准备](deploy/建站准备.md)
-  - [SSL证书申请](deploy/SSL证书申请.md)
-
 - HTML
   - [字符实体](html/字符实体.md)
   - [表单](html/form.md)
@@ -94,9 +90,6 @@
     - [存储过程](database/mysql/存储过程.md)
     - [流程控制结构](database/mysql/流程控制结构.md)
 
-- Git
-  - [基本使用](git/README.md)
-  - [GitHub Pages](git/github_pages.md)
-  - [GitHub Actions](git/github_actions.md)
+- [Git](git.md)
 
 - [正则表达式](regular.md)
