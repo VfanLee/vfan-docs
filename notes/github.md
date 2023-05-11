@@ -11,8 +11,8 @@ A类型 185.199.111.153
 
 ## github actions
 
-```yaml
-name: github pages
+```yml
+name: ci
 
 on:
   push:
