@@ -1,5 +1,9 @@
 # 软件合集
 
+## 微软常用运行库合集
+
+[果核剥壳](https://www.ghxi.com/yxkhj.html)
+
 ## 版本控制工具
 
 ### Git
