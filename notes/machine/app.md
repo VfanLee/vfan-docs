@@ -10,21 +10,23 @@
 
 [Git 下载地址](https://git-scm.com/downloads)
 
-安装完 Git 之后，要做的第一件事就是设置你的用户名和邮件地址。 这一点很重要，因为每一个 Git 提交都会使用这些信息，它们会写入到你的每一次提交中，不可更改。所有的全局配置在 `~/.gitconfig` 中都可查看。
+设置 Git 提交信息。
 
 ```sh
 git config --global user.name "VfanLee"                   # 用户名【必须】
 git config --global user.email "fanfanfafafa@gmail.com"   # 邮箱【必须】
 ```
 
-Git 设置代理
+Git 设置代理。
 
 ```sh
-git config --global https.proxy https://127.0.0.1:7890    # 设置 https 代理
-git config --global --unset https.proxy                   # 取消代理
+git config --global https.proxy http://127.0.0.1:7890    # 设置 http 代理
+git config --global https.proxy https://127.0.0.1:7890   # 设置 https 代理
+git config --global --unset http.proxy                   # 取消 http 代理
+git config --global --unset https.proxy                  # 取消 https 代理
 ```
 
-Git 设置 SSH 免密登录
+Git 设置 SSH。
 
 1. 生成 SSH 密钥
 
