@@ -64,6 +64,10 @@
     - [01](docs/vue/vue2-notes/01.md)
     - [Element UI](docs/vue/vue2-notes/elementui.md)
 
+- [webpack](docs/webpack.md)
+
+- [vite](docs/vite.md)
+
 - Node.js
   - [安装](docs/nodejs/安装.md)
   - [npm](docs/nodejs/npm.md)
