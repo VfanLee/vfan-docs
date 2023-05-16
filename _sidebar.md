@@ -58,8 +58,6 @@
     - [基本使用](docs/vue/pinia/基本使用.md)
   - Vue I18n
     - [基本使用](docs/vue/vue-i18n/基本使用.md)
-  - Vue3 踩坑
-    - [01](docs/vue/vue3-notes/01.md)
   - Vue2 踩坑
     - [01](docs/vue/vue2-notes/01.md)
     - [Element UI](docs/vue/vue2-notes/elementui.md)
