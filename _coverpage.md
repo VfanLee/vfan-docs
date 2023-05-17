@@ -4,5 +4,5 @@
 
 <img style="width: 120px; height: 120px;" src="./image/avatar_nobg.png" />
 
-[随记](README.md)
+[随记](notes/README.md)
 [学习笔记](README.md)

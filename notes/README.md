@@ -1,3 +1,15 @@
 # 随记
 
-随便写写。
+- machine
+  - [验机步骤](notes/machine/验机步骤.md)
+  - [Windows 系统安装](notes/machine/系统安装/Windows.md)
+  - [Ubuntu 系统安装](notes/machine/系统安装/Ubuntu.md)
+  - [常用软件](notes/machine/app.md)
+- deploy
+  - [建站准备.md](notes/deploy/建站准备.md)
+  - [SSL证书申请.md](notes/deploy/SSL证书申请.md)
+- [GitHub](notes/GitHub.md)
+- [网盘挂载](notes/网盘挂载.md)
+- [部署chatgpt](notes/部署chatgpt.md)
+- [AI绘图](notes/AI绘图.md)
+- [语音文字](notes/语音文字.md)
