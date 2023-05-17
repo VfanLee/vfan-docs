@@ -20,7 +20,7 @@ git config --global user.email "fanfanfafafa@gmail.com"   # 邮箱【必须】
 Git 设置代理。
 
 ```sh
-git config --global https.proxy http://127.0.0.1:7890    # 设置 http 代理
+git config --global http.proxy http://127.0.0.1:7890     # 设置 http 代理
 git config --global https.proxy https://127.0.0.1:7890   # 设置 https 代理
 git config --global --unset http.proxy                   # 取消 http 代理
 git config --global --unset https.proxy                  # 取消 https 代理
@@ -53,11 +53,11 @@ Git 设置 SSH。
 
 ### Visual Studio Code
 
-[Visual Studio Code 官方](https://code.visualstudio.com/Download)
+[Visual Studio Code 下载地址](https://code.visualstudio.com/Download)
 
 ### Node.js
 
-- [Node.js 官方](https://nodejs.org/zh-cn/download)
+- [Node.js 下载地址](https://nodejs.org/zh-cn/download)
 - [nvm - windows 版本](https://github.com/coreybutler/nvm-windows/releases)
 - [nvm - Linux 版本](https://github.com/nvm-sh/nvm/releases)
 
@@ -65,19 +65,19 @@ Git 设置 SSH。
 
 ### IntelliJ IDEA
 
-[IntelliJ IDEA 官方](https://www.jetbrains.com/zh-cn/idea/download)
+[IntelliJ IDEA 下载地址](https://www.jetbrains.com/zh-cn/idea/download)
 
 ### JDK
 
-[JDK 官方](https://www.oracle.com/java/technologies/downloads/)
+[JDK 下载地址](https://www.oracle.com/java/technologies/downloads/)
 
 ## Python
 
-- [Python 官方](https://www.python.org/downloads/)
+- [Python 下载地址](https://www.python.org/downloads/)
 
 ## 虚拟化技术
 
-[VMware Workstation](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
+[VMware Workstation 下载地址](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
 
 ## 镜像站
 
@@ -89,7 +89,7 @@ Git 设置 SSH。
 
 - [微PE](https://www.wepe.com.cn/download.html)
 - [图吧工具箱](http://www.tbtool.cn/)
-- [Windows 激活](https://github.com/zbezj/HEU_KMS_Activator/releases)
+- [Windows 激活工具](https://github.com/zbezj/HEU_KMS_Activator/releases)
 - [Win11 右键菜单](https://www.sordum.org/14479/windows-11-classic-context-menu-v1-1/)
-- [远程桌面](https://github.com/stascorp/rdpwrap)
+- [Windows 远程桌面](https://github.com/stascorp/rdpwrap)
 - [网盘挂载](https://github.com/alist-org/alist)
