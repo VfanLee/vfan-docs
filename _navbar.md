@@ -1,3 +1,1 @@
 - [学习笔记](README.md)
-- [随记](notes/README.md)
-- [速查]()
