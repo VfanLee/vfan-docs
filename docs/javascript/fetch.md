@@ -1,4 +1,4 @@
-# AJAX Reference
+# Fetch
 
 ## 获取 JSON 数据
 

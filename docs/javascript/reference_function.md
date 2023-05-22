@@ -1,0 +1,38 @@
+# Function Rederence
+
+## debounce
+
+```js
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+  	var context = this, args = arguments;
+  	clearTimeout(timeout);
+  	timeout = setTimeout(function() {
+  		timeout = null;
+  		if (!immediate) func.apply(context, args);
+  	}, wait);
+  	if (immediate && !timeout) func.apply(context, args);
+  };
+}
+```
+
+## throttle
+
+```js
+function throttle(func, timeFrame) {
+  var lastTime = 0;
+  return function (...args) {
+      var now = new Date();
+      if (now - lastTime >= timeFrame) {
+          func(...args);
+          lastTime = now;
+      }
+  };
+}
+```
+
+## 参考
+
+- [You Might Not Need Lodash](https://youmightnotneed.com/lodash)
+- [You-Dont-Need-Lodash-Underscore](https://you-dont-need.github.io/You-Dont-Need-Lodash-Underscore/#/)
