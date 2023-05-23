@@ -11,6 +11,46 @@ capitalize('FRED')
 // => 'Fred'
 ```
 
+## lowerFirst
+
+将字符串的第一个字符转换为小写。
+
+```js
+const lowerFirst = string => (string ? string.charAt(0).toLowerCase() + string.slice(1) : '')
+
+lowerFirst('Fred')
+// => 'fred'
+```
+
+## upperFirst
+
+将字符串的第一个字符转换为大写。
+
+```js
+const upperFirst = string => (string ? string.charAt(0).toUpperCase() + string.slice(1) : '')
+
+upperFirst('fred')
+// => 'Fred'
+```
+
+## toLower
+
+给定字符串的小写。
+
+```js
+'FOOBAR'.toLowerCase()
+// => 'foobar'
+```
+
+## toUpper
+
+给定字符串的大写。
+
+```js
+'foobar'.toLowerCase()
+// => 'FOOBAR'
+```
+
 ## startsWith
 
 检查字符串是否以给定的目标字符串开头。
@@ -33,28 +73,6 @@ capitalize('FRED')
 
 'abc'.endsWith('c')
 // => true
-```
-
-## lowerFirst
-
-将字符串的第一个字符转换为小写。
-
-```js
-const lowerFirst = string => (string ? string.charAt(0).toLowerCase() + string.slice(1) : '')
-
-lowerFirst('Fred')
-// => 'fred'
-```
-
-## upperFirst
-
-将字符串的第一个字符转换为大写。
-
-```js
-const upperFirst = string => (string ? string.charAt(0).toUpperCase() + string.slice(1) : '')
-
-upperFirst('fred')
-// => 'Fred'
 ```
 
 ## padStart
@@ -102,22 +120,22 @@ upperFirst('fred')
 // => ['2022', '02', '22']
 ```
 
-## toLower
+## trimStart
 
-给定字符串的小写。
+从字符串中删除前导和尾随空格字符。
 
 ```js
-'FOOBAR'.toLowerCase()
-// => 'foobar'
+' abc '.trimStart()
+// => 'abc '
 ```
 
-## toUpper
+## trimEnd
 
-给定字符串的大写。
+从字符串中删除前导和尾随空格字符。
 
 ```js
-'foobar'.toLowerCase()
-// => 'FOOBAR'
+' abc '.trimEnd()
+// => ' abc'
 ```
 
 ## trim
