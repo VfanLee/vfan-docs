@@ -16,8 +16,6 @@
 
 采样步数建议值至少为20，在使用 Euler a 和 UniPC 采样方法的时候就有很好效果。
 
-相对的 DDIM 需要 80 以上的采样步数才会有好结果。
-
 ## Restore faces 脸部修复
 
 使用脸部修复模型改善脸部生成效果。缺省使用 CodeFormer，可在 Settings 切换为GFPGAN。
@@ -54,11 +52,11 @@
 
 ## Batch count 生成次数
 
-设置按左上角的Generate后要生成多少次的图片。
+设置按左上角的 Generate 后要生成多少次的图片。
 
 ## Batch size 每次数量
 
-设置按左上角的Generate后，一次生成内要算多少图片。通常要一次算多张图，调整Batch count就够了，Batch size的值维持为1。
+设置按左上角的 Generate 后，一次生成内要算多少图片。通常要一次算多张图，调整 Batch count 就够了，Batch size 的值维持为 1。
 
 ## CFG Scale 提示词引导系数
 
