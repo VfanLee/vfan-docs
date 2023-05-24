@@ -1,14 +1,8 @@
 # Form 表单
 
-> MDN form：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form
-
-一个完整的表单通常由三个部分组成：
-
-1. 表单标签：form 标签自身。
-2. 表单域：用来收集用户数据，如 input 标签（文本框、密码框 ……）。
-3. 表单按钮：用来提交表单数据和进行其他操作。
-
 ## form
+
+> [MDN form](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form)
 
 属性：
 
@@ -22,7 +16,7 @@
 
 ## input
 
-> MDN input: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input
+> [MDN input](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input)
 
 属性：
 
@@ -38,8 +32,8 @@
 
 ## 下拉列表
 
-> mdn select：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select  
-> mdn option：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/option
+> [mdn select](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select)  
+> [mdn option](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/option)
 
 下拉列表需要 select 和 option 共同使用。
 
@@ -55,7 +49,7 @@
 
 ## textarea 多行文本
 
-> mdn textarea：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea
+> [mdn textarea](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea)
 
 属性：
 
@@ -69,6 +63,8 @@
 按钮分两种写法：`<button>` 或者 `<input>`。
 
 ### button
+
+> [MDN button](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button)
 
 属性：
 
@@ -100,6 +96,8 @@
 
 ## label
 
+> [MDN label](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label)
+
 HTML `<label>` 元素（标签）表示用户界面中某个元素的说明。
 
 ```html
@@ -115,3 +113,10 @@ HTML `<label>` 元素（标签）表示用户界面中某个元素的说明。
   <input type="checkbox" name="foo">
 </label>
 ```
+
+## 表单分组
+
+> [MDN fieldset](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/fieldset)  
+> [MDN legend](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/legend)
+
+`<legend>` 需要配合 `<fieldset>` 来进行使用。
