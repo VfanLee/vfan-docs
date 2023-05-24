@@ -17,7 +17,7 @@ SD 支持用自然语言描述，不过还是推荐使用 tag 语法来书写。
 (best quality: 1.21), (high quality), game cg, official wallpaper, 
 
 画面主体 >>
-1girl, pink | blue hair, long hair, white cat ears, happy, 
+1girl, pink|blue hair, long hair, white cat ears, 
 
 画面环境 >>
 indoors, sunlight, 
@@ -29,7 +29,12 @@ Lora 触发词
 ### 反向提示词
 
 ```txt
-bad anatomy, bad hands, missing fingers, blurry, missing arms, Humpbacked, missing limb, too many fingers, mutated, poorly drawn, out of frame, bad hands, unclear eyes, cloned face, bad face, 
+图片质量 >>
+(best quality: 1.21), (high quality), 
+
+画面主体 >>
+1girl, pink|blue hair, long hair, white cat ears, 
+indoors, sunlight, 
 ```
 
 ## Tag 语法
@@ -38,13 +43,7 @@ bad anatomy, bad hands, missing fingers, blurry, missing arms, Humpbacked, missi
 
 不同的关键词 tag 之间，需要使用英文逗号 `,` 分隔，逗号前后有空格或者换行是没关系的。
 
-ex：`1girl, long hair`（1个女孩，长发）
-
-### 混合
-
-WebUi 使用 `|` 分隔多个关键词，实现混合多个要素，注意混合是同等比例混合，同时混。
-
-ex: `1girl, red|blue hair, long hair`（1个女孩，红色与蓝色头发混合，长发）
+ex：`1girl, long hair`
 
 ### 权重
 
@@ -61,15 +60,23 @@ ex: `(best quality: 1.21)`
 
 ex: `(best quality), [official wallpaper],`
 
-## 渐变
+### 混合
 
-比较简单的理解时，先按某种关键词生成，然后再此基础上向某个方向变化。
-`[关键词1:关键词2:数字]`，数字大于 1 理解为第 X 步前为关键词 1，第 X 步后变成关键词 2，数字小于 1 理解为总步数的百分之 X 前为关键词 1，之后变成关键词 2。
+WebUi 使用 `|` 分隔多个关键词，实现混合多个要素，注意混合是同等比例混合，同时混。
 
-ex: `[ pink:blue:0.4] hair,`
+ex: `1girl, red|blue hair, long hair`（1个女孩，红色与蓝色头发混合，长发）
 
-## 交替
+### 渐变
 
-轮流使用关键词。
+`[关键词1:关键词2:数字]`：先按某种关键词生成，然后再此基础上向某个方向变化。
 
-ex：`[pink|blue] hair,`。
+- 数字大于 1 理解为第 X 步前为关键词 1，第 X 步后变成关键词 2
+- 数字小于 1 理解为总步数的百分之 X 前为关键词 1，之后变成关键词 2。
+
+ex: `[ pink:blue:16] hair,`、`[ pink:blue:0.4] hair,`
+
+### 交替
+
+交替使用关键词。
+
+ex：`[pink|blue|green] hair,`。
