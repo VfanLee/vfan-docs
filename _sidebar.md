@@ -30,24 +30,13 @@
 
 - HTML
   - [字符实体](docs/html/字符实体.md)
-  - [表单](docs/html/form.md)
+  - [Form 表单](docs/html/form.md)
+  - [Table 表格](docs/html/table.md)
 
 - CSS
   - [书写顺序](docs/css/书写顺序.md)
   - [CSS 设计模式](docs/css/设计模式.md)
   - [媒体查询](docs/css/媒体查询.md)
-
-- JavaScript
-  - [数据类型](docs/javascript/数据类型.md)
-  - 数据处理
-    - [String](docs/javascript/数据处理/String.md)
-    - [Array](docs/javascript/数据处理/Array.md)
-    - [Object](docs/javascript/数据处理/Object.md)
-    - [RegExp](docs/javascript/数据处理/RegExp.md)
-  - [模块化](docs/javascript/模块化.md)
-  - [DOM 常见操作](docs/javascript/DOM.md)
-  - [BOM 常见操作](docs/javascript/BOM.md)
-  - [位运算](docs/javascript/位运算.md)
 
 - Vue
   - [基本使用](docs/vue/基本使用.md)

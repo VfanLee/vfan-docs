@@ -334,8 +334,3 @@ const reject = (arr, predicate) => arr.filter(x => !predicate(x))
 reject(['a', 'b', 'c', 'd', 'e', 'f', 'g'], char => char === 'd')
 // => ['a', 'b', 'c', 'e', 'f', 'g']
 ```
-
-## 参考
-
-- [You Might Not Need Lodash](https://youmightnotneed.com/lodash)
-- [You-Dont-Need-Lodash-Underscore](https://you-dont-need.github.io/You-Dont-Need-Lodash-Underscore/#/)

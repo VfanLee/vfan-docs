@@ -31,8 +31,3 @@ function throttle(func, timeFrame) {
   };
 }
 ```
-
-## 参考
-
-- [You Might Not Need Lodash](https://youmightnotneed.com/lodash)
-- [You-Dont-Need-Lodash-Underscore](https://you-dont-need.github.io/You-Dont-Need-Lodash-Underscore/#/)

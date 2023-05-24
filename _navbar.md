@@ -1,1 +1,6 @@
 - [学习笔记](README.md)
+- 快速参考
+  - [数组处理](docs/javascript/reference/reference_array.md)
+  - [字符处理](docs/javascript/reference/reference_string.md)
+  - [对象处理](docs/javascript/reference/reference_object.md)
+  - [函数处理](docs/javascript/reference/reference_function.md)

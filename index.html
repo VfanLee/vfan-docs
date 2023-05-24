@@ -30,52 +30,10 @@
   </head>
   <body>
     <div id="app"></div>
-    <script>
-      window.$docsify = {
-        el: '#app',
-        // repo: 'https://github.com/VfanLee/vfan-docs',
-        name: 'vfan-docs',
-        nameLink: location.pathname,
-        alias: {
-          // '/.*/_sidebar.md': '/_sidebar.md',
-          '/.*/_navbar.md': '/_navbar.md',
-        },
 
-        // ------------ coverpage ------------
-        coverpage: true,
-        onlyCover: true,
+    <script src="init.js"></script>
 
-        // ------------ navbar ------------
-        loadNavbar: true,
-
-        // ------------ sidebar ------------
-        loadSidebar: true,
-        subMaxLevel: 0,
-
-        // ------------ plugins ------------
-        // https://github.com/mrpotatoes/docsify-toc
-        // toc: {
-        //   scope: '.markdown-section',
-        //   headings: 'h2, h3, h4, h5, h6',
-        //   title: '目录',
-        // },
-        // https://github.com/jperasmus/docsify-copy-code
-        copyCode: {
-          buttonText: '复制',
-          errorText: '复制失败',
-          successText: '复制成功',
-        },
-        // https://jhildenbiddle.github.io/docsify-tabs/
-        tabs: {
-          persist: false,
-          sync: false,
-          theme: 'classic',
-          tabComments: true,
-          tabHeadings: true,
-        },
-      }
-    </script>
-    <!-- docsify4 -->
+    <!-- docsif -->
     <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
     <!-- docsify-themeable -->
@@ -90,16 +48,19 @@
     <!-- zoom-image -->
     <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
-    <!-- 分页导航 -->
+    <!-- pagination -->
     <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 
-    <!-- 侧边栏目录折叠 -->
+    <!-- countable -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+
+    <!-- sidebar-collapse -->
     <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
     <!-- TOC -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-toc/dist/toc.js"></script> -->
 
-    <!-- 代码复制 -->
+    <!-- copy-code -->
     <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 
     <!-- tabs -->
