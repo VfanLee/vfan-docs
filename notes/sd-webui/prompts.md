@@ -43,7 +43,13 @@ indoors, sunlight,
 
 不同的关键词 tag 之间，需要使用英文逗号 `,` 分隔，逗号前后有空格或者换行是没关系的。
 
-ex：`1girl, long hair`
+ex：`1girl, long hair,`
+
+### 混合
+
+WebUi 使用 `|` 分隔多个关键词，实现混合多个要素，注意混合是同等比例混合，同时混。
+
+ex: `1girl, red|blue hair, long hair,`
 
 ### 权重
 
@@ -55,10 +61,13 @@ ex: `(best quality: 1.21)`
 
 #### 写法二
 
-- `(((提示词)))`：每套一层 `()` 括号增强 `1.1` 倍。
-- `[[[提示词]]]`：每套一层 `[]` 减弱 `1.1` 倍。
+`(((提示词)))`：每套一层 `()` 括号增强 `1.1` 倍。
 
-ex: `(best quality), [official wallpaper],`
+ex: `(best quality)`
+
+`[[[提示词]]]`：每套一层 `[]` 减弱 `1.1` 倍。
+
+ex: `[official wallpaper]`
 
 ### 混合
 
