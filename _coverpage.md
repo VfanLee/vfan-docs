@@ -1,7 +1,7 @@
 # Vfan Docs
 
-> 个人文档库
+![logo](./assets/images/avatar_nobg.png ':size=40%')
 
-![logo](./assets/images/avatar_nobg.png ':size=10%')
+> 个人知识库
 
 [学习笔记](README.md)

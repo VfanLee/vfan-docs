@@ -28,7 +28,7 @@ window.$docsify = {
   // ------------ plugins ------------
   // https://docsify.js.org/#/zh-cn/plugins?id=%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2-search
   search: {
-    placeholder: '键入搜索',
+    placeholder: '搜索',
   },
 
   count: {
