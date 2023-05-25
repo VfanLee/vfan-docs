@@ -124,6 +124,21 @@ fill([4, 6, 8, 10], '*', 1, 3)
 // => [4, '*', '*', 10]
 ```
 
+## find
+
+返回满足提供的测试函数的数组中第一个元素的值。否则返回未定义。
+
+```js
+const users = [
+  { user: 'barney', age: 36, active: true },
+  { user: 'fred', age: 40, active: false },
+  { user: 'pebbles', age: 1, active: true },
+]
+
+users.find(o => o.age < 40)
+// => {user: 'barney', age: 36, active: true}
+```
+
 ## findIndex
 
 返回第一个通过 predicate 判断为真值的元素的索引值（index）。
@@ -260,7 +275,7 @@ join(['a', 'b', 'c'], '~')
 
 ## last
 
-获取array中的最后一个元素。
+获取 array 中的最后一个元素。
 
 ```js
 const last = (array) => array[array.length - 1]
@@ -289,6 +304,8 @@ lastIndexOf([1, 2, 1, 2], 2, 2)
 
 ```js
 const nth = (array, index) => array.slice(index)[0]
+
+// or => array.at(index)
 
 const array = ['a', 'b', 'c', 'd']
 

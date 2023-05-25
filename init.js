@@ -1,5 +1,3 @@
-// import search from './config/search'
-
 window.$docsify = {
   el: '#app',
   // repo: 'https://github.com/VfanLee/vfan-docs',
@@ -31,10 +29,11 @@ window.$docsify = {
     placeholder: '搜索',
   },
 
+  // https://github.com/827652549/docsify-count
   count: {
     countable: true,
     fontsize: '0.9em',
-    color: 'rgb(90,90,90)',
+    color: 'rgb(90, 90, 90)',
     language: 'chinese',
   },
 
@@ -60,5 +59,4 @@ window.$docsify = {
     tabComments: true,
     tabHeadings: true,
   },
-  disqus: 'shortname',
 }
