@@ -33,8 +33,7 @@ Lora 触发词
 (best quality: 1.21), (high quality), 
 
 画面主体 >>
-1girl, pink|blue hair, long hair, white cat ears, 
-indoors, sunlight, 
+
 ```
 
 ## Tag 语法
