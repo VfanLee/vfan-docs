@@ -1,6 +1,4 @@
-# 包管理
-
-## 1. apt
+# apt
 
 `apt` 是 **Ubuntu** 的包管理工具。
 
@@ -20,15 +18,3 @@ apt upgrade             # 更新已安装的包
 apt 包索引本质上是一个数据库，其中包含文件 `/etc/apt/sources.list` 和 `/etc/apt/sources.list.d` 目录中定义的存储库中的可用包。
 
 apt 的命令操作记录在 `var/log/dpkg.log` 日志文件中。
-
-## 2. dpkg
-
-Debian 系统上的基本包管理工具。
-
-## 3. yum
-
-CentOS、Red Hat 和 Fedora 等 Linux 发行版上的包管理工具。
-
-## 4. rpm
-
-Red Hat 系统上的基本包管理工具。
