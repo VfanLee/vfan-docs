@@ -62,21 +62,120 @@ execdocker-compose exec [options] [-e KEY=VAL...] [--] SERVICE COMMAND [ARGS...]
 > Compose file 版本与 Docker Engine [版本对应关系](https://docs.docker.com/compose/compose-file/compose-versioning/#compatibility-matrix)
 
 ```yml
-version: "3.8" # Compose file 版本
+version: "3"                # 指定 Compose file 版本
 
-services: # 定义运行的服务
-  servicename: # 服务1名称
-    image: # 指定要使用的 Docker 镜像名称
-    build: # 通过本地 Dockerfile 构建镜像
-      context: # 上下文路径
-      dockerfile: # 指定构建镜像的 Dockerfile 文件名
-    environment: # 相当于 docker run -e
-    volumes: # 相当于 docker run -v
-    ports: # 相当于 docker run -p
-    networks: # 相当于 docker run --network
-    command: # 相当于 docker run <command>
-  servicename2: # 服务2名称
+services:                   # 定义服务
+  web:                      # 服务1名称，如：web
+    depends_on:             # 指定依赖的服务
+    image:                  # 指定要使用的 Docker 镜像名称
+    build:                  # 通过本地 Dockerfile 构建镜像
+      context:              # 上下文路径
+      dockerfile:           # 指定构建镜像的 Dockerfile 文件名
+    environment:            # 相当于 docker run -e
+    volumes:                # 相当于 docker run -v
+    ports:                  # 相当于 docker run -p
+    networks:               # 相当于 docker run --network
+    command:                # 相当于 docker run <command>
+  db:                       # 服务2名称，如：db
 
-volumes: # 相当于 docker volume create
-networks: # 相当于 docker network create
+volumes:                    # 相当于 docker volume create
+networks:                   # 相当于 docker network create
+```
+
+## 前端后分离示例
+
+Dockerfile.web（Vue.js）
+
+```Dockerfile
+ARG NODE_VERSION=18-alpine
+
+FROM node:$NODE_VERSION
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "run", "dev"]
+```
+
+Dockerfile.api（Node.js）
+
+```Dockerfile
+ARG NODE_VERSION=18-alpine
+
+FROM node:$NODE_VERSION
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+CMD ["node", "server.js"]
+```
+
+docker-compose.yml
+
+```yml
+version: "3"
+
+services:
+  web: # 前端服务
+    build:
+      context: ./web
+      dockerfile: Dockerfile.web
+    ports:
+      - "8080:8080"
+    networks:
+      - webnet
+    restart: always
+    depends_on:
+      - api
+
+  api: # 后端服务
+    build:
+      context: ./api
+      dockerfile: Dockerfile.api
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=vue_node_mysql
+      - REDIS_HOST=redis
+    networks:
+      - webnet
+    depends_on:
+      - db
+      - redis
+
+  db: # 数据库服务
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=vue_node_mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - webnet
+
+  redis: # 缓存服务
+    image: redis
+    networks:
+      - webnet
+
+volumes:
+  db-data:
+
+networks:
+  webnet:
 ```
