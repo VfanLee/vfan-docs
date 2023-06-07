@@ -87,11 +87,12 @@ Generate 生图按钮，快捷操作是 `Ctrl + Enter` 或者 `Alt + Enter`。
 
 其下方 5 个按钮由左至依序为：
 
-1. 呼出上次生图使用的设置值。
-2. 清空提示词。
-3. 激活额外网络。
-4. 套用选中的 style。
-5. 保存目前的 style，会保存在 Stable Diffusion Web UI 项目路径下的 styles.csv 文件中。其下方的 Styles 列表即为保存的 style。
+1. 从提示词中读取生成参数,如果提示词为空,则读取上一次的生成参数到用户界面。
+2. 从提示词中读取生成参数,如果提示词为空,则读取上一次的生成参数到用户界面。
+3. 清空提示词。
+4. 激活额外网络。
+5. 套用选中的 style。
+6. 保存目前的 style，会保存在 Stable Diffusion Web UI 项目路径下的 styles.csv 文件中。其下方的 Styles 列表即为保存的 style。
 
 ## 生图结果区
 

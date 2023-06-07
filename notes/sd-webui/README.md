@@ -11,7 +11,7 @@
 3. 下载 stable-diffusion-webui 存储库，例如通过运行 `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`。
 4. 以正常、非管理员、用户身份从 Windows 资源管理器运行 webui-user.bat。
 
-## SD WebUI 界面介绍
+## SD WebUI 界面
 
 `Stable Diffusion 模型(ckpt)/Stable Diffusion checkpoint`：当前使用的模型。
 
@@ -55,13 +55,8 @@
 
 常见模型下载网站：
 
+- [civitai](https://civitai.com)
 - [HuggingFace](https://huggingface.co/models?other=stable-diffusion)
-- [civitai](https://civitai.com/)
-
-## SD-WebUI 插件
-
-- [汉化](https://github.com/VinsonLaro/stable-diffusion-webui-chinese)
-- [Tag 自动补全](https://github.com/DominikDoom/a1111-sd-webui-tagcomplete)
 
 ## 其他 AI 绘图软件
 

@@ -89,7 +89,10 @@ Git 设置 SSH。
 
 - [微PE](https://www.wepe.com.cn/download.html)
 - [图吧工具箱](http://www.tbtool.cn/)
-- [Windows 激活工具](https://github.com/zbezj/HEU_KMS_Activator/releases)
-- [Win11 右键菜单](https://www.sordum.org/14479/windows-11-classic-context-menu-v1-1/)
+- Windows/Office 激活工具
+  - [HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)
+  - [CMWTAT_Digital_Edition](https://github.com/TGSAN/CMWTAT_Digital_Edition)
+  - [Office-Tool](https://github.com/YerongAI/Office-Tool)
+- [win11 右键菜单](https://www.sordum.org/14479/windows-11-classic-context-menu-v1-1/)
 - [Windows 远程桌面](https://github.com/stascorp/rdpwrap)
 - [网盘挂载](https://github.com/alist-org/alist)
