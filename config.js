@@ -20,8 +20,8 @@ window.$docsify = {
   // ------------ sidebar ------------
   // hideSidebar: true,
   loadSidebar: true,
-  maxLevel: 2,
-  subMaxLevel: 0,
+  // maxLevel: 1,
+  // subMaxLevel: 0,
 
   // ------------ plugins ------------
   // https://docsify.js.org/#/zh-cn/plugins?id=%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2-search
@@ -38,11 +38,11 @@ window.$docsify = {
   },
 
   // https://github.com/mrpotatoes/docsify-toc
-  // toc: {
-  //   scope: '.markdown-section',
-  //   headings: 'h2, h3, h4, h5, h6',
-  //   title: '目录',
-  // },
+  toc: {
+    scope: '.markdown-section',
+    headings: 'h2, h3, h4, h5, h6',
+    title: 'Contents',
+  },
 
   // https://github.com/jperasmus/docsify-copy-code
   copyCode: {

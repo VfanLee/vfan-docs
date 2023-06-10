@@ -1,7 +1,11 @@
-# Vfan Docs
+<img src="./assets/images/avatar_nobg.png" style="width: 200px; height: 200px;" />
 
-![logo](./assets/images/avatar_nobg.png ':size=40%')
+# Vfan Lee's Docs
 
-> 个人知识库
+> 记录、总结、备忘
 
-[学习笔记](README.md)
+- 记录前端技术
+- 记录辅助技术
+- 记录日常零散
+
+[Let's Start](/front-end/html/字符实体.md)

@@ -1,6 +1,11 @@
-- [学习笔记](README.md)
-- 快速参考
-  - [数组处理](docs/javascript/reference/reference_array.md)
-  - [字符处理](docs/javascript/reference/reference_string.md)
-  - [对象处理](docs/javascript/reference/reference_object.md)
-  - [函数处理](docs/javascript/reference/reference_function.md)
+- [Front-End](/front-end/css/书写顺序.md)
+
+- JS Snippet
+  - [array](/snippet/array.md)
+  - [string](/snippet/string.md)
+  - [object](/snippet/object.md)
+  - [function](/snippet/function.md)
+
+- [full-stack](/full-stack/computer-basis/计算机基本组成.md)
+
+- [随记](/articles/machine/app.md)

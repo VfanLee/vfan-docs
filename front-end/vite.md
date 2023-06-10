@@ -1,6 +1,6 @@
 # Vite
 
-> vite 配置：https://vitejs.dev/config/
+> vite 配置：https://vitejs.dev/config/  
 > 当前版本：v4
 
 ## 设置全局 sass 变量
