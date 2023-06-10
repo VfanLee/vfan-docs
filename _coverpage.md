@@ -8,4 +8,4 @@
 - 记录辅助技术
 - 记录日常零散
 
-[Let's Start](/front-end/html/字符实体.md)
+[Let's Start](/front-end/css/书写顺序.md)

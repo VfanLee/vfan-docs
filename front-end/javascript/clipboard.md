@@ -1,4 +1,4 @@
-# clipboard 剪切板
+# Clipboard 剪切板
 
 剪贴板 Clipboard API 为 Navigator 接口添加了只读属性 clipboard，该属性返回一个可以读写剪切板内容的 Clipboard 对象。在 Web 应用中，Clipboard API 可用于实现剪切、复制、粘贴的功能。
 

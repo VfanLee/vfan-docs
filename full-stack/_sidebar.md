@@ -2,12 +2,15 @@
   - [计算机基本组成](/full-stack/computer-basis/计算机基本组成.md)
 
 - 计算机网络
-  - [协议](/full-stack/computer-network/协议)
+  - [URL](/full-stack/computer-network/URL.md)
+  - [协议](/full-stack/computer-network/协议.md)
+  - [DNS](/full-stack/computer-network/DNS.md)
+
+- [Git](/full-stack/git.md)
 
 - Ubuntu
-  - [介绍](/full-stack/ubuntu/)
   - [快捷操作](/full-stack/ubuntu/快捷操作.md)
-  - [包管理](/full-stack/ubuntu/包管理.md)
+  - [apt](/full-stack/ubuntu/apt.md)
   - [文件和目录管理](/full-stack/ubuntu/文件和目录管理.md)
   - [用户和权限管理](/full-stack/ubuntu/用户和权限管理.md)
   - [网络管理](/full-stack/ubuntu/网络管理.md)
@@ -25,7 +28,7 @@
   - [Image](/full-stack/docker/image.md)
   - [Volume](/full-stack/docker/volume.md)
   - [Network](/full-stack/docker/network.md)
-  - [Dockerfile](/full-stack/docker/dockerfile/)
+  - [Dockerfile](/full-stack/docker/dockerfile.md)
   - [Docker Compose](/full-stack/docker/docker-compose.md)
 
 - Node.js
@@ -48,6 +51,8 @@
     - [存储过程](/full-stack/database/mysql/存储过程.md)
     - [流程控制结构](/full-stack/database/mysql/流程控制结构.md)
 
-- [Git](/full-stack/git.md)
-
 - [正则表达式](/full-stack/regular.md)
+
+- Deploy
+  - [建站准备](/full-stack/deploy/建站准备.md)
+  - [SSL 证书申请](/full-stack/deploy/SSL证书申请.md)
