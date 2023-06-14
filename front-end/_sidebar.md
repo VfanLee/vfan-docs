@@ -7,7 +7,8 @@
   - [CSS 设计模式](/front-end/css/设计模式.md)
   - [媒体查询](/front-end/css/媒体查询.md)
   - [关键字](/front-end/css/关键字.md)
-  - [阴影](/front-end/css/阴影.md)
+  - [shadow](/front-end/css/shadow.md)
+  - [background](/front-end/css/background.md)
 
 - JavaScript
   - [位运算](/front-end/javascript/位运算.md)
@@ -17,7 +18,10 @@
   - [模块化](/front-end/javascript/模块化.md)
   - [Fetch](/front-end/javascript/fetch.md)
   - [上传文件](/front-end/javascript/上传文件.md)
-  - [Clipboard](/front-end/javascript/Clipboard.md)
+  - [剪切板](/front-end/javascript/剪切板.md)
+  - [DOM](/front-end/javascript/DOM.md)
+  - [BOM](/front-end/javascript/BOM.md)
+  - [大小/位置](/front-end/javascript/大小位置.md)
 
 - Vue
   - [基本使用](/front-end/vue/基本使用.md)
