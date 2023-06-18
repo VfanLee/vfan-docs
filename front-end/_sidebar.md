@@ -14,14 +14,17 @@
   - [位运算](/front-end/javascript/位运算.md)
   - [数据类型](/front-end/javascript/数据类型.md)
   - [this](/front-end/javascript/this.md)
-  - [RegExp](/front-end/javascript/RegExp.md)
+  - [OOP](/front-end/javascript/OOP.md)
   - [模块化](/front-end/javascript/模块化.md)
+  - [RegExp](/front-end/javascript/RegExp.md)
   - [Fetch](/front-end/javascript/fetch.md)
   - [上传文件](/front-end/javascript/上传文件.md)
   - [剪切板](/front-end/javascript/剪切板.md)
   - [DOM](/front-end/javascript/DOM.md)
   - [BOM](/front-end/javascript/BOM.md)
-  - [大小/位置](/front-end/javascript/大小位置.md)
+  - [大小位置](/front-end/javascript/大小位置.md)
+
+- [Canvas](/front-end/canvas.md)
 
 - Vue
   - [基本使用](/front-end/vue/基本使用.md)
@@ -36,12 +39,12 @@
     - [01](/front-end/vue/vue2-notes/01.md)
     - [Element UI](/front-end/vue/vue2-notes/elementui.md)
 
-- React
-  - [基本使用](/front-end/react/基本使用.md)
-
 - 构建工具
   - [webpack](/front-end/webpack.md)
   - [vite](/front-end/vite.md)
+
+- React
+  - [基本使用](/front-end/react/基本使用.md)
 
 - typescript
   - [数据类型](/front-end/typescript/数据类型.md)

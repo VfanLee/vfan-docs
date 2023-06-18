@@ -56,3 +56,7 @@
 - 导航到浏览器历史记录中的上一个页面：`window.history.back()`
 - 导航到浏览器历史记录中的下一个页面：`window.history.forward()`
 - 加载 history 列表中的某个具体页面：`window.history.go()`
+
+## 其他
+
+- 使元素被用户可见：[`scrollIntoView()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollIntoView)

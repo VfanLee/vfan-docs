@@ -6,6 +6,6 @@
   - [object](/snippet/object.md)
   - [function](/snippet/function.md)
 
-- [技术辅助](/full-stack/computer-basis/计算机基本组成.md)
+- [技术辅助](/full-stack/git.md)
 
 - [随记](/articles/machine/app.md)

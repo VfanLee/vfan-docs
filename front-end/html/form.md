@@ -32,8 +32,8 @@
 
 ## 下拉列表
 
-> [mdn select](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select)  
-> [mdn option](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/option)
+> [MDN select](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select)  
+> [MDN option](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/option)
 
 下拉列表需要 select 和 option 共同使用。
 
@@ -49,7 +49,7 @@
 
 ## textarea 多行文本
 
-> [mdn textarea](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea)
+> [MDN textarea](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea)
 
 属性：
 

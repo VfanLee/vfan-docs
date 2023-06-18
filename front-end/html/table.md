@@ -1,27 +1,19 @@
 # Table 表格
 
-```
-table
-thead
-tbody
-tfoot
-tr
-th
-td
-```
+## 单元格合并
 
 - colspan：合并列
 - rowspan：合并行
+
+## 样式
+
+- `border-spacing: 0;`
+- `border-collapse: collapse;`
 
 ## colgroup
 
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col
-
-## 样式
-
-- border-spacing: 0;
-- border-collapse: collapse;
 
 ## DOM 操作
 
@@ -48,24 +40,24 @@ td
     </tr>
   </tbody>
 </table>
+```
 
-<script>
-  const allTables = document.querySelectorAll('table')
-  for (const table of allTables) {
-    const tBody = table.tBodies[0]
-    const rows = Array.from(tBody.rows)
-    const headerCells = table.tHead.rows[0].cells
-    for (const th of headerCells) {
-      const cellIndex = th.cellIndex
-      th.addEventListener('click', () => {
-        rows.sort((tr1, tr2) => {
-          const tr1Text = tr1.cells[cellIndex].textContent
-          const tr2Text = tr2.cells[cellIndex].textContent
-          return tr1Text.localeCompare(tr2Text)
-        })
-        tBody.append(...rows)
+```js
+const allTables = document.querySelectorAll('table')
+for (const table of allTables) {
+  const tBody = table.tBodies[0]
+  const rows = Array.from(tBody.rows)
+  const headerCells = table.tHead.rows[0].cells
+  for (const th of headerCells) {
+    const cellIndex = th.cellIndex
+    th.addEventListener('click', () => {
+      rows.sort((tr1, tr2) => {
+        const tr1Text = tr1.cells[cellIndex].textContent
+        const tr2Text = tr2.cells[cellIndex].textContent
+        return tr1Text.localeCompare(tr2Text)
       })
-    }
+      tBody.append(...rows)
+    })
   }
-</script>
+}
 ```
