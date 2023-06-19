@@ -17,7 +17,6 @@
   - [OOP](/front-end/javascript/OOP.md)
   - [模块化](/front-end/javascript/模块化.md)
   - [RegExp](/front-end/javascript/RegExp.md)
-  - [Fetch](/front-end/javascript/fetch.md)
   - [上传文件](/front-end/javascript/上传文件.md)
   - [剪切板](/front-end/javascript/剪切板.md)
   - [BOM](/front-end/javascript/BOM.md)
