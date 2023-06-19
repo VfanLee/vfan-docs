@@ -72,9 +72,9 @@ el.previousElementSibling
 el.nextElementSibling
 ```
 
-### Closest
+### closest
 
-Closest 获得匹配选择器的第一个祖先元素，从当前元素开始沿 DOM 树向上。
+获得匹配选择器的第一个祖先元素，从当前元素开始沿 DOM 树向上。
 
 ```js
 el.closest(selector)
