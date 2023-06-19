@@ -20,7 +20,6 @@
   - [Fetch](/front-end/javascript/fetch.md)
   - [上传文件](/front-end/javascript/上传文件.md)
   - [剪切板](/front-end/javascript/剪切板.md)
-  - [DOM](/front-end/javascript/DOM.md)
   - [BOM](/front-end/javascript/BOM.md)
   - [大小位置](/front-end/javascript/大小位置.md)
 

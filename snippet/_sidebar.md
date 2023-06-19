@@ -1,4 +1,0 @@
-- [arrary](/snippet/array.md)
-- [string](/snippet/string.md)
-- [object](/snippet/object.md)
-- [function](/snippet/function.md)
