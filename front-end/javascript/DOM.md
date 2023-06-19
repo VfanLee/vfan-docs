@@ -8,10 +8,13 @@
 - 通过 CSS 选择器获取单个元素：`document.querySelector('css_selector')`
 - 通过 CSS 选择器获取多个元素：`document.querySelectorAll('css_selector')`
 
-## 元素属性与内容
+## 元素内容
 
 - 获取或设置元素的文本内容：`element.textContent`、`element.innerText`
 - 获取或设置元素的 HTML 内容：`element.innerHTML`
+
+## 元素属性
+
 - 获取或设置元素属性：`element.property`
 - 获取元素的属性：`element.getAttribute('attribute')`
 - 设置元素的属性：`element.setAttribute('attribute', 'value')`
@@ -29,21 +32,26 @@
 - 替换类名：`element.classList.replace('classname', 'classname')`
 - 检查元素是否具有某个类名：`element.classList.contains('classname')`
 
-## 元素创建与插入
+## 元素创建 && 克隆
 
 - 创建新的文本节点：`document.createTextNode('text')`
 - 创建新的元素节点：`document.createElement('tagname')`
-- 克隆元素：`element.cloneNode(true)`、`element.cloneNode(false)`
-- 插入元素作为子节点：`parentElement.appendChild(newElement)`
-- 在元素之前插入新元素：`parentElement.insertBefore(newElement, referenceElement)`
+- 克隆元素：`element.cloneNode(true)`
 
-## 元素删除与替换
+## 元素插入
+
+- 插入到第一个子节点之前：`parentElement.prepend(newNode)`
+- 插入到最后一个子节点之后：`parentElement.append(newNode)`
+- 在元素之前插入新元素：`parentElement.insertBefore(newElement, referenceElement)`
+- 在元素之后插入新元素：`parentElement.appendChild(newElement)`
+
+## 元素删除 && 替换
 
 - 删除节点：`element.remove()`
 - 移除子节点：`parentElement.removeChild(element)`
 - 替换节点：`parentElement.replaceChild(newElement, oldElement)`
 
-## 元素遍历与查询
+## 元素遍历
 
 - 获取父元素节点：`element.parentNode`
 - 获取父元素元素：`element.parentElement`
