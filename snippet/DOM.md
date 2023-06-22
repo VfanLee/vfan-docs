@@ -1,12 +1,43 @@
 # DOM Manipulation
 
+> **元素** 是一种特殊的节点，是元素节点 (Node.ELEMENT_NODE) 的简称，它由 HTML 文档中的标签表示。例如，`<div>`，`<p>`，`<span>` 都是元素。
+>
+> **节点** 是一个更广泛的概念，它包括元素节点，文本节点 (Node.TEXT_NODE) ，注释节点 (Node.COMMENT_NODE) ，文档节点 (Node.DOCUMENT_NODE) 等。例如，`<div>` 是一个元素节点，“Hello” 是一个文本节点，`<!-- comment -->` 是一个注释节点。
+
 ## 选择器
+
+### 获取文档对象 `document`
+
+```js
+document
+```
+
+### 获取文档对象的根元素
+
+```js
+document.documentElement
+```
+
+### 获取 `<body>`
+
+```js
+document.body
+```
+
+### 获取 `<iframe>` 内的 `document`
+
+```js
+iframeEl.contentDocument
+```
 
 ### 选择器查询
 
 ```js
-document.querySelector('selector') // 查询单个
-document.querySelectorAll('selector') // 查询多个
+// 查询单个
+document.querySelector('selector')
+
+// 查询多个
+document.querySelectorAll('selector')
 ```
 
 ### class 查询
@@ -39,42 +70,38 @@ document.querySelectorAll('a[target=_blank]')
 ### 后代查询
 
 ```js
-el.querySelectorAll('li')
+// 查询单个
+el.querySelector('selector')
+
+// 查询多个
+el.querySelectorAll('selector')
 ```
 
-### 兄弟元素
+### 获取上一个元素
 
-```js
-[...el.parentNode.children].filter((child) =>
-  child !== el
-)
-
-// or
-Array.from(el.parentNode.children).filter((child) =>
-  child !== el
-)
-
-// or
-Array.prototype.filter.call(el.parentNode.children, (child) =>
-  child !== el
-)
-```
-
-### 上一个元素
+> `el.previousSibling` 获取上一个节点
 
 ```js
 el.previousElementSibling
 ```
 
-### 下一个元素
+### 获取下一个元素
+
+> `el.nextSibling` 获取下一个节点
 
 ```js
 el.nextElementSibling
 ```
 
-### closest
+### 获取父级元素
 
-获得匹配选择器的第一个祖先元素，从当前元素开始沿 DOM 树向上。
+> `el.parentNode` 获取父级节点
+
+```js
+el.parentElement
+```
+
+### 获取最近的匹配的祖先元素
 
 ```js
 el.closest(selector)
@@ -94,47 +121,46 @@ function closest(el, selector) {
 }
 ```
 
-### parentsUntil
-
-获取当前每一个匹配元素集的祖先，不包括匹配元素的本身。
+### 获取兄弟元素
 
 ```js
-function parentsUntil(el, selector, filter) {
-  const result = []
-  const matchesSelector = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector
+[...el.parentNode.children].filter(child => child !== el)
 
-  // match start from parent
-  el = el.parentElement
-  while (el && !matchesSelector.call(el, selector)) {
-    if (!filter) {
-      result.push(el)
-    } else {
-      if (matchesSelector.call(el, filter)) {
-        result.push(el)
-      }
-    }
-    el = el.parentElement
-  }
-  return result
-}
+// or
+Array.from(el.parentNode.children).filter(child => child !== el)
+
+// or
+Array.prototype.filter.call(el.parentNode.children, child => child !== el)
 ```
 
-### 获取 iframe 内的 document
+### 获取子元素集合
+
+> `el.childrenNodes` 获取子节点集合
 
 ```js
-iframeEl.contentDocument
+el.children
 ```
 
-### 获取 body
+### 获取第一个子元素
+
+> `el.firstChild` 获取第一个子节点
 
 ```js
-document.body
+el.firstElementChild
 ```
 
-### 获取文档对象
+### 获取最后一个子元素
+
+> `el.lastChild` 获取最后一个子节点
 
 ```js
-document.documentElement
+el.lastElementChild
+```
+
+### 是否匹配指定的选择器
+
+```js
+el.matches(selector)
 ```
 
 ## 属性
@@ -151,14 +177,16 @@ el.getAttribute('foo')
 el.setAttribute('foo', 'bar')
 ```
 
-### 获取 `data-` 属性
+### 删除属性
 
 ```js
-// or
-el.getAttribute('data-foo')
+el.removeAttribute('foo')
+```
 
-// or
-el.dataset['foo']
+### 检查元素是否具有某个属性
+
+```js
+el.hasAttribute('foo')
 ```
 
 ## Style & Class
@@ -166,8 +194,8 @@ el.dataset['foo']
 ### 获取 Style
 
 ```js
-const win = el.ownerDocument.defaultView // 此处为了解决当 style 值为 auto 时，返回 auto 的问题
-win.getComputedStyle(el, null).color // null 的意思是不返回伪类元素
+const win = el.ownerDocument.defaultView // 解决当 style 值为 auto 时，返回 auto 的问题
+win.getComputedStyle(el, null).color // null 表示不返回伪类元素
 ```
 
 ### 设置 Style
@@ -176,28 +204,48 @@ win.getComputedStyle(el, null).color // null 的意思是不返回伪类元素
 el.style.color = '#ff0011'
 ```
 
-### 添加 class
+### 获取 Class
 
 ```js
-el.classList.add(className)
+// 数组形式
+el.classList
+
+// 字符串形式
+el.className
 ```
 
-### 移除 class
+### 添加 Class
 
 ```js
-el.classList.remove(className)
+el.classList.add(className) // 添加单个
+el.classList.add("foo", "bar", "baz") // 添加多个
+el.classList.add(["foo", "bar", "baz"]) // 添加多个
 ```
 
-### 是否包含 class
+### 移除 Class
 
 ```js
-el.classList.contains(className)
+el.classList.remove(className) // 移除单个
+el.classList.remove("foo", "bar", "baz") // 移除多个
+el.classList.remove(["foo", "bar", "baz"]) // 移除多个
 ```
 
-### 切换 class
+### 切换 Class
 
 ```js
 el.classList.toggle(className)
+```
+
+### 替换某个 Class
+
+```js
+el.classList.replace('show', 'hide')
+```
+
+### 是否包含某个 Class
+
+```js
+el.classList.contains(className)
 ```
 
 ## Width & Height
@@ -279,19 +327,9 @@ function getOffset (el) {
 (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop
 ```
 
-## DOM 操作
+## Text & HTML
 
-### 从 DOM 中移除元素
-
-```js
-// Native
-el.parentNode.removeChild(el)
-
-// or
-el.remove()
-```
-
-### 返回指定元素及其后代的文本内容
+### 获取元素及后代的文本内容
 
 ```js
 el.textContent
@@ -303,72 +341,84 @@ el.textContent
 el.textContent = string
 ```
 
-### 获取 HTML
+### 获取 HTML 内容
 
 ```js
 el.innerHTML
 ```
 
-### 设置 HTML
+### 设置 HTML 内容
 
 ```js
 el.innerHTML = htmlString
 ```
 
-### 插入到子节点的末尾
+## DOM 处理
+
+### 元素自身的前面插入新元素
 
 ```js
-el.insertAdjacentHTML('beforeend', '<div id="container">Hello World</div>')
+el.insertAdjacentHTML('beforebegin', '<div id="container">Hello World</div>')
 
 // or
-el.appendChild(newEl)
+el.insertAdjacentElement('beforebegin', newEl)
+
+// or
+el.parentNode.insertBefore(newEl, el)
 ```
 
-### 插入元素内部的第一个子节点之前
+### 元素内部的第一个子节点之前插入新元素
 
 ```js
 el.insertAdjacentHTML('afterbegin', '<div id="container">Hello World</div>')
 
 // or
-el.insertBefore(newEl, el.firstChild)
-```
-
-### 在选中元素前插入新节点
-
-```js
-el.insertAdjacentHTML('beforebegin ', '<div id="container">Hello World</div>')
+el.insertAdjacentElement('afterbegin', newEl)
 
 // or
-const el = document.querySelector(selector)
-if (el.parentNode) {
-  el.parentNode.insertBefore(newEl, el)
-}
+el.insertBefore(newEl, el.firstChild)
+
+// or
+el.prepend(newNode)
 ```
 
-### 在选中元素后插入新节点
+### 元素内部的最后一个子节点之后插入新元素
+
+```js
+el.insertAdjacentHTML('beforeend', '<div id="container">Hello World</div>')
+
+// or
+el.insertAdjacentElement('beforeend', newEl)
+
+// or
+el.append(newEl)
+```
+
+### 元素自身的后面插入新元素
 
 ```js
 el.insertAdjacentHTML('afterend', '<div id="container">Hello World</div>')
 
 // or
-const el = document.querySelector(selector)
-if (el.parentNode) {
-  el.parentNode.insertBefore(newEl, el.nextSibling)
-}
+el.insertAdjacentElement('afterend', newEl)
+
+// or
+el.parentNode.insertBefore(newEl, el.nextSibling)
 ```
 
-### 是否匹配给定的选择器
+### 替换元素
 
 ```js
-el.matches(selector)
+parentNode.replaceChild(newChild, oldChild)
 ```
 
-### 拷贝被选元素
-
-深拷贝元素包括：生成被选元素的副本，包含子节点、文本和属性。
+### 移除元素
 
 ```js
-el.cloneNode() // 深拷贝添加参数'true'
+el.remove()
+
+// or
+el.parentNode.removeChild(el)
 ```
 
 ### 移除所有子节点
@@ -377,54 +427,62 @@ el.cloneNode() // 深拷贝添加参数'true'
 el.innerHTML = ''
 ```
 
-### 把每个被选元素放置在指定的HTML结构中
+### 克隆节点
 
 ```js
-Array.from(document.querySelectorAll('.inner')).forEach((el) => {
-  const wrapper = document.createElement('div')
-  wrapper.className = 'wrapper'
-  el.parentNode.insertBefore(wrapper, el)
-  el.parentNode.removeChild(el)
-  wrapper.appendChild(el)
-})
+el.cloneNode(true) // true 代表进行深拷贝（生成被选元素的副本，包含子节点、文本和属性）
 ```
 
-### 移除被选元素的父元素的DOM结构
+### 判断元素是否包含指定的节点
 
 ```js
-Array.prototype.forEach.call(document.querySelectorAll('.inner'), (el) => {
-  let elParentNode = el.parentNode
+el.contains(node)
+```
 
-  if(elParentNode !== document.body) {
-      elParentNode.parentNode.insertBefore(el, elParentNode)
-      elParentNode.parentNode.removeChild(elParentNode)
+## 事件处理
+
+### 标签事件
+
+```html
+<button onclick="handleClick()">Btn</button>
+
+<script>
+  const handleClick = function () {
+    console.log('btn click')
   }
-})
+</script>
 ```
 
-### 用指定的元素替换被选的元素
+### onXXX
 
-```js
-Array.prototype.forEach.call(document.querySelectorAll('.inner'),(el) => {
-  const outer = document.createElement("div")
-  outer.className = "outer"
-  el.parentNode.insertBefore(outer, el)
-  el.parentNode.removeChild(el)
-})
+```html
+<button id="btn">btn</button>
+
+<script>
+  const btn = document.querySelector('#btn')
+  btn.onclick = function () {
+    console.log('btn click')
+  }
+</script>
 ```
 
-### 解析 HTML/SVG/XML 字符串
+### [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 
-```js
-range = document.createRange()
-parse = range.createContextualFragment.bind(range)
+```html
+<button id="btn">btn</button>
 
-parse(`<ol>
-  <li>a</li>
-  <li>b</li>
-</ol>
-<ol>
-  <li>c</li>
-  <li>d</li>
-</ol>`)
+<script>
+  const btn = document.querySelector('#btn')
+  const handleClick = function () {
+    console.log('btn click')
+  }
+  btn.addEventListener('click', handleClick) // 添加事件监听器
+  btn.removeEventListener('click', handleClick) // 移除事件监听器
+</script>
 ```
+
+### 事件对象
+
+- 阻止事件传播：`event.stopPropagation()`
+- 阻止默认行为：`event.preventDefault()`
+- 事件触发元素：`event.target`
