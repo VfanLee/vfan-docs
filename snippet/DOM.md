@@ -77,21 +77,7 @@ el.querySelector('selector')
 el.querySelectorAll('selector')
 ```
 
-### 获取上一个元素
-
-> `el.previousSibling` 获取上一个节点
-
-```js
-el.previousElementSibling
-```
-
-### 获取下一个元素
-
-> `el.nextSibling` 获取下一个节点
-
-```js
-el.nextElementSibling
-```
+## 遍历
 
 ### 获取父级元素
 
@@ -104,9 +90,6 @@ el.parentElement
 ### 获取最近的匹配的祖先元素
 
 ```js
-el.closest(selector)
-
-// or
 function closest(el, selector) {
   const matchesSelector = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector
 
@@ -119,6 +102,9 @@ function closest(el, selector) {
   }
   return null
 }
+
+// or
+el.closest(selector)
 ```
 
 ### 获取兄弟元素
@@ -131,6 +117,22 @@ Array.from(el.parentNode.children).filter(child => child !== el)
 
 // or
 Array.prototype.filter.call(el.parentNode.children, child => child !== el)
+```
+
+### 获取上一个兄弟元素
+
+> `el.previousSibling` 获取上一个兄弟节点
+
+```js
+el.previousElementSibling
+```
+
+### 获取下一个兄弟元素
+
+> `el.nextSibling` 获取下一个兄弟节点
+
+```js
+el.nextElementSibling
 ```
 
 ### 获取子元素集合
@@ -364,7 +366,7 @@ el.insertAdjacentHTML('beforebegin', '<div id="container">Hello World</div>')
 el.insertAdjacentElement('beforebegin', newEl)
 
 // or
-el.parentNode.insertBefore(newEl, el)
+el.parentNode.insertBefore(newNode, el)
 ```
 
 ### 元素内部的第一个子节点之前插入新元素
@@ -376,7 +378,7 @@ el.insertAdjacentHTML('afterbegin', '<div id="container">Hello World</div>')
 el.insertAdjacentElement('afterbegin', newEl)
 
 // or
-el.insertBefore(newEl, el.firstChild)
+el.insertBefore(newNode, el.firstChild)
 
 // or
 el.prepend(newNode)
@@ -391,7 +393,7 @@ el.insertAdjacentHTML('beforeend', '<div id="container">Hello World</div>')
 el.insertAdjacentElement('beforeend', newEl)
 
 // or
-el.append(newEl)
+el.append(newNode)
 ```
 
 ### 元素自身的后面插入新元素
@@ -403,7 +405,7 @@ el.insertAdjacentHTML('afterend', '<div id="container">Hello World</div>')
 el.insertAdjacentElement('afterend', newEl)
 
 // or
-el.parentNode.insertBefore(newEl, el.nextSibling)
+el.parentNode.insertBefore(newNode, el.nextSibling)
 ```
 
 ### 替换元素
