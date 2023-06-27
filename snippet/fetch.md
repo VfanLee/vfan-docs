@@ -1,9 +1,11 @@
 # Fetch
 
+> 参考于：[Fetch 文档](https://developer.mozilla.org/zh-CN/docs/Web/API/fetch)
+
 ## 获取 JSON 数据
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/users')
+fetch('https://jsonplaceholder.typicode.com/posts')
   .then(response => response.json())
   .then(data => {
     console.log(data)
@@ -14,7 +16,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 ## 获取 Text 数据
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/users')
+fetch('https://jsonplaceholder.typicode.com/posts')
   .then(response => response.text())
   .then(data => {
     console.log(data)
@@ -24,9 +26,21 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 ## 自定义请求头
 
+请求的头信息，形式为 [Headers](https://developer.mozilla.org/zh-CN/docs/Web/API/Headers) 的对象或包含 [ByteString](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) 值的对象字面量。
+
 ```js
-fetch('https://jsonplaceholder.typicode.com/users', {
+fetch('https://jsonplaceholder.typicode.com/posts', {
   headers: new Headers({ 'custom-header': 'foo' }),
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => console.error(error))
+
+// or
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  headers: { 'custom-header': 'foo' },
 })
   .then(response => response.json())
   .then(data => {
@@ -38,7 +52,7 @@ fetch('https://jsonplaceholder.typicode.com/users', {
 ## HTTP 错误处理
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/vfan')
+fetch('https://jsonplaceholder.typicode.com/vfanlee')
   .then(response => (response.ok ? response.json() : Promise.reject(new Error('Failed to load data from server'))))
   .then(data => console.log(data))
   .catch(error => console.error(error))
@@ -47,7 +61,7 @@ fetch('https://jsonplaceholder.typicode.com/vfan')
 ## CORS
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/users', {
+fetch('https://jsonplaceholder.typicode.com/posts', {
   credentials: 'include',
 })
   .then(response => response.json())
@@ -63,7 +77,7 @@ const data = {
   password: 'PASSWORD',
 }
 
-fetch('https://jsonplaceholder.typicode.com/users', {
+fetch('https://jsonplaceholder.typicode.com/posts', {
   credentials: 'same-origin',
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
@@ -91,7 +105,7 @@ fetch('https://jsonplaceholder.typicode.com/users', {
 document.querySelector('#form').addEventListener('submit', function (e) {
   e.preventDefault()
   const formdata = new FormData(e.target)
-  fetch('https://jsonplaceholder.typicode.com/users', {
+  fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
     body: formdata,
   })

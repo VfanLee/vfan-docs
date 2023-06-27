@@ -5,10 +5,10 @@
 - CSS
   - [书写顺序](/front-end/css/书写顺序.md)
   - [CSS 设计模式](/front-end/css/设计模式.md)
+  - [CSS 简写属性](/front-end/css/简写属性.md)
   - [媒体查询](/front-end/css/媒体查询.md)
-  - [关键字](/front-end/css/关键字.md)
   - [shadow](/front-end/css/shadow.md)
-  - [background](/front-end/css/background.md)
+  - [background-clip](/front-end/css/background-clip.md)
 
 - JavaScript
   - [位运算](/front-end/javascript/位运算.md)
@@ -20,7 +20,8 @@
   - [上传文件](/front-end/javascript/上传文件.md)
   - [剪切板](/front-end/javascript/剪切板.md)
   - [BOM](/front-end/javascript/BOM.md)
-  - [大小位置](/front-end/javascript/大小位置.md)
+  - [offset_client_scroll](/front-end/javascript/offset_client_scroll.md)
+  - [鼠标位置](/front-end/javascript/鼠标位置.md)
 
 - [Canvas](/front-end/canvas.md)
 
