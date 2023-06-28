@@ -64,6 +64,7 @@ var obj = {
 
 foo(obj.bar) // window
 ```
+
 ```js
 function foo() {
   console.log(this)
@@ -78,8 +79,11 @@ var bar = obj1.foo
 
 bar() // window
 ```
-### 1.2. **隐式绑定**
+
+### 1.2. 隐式绑定
+
 当函数通过某个对象进行调用时，该对象内部一定有一个引用指向指向这个函数，间接性地将 this 绑定到了一个对象上，所以 this 指向的就是这个对象。
+
 ```js
 function foo() {
   console.log(this)
@@ -97,12 +101,15 @@ var obj2 = {
 
 obj2.obj.foo() // obj1
 ```
-### 1.3. **显式绑定**
+
+### 1.3. 显式绑定
+
 顾名思义，调用函数时，显式地将 this 的引用绑定到某个对象上。在函数调用时有 3 个方法可以显式地绑定某个对象：
 
-- **call(obj, arg1, arg2 ...)**：参数一为指定的对象，后续参数为调用函数所需要的参数，[了解更多](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)。
-- **apply(obj, [arg1, arg2])**：与 call() 相似，参数一为指定的对象，参数二就是将所需要的参数统一放在一个数组中，[了解更多](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)。
-- **bind(obj)**：与 call() 相似，甚至说传参的方式都一样，但不同的是，call() 调用后会执行，而 bind() 会返回一个新的函数，这个函数需要手动执行，**且该函数的 this 始终为指定的对象**，[了解更多](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)。
+- [call(obj, arg1, arg2 ...)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)：参数一为指定的对象，后续参数为调用函数所需要的参数。
+- [apply(obj, [arg1, arg2])](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)：与 call() 相似，参数一为指定的对象，参数二就是将所需要的参数统一放在一个数组中。
+- [bind(obj)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)：与 call() 相似，甚至说传参的方式都一样，但不同的是，call() 调用后会执行，而 bind() 会返回一个新的函数，这个函数需要手动执行，**且该函数的 this 始终为指定的对象**。
+
 ```js
 function foo(num1, num2, num3) {
   console.log(this, num1 + num2 + num3)
@@ -125,13 +132,16 @@ func() // String {'233'}
 var fn = bar.bind('886')
 fn(8, 8, 6) // String {'886'}
 ```
-### 1.4. **new 绑定**
+
+### 1.4. new 绑定
+
 在 JavaScript 中，函数可以作为一个对象的构造函数，在 new 调用函数时，会执行如下操作：
 
 1. 创建一个全新的对象实例；
 2. 这个对象会与 prototype 连接；
 3. **函数调用的 this 会绑定到这个新对象上**。
 4. 如果函数没有返回其他对象，那么表达式会返回这个新对象。
+
 ```js
 function Person(name) {
   console.log(this) // Person {}
@@ -140,18 +150,23 @@ function Person(name) {
 
 var p = new Person('fan')
 ```
+
 ### 1.5. this 其他规则
+
 一些内置函数、第三方库 …… 具体的 this 绑定，需要根据具体实现来确定。
 
-- 例如 **setTimeout()**，其实在实现过程中 this 已经确定好了，绑定的就是 window。
-- 例如 **forEach()、map() ……  这些高阶函数 **在传参的时候，最后一个可选参数就是可以指定 this 绑定具体的对象。
-- 例如** DOM 元素在执行某些事件** 时，绑定的就是自身 DOM 元素对象。
-- 例如在** 显式绑定时，传递的对象时 null 或者 undefined**，那么这个显式绑定会被忽略，**使用默认规则**。
-- ES6+ 推出的** 箭头函数** 让 JavaScript 更加灵活，**箭头函数没有自己的 this，都是从上层的作用域（AO）开始寻找**。即使是 setTimeout()、高阶函数、DOM 元素执行事件 …… 也是没有自己的 this 对象。
+- 例如 `setTimeout()`，其实在实现过程中 this 已经确定好了，绑定的就是 window。
+- 例如 `forEach()`、`map() 等高阶函数` …… 在传参的时候，最后一个可选参数就是可以指定 this 绑定具体的对象。
+- 例如 **DOM 元素在执行某些事件** 时，绑定的就是自身 DOM 元素对象。
+- 例如 **在显式绑定时，传递的对象时 null 或者 undefined**，那么这个显式绑定会被忽略，**使用默认规则**。
+- ES6+ 中的 **箭头函数** 让 JavaScript 更加灵活，**箭头函数没有自己的 this，都是从上层的作用域（AO）开始寻找**。即使是 `setTimeout()`、`高阶函数`、`DOM 元素执行事件` …… 也是没有自己的 this 对象。
+
 ## 2. 规则优先级
+
 > **默认绑定  <  隐式绑定  <  显式绑定(bind)  <  new 绑定**
 
 **new 绑定不允许和 call()、apply() 同时使用，所以不存在优先级的说法。**
+
 ```js
 function foo() {
   console.log(this)
@@ -161,4 +176,3 @@ var func = foo.bind('abc')
 
 var bar = new func() // foo {}
 ```
-
