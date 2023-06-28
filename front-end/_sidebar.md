@@ -9,6 +9,9 @@
   - [媒体查询](/front-end/css/媒体查询.md)
   - [shadow](/front-end/css/shadow.md)
   - [background-clip](/front-end/css/background-clip.md)
+  - [show_hide](/front-end/css/show_hide.md)
+  - [text](/front-end/css/text.md)
+  - [杂项](/front-end/css/杂项.md)
 
 - JavaScript
   - [位运算](/front-end/javascript/位运算.md)
