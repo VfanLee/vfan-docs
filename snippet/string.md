@@ -1,36 +1,35 @@
-# String Reference
+# String
 
-## capitalize
+> 参考于：[Lodash](https://www.lodashjs.com/)、[MDN String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
-将字符串的第一个字符转换为大写，将其余字符转换为小写。
+## indexOf
+
+返回指定子字符串第一次出现的索引。
 
 ```js
-const capitalize = string => (string ? string.charAt(0).toUpperCase() + string.slice(1).toLowerCase() : '')
+'a cat'.indexOf('a')
+// => 0
 
-capitalize('FRED')
-// => 'Fred'
+'a cat'.indexOf('x')
+// => -1
+
+'a cat'.indexOf('a', 3)
+// => 3
 ```
 
-## lowerFirst
+## includes
 
-将字符串的第一个字符转换为小写。
-
-```js
-const lowerFirst = string => (string ? string.charAt(0).toLowerCase() + string.slice(1) : '')
-
-lowerFirst('Fred')
-// => 'fred'
-```
-
-## upperFirst
-
-将字符串的第一个字符转换为大写。
+是否包含指定子字符串。
 
 ```js
-const upperFirst = string => (string ? string.charAt(0).toUpperCase() + string.slice(1) : '')
+'a cat'.includes('a')
+// => true
 
-upperFirst('fred')
-// => 'Fred'
+'a cat'.includes('x')
+// => false
+
+'a cat'.includes('a', 3)
+// => true
 ```
 
 ## toLower
@@ -42,13 +41,46 @@ upperFirst('fred')
 // => 'foobar'
 ```
 
-## toUpper
+## ToUpper
 
 给定字符串的大写。
 
 ```js
-'foobar'.toLowerCase()
+'foobar'.ToUpperCase()
 // => 'FOOBAR'
+```
+
+## lowerFirst
+
+将字符串的第一个字符转换为小写。
+
+```js
+const lowerFirst = str.charAt(0).toLowerCase() + str.slice(1)
+
+lowerFirst('Fred')
+// => 'fred'
+```
+
+## upperFirst
+
+将字符串的第一个字符转换为大写。
+
+```js
+const upperFirst = str.charAt(0).toUpperCase() + str.slice(1)
+
+upperFirst('fred')
+// => 'Fred'
+```
+
+## capitalize
+
+将字符串的第一个字符转换为大写，将其余字符转换为小写。
+
+```js
+const capitalize = str => `${str.charAt(0).toUpperCase()}${str.slice(1).toLowerCase()}`
+
+capitalize('FRED')
+// => 'Fred'
 ```
 
 ## startsWith
@@ -95,7 +127,7 @@ upperFirst('fred')
 
 ## repeat
 
-重复给定的字符串 n 次。
+重复给定的字符串。
 
 ```js
 'abc'.repeat(3)
@@ -120,6 +152,15 @@ upperFirst('fred')
 // => ['2022', '02', '22']
 ```
 
+## trim
+
+从字符串中删除前导和尾随空格字符。
+
+```js
+' abc '.trim()
+// => 'abc'
+```
+
 ## trimStart
 
 从字符串中删除前导和尾随空格字符。
@@ -138,11 +179,11 @@ upperFirst('fred')
 // => ' abc'
 ```
 
-## trim
+## customCase
 
-从字符串中删除前导和尾随空格字符。
+将字符串转换为指定形式（默认：`-` 短横线）。
 
 ```js
-' abc '.trim()
-// => 'abc'
+const re = /([0-9]+|([A-Z][a-z]+)|[a-z]+|([A-Z]+)(?![a-z]))/g
+const customCase = (str, flag = '-') => (String(str).match(re) || []).map(x => x.toLowerCase()).join(flag)
 ```
