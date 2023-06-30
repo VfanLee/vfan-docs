@@ -23,25 +23,6 @@ const debounce = (func, delay = 1000, immediate = false) => {
 
 **节流** 指在一段时间内，无论执行多少次函数，只会执行一次。例如：滚动事件、鼠标移动事件等。
 
-<!-- tabs:start -->
-<!-- tab:简易版 -->
-```js
-function throttle(func, delay = 1000) {
-  let wait = false // 是否需要等待标识
-  return (...args) => {
-    if (wait) {
-      return
-    }
-    func(...args) // 第一次执行
-    wait = true
-    setTimeout(() => {
-      wait = false
-    }, delay)
-  }
-}
-```
-
-<!-- tab:完整版 -->
 ```js
 function throttle(func, delay = 1000) {
   let wait = false // 是否需要等待标识
@@ -68,7 +49,6 @@ function throttle(func, delay = 1000) {
   }
 }
 ```
-<!-- tabs:end -->
 
 ## debounce_throttle 案例
 
