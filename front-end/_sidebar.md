@@ -6,11 +6,9 @@
   - [书写顺序](/front-end/css/书写顺序.md)
   - [CSS 设计模式](/front-end/css/设计模式.md)
   - [CSS 简写属性](/front-end/css/简写属性.md)
-  - [媒体查询](/front-end/css/媒体查询.md)
-  - [shadow](/front-end/css/shadow.md)
-  - [background-clip](/front-end/css/background-clip.md)
-  - [show_hide](/front-end/css/show_hide.md)
+  - [CSS 函数](/front-end/css/函数.md)
   - [text](/front-end/css/text.md)
+  - [媒体查询](/front-end/css/媒体查询.md)
   - [杂项](/front-end/css/杂项.md)
 
 - JavaScript
@@ -48,5 +46,5 @@
 - React
   - [基本使用](/front-end/react/基本使用.md)
 
-- typescript
+- TypeScript
   - [数据类型](/front-end/typescript/数据类型.md)
