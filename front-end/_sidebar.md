@@ -15,7 +15,8 @@
   - [位运算](/front-end/javascript/位运算.md)
   - [数据类型](/front-end/javascript/数据类型.md)
   - [this](/front-end/javascript/this.md)
-  - [OOP](/front-end/javascript/OOP.md)
+  - [OOP_ES5](/front-end/javascript/OOP_ES5.md)
+  - [OOP_ES6](/front-end/javascript/OOP_ES6.md)
   - [模块化](/front-end/javascript/模块化.md)
   - [RegExp](/front-end/javascript/RegExp.md)
   - [上传文件](/front-end/javascript/上传文件.md)
@@ -35,13 +36,17 @@
     - [基本使用](/front-end/vue/pinia/基本使用.md)
   - Vue I18n
     - [基本使用](/front-end/vue/vue-i18n/基本使用.md)
-  - Vue2 踩坑
-    - [01](/front-end/vue/vue2-notes/01.md)
-    - [Element UI](/front-end/vue/vue2-notes/elementui.md)
+  - Vue2
+    - [Vue2 记录](/front-end/vue/vue2/记录.md)
+    - [Element UI](/front-end/vue/vue2/elementui.md)
 
 - 构建工具
-  - [webpack](/front-end/webpack.md)
-  - [vite](/front-end/vite.md)
+  - Webpack
+    - [创建项目](/front-end/webpack/创建项目.md)
+    - [常见配置](/front-end/webpack/常见配置.md)
+  - Vite
+    - [创建项目](/front-end/vite/创建项目.md)
+    - [常见配置](/front-end/vite/常见配置.md)
 
 - React
   - [基本使用](/front-end/react/基本使用.md)
