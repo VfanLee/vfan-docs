@@ -47,9 +47,3 @@
   - Vite
     - [创建项目](/front-end/vite/创建项目.md)
     - [常见配置](/front-end/vite/常见配置.md)
-
-- React
-  - [基本使用](/front-end/react/基本使用.md)
-
-- TypeScript
-  - [数据类型](/front-end/typescript/数据类型.md)

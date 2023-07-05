@@ -43,3 +43,34 @@ npm ls -g --depth=0
 <!-- tab:npx -->
 `npx create-<package-spec>`
 <!-- tabs:end -->
+
+### package.json
+
+```json
+{
+  "name": "", // 项目名称
+  "version": "1.0.0", // 项目版本
+  "description": "xxx", // 项目描述
+  "main": "index.js", // 项目入口文件
+  "scripts": { // 项目入口文件
+    "test": "echo \"test\"" // npm 脚本
+  }, 
+  "repository": { // 项目仓库
+    "type": "git",
+    "url": "https://xxx"
+  },
+  "keywords": [ // 项目关键词
+    "aaa",
+    "bbb"
+  ],
+  "author": "vfanlee", // 项目作者
+  "license": "MIT", // 项目许可协议
+  "bugs": {
+    "url": "https://xxx"
+  },
+  "homepage": "https://xxx", //项目主页
+  "dependencies": {}, // 项目依赖
+  "devDependencies": {}, // 项目开发依赖
+  "typings": "./index.d.ts" // 指定 typescript 的类型声明文件
+}
+```
