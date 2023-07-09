@@ -42,8 +42,8 @@
 
 - 构建工具
   - Webpack
-    - [创建项目](/front-end/webpack/创建项目.md)
-    - [常见配置](/front-end/webpack/常见配置.md)
+    - [创建项目](/front-end/build/webpack/创建项目.md)
+    - [常见配置](/front-end/build/webpack/常见配置.md)
   - Vite
-    - [创建项目](/front-end/vite/创建项目.md)
-    - [常见配置](/front-end/vite/常见配置.md)
+    - [创建项目](/front-end/build/vite/创建项目.md)
+    - [常见配置](/front-end/build/vite/常见配置.md)
