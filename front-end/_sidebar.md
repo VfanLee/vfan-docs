@@ -33,6 +33,7 @@
   - [Vue Router](/front-end/vue/vue-router/README.md)
   - [Pinia](/front-end/vue/pinia/README.md)
   - [Vue I18n](/front-end/vue/vue-i18n/README.md)
+  - [Element Plus](/front-end/vue/element-plus.md)
   - Vue2
     - [Vue2 记录](/front-end/vue/vue2/记录.md)
     - [Element UI](/front-end/vue/vue2/elementui.md)
