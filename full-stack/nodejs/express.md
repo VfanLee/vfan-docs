@@ -2,7 +2,7 @@
 
 > Express 官网：[https://expressjs.com/](https://expressjs.com/)  
 > API 参考：[https://expressjs.com/en/4x/api.html](https://expressjs.com/en/4x/api.html)  
-> 当前版本：4.8.12
+> 当前记录版本：4.8.12
 
 ## 1. 路由
 

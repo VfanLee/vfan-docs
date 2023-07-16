@@ -1,7 +1,7 @@
 # Vue I18n
 
-> 参考文档：https://github.com/intlify/vue-i18n-next#readme  
-> 当前版本：v9
+> [Vue I18n 参考文档](https://github.com/intlify/vue-i18n-next#readme)  
+> 当前记录版本：v9
 
 ## 1. 安装依赖
 

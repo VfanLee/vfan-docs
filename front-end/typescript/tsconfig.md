@@ -1,6 +1,6 @@
 # tsconfig.json
 
-`tsc --init`
+使用 `tsc --init` 命令来为项目生成 `tsconfig.json`` 文件。
 
 ```json
 {

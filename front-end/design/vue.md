@@ -1,6 +1,6 @@
 # Vue3 项目架构设计
 
-## 文件目录
+## 项目目录结构
 
 ```
 ├── dist                      # 编译文件
@@ -30,6 +30,58 @@
 └── vite.config.js            # vite 配置文件
 ```
 
-## 元素命名
+## HTML
+
+### 元素命名
 
 HTML 元素命名参考 `BEM` 和 `SMACSS` 命名规则。
+
+## CSS
+
+### 书写顺序
+
+```md
+# 位置
+display
+flex-direction
+justify-content
+align-items
+grid-template-rows
+grid-template-column
+position
+top / right / bottom / left
+z-index
+float
+clear
+overflow
+
+# 盒子
+width / height
+padding
+margin
+border
+box-sizing
+
+# 文字
+font
+color
+text-align
+line-height  
+
+# 视觉
+visibility
+background
+background-clip
+border-color
+border-radius
+transform
+transition
+cursor
+user-select
+```
+
+## JS
+
+### 变量命名
+
+列表数据统一以 `List` 结尾。

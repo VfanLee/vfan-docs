@@ -1,7 +1,7 @@
 # Pinia
 
-> 参考文档：https://pinia.vuejs.org/zh/  
-> 当前版本：v2
+> [Pinia 参考文档](https://pinia.vuejs.org/zh/)  
+> 当前记录版本：v2
 
 ## 1. 基本概念
 

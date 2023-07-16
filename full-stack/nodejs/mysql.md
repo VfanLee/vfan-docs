@@ -1,6 +1,6 @@
 # MySQL
 
-> mysql 参考文档：https://github.com/mysqljs/mysql#readme
+> mysql [参考文档](https://github.com/mysqljs/mysql#readme)
 
 1. `npm i mysql`
 2. 配置
