@@ -1,4 +1,14 @@
-# Vue3 项目架构设计
+# Vue3 后台管理系统
+
+## 技术选型
+
+- Vite
+- Vue
+- Pinia
+- Vue Router
+- Element Plus
+- Axios
+- Vue I18n
 
 ## 项目目录结构
 
