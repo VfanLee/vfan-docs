@@ -76,6 +76,17 @@ export default defineConfig({
 ```
 <!-- tabs:end -->
 
+### 使用全局方法
+
+使用 `ElMessage`、`ElMessageBox`、`ElNotification` 等全局方法时，直接使用即可，无需再手动指定引入
+
+```js
+import { ElNotification } from 'element-plus'// 可以省去这一步
+
+// 直接使用即可
+ElNotification({})
+```
+
 ## 表单
 
 > 参考 [Formitem Exposes](https://element-plus.org/zh-CN/component/form.html#formitem-exposes)
