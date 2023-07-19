@@ -95,3 +95,8 @@ user-select
 ### 变量命名
 
 列表数据统一以 `List` 结尾。
+
+## Vue
+
+- 组件 “大驼峰” 命名：FooBar
+- 路由 “烧烤串” 命名：foo-bar
