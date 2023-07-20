@@ -12,3 +12,8 @@
 ## 历史记录模式
 
 > 参考 [不同的历史记录模式](https://router.vuejs.org/zh/guide/essentials/history-mode.html)
+
+## 获取路由表
+
+1. [router.options.routes](https://router.vuejs.org/zh/api/interfaces/RouterOptions.html#Properties-routes)：路由器的初始路由列表。
+2. [router.getRoutes()](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-getRoutes)：获得所有路由记录的完整列表。

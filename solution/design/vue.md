@@ -50,7 +50,7 @@ HTML 元素命名参考 `BEM` 和 `SMACSS` 命名规则。
 
 ### 书写顺序
 
-```md
+```
 # 位置
 display
 flex-direction
