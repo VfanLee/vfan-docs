@@ -3,43 +3,41 @@
 > [Pinia 参考文档](https://pinia.vuejs.org/zh/)  
 > 当前记录版本：v2
 
-## 1. 基本概念
+## 定义
 
-1. state
-2. action
-3. getter
-
-## 2. 定义
+### Options API
 
 <!-- tabs:start -->
-<!-- tab:Option -->
-在 Option Store 中：
+<!-- tab:Options -->
+在 Options Store 中：
 
 - `state` 就是 store 的数据 (data)。
 - `getters` 就是 store 的计算属性 (computed)。
 - `actions` 就是 store 的方法 (methods)。
 
 ```js
-import { defineStore } from "pinia";
+import { defineStore } from "pinia"
 
 export const useCounterStore = defineStore("counter", {
   state() {
     return {
       count: 1,
-    };
+    }
   },
   getters: {
     double(state) {
-      return state.count * 2;
+      return state.count * 2
     },
   },
   actions: {
     increment(step) {
-      this.count += step;
+      this.count += step
     },
   },
-});
+})
 ```
+
+### Composition API
 
 <!-- tab:Setup -->
 在 Setup Store 中：
@@ -49,34 +47,34 @@ export const useCounterStore = defineStore("counter", {
 - `function()` 就是 actions。
 
 ```js
-import { ref, computed } from "vue";
-import { defineStore } from "pinia";
+import { ref, computed } from "vue"
+import { defineStore } from "pinia"
 
 export const useCounterStore = defineStore("counter", () => {
-  const count = ref(1);
+  const count = ref(1)
 
-  const double = computed(() => count.value * 2);
+  const double = computed(() => count.value * 2)
 
   const increment = step => {
-    count.value += step;
-  };
+    count.value += step
+  }
 
-  return { count, double, increment };
-});
+  return { count, double, increment }
+})
 ```
 <!-- tabs:end -->
 
-## 3. 使用
+## 使用
 
-```vue
+```html
 <script setup>
-import { useCounterStore } from "@/stores/counter";
+import { useCounterStore } from "@/stores/counter"
 
-const counterStore = useCounterStore();
+const counterStore = useCounterStore()
 
 const onClick = () => {
-  counterStore.increment(1);
-};
+  counterStore.increment(1)
+}
 </script>
 
 <template>
@@ -85,3 +83,7 @@ const onClick = () => {
   <button @click="onClick">+1</button>
 </template>
 ```
+
+## 在组件外使用 store
+
+在组件外使用 store 时，语法也是一样的，但需要注意加载顺序的问题，参考：[Vue Router 中使用 Pinia](https://pinia.vuejs.org/zh/core-concepts/outside-component-usage.html)。

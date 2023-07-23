@@ -30,9 +30,8 @@
 
 - Vue
   - [基本使用](/front-end/vue/基本使用.md)
-  - [Vue Router](/front-end/vue/vue-router/README.md)
   - [Pinia](/front-end/vue/pinia/README.md)
-  - [Vue I18n](/front-end/vue/vue-i18n/README.md)
+  - [Vue Router](/front-end/vue/vue-router/README.md)
   - [Element Plus](/front-end/vue/element-plus.md)
   - Vue2
     - [Vue2 记录](/front-end/vue/vue2/记录.md)

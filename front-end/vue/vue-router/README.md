@@ -3,6 +3,15 @@
 > [Vue Router 参考文档](https://router.vuejs.org/zh/)  
 > 当前记录版本：v4
 
+## 组件外使用 router 实例对象
+
+在 `.vue` 文件中可以使用 `useRouter()` 来获取 router 实例。而在单独的 js 文件中使用 router 时，不能使用 `useRouter()`。
+
+```js
+import { useRouter } from 'vue-router' // ❌
+import router from '@/router' // ✅
+```
+
 ## 编程式导航
 
 > 参考 [编程式导航](https://router.vuejs.org/zh/guide/essentials/navigation.html)
