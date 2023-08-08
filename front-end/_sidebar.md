@@ -7,8 +7,16 @@
   - [CSS 设计模式](/front-end/css/设计模式.md)
   - [CSS 简写属性](/front-end/css/简写属性.md)
   - [CSS 函数](/front-end/css/函数.md)
-  - [text](/front-end/css/text.md)
+  - [盒子模型](/front-end/css/盒子模型.md)
+  - [文本](/front-end/css/文本.md)
+  - [背景](/front-end/css/背景.md)
+  - [float 浮动](/front-end/css/float.md)
+  - [position 定位](/front-end/css/position.md)
+  - [flex 弹性布局](/front-end/css/flex.md)
+  - [grid 网格布局](/front-end/css/grid.md)
   - [媒体查询](/front-end/css/媒体查询.md)
+  - [左右排版](/front-end/css/左右排版.md)
+  - [过渡动画](/front-end/css/过渡动画.md)
   - [杂项](/front-end/css/杂项.md)
 
 - JavaScript
