@@ -28,7 +28,6 @@
   - [OOP_ES6](/front-end/javascript/OOP_ES6.md)
   - [模块化](/front-end/javascript/模块化.md)
   - [RegExp](/front-end/javascript/RegExp.md)
-  - [上传文件](/front-end/javascript/上传文件.md)
   - [剪切板](/front-end/javascript/剪切板.md)
   - [BOM](/front-end/javascript/BOM.md)
   - [offset_client_scroll](/front-end/javascript/offset_client_scroll.md)
