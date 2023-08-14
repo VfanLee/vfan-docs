@@ -147,21 +147,21 @@ const handleChange = e => {
   <div>
     <p>{{ checkboxValue1 }}</p>
     <label>
-      <input type="checkbox" :checked="checkboxValue1" @change="checkboxValue1 = $event.target.checked" />
+      <input type="checkbox" :checked="checkboxValue1" @input="checkboxValue1 = $event.target.checked" />
       checked
     </label>
 
     <p>{{ checkboxValue2 }}</p>
     <label>
-      <input type="checkbox" value="1" :checked="checkboxValue2.includes('1')" @change="handleChange" />
+      <input type="checkbox" value="1" :checked="checkboxValue2.includes('1')" @input="handleChange" />
       One
     </label>
     <label>
-      <input type="checkbox" value="2" :checked="checkboxValue2.includes('2')" @change="handleChange" />
+      <input type="checkbox" value="2" :checked="checkboxValue2.includes('2')" @input="handleChange" />
       Two
     </label>
     <label>
-      <input type="checkbox" value="3" :checked="checkboxValue2.includes('3')" @change="handleChange" />
+      <input type="checkbox" value="3" :checked="checkboxValue2.includes('3')" @input="handleChange" />
       Three
     </label>
   </div>
@@ -215,17 +215,17 @@ const radioValue = ref('2')
     <p>{{ radioValue }}</p>
 
     <label>
-      <input type="radio" value="1" :checked="radioValue === '1'" @change="radioValue = $event.target.value" />
+      <input type="radio" value="1" :checked="radioValue === '1'" @input="radioValue = $event.target.value" />
       One
     </label>
 
     <label>
-      <input type="radio" value="2" :checked="radioValue === '2'" @change="radioValue = $event.target.value" />
+      <input type="radio" value="2" :checked="radioValue === '2'" @input="radioValue = $event.target.value" />
       Two
     </label>
 
     <label>
-      <input type="radio" value="3" :checked="radioValue === '3'" @change="radioValue = $event.target.value" />
+      <input type="radio" value="3" :checked="radioValue === '3'" @input="radioValue = $event.target.value" />
       Three
     </label>
   </div>
@@ -288,14 +288,14 @@ const handleChange = event => {
 <template>
   <div>
     <p>{{ selectValue1 }}</p>
-    <select :value="selectValue1" @change="selectValue1 = $event.target.value">
+    <select :value="selectValue1" @input="selectValue1 = $event.target.value">
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
     </select>
 
     <p>{{ selectValue2 }}</p>
-    <select :value="selectValue2" @change="handleChange" multiple>
+    <select :value="selectValue2" @input="handleChange" multiple>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
