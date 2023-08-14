@@ -33,7 +33,7 @@ const textValue = ref('Hello')
     <p>{{ textValue }}</p>
 
     <input type="text" :value="textValue" @input="e => (textValue = e.target.value)" />
-    <!-- or -->
+    <!-- or，$event 是 vue 提供的语法糖 -->
     <input type="text" :value="textValue" @input="textValue = $event.target.value" />
   </div>
 </template>
@@ -147,21 +147,21 @@ const handleChange = e => {
   <div>
     <p>{{ checkboxValue1 }}</p>
     <label>
-      <input type="checkbox" :checked="checkboxValue1" @input="checkboxValue1 = $event.target.checked" />
+      <input type="checkbox" :checked="checkboxValue1" @change="checkboxValue1 = $event.target.checked" />
       checked
     </label>
 
     <p>{{ checkboxValue2 }}</p>
     <label>
-      <input type="checkbox" value="1" :checked="checkboxValue2.includes('1')" @input="handleChange" />
+      <input type="checkbox" value="1" :checked="checkboxValue2.includes('1')" @change="handleChange" />
       One
     </label>
     <label>
-      <input type="checkbox" value="2" :checked="checkboxValue2.includes('2')" @input="handleChange" />
+      <input type="checkbox" value="2" :checked="checkboxValue2.includes('2')" @change="handleChange" />
       Two
     </label>
     <label>
-      <input type="checkbox" value="3" :checked="checkboxValue2.includes('3')" @input="handleChange" />
+      <input type="checkbox" value="3" :checked="checkboxValue2.includes('3')" @change="handleChange" />
       Three
     </label>
   </div>
@@ -215,17 +215,17 @@ const radioValue = ref('2')
     <p>{{ radioValue }}</p>
 
     <label>
-      <input type="radio" value="1" :checked="radioValue === '1'" @input="radioValue = $event.target.value" />
+      <input type="radio" value="1" :checked="radioValue === '1'" @change="radioValue = $event.target.value" />
       One
     </label>
 
     <label>
-      <input type="radio" value="2" :checked="radioValue === '2'" @input="radioValue = $event.target.value" />
+      <input type="radio" value="2" :checked="radioValue === '2'" @change="radioValue = $event.target.value" />
       Two
     </label>
 
     <label>
-      <input type="radio" value="3" :checked="radioValue === '3'" @input="radioValue = $event.target.value" />
+      <input type="radio" value="3" :checked="radioValue === '3'" @change="radioValue = $event.target.value" />
       Three
     </label>
   </div>
@@ -265,8 +265,6 @@ const selectValue2 = ref(['2'])
 ```
 
 <!-- tab: not v-model -->
-注意：这种实现方式会存在一个 bug：选中元素之后，selectValue2 值确实改变了，但是元素选中状态会丢失（暂未找到更好的解决方法）。
-
 ```html
 <script setup>
 import { ref } from 'vue'
@@ -277,9 +275,9 @@ const selectValue2 = ref(['2'])
 const handleChange = event => {
   let options = event.target.options
   selectValue2.value = []
-  for (let i = 0; i < options.length; i++) {
-    if (options[i].selected) {
-      selectValue2.value.push(options[i].value)
+  for (const option of options) {
+    if (option.selected) {
+      selectValue2.value.push(option.value)
     }
   }
 }
@@ -288,19 +286,20 @@ const handleChange = event => {
 <template>
   <div>
     <p>{{ selectValue1 }}</p>
-    <select :value="selectValue1" @input="selectValue1 = $event.target.value">
+    <select :value="selectValue1" @change="selectValue1 = $event.target.value">
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
     </select>
 
     <p>{{ selectValue2 }}</p>
-    <select :value="selectValue2" @input="handleChange" multiple>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+    <select @change="handleChange" multiple>
+      <option value="1" :selected="selectValue2.includes('1')">One</option>
+      <option value="2" :selected="selectValue2.includes('2')">Two</option>
+      <option value="3" :selected="selectValue2.includes('3')">Three</option>
     </select>
   </div>
 </template>
+
 ```
 <!-- tabs: end -->
