@@ -1,12 +1,25 @@
-# Web 工具库
+# Web 开源工具库
 
-- [js-cookie](https://github.com/js-cookie/js-cookie)
-- [dayjs](https://github.com/iamkun/dayjs)
-- [axios](https://github.com/axios/axios)
-- [video.js](https://github.com/videojs/video.js)
-- [mathjs](https://github.com/josdejong/mathjs)
-
-- [nprogress](https://github.com/rstacruz/nprogress)
-- [swiper](https://github.com/nolimits4web/swiper)
-- [Sortable](https://github.com/SortableJS/Sortable)
-- [typed.js](https://github.com/mattboldt/typed.js)
+- [js-cookie](https://github.com/js-cookie/js-cookie)：一个简单、轻量级的 JavaScript API，用于处理浏览器 cookie。
+- [axios](https://github.com/axios/axios)：Axios 是一个基于 promise 网络请求库，作用于 node.js 和浏览器中。
+- [dayjs](https://github.com/iamkun/dayjs)：一个轻量的处理时间和日期的 JavaScript 库，和 [Moment.js](https://github.com/moment/moment) 的 API 设计保持。
+- [Sortable](https://github.com/SortableJS/Sortable)：拖拽排序。
+- [sharer.js](https://github.com/ellisonleao/sharer.js)：社交分享按钮。
+- [jszip](https://github.com/Stuk/jszip)：创建、读取和编辑 zip 文件。
+- [video.js](https://github.com/videojs/video.js)：HTML5 视频播放器。
+- [mathjs](https://github.com/josdejong/mathjs)：适用于 JavaScript 和 Node.js 的丰富数学库。
+- [mock](https://github.com/nuysoft/Mock)：生成随机数据，拦截 Ajax 请求。
+- [swiper](https://github.com/nolimits4web/swiper)：轮播图。
+- [intl-tel-input](https://github.com/jackocnr/intl-tel-input)：国际电话号码。
+- [nprogress](https://github.com/rstacruz/nprogress)：网页加载进度条。
+- [typed.js](https://github.com/mattboldt/typed.js)：打字动画。
+- [echarts](https://github.com/apache/echarts)：数据可视化库。
+- 富文本
+  - [wangEditor](https://github.com/wangeditor-team/wangEditor)：国产、文档详尽、更新快速。
+  - [tinymce](https://github.com/tinymce/tinymce)：对 `IE6+` 和 `Firefox1.5+` 都有着非常良好的支持。
+- markdown
+  - [tui.editor](https://github.com/nhn/tui.editor)
+- 电子表格
+  - [sheetjs](https://github.com/SheetJS/sheetjs)：电子表格工具库。
+  - [x-spreadsheet](https://github.com/myliang/x-spreadsheet)：在线电子表格。
+- [cropperjs](https://github.com/fengyuanchen/cropperjs)：图片裁切。
