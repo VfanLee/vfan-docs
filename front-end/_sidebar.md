@@ -37,12 +37,16 @@
 
 - Vue
   - [基本使用](/front-end/vue/基本使用.md)
+  - [v-model](/front-end/vue/v-model.md)
+  - [CSS 功能](/front-end/vue/css功能.md)
+  - [props](/front-end/vue/props.md)
+  - [组件事件](/front-end/vue/组件事件.md)
   - [Pinia](/front-end/vue/pinia/README.md)
   - [Vue Router](/front-end/vue/vue-router/README.md)
   - [Element Plus](/front-end/vue/element-plus.md)
   - Vue2
-    - [Vue2 记录](/front-end/vue/vue2/记录.md)
-    - [Element UI](/front-end/vue/vue2/elementui.md)
+    - [Vue2 使用记录](/front-end/vue/vue2/README.md)
+    - [Element UI 使用记录](/front-end/vue/vue2/elementui.md)
 
 - 构建工具
   - Webpack

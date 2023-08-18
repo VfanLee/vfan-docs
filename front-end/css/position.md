@@ -1,8 +1,6 @@
 # position 定位
 
-> 参见：
->
-> - [MDN position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
+> 参见：[MDN position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
 
 ## 定位类型
 

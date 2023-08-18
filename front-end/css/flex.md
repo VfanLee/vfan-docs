@@ -1,8 +1,6 @@
 # flex 布局
 
-> 参见：
->
-> - [MDN Flex 布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+> 参见：[MDN Flex 布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 
 ## 开启 flex
 

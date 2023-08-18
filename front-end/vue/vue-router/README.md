@@ -3,9 +3,39 @@
 > [Vue Router 参考文档](https://router.vuejs.org/zh/)  
 > 当前记录版本：v4
 
-## 组件外使用 router 实例对象
+## 基本使用
 
-在 `.vue` 文件中可以使用 `useRouter()` 来获取 router 实例。而在单独的 js 文件中使用 router 时，不能使用 `useRouter()`。
+> 参见：[Vue Router 和 组合式 API](https://router.vuejs.org/zh/guide/advanced/composition-api.html)
+
+### 组件中使用 router、route 实例对象
+
+若在 `<template>` 中使用 router、route，可通过全局 `$router`、`$route` 来进行访问。
+
+```html
+<template>
+  <div>
+    <p>$router</p>
+    <p>$route</p>
+  </div>
+</template>
+```
+
+若在 `<script>` 中使用 router、route，必须通过 `useRouter()`、`useRoute()` 来进行访问。
+
+```html
+<script setup>
+import { useRouter, useRoute } from 'vue-router'
+
+const router = useRouter() // 获取 router 实例
+const route = useRoute() // 获取 route 实例
+</script>
+```
+
+> 备注：之所以这里存在差异，是因为 Vue 中 Composition API 的特殊性，无法访问到 this。
+
+### 组件外使用 router
+
+在单独的 js 文件中使用 router 实例对象时，不能使用 `useRouter()`。
 
 ```js
 import { useRouter } from 'vue-router' // ❌

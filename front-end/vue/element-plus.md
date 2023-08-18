@@ -94,7 +94,7 @@ ElNotification({})
 手动更改某个 FormItem 的状态和提示信息
 
 ```js
-const passwordItemRef = ref() // 指定的 FormItem
+const passwordItemRef = ref() // 指定某个 FormItem 模板引用
 
 passwordItemRef.value.validateState = 'error' // 更改 FormItem 校验状态
 passwordItemRef.value.validateMessage = '用户名或者密码错误' // 更改 FormItem 校验信息

@@ -64,7 +64,9 @@ export const useCounterStore = defineStore("counter", () => {
 ```
 <!-- tabs:end -->
 
-## 使用
+## 基本使用
+
+### 在组件中使用 store
 
 ```html
 <script setup>
@@ -84,6 +86,6 @@ const onClick = () => {
 </template>
 ```
 
-## 在组件外使用 store
+### 在组件外使用 store
 
 在组件外使用 store 时，语法也是一样的，但需要注意加载顺序的问题，参考：[Vue Router 中使用 Pinia](https://pinia.vuejs.org/zh/core-concepts/outside-component-usage.html)。

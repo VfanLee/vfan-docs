@@ -1,8 +1,6 @@
 # float 浮动
 
-> 参见：
->
-> - [MDN float](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)
+> 参见：[MDN float](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)
 
 ## 浮动特性
 

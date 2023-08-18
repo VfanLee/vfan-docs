@@ -1,6 +1,12 @@
 # v-model
 
-## 文本
+> 参见：[组件 v-model](https://cn.vuejs.org/guide/components/v-model.html)
+
+## 原生元素
+
+为了深入理解 v-model，尝试不使用 v-model 来进行实现原生元素的双向绑定。
+
+### 文本
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
@@ -20,7 +26,7 @@ const textValue = ref('Hello')
 </template>
 ```
 
-<!-- tab: not v-model -->
+<!-- tab: 非 v-model -->
 ```html
 <script setup>
 import { ref } from 'vue'
@@ -40,7 +46,7 @@ const textValue = ref('Hello')
 ```
 <!-- tabs: end -->
 
-## 多行文本
+### 多行文本
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
@@ -64,7 +70,7 @@ const textValue = ref(
 </template>
 ```
 
-<!-- tab: not v-model -->
+<!-- tab: 非 v-model -->
 ```html
 <script setup>
 import { ref } from 'vue'
@@ -86,7 +92,7 @@ const textValue = ref(
 ```
 <!-- tabs: end -->
 
-## 复选框
+### 复选框
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
@@ -123,7 +129,7 @@ const checkboxValue2 = ref(['2'])
 </template>
 ```
 
-<!-- tab: not v-model -->
+<!-- tab: 非 v-model -->
 ```html
 <script setup>
 import { ref } from 'vue'
@@ -169,7 +175,7 @@ const handleChange = e => {
 ```
 <!-- tabs: end -->
 
-## 单选按钮
+### 单选按钮
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
@@ -202,7 +208,7 @@ const radioValue = ref('2')
 </template>
 ```
 
-<!-- tab: not v-model -->
+<!-- tab: 非 v-model -->
 ```html
 <script setup>
 import { ref } from 'vue'
@@ -233,7 +239,7 @@ const radioValue = ref('2')
 ```
 <!-- tabs: end -->
 
-## 选择器
+### 选择器
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
@@ -264,7 +270,7 @@ const selectValue2 = ref(['2'])
 </template>
 ```
 
-<!-- tab: not v-model -->
+<!-- tab: 非 v-model -->
 ```html
 <script setup>
 import { ref } from 'vue'
@@ -300,6 +306,45 @@ const handleChange = event => {
     </select>
   </div>
 </template>
+```
+<!-- tabs: end -->
 
+## 自定义组件
+
+而对于自定义组件来说，v-model 就更好理解了，以 element plus 的 [input 组件](https://element-plus.org/zh-CN/component/input.html) 为例。
+
+<!-- tabs: start -->
+<!-- tab: v-model -->
+```html
+<script setup>
+import { ref } from 'vue'
+
+const textValue = ref('')
+</script>
+
+<template>
+  <div>
+    <p>{{ textValue }}</p>
+
+    <el-input v-model="textValue" />
+  </div>
+</template>
+```
+
+<!-- tab: 非 v-model -->
+```html
+<script setup>
+import { ref } from 'vue'
+
+const textValue = ref('')
+</script>
+
+<template>
+  <div>
+    <p>{{ textValue }}</p>
+
+    <el-input :modelValue="textValue" @update:modelValue="val => textValue.value = val" />
+  </div>
+</template>
 ```
 <!-- tabs: end -->
