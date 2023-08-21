@@ -34,7 +34,7 @@
 
 4. 定义 `<SvgIcon />` 组件。
 
-    ```html
+    ```vue
     <script setup>
     import { computed } from 'vue'
 

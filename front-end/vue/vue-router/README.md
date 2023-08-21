@@ -11,7 +11,7 @@
 
 若在 `<template>` 中使用 router、route，可通过全局 `$router`、`$route` 来进行访问。
 
-```html
+```vue
 <template>
   <div>
     <p>$router</p>
@@ -22,7 +22,7 @@
 
 若在 `<script>` 中使用 router、route，必须通过 `useRouter()`、`useRoute()` 来进行访问。
 
-```html
+```vue
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 

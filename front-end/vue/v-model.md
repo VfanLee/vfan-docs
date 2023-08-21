@@ -10,7 +10,7 @@
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -27,7 +27,7 @@ const textValue = ref('Hello')
 ```
 
 <!-- tab: 非 v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -50,7 +50,7 @@ const textValue = ref('Hello')
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -71,7 +71,7 @@ const textValue = ref(
 ```
 
 <!-- tab: 非 v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -96,7 +96,7 @@ const textValue = ref(
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -130,7 +130,7 @@ const checkboxValue2 = ref(['2'])
 ```
 
 <!-- tab: 非 v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -179,7 +179,7 @@ const handleChange = e => {
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -209,7 +209,7 @@ const radioValue = ref('2')
 ```
 
 <!-- tab: 非 v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -243,7 +243,7 @@ const radioValue = ref('2')
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -271,7 +271,7 @@ const selectValue2 = ref(['2'])
 ```
 
 <!-- tab: 非 v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -315,7 +315,7 @@ const handleChange = event => {
 
 <!-- tabs: start -->
 <!-- tab: v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
@@ -332,7 +332,7 @@ const textValue = ref('')
 ```
 
 <!-- tab: 非 v-model -->
-```html
+```vue
 <script setup>
 import { ref } from 'vue'
 
