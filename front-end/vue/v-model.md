@@ -8,8 +8,8 @@
 
 ### 文本
 
-<!-- tabs: start -->
-<!-- tab: v-model -->
+<!-- tabs:start -->
+<!-- tab:v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -26,7 +26,7 @@ const textValue = ref('Hello')
 </template>
 ```
 
-<!-- tab: 非 v-model -->
+<!-- tab:非 v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -44,12 +44,12 @@ const textValue = ref('Hello')
   </div>
 </template>
 ```
-<!-- tabs: end -->
+<!-- tabs:end -->
 
 ### 多行文本
 
-<!-- tabs: start -->
-<!-- tab: v-model -->
+<!-- tabs:start -->
+<!-- tab:v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -70,7 +70,7 @@ const textValue = ref(
 </template>
 ```
 
-<!-- tab: 非 v-model -->
+<!-- tab:非 v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -90,12 +90,12 @@ const textValue = ref(
   </div>
 </template>
 ```
-<!-- tabs: end -->
+<!-- tabs:end -->
 
 ### 复选框
 
-<!-- tabs: start -->
-<!-- tab: v-model -->
+<!-- tabs:start -->
+<!-- tab:v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -129,7 +129,7 @@ const checkboxValue2 = ref(['2'])
 </template>
 ```
 
-<!-- tab: 非 v-model -->
+<!-- tab:非 v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -173,12 +173,12 @@ const handleChange = e => {
   </div>
 </template>
 ```
-<!-- tabs: end -->
+<!-- tabs:end -->
 
 ### 单选按钮
 
-<!-- tabs: start -->
-<!-- tab: v-model -->
+<!-- tabs:start -->
+<!-- tab:v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -208,7 +208,7 @@ const radioValue = ref('2')
 </template>
 ```
 
-<!-- tab: 非 v-model -->
+<!-- tab:非 v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -237,12 +237,12 @@ const radioValue = ref('2')
   </div>
 </template>
 ```
-<!-- tabs: end -->
+<!-- tabs:end -->
 
 ### 选择器
 
-<!-- tabs: start -->
-<!-- tab: v-model -->
+<!-- tabs:start -->
+<!-- tab:v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -270,7 +270,7 @@ const selectValue2 = ref(['2'])
 </template>
 ```
 
-<!-- tab: 非 v-model -->
+<!-- tab:非 v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -307,14 +307,14 @@ const handleChange = event => {
   </div>
 </template>
 ```
-<!-- tabs: end -->
+<!-- tabs:end -->
 
 ## 自定义组件
 
 而对于自定义组件来说，v-model 就更好理解了，以 element plus 的 [input 组件](https://element-plus.org/zh-CN/component/input.html) 为例。
 
-<!-- tabs: start -->
-<!-- tab: v-model -->
+<!-- tabs:start -->
+<!-- tab:v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -331,7 +331,7 @@ const textValue = ref('')
 </template>
 ```
 
-<!-- tab: 非 v-model -->
+<!-- tab:非 v-model -->
 ```vue
 <script setup>
 import { ref } from 'vue'
@@ -347,4 +347,4 @@ const textValue = ref('')
   </div>
 </template>
 ```
-<!-- tabs: end -->
+<!-- tabs:end -->

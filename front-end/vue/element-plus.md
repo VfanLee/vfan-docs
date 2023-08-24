@@ -17,7 +17,7 @@
 $primary-color: #42b883;
 ```
 
-<!-- tab: 自定义 element plus sass 变量 -->
+<!-- tab:自定义 element plus sass 变量 -->
 > ./src/styles/element/var.scss";
 
 ```scss
@@ -31,7 +31,7 @@ $primary-color: #42b883;
 );
 ```
 
-<!-- tab: vite.config.js -->
+<!-- tab:vite.config.js -->
 ```js
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -59,7 +59,7 @@ export default defineConfig({
 })
 ```
 
-<!-- tab: jsconfig.json -->
+<!-- tab:jsconfig.json -->
 引入 `components.d.ts` 和 `auto-imports.d.ts` 可获取智能提示。
 
 ```json
