@@ -195,9 +195,34 @@ el.hasAttribute('foo')
 
 ### 获取 Style
 
+注意：通过 `el.style` 获取的是内联样式，若需要获取元素实际的样式，需要使用 `getComputedStyle`
+
 ```js
-const win = el.ownerDocument.defaultView // 解决当 style 值为 auto 时，返回 auto 的问题
-win.getComputedStyle(el, null).color // null 表示不返回伪类元素
+el.style // 获取内联样式
+el.style.color // 获取内联样式中的 color 值
+```
+
+> 参见：
+>
+> - [MDN getComputedStyle](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getComputedStyle)
+> - [MDN Node.ownerDocument](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/ownerDocument)
+> - [MDN Document.defaultView](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/defaultView)
+
+```js
+window.getComputedStyle(el, null)
+
+// 获取元素的 ::before 伪元素的样式
+var style = window.getComputedStyle(el, "::before");
+```
+
+1. 当我们使用元素的 `style` 属性来获取元素的 CSS 属性值时，有时候会遇到一个问题，就是当属性值为 `auto` 时，返回的也是 `auto` ，而不是实际的像素值。
+2. 又或者，如果我们有一个 `iframe` 元素，它包含了另一个文档，我们想获取 `iframe` 中的某个元素的样式，我们就不能直接使用 `window.getComputedStyle()` 方法，因为 `window` 对象指向的是当前文档的窗口对象，而不是 `iframe` 中的文档的窗口对象。
+
+在遇到如上问题时，可以采取如下写法：
+
+```js
+const win = el.ownerDocument.defaultView
+win.getComputedStyle(el, null)
 ```
 
 ### 设置 Style
