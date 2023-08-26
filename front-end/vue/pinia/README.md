@@ -68,7 +68,7 @@ export const useCounterStore = defineStore("counter", () => {
 
 ### 在组件中使用 store
 
-```html
+```vue
 <script setup>
 import { useCounterStore } from "@/stores/counter"
 
