@@ -59,6 +59,20 @@ window.$docsify = {
     tabComments: true,
     tabHeadings: true
   },
+
+  // https://github.com/jl15988/docsify-hide-code
+  hideCode: {
+    scroll: false, // Enable scrolling
+    height: 300 // Max height
+  },
+
+  // https://github.com/HerbertHe/docsify-progress
+  progress: {
+    position: 'top',
+    color: 'var(--theme-color,#42b983)',
+    height: '3px'
+  },
+
   plugins: [
     function (hook, vm) {
       hook.init(function () {
@@ -81,10 +95,6 @@ window.$docsify = {
 
       hook.doneEach(function () {
         // 每次路由切换时数据全部加载完成后调用，没有参数。
-        if (location.href.includes('snippet')) {
-          const pageToc = document.querySelector('.page_toc')
-          pageToc && pageToc.remove()
-        }
       })
 
       hook.mounted(function () {

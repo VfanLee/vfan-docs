@@ -95,7 +95,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm i
 
 COPY . .
 
@@ -113,7 +113,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm i
 
 COPY . .
 

@@ -1,13 +1,13 @@
-- [Web 前端](/front-end/html/html_element.md)
-
-- JS Snippet
+- Snippet
+  - [DOM Manipulation](/snippet/DOM.md)
   - [Array](/snippet/array.md)
   - [String](/snippet/string.md)
   - [Object](/snippet/object.md)
   - [Function](/snippet/function.md)
-  - [DOM Manipulation](/snippet/DOM.md)
   - [Fetch](/snippet/fetch.md)
 
-- [技术辅助](/full-stack/git.md)
+- [Web 解决方案](/solution/README.md)
 
-- [随记](/articles/machine/app.md)
+- [Web 前端](/front-end/html/html_element.md)
+
+- [全栈](/full-stack/git.md)

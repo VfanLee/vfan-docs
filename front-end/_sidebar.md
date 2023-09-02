@@ -43,7 +43,6 @@
   - [组件事件](/front-end/vue/组件事件.md)
   - [Pinia](/front-end/vue/pinia/README.md)
   - [Vue Router](/front-end/vue/vue-router/README.md)
-  - [Element Plus](/front-end/vue/element-plus.md)
   - Vue2
     - [Vue2 使用记录](/front-end/vue/vue2/README.md)
     - [Element UI 使用记录](/front-end/vue/vue2/elementui.md)

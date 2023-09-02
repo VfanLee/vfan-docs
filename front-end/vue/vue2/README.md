@@ -20,8 +20,8 @@ const app = new Vue({
 
 ```sh
 npm config set sass_binary_site https://repo.huaweicloud.com/node-sass/
-npm install -g node-gyp
-npm install --global --production windows-build-tools 
+npm i -g node-gyp
+npm i --global --production windows-build-tools 
 ```
 
 ## Vue 执行顺序

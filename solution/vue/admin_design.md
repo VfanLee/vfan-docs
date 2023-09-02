@@ -22,10 +22,21 @@
 ├── src                       # 开发核心*
 │   ├── assets                # 静态文件（会编译）
 │   ├── components              # 全局组件
-│   ├── router                  # vue router 路由配置文件
-│   ├── styles                  # 样式管理
+│   ├── icons                   # SVG 图标
+│   ├── layout                  # 布局组件
+│   ├── locale                  # 国际化相关
+│       ├── zh.json               # 翻译文本文件
+│       ├── en.json               # 翻译文本文件
+│       └── index.js              # 国际化配置文件
+│   ├── router                  # Vue Router 路由相关
+│       ├── routes                # 路由定义
+│       └── index.js              # Vue Router 配置文件
+│   ├── store                   # pinia 全局状态管理相关
+│       ├── routes                # store 定义
+│       └── index.js              # pinia 配置文件
+│   ├── styles                  # 全局样式
 │   ├── utils                   # 全局工具
-│   └── views                   # 视图层
+│   ├── views                   # RouterView 文件
 │   ├── App.vue                 # App 根组件
 │   └── main.js                 # 项目入口 JS
 ├── README.md                 # 项目说明
@@ -49,9 +60,9 @@ HTML 元素命名参考 `BEM` 和 `SMACSS` 命名规则。
 
 2. 样式统一放在 `styles` 文件夹中：
 
-    `目录接口示例`
-
     ```
+    # 目录接口示例
+
     └── styles
     ├── _base.scss            # 基础样式
     ├── _modules.scss         # 通用模块样式
