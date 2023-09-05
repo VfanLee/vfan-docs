@@ -1,4 +1,4 @@
-<img src="./assets/images/avatar_nobg.png" style="width: 200px; height: 200px;" />
+<img src="src/assets/images/avatar_nobg.png" style="width: 200px; height: 200px;" />
 
 # Vfan Lee's Docs
 
