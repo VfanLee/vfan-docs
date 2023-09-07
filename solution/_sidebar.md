@@ -3,6 +3,7 @@
 - [全屏模式](/solution/全屏模式.md)
 - [人机校验](/solution/人机校验.md)
 - [前端埋点](/solution/前端埋点.md)
+- [性能优化](/solution/性能优化.md)
 - 上传
   - [获取文件](/solution/upload/获取文件.md)
   - [上传限制](/solution/upload/上传限制.md)

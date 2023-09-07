@@ -29,6 +29,7 @@
   - [模块化](/front-end/javascript/模块化.md)
   - [RegExp](/front-end/javascript/RegExp.md)
   - [剪切板](/front-end/javascript/剪切板.md)
+  - [CSS 变量](/front-end/javascript/css_变量.md)
   - [BOM](/front-end/javascript/BOM.md)
   - [offset_client_scroll](/front-end/javascript/offset_client_scroll.md)
   - [鼠标位置](/front-end/javascript/鼠标位置.md)
