@@ -34,6 +34,6 @@ require.config({
   }
 })
 
-require(['config', 'docsifySearch', 'docsifyZoomImage', 'docsifyPagination', 'docsifySidebarCollapse', 'docsifyCopyCode', 'docsifyTabs', 'docsifyHideCode', 'docsifyProgress'], function () {
+require(['docsifySearch', 'docsifyZoomImage', 'docsifyPagination', 'docsifySidebarCollapse', 'docsifyCopyCode', 'docsifyTabs', 'docsifyHideCode', 'docsifyProgress'], function () {
   require(['docsify'], function () {})
 })

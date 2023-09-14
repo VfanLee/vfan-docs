@@ -1,6 +1,6 @@
-# CSS 变量
+# CSS Variable
 
-## css 定义变量
+## CSS 定义变量
 
 ```css
 :root {
@@ -12,14 +12,18 @@
 }
 ```
 
-## JavaScript 定义与更改
+## JavaScript 使用 CSS 变量
+
+### JavaScript 获取变量
 
 ```js
-// 获取变量
 getComputedStyle(document.querySelector(':root')).getPropertyValue('--width')
 getComputedStyle(document.querySelector('.box')).getPropertyValue('--height')
+```
 
-// 设置变量
+### JavaScript 设置变量值
+
+```js
 document.querySelector(':root').style.setProperty('--width', '50px')
 document.querySelector('.box').style.setProperty('--height', '50px')
 ```

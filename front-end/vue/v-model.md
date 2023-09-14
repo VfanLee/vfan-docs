@@ -6,7 +6,7 @@
 
 为了深入理解 v-model，尝试不使用 v-model 来进行实现原生元素的双向绑定。
 
-### 文本
+### 单行文本
 
 <!-- tabs:start -->
 <!-- tab:v-model -->
@@ -87,6 +87,70 @@ const textValue = ref(
     <p>{{ textValue }}</p>
 
     <textarea @input="textValue = $event.target.value">{{ textValue }}</textarea>
+  </div>
+</template>
+```
+<!-- tabs:end -->
+
+### 单选按钮
+
+<!-- tabs:start -->
+<!-- tab:v-model -->
+```vue
+<script setup>
+import { ref } from 'vue'
+
+const radioValue = ref('2')
+</script>
+
+<template>
+  <div>
+    <p>{{ radioValue }}</p>
+
+    <label>
+      <input type="radio" v-model="radioValue" value="1" />
+      One
+    </label>
+
+    <label>
+      <input type="radio" v-model="radioValue" value="2" />
+      Two
+    </label>
+
+    <label>
+      <input type="radio" v-model="radioValue" value="3" />
+      Three
+    </label>
+  </div>
+</template>
+```
+
+<!-- tab:非 v-model -->
+```vue
+<script setup>
+import { ref } from 'vue'
+
+const radioValue = ref('2')
+</script>
+
+<template>
+  <div>
+    <p>{{ radioValue }}</p>
+
+    <label>
+      <input type="radio" value="1" :checked="radioValue === '1'" @change="radioValue = $event.target.value" />
+      One
+    </label>
+
+    <label>
+      <input type="radio" value="2" :checked="radioValue === '2'" @change="radioValue = $event.target.value" />
+      Two
+    </label>
+
+    <label>
+      <input type="radio" value="3" :checked="radioValue === '3'" @change="radioValue = $event.target.value" />
+      Three
+    </label>
   </div>
 </template>
 ```
@@ -175,71 +239,7 @@ const handleChange = e => {
 ```
 <!-- tabs:end -->
 
-### 单选按钮
-
-<!-- tabs:start -->
-<!-- tab:v-model -->
-```vue
-<script setup>
-import { ref } from 'vue'
-
-const radioValue = ref('2')
-</script>
-
-<template>
-  <div>
-    <p>{{ radioValue }}</p>
-
-    <label>
-      <input type="radio" v-model="radioValue" value="1" />
-      One
-    </label>
-
-    <label>
-      <input type="radio" v-model="radioValue" value="2" />
-      Two
-    </label>
-
-    <label>
-      <input type="radio" v-model="radioValue" value="3" />
-      Three
-    </label>
-  </div>
-</template>
-```
-
-<!-- tab:非 v-model -->
-```vue
-<script setup>
-import { ref } from 'vue'
-
-const radioValue = ref('2')
-</script>
-
-<template>
-  <div>
-    <p>{{ radioValue }}</p>
-
-    <label>
-      <input type="radio" value="1" :checked="radioValue === '1'" @change="radioValue = $event.target.value" />
-      One
-    </label>
-
-    <label>
-      <input type="radio" value="2" :checked="radioValue === '2'" @change="radioValue = $event.target.value" />
-      Two
-    </label>
-
-    <label>
-      <input type="radio" value="3" :checked="radioValue === '3'" @change="radioValue = $event.target.value" />
-      Three
-    </label>
-  </div>
-</template>
-```
-<!-- tabs:end -->
-
-### 选择器
+### 下拉列表
 
 <!-- tabs:start -->
 <!-- tab:v-model -->

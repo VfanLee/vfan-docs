@@ -7,6 +7,7 @@
   - [CSS 设计模式](/front-end/css/设计模式.md)
   - [CSS 简写属性](/front-end/css/简写属性.md)
   - [CSS 函数](/front-end/css/函数.md)
+  - [CSS 变量](/front-end/css/variable.md)
   - [盒子模型](/front-end/css/盒子模型.md)
   - [文本](/front-end/css/文本.md)
   - [背景](/front-end/css/背景.md)
@@ -29,12 +30,17 @@
   - [模块化](/front-end/javascript/模块化.md)
   - [RegExp](/front-end/javascript/RegExp.md)
   - [剪切板](/front-end/javascript/剪切板.md)
-  - [CSS 变量](/front-end/javascript/css_变量.md)
   - [BOM](/front-end/javascript/BOM.md)
   - [offset_client_scroll](/front-end/javascript/offset_client_scroll.md)
   - [鼠标位置](/front-end/javascript/鼠标位置.md)
 
 - [Canvas](/front-end/canvas.md)
+
+- TypeScript
+  - [数据类型](/front-end/typescript/数据类型.md)
+  - [关键字](/front-end/typescript/关键字.md)
+  - [类型声明文件](/front-end/typescript/类型声明文件.md)
+  - [tsconfig.json](/front-end/typescript/tsconfig.md)
 
 - Vue
   - [基本使用](/front-end/vue/基本使用.md)
@@ -49,15 +55,12 @@
     - [Element UI 使用记录](/front-end/vue/vue2/elementui.md)
 
 - 构建工具
-  - Webpack
-    - [创建项目](/front-end/build/webpack/创建项目.md)
-    - [常见配置](/front-end/build/webpack/常见配置.md)
   - Vite
-    - [创建项目](/front-end/build/vite/创建项目.md)
-    - [常见配置](/front-end/build/vite/常见配置.md)
+    - [Vite 介绍](/front-end/build/vite/README.md)
+    - [Vite 创建项目](/front-end/build/vite/创建项目.md)
+    - [Vite 配置](/front-end/build/vite/配置.md)
+  - Webpack
+    - [Webpack 介绍](/front-end/build/webpack/README.md)
+    - [Webpack 创建项目](/front-end/build/webpack/创建项目.md)
+    - [Webpack 配置](/front-end/build/webpack/配置.md)
 
-- TypeScript
-  - [数据类型](/front-end/typescript/数据类型.md)
-  - [关键字](/front-end/typescript/关键字.md)
-  - [类型声明文件](/front-end/typescript/类型声明文件.md)
-  - [tsconfig.json](/front-end/typescript/tsconfig.md)
