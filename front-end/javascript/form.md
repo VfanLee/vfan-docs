@@ -1,6 +1,10 @@
 # Form 表单
 
-## form
+> vanilla form 的一些 [使用示例](https://github.com/VfanLee/lab/tree/main/basic/form)。
+
+## 常见的表单元素
+
+### form
 
 > [MDN form](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form)
 
@@ -14,7 +18,7 @@
   - `multipart/form-data`：当表单包含 type=file 的 `<input>` 元素时使用此值。
   - `text/plain`：出现于 HTML5，用于调试。这个值可被 `<button>`、`<input type="submit">` 或 `<input type="image">` 元素上的 `formenctype` 属性覆盖。
 
-## input
+### input
 
 > [MDN input](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input)
 
@@ -30,7 +34,7 @@
 - name：名称，表单提交后会以 name 值作为参数名提交。
 - id：通常和 `<label for=""></label>` 一起使用。
 
-## 下拉列表
+### 下拉列表
 
 > [MDN select](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select)  
 > [MDN option](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/option)
@@ -47,7 +51,7 @@
 - label：表示选项含义的文本。如果 label 属性没有定义，它的值就是元素文本内容。
 - selected：默认选中。
 
-## textarea 多行文本
+### textarea 多行文本
 
 > [MDN textarea](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea)
 
@@ -58,11 +62,11 @@
 - rows：元素的输入文本的行数（显示的高度）。
 - id：通常和 `<label for=""></label>` 一起使用。
 
-## 按钮
+### 按钮
 
 按钮分两种写法：`<button>` 或者 `<input>`。
 
-### button
+#### button
 
 > [MDN button](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button)
 
@@ -80,7 +84,7 @@
 <button type="button">button:button 普通按钮</button>
 ```
 
-### input
+#### input
 
 属性：
 
@@ -94,7 +98,7 @@
 <input type="button" value="input:button 普通按钮" />
 ```
 
-## label
+### label
 
 > [MDN label](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label)
 
@@ -114,9 +118,36 @@ HTML `<label>` 元素（标签）表示用户界面中某个元素的说明。
 </label>
 ```
 
-## 表单分组
+### 分组
 
 > [MDN fieldset](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/fieldset)  
 > [MDN legend](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/legend)
 
 `<legend>` 需要配合 `<fieldset>` 来进行使用。
+
+## FormData & JSON 转换
+
+### formData => JSON
+
+```js
+const jsonData = {}
+mockFormData.forEach((value, key) => (data[key] = value))
+console.log(jsonData);
+```
+
+### JSON => formData
+
+```js
+const mockJsonData = {
+  id: 1,
+  name: 'foo'
+}
+
+const formData = new FormData()
+for (const key in mockJsonData) {
+  if (Object.hasOwnProperty.call(mockJsonData, key)) {
+    formData.append(key, mockJsonData[key])
+  }
+}
+console.log(formData);
+```

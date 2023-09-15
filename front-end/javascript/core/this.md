@@ -110,6 +110,8 @@ obj2.obj.foo() // obj1
 - [apply(obj, [arg1, arg2])](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)：与 call() 相似，参数一为指定的对象，参数二就是将所需要的参数统一放在一个数组中。
 - [bind(obj)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)：与 call() 相似，甚至说传参的方式都一样，但不同的是，call() 调用后会执行，而 bind() 会返回一个新的函数，这个函数需要手动执行，**且该函数的 this 始终为指定的对象**。
 
+> call、apply、bind [实现示例](https://github.com/VfanLee/lab/tree/main/analysis/this)。
+
 ```js
 function foo(num1, num2, num3) {
   console.log(this, num1 + num2 + num3)
@@ -165,7 +167,7 @@ var p = new Person('fan')
 
 > **默认绑定  <  隐式绑定  <  显式绑定(bind)  <  new 绑定**
 
-**new 绑定不允许和 call()、apply() 同时使用，所以不存在优先级的说法。**
+new 绑定不允许和 call()、apply() 同时使用，所以不存在优先级的说法。
 
 ```js
 function foo() {

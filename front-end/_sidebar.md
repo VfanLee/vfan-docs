@@ -1,8 +1,3 @@
-- HTML
-  - [元素参考](/front-end/html/html_element.md)
-  - [Form 表单](/front-end/html/form.md)
-  - [Table 表格](/front-end/html/table.md)
-
 - CSS
   - [CSS 设计模式](/front-end/css/设计模式.md)
   - [CSS 简写属性](/front-end/css/简写属性.md)
@@ -21,20 +16,22 @@
   - [杂项](/front-end/css/杂项.md)
 
 - JavaScript
-  - [位运算](/front-end/javascript/位运算.md)
-  - [数据类型](/front-end/javascript/数据类型.md)
-  - [this](/front-end/javascript/this.md)
-  - [promise](/front-end/javascript/promise.md)
-  - [OOP_ES5](/front-end/javascript/OOP_ES5.md)
-  - [OOP_ES6](/front-end/javascript/OOP_ES6.md)
-  - [模块化](/front-end/javascript/模块化.md)
-  - [RegExp](/front-end/javascript/RegExp.md)
+  - 编程核心
+    - [位运算](/front-end/javascript/位运算.md)
+    - [数据类型](/front-end/javascript/数据类型.md)
+    - [日期比较](/front-end/javascript/日期比较.md)
+    - [this](/front-end/javascript/this.md)
+    - [Promise](/front-end/javascript/promise.md)
+    - [OOP_ES5](/front-end/javascript/OOP_ES5.md)
+    - [OOP_ES6](/front-end/javascript/OOP_ES6.md)
+    - [ES6 modular](/front-end/javascript/modular.md)
+  - [Table](/front-end/javascript/table.md)
+  - [Form](/front-end/javascript/form.md)
   - [剪切板](/front-end/javascript/剪切板.md)
   - [BOM](/front-end/javascript/BOM.md)
   - [offset_client_scroll](/front-end/javascript/offset_client_scroll.md)
   - [鼠标位置](/front-end/javascript/鼠标位置.md)
-
-- [Canvas](/front-end/canvas.md)
+  - [Canvas](/front-end/canvas.md)
 
 - TypeScript
   - [数据类型](/front-end/typescript/数据类型.md)
