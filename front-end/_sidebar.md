@@ -27,11 +27,13 @@
     - [ES6 modular](/front-end/javascript/modular.md)
   - [Table](/front-end/javascript/table.md)
   - [Form](/front-end/javascript/form.md)
-  - [剪切板](/front-end/javascript/剪切板.md)
+  - [DOM](/front-end/DOM.md)
   - [BOM](/front-end/javascript/BOM.md)
   - [offset_client_scroll](/front-end/javascript/offset_client_scroll.md)
   - [鼠标位置](/front-end/javascript/鼠标位置.md)
+  - [剪切板](/front-end/javascript/剪切板.md)
   - [Canvas](/front-end/canvas.md)
+  - [Fetch](/front-end/fetch.md)
 
 - TypeScript
   - [数据类型](/front-end/typescript/数据类型.md)

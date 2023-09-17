@@ -1,10 +1,9 @@
 - Snippet
-  - [DOM Manipulation](/snippet/DOM.md)
   - [Array](/snippet/array.md)
   - [String](/snippet/string.md)
   - [Object](/snippet/object.md)
   - [Function](/snippet/function.md)
-  - [Fetch](/snippet/fetch.md)
+  - [Utils](/snippet/utils.md)
 
 - [Web 解决方案](/solution/README.md)
 
