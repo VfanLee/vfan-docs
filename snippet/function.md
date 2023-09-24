@@ -54,11 +54,3 @@ function throttle(func, delay = 500) {
   }
 }
 ```
-
-## debounce_throttle 案例
-
-<iframe height="300" style="width: 100%;" scrolling="no" title="debounce_throttle" src="https://codepen.io/vfanlee/embed/preview/GRwWVZv?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/vfanlee/pen/GRwWVZv">
-  debounce_throttle</a> by Vfan Lee (<a href="https://codepen.io/vfanlee">@vfanlee</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>

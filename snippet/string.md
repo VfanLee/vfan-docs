@@ -1,6 +1,9 @@
 # String
 
-> 参考于：[Lodash](https://www.lodashjs.com/)、[MDN String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+> 参见：
+>
+> - [Lodash](https://www.lodashjs.com/)
+> - [MDN String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 ## indexOf
 

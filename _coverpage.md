@@ -8,4 +8,4 @@
 - 记录辅助技术
 - 记录日常零散
 
-[Let's Start](/snippet/array.md)
+[Let's Start](/solution/README.md)

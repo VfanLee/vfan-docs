@@ -1,13 +1,10 @@
 - [引入图标](/solution/引入图标.md)
+- [文件上传](https://github.com/VfanLee/lab/tree/main/basic/upload)
 - [切换主题](/solution/切换主题.md)
 - [全屏模式](/solution/全屏模式.md)
 - [人机校验](/solution/人机校验.md)
 - [前端埋点](/solution/前端埋点.md)
 - [性能优化](/solution/性能优化.md)
-- 上传
-  - [获取文件](/solution/upload/获取文件.md)
-  - [上传限制](/solution/upload/上传限制.md)
-  - [文件转换](/solution/upload/文件转换.md)
 - Vue
   - [后台管理架构设计](/solution/vue/admin_design.md)
   - [Mock 方案](/solution/vue/mock.md)

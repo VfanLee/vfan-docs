@@ -1,5 +1,4 @@
 - [Git](/full-stack/git.md)
-- [常见编程概念](/full-stack/编程概念.md)
 - [正则表达式](/full-stack/regular.md)
 
 - Ubuntu
@@ -28,14 +27,6 @@
   - [Network](/full-stack/docker/network.md)
   - [Dockerfile](/full-stack/docker/dockerfile.md)
   - [Docker Compose](/full-stack/docker/docker-compose.md)
-
-- Node.js
-  - [安装](/full-stack/nodejs/安装.md)
-  - [npm](/full-stack/nodejs/npm.md)
-  - [模块化](/full-stack/nodejs/模块化.md)
-  - [express](/full-stack/nodejs/express.md)
-  - [mysql](/full-stack/nodejs/mysql.md)
-  - [auth](/full-stack/nodejs/auth.md)
 
 - MySQL
   - [安装](/full-stack/database/mysql/安装.md)

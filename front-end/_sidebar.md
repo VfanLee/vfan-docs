@@ -16,15 +16,15 @@
   - [杂项](/front-end/css/杂项.md)
 
 - JavaScript
-  - 编程核心
-    - [位运算](/front-end/javascript/位运算.md)
-    - [数据类型](/front-end/javascript/数据类型.md)
-    - [日期比较](/front-end/javascript/日期比较.md)
-    - [this](/front-end/javascript/this.md)
-    - [Promise](/front-end/javascript/promise.md)
-    - [OOP_ES5](/front-end/javascript/OOP_ES5.md)
-    - [OOP_ES6](/front-end/javascript/OOP_ES6.md)
-    - [ES6 modular](/front-end/javascript/modular.md)
+  - 语法核心
+    - [位运算](/front-end/javascript/core/位运算.md)
+    - [数据类型](/front-end/javascript/core/数据类型.md)
+    - [日期比较](/front-end/javascript/core/日期比较.md)
+    - [this](/front-end/javascript/core/this.md)
+    - [Promise](/front-end/javascript/core/promise.md)
+    - [OOP_ES5](/front-end/javascript/core/OOP_ES5.md)
+    - [OOP_ES6](/front-end/javascript/core/OOP_ES6.md)
+    - [ES6 modular](/front-end/javascript/core/modular.md)
   - [Table](/front-end/javascript/table.md)
   - [Form](/front-end/javascript/form.md)
   - [DOM](/front-end/DOM.md)
@@ -33,7 +33,6 @@
   - [鼠标位置](/front-end/javascript/鼠标位置.md)
   - [剪切板](/front-end/javascript/剪切板.md)
   - [Canvas](/front-end/canvas.md)
-  - [Fetch](/front-end/fetch.md)
 
 - TypeScript
   - [数据类型](/front-end/typescript/数据类型.md)
@@ -49,9 +48,6 @@
   - [组件事件](/front-end/vue/组件事件.md)
   - [Pinia](/front-end/vue/pinia/README.md)
   - [Vue Router](/front-end/vue/vue-router/README.md)
-  - Vue2
-    - [Vue2 使用记录](/front-end/vue/vue2/README.md)
-    - [Element UI 使用记录](/front-end/vue/vue2/elementui.md)
 
 - 构建工具
   - Vite
@@ -63,3 +59,10 @@
     - [Webpack 创建项目](/front-end/build/webpack/创建项目.md)
     - [Webpack 配置](/front-end/build/webpack/配置.md)
 
+- Node.js
+  - [安装](/front-end/nodejs/安装.md)
+  - [npm](/front-end/nodejs/npm.md)
+  - [模块系统](/front-end/nodejs/modular.md)
+  - [express](/front-end/nodejs/express.md)
+  - [mysql](/front-end/nodejs/mysql.md)
+  - [auth](/front-end/nodejs/auth.md)
