@@ -1,6 +1,6 @@
 # Docker 数据卷（Volume）
 
-Docker Volume 是一个可以在Docker容器和宿主机之间共享数据的持久化存储机制。
+Docker Volume 是一个可以在 Docker 容器和宿主机之间共享数据的持久化存储机制。
 
 ## 1. 常用命令
 

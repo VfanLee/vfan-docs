@@ -60,7 +60,7 @@
     - [Webpack 配置](/front-end/build/webpack/配置.md)
 
 - Node.js
-  - [安装](/front-end/nodejs/安装.md)
+  - [安装](/front-end/nodejs/install.md)
   - [npm](/front-end/nodejs/npm.md)
   - [模块系统](/front-end/nodejs/modular.md)
   - [express](/front-end/nodejs/express.md)

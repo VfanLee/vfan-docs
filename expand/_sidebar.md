@@ -1,40 +1,42 @@
-- [Git](/full-stack/git.md)
-- [正则表达式](/full-stack/regular.md)
+- [开发工具](/expand/开发工具.md)
+- [Git](/expand/git.md)
+- [正则表达式](/expand/regular.md)
 
-- Ubuntu
-  - [快捷操作](/full-stack/ubuntu/快捷操作.md)
-  - [apt](/full-stack/ubuntu/apt.md)
-  - [文件和目录管理](/full-stack/ubuntu/文件和目录管理.md)
-  - [用户和权限管理](/full-stack/ubuntu/用户和权限管理.md)
-  - [网络管理](/full-stack/ubuntu/网络管理.md)
-  - [系统管理](/full-stack/ubuntu/系统管理.md)
-
-- Deploy
-  - [建站准备](/full-stack/deploy/建站准备.md)
-  - [SSL 证书申请](/full-stack/deploy/SSL证书申请.md)
-
-- Nginx
-  - [安装与卸载](/full-stack/nginx/安装与卸载.md)
-  - [实例](/full-stack/nginx/实例.md)
-  - [变量](/full-stack/nginx/变量.md)
+- Linux
+  - [Ubuntu](/expand/linux/ubuntu.md)
+  - [系统目录](/expand/linux/系统目录.md)
+  - [vim](/expand/linux/vim.md)
+  - [变量](/expand/linux/变量.md)
+  - [用户管理](/expand/linux/用户管理.md)
+  - [权限管理](/expand/linux/权限管理.md)
+  - [打包压缩](/expand/linux/打包压缩.md)
+  - [流程控制](/expand/linux/流程控制.md)
 
 - Docker
-  - [安装](/full-stack/docker/安装.md)
-  - [基本命令](/full-stack/docker/基本命令.md)
-  - [Container](/full-stack/docker/container.md)
-  - [Image](/full-stack/docker/image.md)
-  - [Volume](/full-stack/docker/volume.md)
-  - [Network](/full-stack/docker/network.md)
-  - [Dockerfile](/full-stack/docker/dockerfile.md)
-  - [Docker Compose](/full-stack/docker/docker-compose.md)
+  - [安装](/expand/docker/install.md)
+  - [基本命令](/expand/docker/基本命令.md)
+  - [Container](/expand/docker/container.md)
+  - [Image](/expand/docker/image.md)
+  - [Volume](/expand/docker/volume.md)
+  - [Network](/expand/docker/network.md)
+  - [Dockerfile](/expand/docker/dockerfile.md)
+  - [Docker Compose](/expand/docker/docker-compose.md)
+
+- Nginx
+  - [安装](/expand/nginx/install.md)
+  - [申请证书](/expand/nginx/申请证书.md)
+  - [变量](/expand/nginx/变量.md)
+
+- Jenkins
+  - [安装](/expand/jenkins/install.md)
 
 - MySQL
-  - [安装](/full-stack/database/mysql/安装.md)
-  - [DDL](/full-stack/database/mysql/DDL.md)
-  - [DQL](/full-stack/database/mysql/DQL.md)
-  - [DML](/full-stack/database/mysql/DML.md)
-  - [TCL](/full-stack/database/mysql/TCL.md)
-  - [函数](/full-stack/database/mysql/函数.md)
-  - [变量](/full-stack/database/mysql/变量.md)
-  - [存储过程](/full-stack/database/mysql/存储过程.md)
-  - [流程控制结构](/full-stack/database/mysql/流程控制结构.md)
+  - [安装](/expand/database/mysql/install.md)
+  - [DDL](/expand/database/mysql/DDL.md)
+  - [DQL](/expand/database/mysql/DQL.md)
+  - [DML](/expand/database/mysql/DML.md)
+  - [TCL](/expand/database/mysql/TCL.md)
+  - [函数](/expand/database/mysql/函数.md)
+  - [变量](/expand/database/mysql/变量.md)
+  - [存储过程](/expand/database/mysql/存储过程.md)
+  - [流程控制结构](/expand/database/mysql/流程控制结构.md)

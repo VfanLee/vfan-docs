@@ -1,29 +1,5 @@
 # Vue2 记录
 
-## 基本使用
-
-```js
-import Vue from 'vue'
-
-import App from './App.vue'
-import router from './router'
-import store from './store'
-
-const app = new Vue({
-  router,
-  store,
-  render: h => h(App),
-}).$mount('#app')
-```
-
-## 安装 node-sass
-
-```sh
-npm config set sass_binary_site https://repo.huaweicloud.com/node-sass/
-npm i -g node-gyp
-npm i --global --production windows-build-tools 
-```
-
 ## Vue 执行顺序
 
 > 源码参考：https://github.com/vuejs/vue/blob/dev/src/core/instance/state.js#L49-L63
@@ -51,15 +27,13 @@ npm i --global --production windows-build-tools
 
 ## v-modal
 
-用于数据的双向绑定。
+`v-model` 是 `:value="val" @input` 的语法糖。
 
-`<v-model>` 是 `<:value="val" @input>` 的语法糖。
+props 默认为 `value`，event 默认为 `input`，可通过 [`model`](https://v2.cn.vuejs.org/v2/api/#model) 自定义。
 
 ## :xxxValue.sync
 
-用于 props 父子数据双向绑定
-
-`<:xxxValue.sync>` 是 `<:xxxValue="val" @update:xxxValue>` 的语法糖。
+`:xxxValue.sync` 是 `:xxxValue="val" @update:xxxValue` 的语法糖。
 
 ## Vue 中重置 data 数据
 

@@ -15,7 +15,6 @@
 - [typed.js](https://github.com/mattboldt/typed.js)：打字动画。
 - [echarts](https://github.com/apache/echarts)：数据可视化库。
 - 富文本
-  - [wangEditor](https://github.com/wangeditor-team/wangEditor)：国产、文档详尽、更新快速。
   - [tinymce](https://github.com/tinymce/tinymce)：对 `IE6+` 和 `Firefox1.5+` 都有着非常良好的支持。
 - markdown
   - [tui.editor](https://github.com/nhn/tui.editor)

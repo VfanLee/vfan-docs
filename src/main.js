@@ -34,6 +34,11 @@ require.config({
   }
 })
 
-require(['docsifySearch', 'docsifyZoomImage', 'docsifyPagination', 'docsifySidebarCollapse', 'docsifyCopyCode', 'docsifyTabs', 'docsifyHideCode', 'docsifyProgress'], function () {
-  require(['docsify'], function () {})
+require(['config', 'docsifySearch', 'docsifyZoomImage', 'docsifyPagination', 'docsifySidebarCollapse', 'docsifyCopyCode', 'docsifyTabs', 'docsifyHideCode', 'docsifyProgress'], function () {
+  require([
+    'docsify',
+    function () {
+      console.log('load success')
+    }
+  ])
 })

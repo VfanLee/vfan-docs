@@ -5,9 +5,27 @@
 > - [Lodash](https://www.lodashjs.com/)
 > - [MDN Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
+## isArray
+
+判断传递的值是否是一个 Array。
+
+```js
+Array.isArray([1, 3, 5])
+// => true
+
+Array.isArray('[]')
+// => false
+
+Array.isArray(new Array(5))
+// => true
+
+Array.isArray(new Int16Array([15, 33]))
+// => false
+```
+
 ## chunk
 
-将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组。 如果array 无法被分割成全部等长的区块，那么最后剩余的元素将组成一个区块。
+将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组。 如果 array 无法被分割成全部等长的区块，那么最后剩余的元素将组成一个区块。
 
 ```js
 const chunk = (array, chunkSize = 1, cache = []) => {
