@@ -32,68 +32,6 @@ JavaScript 是一门面向对象的编程语言，而面向对象的语言必须
 > - **Promise** 无法完全消除回调，如：Promise.then() 仍然是回调。但是回调变得可控了。
 > - **async/await** 是 Promise 的语法糖，用这种方式可以消除回调。
 
-## Promise 笔试题
-
-> await 会将后续代码推至微队列，如果没有后续代码，会将该函数的完成推至微队列。
-
-```js
-async function asy1() {
-  console.log(1)
-  await asy2()
-  console.log(2)
-}
-
-async function asy2() {
-  await setTimeout(_ => {
-    Promise.resolve().then(_ => {
-      console.log(3)
-    })
-    console.log(4)
-  }, 0)
-}
-
-async function asy3() {
-  Promise.resolve().then(() => {
-    console.log(6)
-  })
-}
-
-asy1()
-console.log(7)
-asy3()
-
-// => 1 7 6 2 4 3
-```
-
-```js
-async function asy1() {
-  console.log(1)
-  await asy2()
-  console.log(2)
-}
-
-async function asy2() {
-  await (async () => {
-    await (() => {
-      console.log(3)
-    })()
-    console.log(4)
-  })()
-}
-
-async function asy3() {
-  Promise.resolve().then(() => {
-    console.log(6)
-  })
-}
-
-asy1()
-console.log(7)
-asy3()
-
-// => 1 3 7 4 6 2
-```
-
 ## let 和 var 的区别？
 
 > 变量提升：在声明前进行使用则会出现变量提升的情况。

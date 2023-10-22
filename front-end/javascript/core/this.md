@@ -8,7 +8,7 @@ function foo() {
 }
 
 // 1.直接调用
-foo(); // window
+foo() // window
 
 // 2.将foo放到一个对象中，再调用
 var obj = {

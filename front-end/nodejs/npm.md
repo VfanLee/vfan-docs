@@ -3,74 +3,47 @@
 > npm CLI：https://docs.npmjs.com/cli/  
 > npm 仓库：https://www.npmjs.com/
 
-## 1. 命令
-
-```sh
-# 查看全局安装的依赖
-npm ls -g --depth=0
-```
-
-## 2. npm vs npx
+## npm vs npx
 
 为了方便比较，同一个场景，分两个命令来实现，比较之后，非常清晰，如下：
 
-### 2.1. 例1
-<!-- tabs:start -->
-<!-- tab:npm -->
-1. `npm i -g cowsay`
-2. `cowsay hello`
-3. `npm un -g cowsay`
+### npm 场景
 
-分析：
+1. `npm install -g cowsay`
+2. `cowsay hello`
+3. `npm uninstall -g cowsay`
+
+过程分析：
 
 1. 全局安装了 cowsay。
 2. 通过 cowsay 将 hello 输出到控制台。
 3. 全局卸载 cowsay。
 
-<!-- tab:npx -->
+### npx 场景
+
 1. `npx cowsay hello`
 
-分析：
+过程分析：
 
-1. 临时安装 cowsay；通过 cowsay 将 hello 输出到控制台；执行完后，卸载 cowsay。
-<!-- tabs:end -->
+1. 全局临时安装 cowsay；
+2. 通过 cowsay 将 hello 输出到控制台；
+3. 执行完后，卸载 cowsay。
 
-### 2.2. 例2
-<!-- tabs:start -->
-<!-- tab:npm -->
-`npm init <package-spec>`
+## node 模块寻找策略
 
-<!-- tab:npx -->
-`npx create-<package-spec>`
-<!-- tabs:end -->
+使用路径（相对路径、绝对路径）写法导入模块，例如：`require(./a)`。
 
-### package.json
+1. 文件查找
+   1. 首先根据路径寻找 `a` 文件，
+   2. 若找不到，会寻找 `a.js`、`a.json` 文件。
+2. 文件夹查找
+   1. 若找不到，会进入 `a` 文件夹，寻找 `package.json` 文件中的 `main` 字段的指定文件。
+   2. 若找不到 `package.json` 文件或者其 `main` 字段文件不存在，则会在 `a` 文件夹下寻找 `index.js`、`index.json`文件。
 
-```json
-{
-  "name": "", // 项目名称
-  "version": "1.0.0", // 项目版本
-  "description": "xxx", // 项目描述
-  "main": "index.js", // 项目入口文件
-  "scripts": { // 项目入口文件
-    "test": "echo \"test\"" // npm 脚本
-  }, 
-  "repository": { // 项目仓库
-    "type": "git",
-    "url": "https://xxx"
-  },
-  "keywords": [ // 项目关键词
-    "aaa",
-    "bbb"
-  ],
-  "author": "vfanlee", // 项目作者
-  "license": "MIT", // 项目许可协议
-  "bugs": {
-    "url": "https://xxx"
-  },
-  "homepage": "https://xxx", //项目主页
-  "dependencies": {}, // 项目依赖
-  "devDependencies": {}, // 项目开发依赖
-  "typings": "./index.d.ts" // 指定 typescript 的类型声明文件
-}
-```
+使用非路径写法导入模块，例如：`require(xxx)`。
+
+1. 内置模块
+   1. 首先去寻找内置模块，如：fs、path、http ……
+2. 第三方模块
+   1. 若找不到，会认为是第三方模块，会从 `node_modules` 文件夹中寻找。并且在 `node_modules` 中寻找的时候，也是遵循 **文件查找** 和 **文件夹查找** 的逻辑的。
+   2. 若该层的 `node_modules` 的没有找到，则会去上层的 `node_modules` 文件夹中寻找。

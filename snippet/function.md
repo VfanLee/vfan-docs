@@ -5,6 +5,30 @@
 1. 接受一个或多个函数作为输入。
 2. 输出一个函数。
 
+## curry
+
+创建一个函数，该函数接收 func 的参数，要么调用func返回的结果，如果 func 所需参数已经提供，则直接返回 func 所执行的结果。
+
+```js
+const curry = func => {
+  // 获取函数的形参数量
+  const expectedArgs = func.length
+  const curried = (...args) => {
+    return args.length >= expectedArgs
+        ? func(...args)
+        : (...args2) => curried(...args.concat(args2))
+  }
+  return curried
+}
+
+// 实例
+const abc = (a, b, c) => [a, b, c]
+const curried = curry(abc)
+curried(1)(2)(3)(4) // => [1, 2, 3]
+curried(1, 2)(3) // => [1, 2, 3]
+curried(1, 2, 3) // => [1, 2, 3]
+```
+
 ## debounce
 
 **防抖** 指延迟一段时间后才会执行函数，若重复执行，延迟时间则会刷新。例如：表单提交、输入框实时搜索、窗口大小调整事件等。
