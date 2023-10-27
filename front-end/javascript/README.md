@@ -1,13 +1,5 @@
 # JavaScript
 
-## js 中有几种数据类型？
-
-> 参见：[MDN JavaScript 数据类型和数据结构](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
-
-1. 基本数据类型（7 种）：Null、Undefined、Boolean、Number、String、Symbol、BigInt
-
-2. 引用数据类型（1 种）：Object（包括数组、函数）。
-
 ## 原型的作用？
 
 JavaScript 是一门面向对象的编程语言，而面向对象的语言必须做到一点就是：**能判定一个实例的类型**。原型就是 JS 实现面向对象的核心，JS 通过原型就可以知晓某个对象属于哪个类型，原型的存在就可以避免类型丢失。
@@ -20,17 +12,6 @@ JavaScript 是一门面向对象的编程语言，而面向对象的语言必须
 >
 > 1. 类型元数据：java、C# ……
 > 2. 原型：Javascript ……
-
-## Promise 解决了什么问题？
-
-异步是 JS 中的常见场景。在传统模式下，通常会使用回调函数的方式来进行异步编程，当嵌套层级过多时，代码很难维护，这也称之为“回调地狱”。而 Promise 可以通过“链式调用”的方式来避免代码的深度嵌套。
-
-总的来说就是，Promise 可以更方便地进行异步编程，统一异步实现。
-
-> Tips：
->
-> - **Promise** 无法完全消除回调，如：Promise.then() 仍然是回调。但是回调变得可控了。
-> - **async/await** 是 Promise 的语法糖，用这种方式可以消除回调。
 
 ## let 和 var 的区别？
 
