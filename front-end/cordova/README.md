@@ -61,6 +61,8 @@ document.addEventListener('deviceready', function () {
 
 ## Cordova 集成 Vue3 开发
 
+> 参考 Demo：[vue-cordova-project](https://github.com/VfanLee/vue-cordova-project)
+
 1. 创建一个 cordova 模板项目（以下称为 A）；
 2. 创建一个 vue3 项目（以下称为 B）；
 3. 将 A 中 `config.xml` 复制到 B 的根目录下，内容自行调整；
