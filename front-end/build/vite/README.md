@@ -4,7 +4,7 @@
 
 ## 1. 什么是 Vite ？
 
-> 参见 [Vite](https://cn.vitejs.dev/guide/)
+> 参考： [Vite](https://cn.vitejs.dev/guide/)
 
 ## 2. Vite vs Webpack
 

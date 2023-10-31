@@ -1,6 +1,6 @@
 # 全局 SVG 图标
 
-> 参见：
+> 参考：
 >
 > - [SVG MDN](https://developer.mozilla.org/zh-CN/docs/Web/SVG)
 > - [vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons)
@@ -41,4 +41,4 @@
     import 'virtual:svg-icons-register'
     ```
 
-4. 定义 `<SvgIcon />` 组件，参见：[SvgIcon.vue](https://github.com/VfanLee/vue3-admin-template/blob/main/src/components/SvgIcon.vue)。
+4. 定义 `<SvgIcon />` 组件，参考：[SvgIcon.vue](https://github.com/VfanLee/vue3-admin-template/blob/main/src/components/SvgIcon.vue)。

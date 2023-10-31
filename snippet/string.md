@@ -1,6 +1,6 @@
 # String
 
-> 参见：
+> 参考：
 >
 > - [Lodash](https://www.lodashjs.com/)
 > - [MDN String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)

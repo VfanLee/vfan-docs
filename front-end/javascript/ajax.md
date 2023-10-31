@@ -1,6 +1,6 @@
 # Ajax
 
-> 参见：
+> 参考：
 >
 > - [MDN Ajax](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX)
 > - [MDN XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

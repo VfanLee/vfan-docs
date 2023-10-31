@@ -5,7 +5,7 @@
 
 ## 基本使用
 
-> 参见：[Vue Router 和 组合式 API](https://router.vuejs.org/zh/guide/advanced/composition-api.html)
+> 参考：[Vue Router 和 组合式 API](https://router.vuejs.org/zh/guide/advanced/composition-api.html)
 
 ### 组件中使用 router、route 实例对象
 

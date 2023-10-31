@@ -1,6 +1,6 @@
 # v-model
 
-> 参见：[组件 v-model](https://cn.vuejs.org/guide/components/v-model.html)
+> 参考：[组件 v-model](https://cn.vuejs.org/guide/components/v-model.html)
 
 ## 原生元素
 

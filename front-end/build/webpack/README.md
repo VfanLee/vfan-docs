@@ -4,4 +4,4 @@
 
 ## 1. 什么是 Webpage ？
 
-> 参见：[webpack](https://webpack.docschina.org/concepts/)
+> 参考：[webpack](https://webpack.docschina.org/concepts/)

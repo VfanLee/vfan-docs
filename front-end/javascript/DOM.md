@@ -202,7 +202,7 @@ el.style // 获取内联样式
 el.style.color // 获取内联样式中的 color 值
 ```
 
-> 参见：
+> 参考：
 >
 > - [MDN getComputedStyle](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getComputedStyle)
 > - [MDN Node.ownerDocument](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/ownerDocument)

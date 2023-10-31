@@ -1,6 +1,3 @@
-- [Windows 系统安装](/expand/windows/install.md)
-- [开发工具](/expand/开发工具.md)
-
 - [常见编程概念](/expand/常见编程概念.md)
 - [Git](/expand/git.md)
 - [正则表达式](/expand/regular.md)
@@ -37,14 +34,6 @@
   - [Dockerfile](/expand/docker/dockerfile.md)
   - [Docker Compose](/expand/docker/docker-compose.md)
 
-- Nginx
-  - [安装](/expand/nginx/install.md)
-  - [申请证书](/expand/nginx/申请证书.md)
-  - [变量](/expand/nginx/变量.md)
-
-- Jenkins
-  - [安装](/expand/jenkins/install.md)
-
 - 数据库
   - MySQL
     - [安装](/expand/database/mysql/install.md)
@@ -56,3 +45,11 @@
     - [变量](/expand/database/mysql/变量.md)
     - [存储过程](/expand/database/mysql/存储过程.md)
     - [流程控制结构](/expand/database/mysql/流程控制结构.md)
+
+- Nginx
+  - [安装](/expand/nginx/install.md)
+  - [申请证书](/expand/nginx/申请证书.md)
+  - [变量](/expand/nginx/变量.md)
+
+- Jenkins
+  - [安装](/expand/jenkins/install.md)

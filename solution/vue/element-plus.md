@@ -2,7 +2,7 @@
 
 ## 引入 Element Plus【vite 版】
 
-> 参见：
+> 参考：
 >
 > - [vite: css.preprocessorOptions](https://cn.vitejs.dev/config/shared-options.html#css-preprocessoroptions)
 > - [Element Plus 按需导入](https://element-plus.org/zh-CN/guide/quickstart.html#%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5)

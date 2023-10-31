@@ -1,6 +1,6 @@
 # Array Reference
 
-> 参见：
+> 参考：
 >
 > - [Lodash](https://www.lodashjs.com/)
 > - [MDN Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)

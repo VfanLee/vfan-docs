@@ -63,9 +63,10 @@
     - [Webpack 配置](/front-end/build/webpack/配置.md)
 
 - Node.js
-  - [安装](/front-end/nodejs/install.md)
   - [npm](/front-end/nodejs/npm.md)
   - [模块系统](/front-end/nodejs/modular.md)
   - [express](/front-end/nodejs/express.md)
   - [mysql](/front-end/nodejs/mysql.md)
   - [auth](/front-end/nodejs/auth.md)
+
+- [Cordova](/front-end/cordova/README.md)
