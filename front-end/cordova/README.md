@@ -66,13 +66,13 @@ document.addEventListener('deviceready', function () {
 1. 创建一个 cordova 模板项目（以下称为 A）；
 2. 创建一个 vue3 项目（以下称为 B）；
 3. 将 A 中 `config.xml` 复制到 B 的根目录下，内容自行调整；
-4. 在 B 的 `index.html` 中引入 cordova 文件（文件不存在没关系，Cordova 打包成后会自动生成）；
+4. 在 B 的 `index.html` 中引入 cordova 文件（文件不存在没关系，Cordova 打包成 APP 后会自动生成）；
 
     ```html
     <script src="cordova.js"></script>
     ```
 
-5. 修改 B 的打包的项目名为 `www`，然后打包编译；
+5. 修改 B 编译后的目录名为 `www`；
 
     ```js
     // vite 为例
@@ -86,16 +86,24 @@ document.addEventListener('deviceready', function () {
 
 7. 命令行执行 `cordova run android` 来打包 vue3 + Cordova 的集成项目。
 
-### 实时调试
+如上，一个最基本的集成项目就搭建完成了。
+
+### APP 实时调试
+
+注意：APP 实时调试其实没什么卵用，因为将服务更改为 **本地服务** 后，会找不到 `cordova.js` 文件，其原因就是本地没有该文件，该文件是 cordova 打包应用时才生成的。如果调试原生功能，还是需要打包应用后再来查看效果。不过，由于应用是运行在 [WebView](https://developer.android.com/reference/android/webkit/WebView) 之中的，所以可以在 [Chrome](https://www.google.com/chrome/) 的搜索栏中输入 `chrome://inspect/#devices` 来进行调试。
 
 1. 本地运行 vue 项目，启动一个服务：`http://192.168.1.88:5173`；
 2. 将 `config.xml` 中的 `<content src="index.html" />` 更改为 `<content src="http://192.168.1.88:5173/" />`
-
-    ```xml
-    <!-- dev -->
-    <content src="http://192.168.1.88:5173/" />
-    <!-- prod -->
-    <!-- <content src="index.html" /> -->
-    ```
-
 3. Cordova 重新打包应用。
+
+### FAQ
+
+#### 应用报错：`et::ERR_CLEARTEXT_NOT_PERMITTED`
+
+1. 在 `YOUR_PATH\platforms\android\app\src\main` 路径下找到 `AndroidManifest.xml` 文件；
+2. 在 `<application>` 标签中添加 `android:usesCleartextTraffic="true"`；
+3. Cordova 重新打包应用。
+
+#### APP 启动时默认 404
+
+vue router 路由模式请使用 **hash 模式** 而非 **history 模式**。
