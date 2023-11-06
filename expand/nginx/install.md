@@ -4,7 +4,6 @@
 
     ```sh
     mkdir -p /app/nginx
-    chmod -R 777 /app/nginx
     ```
 
 2. 申请证书。
@@ -19,12 +18,13 @@
     cd /app/nginx/certs && vi key.pem
     ```
 
-3. 编写 nginx 配置文件。
+3. 建立基本目录结构。
 
-    - 参考：[nginx.conf 模板](/expand//nginx/template/nginx.conf)
-    - 参考：[代理静态页面](/expand//nginx/template/代理静态页.conf)
-    - 参考：[反向代理](/expand//nginx/template/反向代理.conf)
-    - 参考：[重定向](/expand//nginx/template/重定向.conf)
+   - Template 参考：
+     - [nginx.conf](/expand/nginx/template/nginx.conf)
+     - [default.conf](/expand/nginx/template/default.conf)
+
+    ![](assets/nginx_directory_structure.png)
 
 4. 部署容器
 
@@ -40,7 +40,12 @@
                          --volume /app/nginx/nginx.conf:/etc/nginx/nginx.conf \
                          --volume /app/nginx/conf.d:/etc/nginx/conf.d \
                          --volume /app/nginx/html:/usr/share/nginx/html \
-                         --volume /app/nginx/logs:/var/log/nginx \
                          --volume /app/nginx/certs:/etc/nginx/certs \
                          nginx:latest
     ```
+
+5. 自定义 nginx 配置
+
+   - 参考：[代理静态页面](/expand//nginx/template/代理静态页.conf)
+   - 参考：[反向代理](/expand//nginx/template/反向代理.conf)
+   - 参考：[重定向](/expand//nginx/template/重定向.conf)
