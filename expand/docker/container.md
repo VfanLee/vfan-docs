@@ -78,4 +78,5 @@ docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
   - `-v, --volume list`: 将主机上的目录或文件挂载到容器内部。
   - `-e, --env list`: 设置环境变量。
   - `--name string`: 为容器指定名称。
+  - `--restart`：容器退出时应用的重新启动策略（默认 `no`）。
   - `--rm`：容器退出后立即删除。

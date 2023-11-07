@@ -24,7 +24,7 @@
      - [nginx.conf](/expand/nginx/template/nginx.conf)
      - [default.conf](/expand/nginx/template/default.conf)
 
-    ![](assets/nginx_directory_structure.png)
+    ![nginx 目录结构](assets/nginx_directory_structure.png)
 
 4. 部署容器
 
@@ -41,6 +41,7 @@
                          --volume /app/nginx/conf.d:/etc/nginx/conf.d \
                          --volume /app/nginx/html:/usr/share/nginx/html \
                          --volume /app/nginx/certs:/etc/nginx/certs \
+                         --restart=always \
                          nginx:latest
     ```
 

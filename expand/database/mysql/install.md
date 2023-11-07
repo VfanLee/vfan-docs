@@ -8,5 +8,6 @@ docker container run -d \
                      -p 3306:3306 \
                      -v /app/mysql:/var/lib/mysql \
                      -e MYSQL_ROOT_PASSWORD=<your_pwd> \
+                     --restart=always \
                      mysql:latest
 ```
