@@ -6,8 +6,6 @@
   - [Utils](/snippet/utils.md)
   - [Code Review](/snippet/grace.md)
 
-- [Web 解决方案](/solution/README.md)
-
 - [Web EF](/front-end/README.md)
 
 - [技术拓展](/expand/README.md)

@@ -1,3 +1,5 @@
+- [Web 相关术语的定义](https://developer.mozilla.org/zh-CN/docs/Glossary)
+
 - CSS
   - [CSS 设计模式](/front-end/css/设计模式.md)
   - [CSS 简写属性](/front-end/css/简写属性.md)
@@ -26,7 +28,9 @@
     - OOP
       - [OOP ES5](/front-end/javascript/core/OOP_ES5.md)
       - [OOP ES6](/front-end/javascript/core/OOP_ES6.md)
-    - [ES6 modular](/front-end/javascript/core/modular.md)
+    - [ES6 module](/front-end/javascript/core/modular.md)
+    - [Array 方法总结](/front-end/javascript/core/array.md)
+    - [String 方法总结](/front-end/javascript/core/string.md)
   - [Table](/front-end/javascript/table.md)
   - [Form](/front-end/javascript/form.md)
   - [DOM](/front-end/DOM.md)
