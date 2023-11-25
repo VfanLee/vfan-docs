@@ -35,7 +35,7 @@ git config --global --unset https.proxy                  # 取消 https 代理
     成功执行后，会生成 `~/.ssh` 文件夹，包含公钥 `id_rsa.pub`、私钥 `id_rsa` 等文件。
 
     ```txt
-    ├── id_rsa # 私钥
+    ├── id_rsa     # 私钥
     └── id_rsa.pub # 公钥
     ```
 
@@ -253,13 +253,21 @@ git push origin --delete <branch-name>
 
 ### 6.7. 合并分支
 
-还有一种合并分支的方式是 rebase “变基”，会改变提交历史，以此来保持线性历史，个人不习惯，因此不记录。
+> 备注：还有一种合并分支的方式是 rebase “变基”，会改变提交历史，以此来保持线性历史，个人不习惯，因此不记录。
 
 ```sh
 # 1. 切换到你需要更改的分支上，比如切换到 main 分支上
 git switch main
 # 2. 再来合并你的分支
 git merge <your-branch>
+```
+
+如果遇到冲突如何处理？
+
+```sh
+# 1. 解决冲突代码
+# 2. 使用 "git add <file>..." 来更新文件状态，以此来标记冲突已解决
+git add xxx
 ```
 
 ## 难道还有 “后悔药” ？
