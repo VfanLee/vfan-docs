@@ -6,8 +6,10 @@
 - [JavaScript](/front-end/javascript/README.md)
 - [位运算](/front-end/javascript/位运算.md)
 - [数据类型](/front-end/javascript/数据类型.md)
-- [日期比较](/front-end/javascript/日期比较.md)
 - [this](/front-end/javascript/this.md)
+- [Array 方法总结](/front-end/javascript/array.md)
+- [String 方法总结](/front-end/javascript/string.md)
+- [日期比较](/front-end/javascript/日期比较.md)
 - [Promise](/front-end/javascript/promise.md)
 - OOP
   - [OOP ES5](/front-end/javascript/OOP/OOP_ES5.md)
