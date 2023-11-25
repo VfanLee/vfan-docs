@@ -78,3 +78,15 @@ function throttle(func, delay = 500) {
   }
 }
 ```
+
+## function 函数调用
+
+```js
+function getitems(fruitList, ...args, favoriteFruit){
+  return [ ...fruitList, ...args, favoriteFruit];
+}
+
+// 下面的函数调用结果是什么？
+getitems([' banana', 'apple'], 'pear', 'orange ')
+// => 报错：Rest parameter must be last formal parameter（剩余参数必须是最后一个）
+```

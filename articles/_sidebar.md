@@ -1,1 +1,0 @@
-- [machine](/articles/machine/app.md)

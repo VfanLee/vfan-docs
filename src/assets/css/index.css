@@ -1,3 +1,8 @@
+.sidebar-nav .folder {
+  cursor: pointer;
+  font-weight: 700;
+}
+
 .hide-code-mask-btn {
   cursor: pointer;
 }

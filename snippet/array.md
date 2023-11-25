@@ -374,3 +374,26 @@ const reject = (arr, predicate) => arr.filter(x => !predicate(x))
 reject(['a', 'b', 'c', 'd', 'e', 'f', 'g'], char => char === 'd')
 // => ['a', 'b', 'c', 'e', 'f', 'g']
 ```
+
+## Array 使用场景
+
+```js
+const products = [
+  { name: 'XiaoMi', stock: 2000 },
+  { name: 'iphone14', stock: 1500 },
+  { name: 'Huawei', stock: 1300 }
+]
+
+// 要求：面的所有对象不可更改，使 iphone14 的库存 -1，得到一个新数组
+products.map(p => (p.name === 'iphone14' ? { ...p, stock: p.stock - 1 } : p))
+```
+
+```js
+const arr1 = [33, 22, 22, 55, 33, 11, 33, 5]
+const arr2 = [22, 22, 55, 77, 88, 88, 99, 99]
+
+// 要求：两个数组的并集、交集、差集，不能出现重复项,得到的结果是一个新数组
+const union = [...new Set([...arr1, ...arr2])]
+const cross = [...new Set([...arr1.filter(x => arr2.includes(x))])]
+const diff = union.filter(x => !cross.includes(x))
+```

@@ -1,40 +1,5 @@
-- CSS
-  - [CSS 设计模式](/front-end/css/设计模式.md)
-  - [CSS 简写属性](/front-end/css/简写属性.md)
-  - [CSS 函数](/front-end/css/函数.md)
-  - [CSS 变量](/front-end/css/variable.md)
-  - [盒子模型](/front-end/css/盒子模型.md)
-  - [文本](/front-end/css/文本.md)
-  - [背景](/front-end/css/背景.md)
-  - [float 浮动](/front-end/css/float.md)
-  - [position 定位](/front-end/css/position.md)
-  - [flex 弹性布局](/front-end/css/flex.md)
-  - [grid 网格布局](/front-end/css/grid.md)
-  - [媒体查询](/front-end/css/媒体查询.md)
-  - [左右排版](/front-end/css/左右排版.md)
-  - [过渡动画](/front-end/css/过渡动画.md)
-  - [杂项](/front-end/css/杂项.md)
-
-- JavaScript
-  - [JavaScript](/front-end/javascript/README.md)
-  - 语法核心
-    - [位运算](/front-end/javascript/core/位运算.md)
-    - [数据类型](/front-end/javascript/core/数据类型.md)
-    - [日期比较](/front-end/javascript/core/日期比较.md)
-    - [this](/front-end/javascript/core/this.md)
-    - [Promise](/front-end/javascript/core/promise.md)
-    - OOP
-      - [OOP ES5](/front-end/javascript/core/OOP_ES5.md)
-      - [OOP ES6](/front-end/javascript/core/OOP_ES6.md)
-    - [ES6 modular](/front-end/javascript/core/modular.md)
-  - [Table](/front-end/javascript/table.md)
-  - [Form](/front-end/javascript/form.md)
-  - [DOM](/front-end/DOM.md)
-  - [BOM](/front-end/javascript/BOM.md)
-  - [offset_client_scroll](/front-end/javascript/offset_client_scroll.md)
-  - [鼠标位置](/front-end/javascript/鼠标位置.md)
-  - [剪切板](/front-end/javascript/剪切板.md)
-  - [Canvas](/front-end/canvas.md)
+- [CSS](/front-end/css/设计模式.md)
+- [JavaScript](/front-end/javascript/README.md)
 
 - TypeScript
   - [数据类型](/front-end/typescript/数据类型.md)
@@ -69,4 +34,5 @@
   - [mysql](/front-end/nodejs/mysql.md)
   - [auth](/front-end/nodejs/auth.md)
 
+- [Knockout](/front-end/knockout/README.md)
 - [Cordova](/front-end/cordova/README.md)

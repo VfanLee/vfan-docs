@@ -1,18 +1,15 @@
 # GitHub
 
-## github pages
+## GitHub Actions
 
-```txt
-A类型 185.199.108.153
-A类型 185.199.109.153
-A类型 185.199.110.153
-A类型 185.199.111.153
-```
-
-## github actions
+1. GitHub 进入 Account Settings；
+2. 找到 Developer settings，生成一个 token，并赋予 repo、workflow 的权限；
+3. 进入项目仓库（Vue 为例）的 Settings 中；
+4. 找到 Security/Secrets and variables/Actions，新建一个仓库密钥（token 值）。
+5. 编写自动化脚本，如下：
 
 ```yml
-name: ci
+name: deploy
 
 on:
   push:
@@ -42,4 +39,5 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
+          token: ${{ secrets.CICD }}
 ```
