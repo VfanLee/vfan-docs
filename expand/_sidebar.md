@@ -47,9 +47,9 @@
     - [流程控制结构](/expand/database/mysql/流程控制结构.md)
 
 - Nginx
-  - [安装](/expand/nginx/install.md)
   - [申请证书](/expand/nginx/申请证书.md)
-  - [变量](/expand/nginx/变量.md)
+  - [安装](/expand/nginx/install.md)
+  - [Nginx 基础](/expand/nginx/基础.md)
 
 - Jenkins
   - [安装](/expand/jenkins/install.md)
