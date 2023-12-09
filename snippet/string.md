@@ -1,10 +1,5 @@
 # String
 
-> 参考：
->
-> - [Lodash](https://www.lodashjs.com/)
-> - [MDN String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-
 ## indexOf
 
 返回指定子字符串第一次出现的索引。
@@ -189,4 +184,17 @@ capitalize('FRED')
 ```js
 const re = /([0-9]+|([A-Z][a-z]+)|[a-z]+|([A-Z]+)(?![a-z]))/g
 const customCase = (str, flag = '-') => (String(str).match(re) || []).map(x => x.toLowerCase()).join(flag)
+```
+
+## escapeHTML
+
+转义 HTML 特殊字符。
+
+```js
+function escapeHTML(str) {
+  return str.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]))
+}
+
+// example
+escapeHTML('<div >Hi Medium</div>') // '&lt;div &gt;Hi Medium&lt;/div&gt;'
 ```

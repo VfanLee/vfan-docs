@@ -1,11 +1,14 @@
 # Utils
 
-## getRandom
+## removeFalsy
 
-获取 `[min, max]` 范围内的随机整数。
+过滤掉数组中的所有 [falsy](https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy)。
 
 ```js
-function getRandom(min, max) {
-  return Math.floor(Math.random() * (max + 1 - min) + min)
+function removeFalsy(arr) {
+  return arr.filter(Boolean)
 }
+
+// example
+removeFalsy([0, 'a string', '', NaN, true, 5, undefined, 'another string', false]) // [ 'a string', true, 5, 'another string' ]
 ```

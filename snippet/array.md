@@ -1,27 +1,4 @@
-# Array Reference
-
-> 参考：
->
-> - [Lodash](https://www.lodashjs.com/)
-> - [MDN Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-
-## isArray
-
-判断传递的值是否是一个 Array。
-
-```js
-Array.isArray([1, 3, 5])
-// => true
-
-Array.isArray('[]')
-// => false
-
-Array.isArray(new Array(5))
-// => true
-
-Array.isArray(new Int16Array([15, 33]))
-// => false
-```
+# Array
 
 ## chunk
 
