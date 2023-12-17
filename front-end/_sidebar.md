@@ -17,15 +17,7 @@
   - [Pinia](/front-end/vue/pinia/README.md)
   - [Vue Router](/front-end/vue/vue-router/README.md)
 
-- 构建工具
-  - Vite
-    - [Vite 介绍](/front-end/build/vite/README.md)
-    - [Vite 创建项目](/front-end/build/vite/创建项目.md)
-    - [Vite 配置](/front-end/build/vite/配置.md)
-  - Webpack
-    - [Webpack 介绍](/front-end/build/webpack/README.md)
-    - [Webpack 创建项目](/front-end/build/webpack/创建项目.md)
-    - [Webpack 配置](/front-end/build/webpack/配置.md)
+- [工程化](/front-end/engineering/vite/README.md)
 
 - Node.js
   - [npm](/front-end/nodejs/npm.md)

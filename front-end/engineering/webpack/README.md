@@ -1,7 +1,7 @@
-# Webpage
+# Webpack
 
 > 当前记录版本 v5
 
-## 1. 什么是 Webpage ？
+## 1. 什么是 Webpack ？
 
-> 参考：[webpack](https://webpack.docschina.org/concepts/)
+> 参考：[Webpack 概念](https://webpack.docschina.org/concepts/)
