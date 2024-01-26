@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>常见编解码</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>encodeURI & decodeURI</h2>
+      <section>
+        <textarea id="encodeURI-source" cols="30" rows="5"></textarea>
+        <button onclick="handleEncodeURI()">encodeURI</button>
+        <textarea id="encodeURI-result" cols="30" rows="5" readonly disabled></textarea>
+      </section>
+
+      <section>
+        <textarea id="decodeURI-source" cols="30" rows="5"></textarea>
+        <button onclick="handleDecodeURI()">decodeURI</button>
+        <textarea id="decodeURI-result" cols="30" rows="5" readonly disabled></textarea>
+      </section>
+
+      <h2>encodeURIComponent & decodeURIComponent</h2>
+      <section>
+        <textarea id="encodeURIComponent-source" cols="30" rows="5"></textarea>
+        <button onclick="handleEncodeURIComponent()">encodeURIComponent</button>
+        <textarea id="encodeURIComponent-result" cols="30" rows="5" readonly disabled></textarea>
+      </section>
+
+      <section>
+        <textarea id="decodeURIComponent-source" cols="30" rows="5"></textarea>
+        <button onclick="handleDecodeURIComponent()">decodeURIComponent</button>
+        <textarea id="decodeURIComponent-result" cols="30" rows="5" readonly disabled></textarea>
+      </section>
+
+      <h2>
+        escape & unescape
+        <span style="font-size: 12px; color: red">Deprecated</span>
+      </h2>
+      <section>
+        <textarea id="escape-source" cols="30" rows="5"></textarea>
+        <button onclick="handleEscape()">escape</button>
+        <textarea id="escape-result" cols="30" rows="5" readonly disabled></textarea>
+      </section>
+
+      <section>
+        <textarea id="unescape-source" cols="30" rows="5"></textarea>
+        <button onclick="handleUnescape()">unescape</button>
+        <textarea id="unescape-result" cols="30" rows="5" readonly disabled></textarea>
+      </section>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

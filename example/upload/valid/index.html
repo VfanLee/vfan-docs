@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文件校验</title>
+  </head>
+  <body>
+    <section>
+      <h2>限制大小</h2>
+      <input type="file" onchange="handleFileUpload1(event)" />
+    </section>
+
+    <section>
+      <h2>限制格式</h2>
+      <input type="file" onchange="handleFileUpload2(event)" accept=".jpg, .jpeg, .png, .gif" />
+    </section>
+
+    <section>
+      <h2>限制图片比例</h2>
+      <input type="file" onchange="handleFileUpload3(event)" />
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

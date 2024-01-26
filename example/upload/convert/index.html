@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File 转换</title>
+    <style>
+      .file__container {
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>File To xxx</h2>
+
+    <div class="file__container">
+      <input type="file" onchange="addFile(event)" />
+    </div>
+
+    <button onclick="fileToArrayBuffer(event)">To ArrayBuffer</button>
+    <button onclick="fileToBinaryString(event)">To BinaryString</button>
+    <button onclick="fileToDataURL(event)">To DataURL(Base64)</button>
+    <button onclick="fileToText(event)">To Text</button>
+    <button onclick="fileToObjectURL(event)">To ObjectURL</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spark-md5/3.0.2/spark-md5.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

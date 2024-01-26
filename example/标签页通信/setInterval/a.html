@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>A Tab</h1>
+    <button type="button" class="open-btn">新开标签页</button>
+
+    <script>
+      const openBtn = document.querySelector('.open-btn')
+
+      function windowCloseCallback(tab) {
+        const timer = setInterval(function () {
+          if (tab.closed) {
+            alert('新标签页已关闭')
+            clearInterval(timer)
+          }
+        }, 1000)
+      }
+
+      openBtn.addEventListener('click', function () {
+        const bTab = window.open('./b.html', '_blank')
+        windowCloseCallback(bTab)
+      })
+    </script>
+  </body>
+</html>
