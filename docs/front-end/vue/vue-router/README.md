@@ -1,6 +1,5 @@
 # Vue Router
 
-> [Vue Router 参考文档](https://router.vuejs.org/zh/)  
 > 当前记录版本：v4
 
 ## 基本使用

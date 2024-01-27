@@ -1,6 +1,5 @@
 # Pinia
 
-> [Pinia 参考文档](https://pinia.vuejs.org/zh/)  
 > 当前记录版本：v2
 
 ## 定义

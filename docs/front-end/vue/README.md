@@ -1,7 +1,15 @@
-# Vue
+# Vue 文档说明
 
-## 什么是 Vue 的响应式？
+Vue 的中文官方文档很成熟、既清晰也完整，仅作简单记录。
 
-Vue 的响应式指的是：数据变化时，依赖数据的函数重新运行。
+## Vue2
 
-在 Vue 开发中，数据和组件的 render 函数关联在一起，从而实现了数据变化时，会重新执行 render 函数。当然除了 vue 中的 render 函数之外，如：computed、watch …… 也是响应式的场景。
+- [Vue2](https://v2.cn.vuejs.org/)
+- [Vue Router v3](https://v3.router.vuejs.org/zh/)
+- [Vuex](https://v3.vuex.vuejs.org/zh/)
+
+## Vue3【最新】
+
+- [Vue3](https://cn.vuejs.org/)
+- [Vue Router v4](https://router.vuejs.org/zh/)
+- [Pinia](https://pinia.vuejs.org/zh/)
