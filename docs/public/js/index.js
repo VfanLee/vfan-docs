@@ -22,8 +22,8 @@ window.$docsify = {
   // ------------ sidebar ------------
   hideSidebar: false,
   loadSidebar: true,
-  // maxLevel: 1,
-  // subMaxLevel: 0,
+  maxLevel: 2,
+  subMaxLevel: 0,
 
   // ------------ plugin ------------
   ...thirdPlugin,

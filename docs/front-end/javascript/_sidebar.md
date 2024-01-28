@@ -3,7 +3,6 @@
   - [v8引擎](/front-end/javascript/browser/v8引擎.md)
   - [事件循环](/front-end/javascript/browser/事件循环.md)
   - [浏览器渲染原理](/front-end/javascript/browser/浏览器渲染原理.md)
-- [JavaScript](/front-end/javascript/README.md)
 - [位运算](/front-end/javascript/位运算.md)
 - [数据类型](/front-end/javascript/数据类型.md)
 - [this](/front-end/javascript/this.md)
@@ -21,3 +20,4 @@
   - [offset_client_scroll](/front-end/javascript/web-apis/offset_client_scroll.md)
   - [鼠标坐标](/front-end/javascript/web-apis/鼠标坐标.md)
   - [剪切板](/front-end/javascript/web-apis/剪切板.md)
+- [其他](/front-end/javascript/其他.md)

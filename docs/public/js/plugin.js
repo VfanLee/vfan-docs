@@ -8,14 +8,12 @@ export default {
 
       // 每次开始解析 Markdown 内容时调用。支持异步
       hook.beforeEach(function (content) {
-        console.log(vm);
         // ...
         return content
       })
 
       // 解析成 html 后调用。支持异步
       hook.afterEach(function (html, next) {
-        console.log(vm);
         // ...
         // 异步处理完成后调用 next(html) 返回结果
         next(html)

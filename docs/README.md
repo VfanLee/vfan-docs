@@ -8,9 +8,9 @@
 
 ## 前端基础
 
-- [HTML](/front-end/html/README.md)
+- [HTML](/front-end/html/form.md)
 - [CSS](/front-end/css/设计模式.md)
-- [JavaScript](/front-end/javascript/README.md)
+- [JavaScript](/front-end/javascript/位运算.md)
 - [TypeScript](/front-end/typescript/数据类型.md)
 
 ## 框架篇
@@ -48,7 +48,3 @@
 
 - [Git](/expand/git.md)
 - [正则表达式](/expand/regular.md)
-
-## 杂七杂八
-
-...
