@@ -1,4 +1,4 @@
-# BOM
+# Browser Object Model (BOM)
 
 ## 1. 窗口操作
 

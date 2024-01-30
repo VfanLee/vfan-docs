@@ -1,0 +1,8 @@
+- [Ubuntu](expand/linux/ubuntu.md)
+- [Vim](expand/linux/vim.md)
+- [变量](expand/linux/变量.md)
+- [打包压缩](expand/linux/打包压缩.md)
+- [权限管理](expand/linux/权限管理.md)
+- [流程控制](expand/linux/流程控制.md)
+- [用户管理](expand/linux/用户管理.md)
+- [系统目录](expand/linux/系统目录.md)

@@ -2,49 +2,48 @@
 
 ## 编程基础
 
-- [计算机基础](/expand/computer-basis/操作系统.md)
-- [计算机网络](/expand/computer-network/计算机网络.md)
-- [常见编程概念](/expand/常见编程概念.md)
+- [计算机基础](expand/computer-basis/操作系统.md)
+- [计算机网络](expand/computer-network/计算机网络.md)
+- [常见编程概念](expand/常见编程概念.md)
 
 ## 前端基础
 
-- [HTML](/front-end/html/form.md)
-- [CSS](/front-end/css/设计模式.md)
-- [JavaScript](/front-end/javascript/位运算.md)
-- [TypeScript](/front-end/typescript/数据类型.md)
+- [HTML](front-end/html/form.md)
+- [CSS](front-end/css/设计模式.md)
+- [JavaScript](front-end/javascript/basic/数据类型.md)
+- [TypeScript](front-end/typescript/数据类型.md)
 
 ## 框架篇
 
-- [Vue](/front-end/vue/README.md)
-- [React](/front-end/react/README.md)
-- [Knockout.js](/front-end/knockout/README.md)
+- [Vue](front-end/vue/README.md)
+- [React](front-end/react/README.md)
+- [Knockout.js](front-end/knockout/README.md)
 
-## 前端工程化
+## 工程化
 
-- [Vite](/front-end/vite/README.md)
-- [Webpack](/front-end/webpack/README.md)
-- [Gulp](/front-end/gulp/README.md)
-
-## 全栈开发
-
-- [Node.js](/front-end/nodejs/npm.md)
+- [Vite](front-end/vite/README.md)
+- [Webpack](front-end/webpack/README.md)
+- [Gulp](front-end/gulp/README.md)
 
 ## 混合开发
 
-- [Cordova](/front-end/cordova/README.md)
+- [Cordova](front-end/cordova/README.md)
+
+## 全栈开发
+
+- [Node.js](front-end/nodejs/npm.md)
+- [MySQL](expand/database/mysql/install.md)
 
 ## 服务器
 
-- [Linux【Ubuntu】](/expand/linux/ubuntu.md)
-- [Docker](/expand/docker/基本命令.md)
-- [Nginx](/expand/nginx/基础.md)
-- [Jenkins](/expand/jenkins/install.md)
+- [Linux【Ubuntu】](expand/linux/ubuntu.md)
+- [Docker](expand/docker/基本命令.md)
+- [Nginx](expand/nginx/基础.md)
+- [Jenkins](expand/jenkins/install.md)
 
-## 数据库
+## 其他
 
-- [MySQL](/expand/database/mysql/install.md)
-
-## 其他技术
-
-- [Git](/expand/git.md)
-- [正则表达式](/expand/regular.md)
+- [Git](expand/git.md)
+- [GitHub](expand/github.md)
+- [正则表达式](expand/regular.md)
+- [常见开源协议](expand/regular.md)

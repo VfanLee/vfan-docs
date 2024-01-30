@@ -1,4 +1,4 @@
-# DOM
+# Document Object Model (dom)
 
 > **元素** 是一种特殊的节点，是元素节点 (Node.ELEMENT_NODE) 的简称，它由 HTML 文档中的标签表示。例如，`<div>`，`<p>`，`<span>` 都是元素。
 >
