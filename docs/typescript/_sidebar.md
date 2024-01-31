@@ -1,0 +1,4 @@
+- [数据类型](typescript/数据类型.md)
+- [关键字](typescript/关键字.md)
+- [类型声明文件](typescript/类型声明文件.md)
+- [TS Config](typescript/tsconfig.md)

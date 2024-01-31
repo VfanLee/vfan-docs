@@ -1,6 +1,0 @@
-  - [DOM](front-end/javascript/web-apis/dom.md)
-  - [BOM](front-end/javascript/web-apis/bom.md)
-  - [Canvas](front-end/javascript/web-apis/canvas.md)
-  - [Offset Client Scroll](front-end/javascript/web-apis/offset_client_scroll.md)
-  - [鼠标坐标](front-end/javascript/web-apis/鼠标坐标.md)
-  - [剪切板](front-end/javascript/web-apis/剪切板.md)

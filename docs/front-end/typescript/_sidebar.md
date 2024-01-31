@@ -1,4 +1,0 @@
-- [数据类型](front-end/typescript/数据类型.md)
-- [关键字](front-end/typescript/关键字.md)
-- [类型声明文件](front-end/typescript/类型声明文件.md)
-- [TS Config](front-end/typescript/tsconfig.md)

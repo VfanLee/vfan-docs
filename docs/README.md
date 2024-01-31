@@ -8,30 +8,30 @@
 
 ## 前端基础
 
-- [HTML](front-end/html/form.md)
-- [CSS](front-end/css/设计模式.md)
-- [JavaScript](front-end/javascript/basic/数据类型.md)
-- [TypeScript](front-end/typescript/数据类型.md)
+- [HTML](html/form.md)
+- [CSS](css/设计模式.md)
+- [JavaScript](javascript/basic/数据类型.md)
+- [TypeScript](typescript/数据类型.md)
 
 ## 框架篇
 
-- [Vue](front-end/vue/README.md)
-- [React](front-end/react/README.md)
-- [Knockout.js](front-end/knockout/README.md)
+- [Vue](vue/)
+- [React](react/)
+- [Knockout.js](knockout/)
 
 ## 工程化
 
-- [Vite](front-end/vite/README.md)
-- [Webpack](front-end/webpack/README.md)
-- [Gulp](front-end/gulp/README.md)
+- [Vite](vite/)
+- [Webpack](webpack/)
+- [Gulp](gulp/)
 
 ## 混合开发
 
-- [Cordova](front-end/cordova/README.md)
+- [Cordova](cordova/)
 
 ## 全栈开发
 
-- [Node.js](front-end/nodejs/npm.md)
+- [Node.js](nodejs/npm.md)
 - [MySQL](expand/database/mysql/install.md)
 
 ## 服务器

@@ -1,2 +1,2 @@
 - [首页](?id=开发笔记总览)
-- [解决方案](solution/README.md)
+- [解决方案](solution/)

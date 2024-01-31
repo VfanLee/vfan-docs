@@ -1,3 +1,0 @@
-- [浏览器相关](front-end/javascript/browser/浏览器基本概念.md)
-- [JavaScript 基础](front-end/javascript/basic/数据类型.md)
-- [Web APIs](front-end/javascript/web-apis/dom.md)

@@ -1,0 +1,28 @@
+{
+  "name": "vfan-docs",
+  "version": "1.0.0",
+  "description": "开发笔记，总结，记录，备忘。",
+  "private": true,
+  "scripts": {
+    "start": "docsify s docs",
+    "g": "node scripts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VfanLee/vfan-docs.git"
+  },
+  "keywords": [
+    "docs",
+    "notes",
+    "blog"
+  ],
+  "author": "Vfan Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VfanLee/vfan-docs/issues"
+  },
+  "homepage": "https://github.com/VfanLee/vfan-docs#readme",
+  "devDependencies": {
+    "docsify-cli": "^4.4.4"
+  }
+}
