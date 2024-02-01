@@ -3,6 +3,17 @@
 ## 创建对象
 
 <!-- tabs:start -->
+<!-- tab: new Object() -->
+
+```js
+const obj = new Object()
+obj.name = 'fan'
+obj.age = 20
+obj.eating = function() {
+  console.log(this.name + 'eating!')
+}
+```
+
 <!-- tab: 字面量 -->
 
 ```js
