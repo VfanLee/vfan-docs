@@ -1,6 +1,6 @@
 # JS 模块化
 
-> JS 模块化 [Example Demo](https://github.com/VfanLee/vfan-docs/tree/main/example/modular)
+> JS 模块化 [Example Demo](https://github.com/VfanLee/vfan-docs/tree/main/examples/modular)
 
 ## export 导出
 

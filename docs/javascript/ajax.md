@@ -29,4 +29,4 @@
 
 ## Ajax 示例参考
 
-[ajax 使用示例](https://github.com/VfanLee/lab/tree/main/basic/ajax)
+[ajax 使用示例](https://github.com/VfanLee/vfan-docs/tree/main/examples/ajax)
