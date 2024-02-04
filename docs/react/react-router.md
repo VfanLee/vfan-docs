@@ -59,8 +59,6 @@ export default App
 - 不需要后端支持
 - 使用 `createHashRouter`
 
-url 表现：`url/login`
-
 ## 路由导航
 
 ### 声明式
@@ -137,7 +135,7 @@ const name = params.get('name')
 
 2. 使用 `<Outlet />` 渲染位置
 
-### 默认路由
+## 默认路由
 
 嵌套路由时，指定某个子路由为默认路由，案例如下：
 
@@ -163,7 +161,7 @@ const name = params.get('name')
 }
 ```
 
-### 404 路由配置
+## 404 路由配置
 
 ```jsx
 {

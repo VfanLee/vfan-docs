@@ -1,6 +1,6 @@
 # Vite
 
-> 当前记录版本 v4
+> 当前记录版本 v5
 
 ## 1. 什么是 Vite ？
 
@@ -37,30 +37,3 @@ Vite 和 Webpack 都是前端构建工具，用于处理和管理前端项目中
 3. **快速的开发服务器**：Vite 提供了一个快速的开发服务器，它能够在几乎没有构建延迟的情况下立即启动您的应用程序。这使得开发体验非常流畅，您可以更快地进行调试和测试。
 4. **按需加载**：Vite 会根据需要按需加载模块，而不是提前加载整个应用程序。这意味着只有在用户导航到某个页面或执行某个操作时，相关的代码才会被加载，减少了初始加载时间和资源消耗。
 5. **支持多种前端框架和语言**：Vite 不仅支持纯 JavaScript，还支持多种前端框架和语言，包括 TypeScript、Vue.js、React、Svelte 等。这使得开发者可以根据项目需求选择最合适的技术栈。
-
-## 创建项目
-
-vite 可以快速创建多种项目，如：vanilla JS、vue、react ……
-
-```sh
-npm create vite
-```
-
-### 创建 Vue 项目
-
-可以使用官方脚手架 [create-vue](https://github.com/vuejs/create-vue) 来进行创建。
-
-#### 创建 Vue3 项目
-
-```sh
-npm create vue@latest
-
-# or 可能会存在有 npm 缓存而不是最新的
-npm create vue@3
-```
-
-#### 创建 Vue2 项目
-
-```sh
-npm create vue@2
-```

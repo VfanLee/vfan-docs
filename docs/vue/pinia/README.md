@@ -2,6 +2,10 @@
 
 > 当前记录版本：v2
 
+## 目录规范
+
+https://pinia.vuejs.org/zh/cookbook/migration-vuex.html#restructuring-modules-to-stores
+
 ## 定义
 
 ### Options API

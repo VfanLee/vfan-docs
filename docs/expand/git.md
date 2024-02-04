@@ -276,9 +276,19 @@ git merge <your-branch>
 git add xxx
 ```
 
-## 难道还有 “后悔药” ？
+如果你想取消这个合并该如何处理？
 
-### 回滚到某次提交
+```sh
+git merge --abort
+
+# 或者，如果你使用的是较旧的 Git 版本
+git reset --merge
+
+# 取消合并后检查状态，来确保合并状态已取消
+git status
+```
+
+## 7. 回滚到某次提交
 
 如果您需要回滚到某次提交，可以按照以下步骤操作：
 
@@ -311,7 +321,7 @@ git add xxx
    git push origin rollback-branch
    ```
 
-## .gitignore
+## 8. `.gitignore`
 
 .gitignore 用于忽略提交的文件。以下是.gitignore文件的一些常见语法规则的总结：
 

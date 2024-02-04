@@ -1,4 +1,8 @@
-# 鼠标坐标
+# Event
+
+> 参考：
+>
+> [MDN Event](https://developer.mozilla.org/zh-CN/docs/Web/API/event)
 
 - `event.clientX/x`、`event.clientY/y`：以浏览器窗口（视口）左上顶角为原点，定位 x/y 轴坐标，单位是像素。
 - `event.pageX`、`event.pageY`：以 document 对象（文档窗口）左上顶角为原点，定位 x/y 轴坐标，单位是像素。包括滚动条的偏移量。
