@@ -1,5 +1,15 @@
 # Date
 
+## 获取当前时间戳
+
+```js
++new Date()
+
+new Date().getTime()
+
+Date.now()
+```
+
 ## diffDays
 
 计算两个日期之间的相差天数。
