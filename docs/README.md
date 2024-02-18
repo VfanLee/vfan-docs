@@ -8,9 +8,9 @@
 
 ## 前端基础
 
-- [HTML](html/form.md)
+- [HTML](html/doctype.md)
 - [CSS](css/设计模式.md)
-- [JavaScript](javascript/basic/数据类型.md)
+- [JavaScript](javascript/数据类型.md)
 - [TypeScript](typescript/数据类型.md)
 
 ## 框架篇

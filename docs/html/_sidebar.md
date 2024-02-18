@@ -2,5 +2,5 @@
 - [form 表单](html/form.md)
 - [table 表格](html/table.md)
 - [SEO 技巧](html/seo.md)
-- [script 元素加载](html/script.html)
-- [data-* 数据属性](html/data-attribute.html)
+- [script 元素加载](html/script.md)
+- [data-* 数据属性](html/data-attribute.md)

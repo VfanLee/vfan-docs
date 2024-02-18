@@ -1,1 +1,1 @@
-alert('async')
+debugger

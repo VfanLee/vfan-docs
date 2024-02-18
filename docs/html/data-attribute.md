@@ -40,7 +40,7 @@ article.getAttribute('data-parent') // "cars"
 
 ## CSS 访问自定义属性
 
-注意，data 设定为 HTML 属性，他们同样能被 CSS 访问。如下：
+data 设定为 HTML 属性，它们同样能被 CSS 访问。访问方式如下：
 
 ```css
 article::before {

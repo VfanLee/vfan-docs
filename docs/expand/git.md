@@ -201,6 +201,9 @@ git branch -r
 
 # 查看所有分支
 git branch -a
+
+# 同步分支
+git remote prune origin
 ```
 
 ### 6.2. 创建新分支

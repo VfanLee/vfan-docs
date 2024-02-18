@@ -2,4 +2,3 @@
 - [NPM](nodejs/npm.md)
 - [Express](nodejs/express.md)
 - [Mysql](nodejs/mysql.md)
-- [Auth](nodejs/auth.md)
