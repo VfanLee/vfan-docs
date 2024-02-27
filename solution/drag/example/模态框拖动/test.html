@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable Modal</title>
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        z-index: 1000;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="openModal()">Open Modal</button>
+
+    <div id="modal" class="modal">
+      <h2>Draggable Modal</h2>
+      <span onclick="closeModal()" style="cursor: pointer; float: right">&times;</span>
+      <p>Drag this modal by clicking and dragging the title bar.</p>
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById('modal')
+
+      // Get the title bar element
+      var titleBar = modal.querySelector('h2')
+
+      // Initialize variables
+      var offsetX,
+        offsetY,
+        isDragging = false
+
+      // Function to open the modal
+      function openModal() {
+        modal.style.display = 'block'
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        modal.style.display = 'none'
+      }
+
+      // Function to handle mouse down event
+      function handleMouseDown(event) {
+        isDragging = true
+        offsetX = event.clientX - modal.offsetLeft
+        offsetY = event.clientY - modal.offsetTop
+      }
+
+      // Function to handle mouse move event
+      function handleMouseMove(event) {
+        if (isDragging) {
+          modal.style.left = event.clientX - offsetX + 'px'
+          modal.style.top = event.clientY - offsetY + 'px'
+        }
+      }
+
+      // Function to handle mouse up event
+      function handleMouseUp(event) {
+        isDragging = false
+      }
+
+      // Function to handle touch start event
+      function handleTouchStart(event) {
+        var touch = event.touches[0]
+        isDragging = true
+        offsetX = touch.clientX - modal.offsetLeft
+        offsetY = touch.clientY - modal.offsetTop
+      }
+
+      // Function to handle touch move event
+      function handleTouchMove(event) {
+        if (isDragging) {
+          var touch = event.touches[0]
+          modal.style.left = touch.clientX - offsetX + 'px'
+          modal.style.top = touch.clientY - offsetY + 'px'
+        }
+      }
+
+      // Function to handle touch end event
+      function handleTouchEnd(event) {
+        isDragging = false
+      }
+
+      // Attach event listeners
+      titleBar.addEventListener('mousedown', handleMouseDown)
+      document.addEventListener('mousemove', handleMouseMove)
+      document.addEventListener('mouseup', handleMouseUp)
+
+      titleBar.addEventListener('touchstart', handleTouchStart)
+      document.addEventListener('touchmove', handleTouchMove)
+      document.addEventListener('touchend', handleTouchEnd)
+    </script>
+  </body>
+</html>

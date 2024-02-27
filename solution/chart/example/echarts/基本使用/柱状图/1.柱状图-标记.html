@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      // 模拟数据
+      let xData = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二妞', '大强']
+      let yData = [88, 92, 63, 77, 94, 80, 72, 86]
+
+      // 配置
+      let option = {
+        xAxis: {
+          type: 'category',
+          data: xData
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            type: 'bar',
+            data: yData,
+            // 标记的图形
+            markPoint: {
+              data: [
+                {
+                  name: '最大值',
+                  type: 'max'
+                },
+                {
+                  name: '最小值',
+                  type: 'min'
+                }
+              ]
+            },
+            // 图表标线
+            markLine: {
+              data: [
+                {
+                  name: '平均值',
+                  type: 'average'
+                }
+              ]
+            }
+          }
+        ]
+      }
+      echarts.init(document.querySelector('#main')).setOption(option)
+    </script>
+  </body>
+</html>

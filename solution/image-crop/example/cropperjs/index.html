@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cropperjs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="content__container">
+      <div class="cropper__container">
+        <img class="cropper-image" src="images/picture.jpg" alt="default" />
+      </div>
+
+      <div class="preview__container">
+        <div class="preview-image lg"></div>
+        <div class="preview-image md"></div>
+        <div class="preview-image sm"></div>
+      </div>
+    </div>
+
+    <div class="action__container">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cropped-canvas__modal">getCroppedCanvas()</button>
+    </div>
+
+    <!-- cropped canvas modal -->
+    <div class="modal fade" id="cropped-canvas__modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">getCroppedCanvas()</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

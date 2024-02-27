@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      $.get('../../data/china.json', function (res) {
+        console.log(res)
+        // 注册可用的地图
+        echarts.registerMap('chinaMap', res)
+        // 配置 geo
+        let option = {
+          geo: {
+            type: 'map', // map是一个固定的值
+            map: 'chinaMap' // “chinaMap” 需要和 registerMap 中注册的地图名称保持一致
+          }
+        }
+        echarts.init(document.querySelector('#main')).setOption(option)
+      })
+    </script>
+  </body>
+</html>

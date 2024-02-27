@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highlight.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  </head>
+  <body>
+    <pre>
+      <code class="code-area">
+@mixin color-mode-theme($theme-name, $include-root: false) {
+  @if $include-root {
+    :root,
+    [data-color-mode='light'][data-light-theme='#{$theme-name}'],
+    [data-color-mode='dark'][data-dark-theme='#{$theme-name}'] {
+      &,
+      &::selection {
+        @content;
+      }
+    }
+
+    ::backdrop,
+    [data-color-mode='light'][data-light-theme='#{$theme-name}'],
+    [data-color-mode='dark'][data-dark-theme='#{$theme-name}']::backdrop {
+      @content;
+    }
+  } @else {
+    [data-color-mode='light'][data-light-theme='#{$theme-name}'],
+    [data-color-mode='dark'][data-dark-theme='#{$theme-name}'] {
+      &,
+      &::selection {
+        @content;
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    [data-color-mode='auto'][data-light-theme='#{$theme-name}'] {
+      &,
+      &::selection {
+        @content;
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-color-mode='auto'][data-dark-theme='#{$theme-name}'] {
+      &,
+      &::selection {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin color-mode($mode) {
+  @if $mode == light {
+    :root,
+    [data-color-mode='light'][data-light-theme*='#{$mode}'],
+    [data-color-mode='dark'][data-dark-theme*='#{$mode}'] {
+      @content;
+    }
+  } @else {
+    [data-color-mode='light'][data-light-theme*='#{$mode}'],
+    [data-color-mode='dark'][data-dark-theme*='#{$mode}'] {
+      @content;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    [data-color-mode='auto'][data-light-theme*='#{$mode}'] {
+      @content;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-color-mode='auto'][data-dark-theme*='#{$mode}'] {
+      @content;
+    }
+  }
+}
+
+@mixin color-variables($color-map) {
+  $dark-colors: ();
+  $light-colors: ();
+
+  @each $name, $value in $color-map {
+    @each $type, $color in $value {
+      @if $type == dark {
+        $dark-colors: append($dark-colors, (--color-#{$name}, #{$color}));
+      } @else {
+        $light-colors: append($light-colors, (--color-#{$name}, #{$color}));
+      }
+    }
+  }
+
+  $mode-colors: (
+    dark: $dark-colors,
+    light: $light-colors
+  );
+
+  @each $mode, $variables in $mode-colors {
+    @include color-mode($mode) {
+      @each $prop, $val in $variables {
+        #{$prop}: $val;
+      }
+    }
+  }
+}
+      </code>
+    </pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

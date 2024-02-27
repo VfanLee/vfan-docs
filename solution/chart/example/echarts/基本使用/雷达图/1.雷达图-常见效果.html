@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      let dataMax = [
+        {
+          name: '易用性',
+          max: 100
+        },
+        {
+          name: '功能',
+          max: 100
+        },
+        {
+          name: '拍照',
+          max: 100
+        },
+        {
+          name: '跑分',
+          max: 100
+        },
+        {
+          name: '续航',
+          max: 100
+        }
+      ]
+      let hwScore = [80, 90, 80, 82, 90]
+      let zxScore = [70, 82, 75, 70, 78]
+
+      // 配置
+      let option = {
+        radar: {
+          indicator: dataMax,
+          shape: 'circle' // 配置雷达图最外层的图形：circle、polygon
+        },
+        series: [
+          {
+            type: 'radar',
+            // 标签样式
+            label: {
+              // show: true
+            },
+            // 每个产品的阴影面积
+            areaStyle: {},
+            data: [
+              {
+                name: '华为手机',
+                value: hwScore
+              },
+              {
+                name: '中兴手机',
+                value: zxScore
+              }
+            ]
+          }
+        ]
+      }
+      echarts.init(document.querySelector('#main')).setOption(option)
+    </script>
+  </body>
+</html>

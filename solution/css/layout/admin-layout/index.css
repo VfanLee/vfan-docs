@@ -1,0 +1,68 @@
+@charset "UTF-8";
+.l-container {
+  display: flex;
+}
+
+.l-sidebar {
+  flex-shrink: 0;
+  box-sizing: content-box;
+  width: 48px;
+  min-height: 100vh;
+  border-right: 1px solid #000;
+  background-color: pink;
+  transition: 0.3s;
+}
+.l-sidebar.is-expand {
+  width: 208px;
+}
+
+.l-sidebar__inner {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: inherit;
+  height: 100%;
+  /* 固定 sidebar */
+}
+.l-sidebar__inner.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.l-sidebar__inner .sidebar__header {
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.l-sidebar__inner .sidebar__body {
+  flex-grow: 1;
+  overflow: hidden auto;
+}
+
+.l-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-navbar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  background-color: orange;
+  transition: 0.3s;
+}
+.l-navbar.is-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.l-navbar.is-fixed + .app-main {
+  margin-top: 48px;
+}
+
+.app-main {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=index.css.map */

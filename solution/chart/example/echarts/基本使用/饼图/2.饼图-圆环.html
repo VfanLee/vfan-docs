@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      // 模拟数据
+      let data = [
+        {
+          value: 11231,
+          name: '淘宝'
+        },
+        {
+          value: 22673,
+          name: '京东'
+        },
+        {
+          value: 6123,
+          name: '唯品会'
+        },
+        {
+          value: 8989,
+          name: '1号店'
+        },
+        {
+          value: 6700,
+          name: '聚美优品'
+        }
+      ]
+
+      // 配置
+      let option = {
+        series: {
+          type: 'pie',
+          data: data,
+          /**
+           * 饼图半径
+           * 1.固定值
+           * 2.百分比，参照的是宽度和高度较小的那个的一半的百分比
+           * 3.数组，第1个参数代表内圆半径，第2个参数代表外圆的半径
+           *
+           * 饼图半径 【20% === 40】 => 【400px / 2 * 0.2 = 40px】
+           */
+          // radius: '40'
+          // radius: '20%'
+          radius: ['50%', '75%']
+        }
+      }
+      echarts.init(document.querySelector('#main')).setOption(option)
+    </script>
+  </body>
+</html>

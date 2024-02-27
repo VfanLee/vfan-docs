@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --left-width: 200px;
+        --right-width: 100px;
+        --left-background: #1abc9c;
+        --mid-background: #3498db;
+        --right-background: #2ecc71;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-width: calc(var(--left-width) + 300px + var(--right-width));
+      }
+
+      header,
+      footer {
+        height: 50px;
+        background-color: #95a5a6;
+      }
+
+      section {
+        flex: 1;
+        display: flex;
+      }
+
+      .mid {
+        order: 1;
+        flex: auto;
+        background-color: var(--mid-background);
+      }
+
+      .left {
+        order: 0;
+        flex: 0 0 var(--left-width);
+        background-color: var(--left-background);
+      }
+
+      .right {
+        order: 2;
+        flex: 0 0 var(--right-width);
+        background-color: var(--right-background);
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <section>
+      <div class="mid">mid</div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </section>
+    <footer>footer</footer>
+  </body>
+</html>

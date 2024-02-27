@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      // 模拟数据
+      let xData = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二妞', '大强']
+      let yData = [88, 92, 63, 77, 94, 80, 72, 86]
+
+      // 配置
+      let option = {
+        /**
+         * 区域缩放，对数据范围过滤，x轴、y轴都可以拥有
+         * dataZoom 是一个数据，意味着可以配置多个区域所放器
+         */
+        dataZoom: [
+          {
+            type: 'slider', // 滑块类型：slider、inside
+            xAxisIndex: 0 // 设置缩放组件控制的是哪一个x轴，一般 0 即可
+          },
+          {
+            type: 'slider',
+            yAxisIndex: 0, // 设置缩放组件控制的是哪一个y轴，一般 0 即可
+            start: 0, // 数据窗口范围的起始百分比
+            end: 50 // 数据窗口范围的结束百分比
+          }
+        ],
+        // 直角坐标系内绘图网格。可以在网格上绘制 **折线图，柱状图，散点图**
+        grid: {
+          show: true, // 是否显示网格
+          borderWidth: 1, // 网格边框线宽
+          borderColor: 'red', // 网格边框颜色
+          // 网格位置
+          top: 100,
+          left: 100,
+          // 网格大小
+          width: 300,
+          height: 150
+        },
+        // 坐标轴 x 轴
+        xAxis: {
+          /**
+           * 坐标轴类型type
+           * category：类目轴，该类型必须通过 data 设置类目数据
+           * value：自动从目标数据中读取数据
+           */
+          type: 'category',
+          data: xData,
+          // x轴位置
+          position: 'top'
+        },
+        // 坐标轴 y 轴
+        yAxis: {
+          type: 'value',
+          // y轴位置
+          position: 'right'
+        },
+        series: [
+          {
+            type: 'bar',
+            data: yData,
+            barWidth: '30%'
+          }
+        ]
+      }
+      echarts.init(document.querySelector('#main')).setOption(option)
+    </script>
+  </body>
+</html>

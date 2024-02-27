@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      let xData = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二妞', '大强']
+      let yData = [88, 92, 63, 77, 94, 80, 72, 86]
+      let option = {
+        xAxis: {
+          type: 'category',
+          data: xData
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            type: 'bar',
+            data: yData,
+            markPoint: {
+              data: [
+                {
+                  type: 'max',
+                  name: '最大值'
+                },
+                {
+                  type: 'min',
+                  name: '最小值'
+                }
+              ]
+            },
+            markLine: {
+              data: [
+                {
+                  type: 'average',
+                  name: '平均值'
+                }
+              ]
+            },
+            label: {
+              show: true,
+              rotate: 60
+            },
+            barWidth: '30%'
+          }
+        ]
+      }
+      /**
+       * echarts.init(dom, theme)
+       * 1.第一个参数代表DOM元素
+       * 2.第二个参数代表主题，内置有 light、dark 两套，也可以自定义
+       */
+      // echarts.init(document.querySelector('#main'), 'light').setOption(option)
+      echarts.init(document.querySelector('#main'), 'dark').setOption(option)
+    </script>
+  </body>
+</html>

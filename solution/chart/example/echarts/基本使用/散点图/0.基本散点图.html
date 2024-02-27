@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      $.get('../../data/test_data.json', function (res) {
+        // 图表展示数据
+        let axisData = []
+        axisData = res.map(({ height, weight }) => [height, weight])
+        // 配置
+        let option = {
+          xAxis: {
+            type: 'value',
+            scale: true // 脱离 0 值比例
+          },
+          yAxis: {
+            type: 'value',
+            scale: true // 脱离 0 值比例
+          },
+          series: [
+            {
+              type: 'scatter', // scatter 为散点图
+              data: axisData
+            }
+          ]
+        }
+        echarts.init(document.querySelector('#main')).setOption(option)
+      })
+    </script>
+  </body>
+</html>

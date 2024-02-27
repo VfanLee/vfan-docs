@@ -1,0 +1,94 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="height: 400px"></div>
+    <button id="modifyBtn">修改数据</button>
+    <button id="addBtn">增加数据</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      let myChart = echarts.init(document.querySelector('div'))
+      let xDataArr = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二妞', '大强']
+      let yDataArr = [88, 92, 63, 77, 94, 80, 72, 86]
+      let option = {
+        xAxis: {
+          type: 'category',
+          data: xDataArr
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            type: 'bar',
+            data: yDataArr,
+            markPoint: {
+              data: [
+                {
+                  type: 'max',
+                  name: '最大值'
+                },
+                {
+                  type: 'min',
+                  name: '最小值'
+                }
+              ]
+            },
+            markLine: {
+              data: [
+                {
+                  type: 'average',
+                  name: '平均值'
+                }
+              ]
+            },
+            label: {
+              show: true,
+              rotate: 60
+            },
+            barWidth: '30%'
+          }
+        ]
+      }
+      myChart.setOption(option)
+
+      document.querySelector('#modifyBtn').onclick = function () {
+        let option = {
+          series: [
+            {
+              data: [68, 32, 99, 77, 94, 80, 72, 86]
+            }
+          ]
+        }
+        /**
+         * setOption 可以设置多次
+         * 新旧option的关系并不是覆盖关系，而是互相整合
+         * 所以在设置新的option的时候，只需要考虑变化的部分即可
+         * 数据变化则会产生增量动画
+         */
+        myChart.setOption(option)
+      }
+
+      document.querySelector('#addBtn').onclick = function () {
+        xDataArr.push('小明')
+        yDataArr.push(90)
+        let option = {
+          xAxis: {
+            data: xDataArr
+          },
+          series: [
+            {
+              data: yDataArr
+            }
+          ]
+        }
+        myChart.setOption(option)
+      }
+    </script>
+  </body>
+</html>

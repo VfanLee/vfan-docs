@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.9.0-rc.1/echarts.min.js"></script>
+    <script>
+      // 模拟数据
+      let xData = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二妞', '大强']
+      let yData1 = [88, 92, 63, 77, 94, 80, 72, 86]
+      let yData2 = [93, 64, 77, 80, 60, 75, 86, 86]
+
+      // 配置
+      let option = {
+        // 标题组件，包含主标题和副标题
+        title: {
+          text: '成绩展示', // 标题文字
+          textStyle: {
+            color: 'red' // 文字颜色
+          },
+          borderWidth: 5, // 标题边框宽度
+          borderColor: 'blue', // 标题边框颜色
+          borderRadius: 5, // 标题边框圆角
+          // 标题位置
+          top: 10,
+          left: 30
+        },
+        // 提示框组件，当鼠标移入到图表或者点击图表时展示的提示框
+        tooltip: {
+          trigger: 'axis', // 触发类型：item
+          triggerOn: 'click', // 触发方式：mousemove
+          // 提示框浮层内容格式器，支持字符串模板和回调函数两种形式
+          // formatter: '{b} 的成绩是 {c}', // {b} 和 {c} 所代表的含义不需要去记, 在官方文档中有详细的描述
+          formatter(args) {
+            // console.log(arg)
+            return `${args[0].name} 的成绩是 ${args[0].value}`
+          }
+        },
+        // 工具栏。
+        toolbox: {
+          feature: {
+            saveAsImage: {}, // 导出图片
+            dataView: {}, // 数据视图
+            // 动态类型切换
+            magicType: {
+              type: ['bar', 'line']
+            },
+            dataZoom: {}, // 数据区域缩放
+            restore: {} // 重置
+          }
+        },
+        // 图例组件,用于筛选类别,需要和 series 配合使用
+        legend: {
+          // legend 中的 data 是一个数组，且 data 的值需要和 series 数组中某组数据的 name 值一致
+          data: ['语文成绩', '数学成绩']
+        },
+        xAxis: {
+          type: 'category',
+          data: xData
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            name: '语文成绩',
+            type: 'bar',
+            data: yData1
+          },
+          {
+            name: '数学成绩',
+            type: 'bar',
+            data: yData2
+          }
+        ]
+      }
+      echarts.init(document.querySelector('#main')).setOption(option)
+    </script>
+  </body>
+</html>
