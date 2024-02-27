@@ -2,4 +2,4 @@
 
 ## FullCalendar
 
-> - [FullCalendar 官网](https://fullcalendar.io/)
+> [FullCalendar 官网](https://fullcalendar.io/)
