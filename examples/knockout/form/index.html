@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knockout Form</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>单行文本</h2>
+      <p data-bind="text: textValue"></p>
+      <input type="text" data-bind="value: textValue" />
+
+      <h2>多行文本</h2>
+      <p data-bind="text: textareaValue"></p>
+      <textarea cols="30" rows="3" data-bind="value: textareaValue"></textarea>
+
+      <h2>单选框</h2>
+      <p data-bind="text: radioValue"></p>
+      <label>
+        <input type="radio" value="1" data-bind="checked: radioValue" />
+        选项1
+      </label>
+      <label>
+        <input type="radio" value="2" data-bind="checked: radioValue" />
+        选项2
+      </label>
+      <label>
+        <input type="radio" value="3" data-bind="checked: radioValue" />
+        选项3
+      </label>
+
+      <h2>复选框</h2>
+      <h3>单选</h3>
+      <p data-bind="text: checkboxValue1"></p>
+      <label>
+        <input type="checkbox" data-bind="checked: checkboxValue1" />
+        选项
+      </label>
+      <h3>多选</h3>
+      <p data-bind="text: checkboxValue2"></p>
+      <label>
+        <input type="checkbox" value="1" data-bind="checked: checkboxValue2" />
+        选项1
+      </label>
+      <label>
+        <input type="checkbox" value="2" data-bind="checked: checkboxValue2" />
+        选项2
+      </label>
+      <label>
+        <input type="checkbox" value="3" data-bind="checked: checkboxValue2" />
+        选项3
+      </label>
+
+      <h2>下拉列表</h2>
+      <h3>单选</h3>
+      <p data-bind="text: selectValue1"></p>
+      <select
+        data-bind="options: exampleOptions,
+                   optionsText: 'name',
+                   optionsValue: 'id',
+                   value: selectValue1,
+                   optionsCaption: '---选项说明---'"
+      ></select>
+      <h3>多选</h3>
+      <p data-bind="text: selectValue2"></p>
+      <select
+        multiple
+        data-bind="options: exampleOptions,
+                   optionsText: 'name',
+                   optionsValue: 'id',
+                   selectedOptions: selectValue2"
+      ></select>
+
+      <div style="margin-top: 16px">
+        <button type="button" data-bind="click: printData">控制台打印数据</button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

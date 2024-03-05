@@ -1,0 +1,45 @@
+@import '@/assets/iconfont/iconfont.css';
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.title {
+  background-clip: text;
+  font-size: 64px;
+  color: transparent;
+}
+
+.example {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+}
+
+.icon {
+  i[class*='icon'] {
+    font-size: 32px;
+  }
+}
+
+.image {
+  height: 60px;
+  img {
+    height: 100%;
+  }
+}

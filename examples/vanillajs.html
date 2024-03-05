@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Vanilla JS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      const app = document.getElementById('app')
+
+      const header = document.createElement('h1')
+      header.textContent = 'Vanilla JS'
+      app.appendChild(header)
+
+      const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+      const list = document.createElement('ul')
+      const lis = document.createDocumentFragment()
+      names.forEach(n => {
+        const li = document.createElement('li')
+        li.textContent = n
+        lis.appendChild(li)
+      })
+      list.appendChild(lis)
+      app.appendChild(list)
+
+      let likes = 0
+      const likeButton = document.createElement('button')
+      likeButton.textContent = `like(${likes})`
+      likeButton.addEventListener('click', () => {
+        likes++
+        likeButton.textContent = `like(${likes})`
+      })
+      app.appendChild(likeButton)
+    </script>
+  </body>
+</html>

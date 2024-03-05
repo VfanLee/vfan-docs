@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue3 Form</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>单行文本</h2>
+      <p>{{ textValue }}</p>
+      <input type="text" v-model="textValue" />
+
+      <h2>多行文本</h2>
+      <p>{{ textareaValue }}</p>
+      <textarea cols="30" rows="3" v-model="textareaValue"></textarea>
+
+      <h2>单选框</h2>
+      <p>{{ radioValue }}</p>
+      <label>
+        <input type="radio" v-model="radioValue" value="1" />
+        One
+      </label>
+      <label>
+        <input type="radio" v-model="radioValue" value="2" />
+        Two
+      </label>
+      <label>
+        <input type="radio" v-model="radioValue" value="3" />
+        Three
+      </label>
+
+      <h2>复选框</h2>
+      <h3>单选</h3>
+      <p>{{ checkboxValue1 }}</p>
+      <label>
+        <input type="checkbox" v-model="checkboxValue1" />
+        checked
+      </label>
+
+      <h3>多选</h3>
+      <p>{{ checkboxValue2 }}</p>
+      <label>
+        <input type="checkbox" v-model="checkboxValue2" value="1" />
+        One
+      </label>
+      <label>
+        <input type="checkbox" v-model="checkboxValue2" value="2" />
+        Two
+      </label>
+      <label>
+        <input type="checkbox" v-model="checkboxValue2" value="3" />
+        Three
+      </label>
+
+      <h2>下拉列表</h2>
+      <h3>单选</h3>
+      <p>{{ selectValue1 }}</p>
+      <select v-model="selectValue1">
+        <option value="">---选项说明---</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <h3>多选</h3>
+      <p>{{ selectValue2 }}</p>
+      <select v-model="selectValue2" multiple>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <div style="margin-top: 16px">
+        <button @click="printData">控制台打印数据</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

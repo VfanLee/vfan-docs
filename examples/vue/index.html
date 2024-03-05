@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Vue3</title>
+  </head>
+  <body>
+    <body>
+      <div id="app"></div>
+
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script>
+        const { createApp, ref } = Vue
+
+        const Header = {
+          props: {
+            title: {
+              type: String,
+              default: 'Default title'
+            }
+          },
+          setup(props, { emit }) {},
+          template: `<h1>{{ title }}</h1>`
+        }
+
+        const App = {
+          components: {
+            Header
+          },
+          setup(props, { emit }) {
+            const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+            const likes = ref(0)
+
+            function handleClick() {
+              likes.value++
+            }
+
+            return {
+              names,
+              likes,
+              handleClick
+            }
+          },
+          template: `
+          <Header title="Vue3" />
+          <ul>
+            <li v-for="(name, index) of names" :key="index">{{ name }}</li>
+          </ul>
+          <button @click="handleClick">Like({{ likes }})</button>
+          `
+        }
+
+        createApp(App).mount('#app')
+      </script>
+    </body>
+  </body>
+</html>
