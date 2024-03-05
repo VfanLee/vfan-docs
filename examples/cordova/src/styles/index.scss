@@ -1,0 +1,12 @@
+@import './vant/index.scss';
+@import './layout/index.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f8fa;
+}

@@ -1,0 +1,15 @@
+.l-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  padding: 12px;
+  overflow: scroll;
+}
+
+.l-tabbar__container {
+  flex-shrink: 0;
+}
