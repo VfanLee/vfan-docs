@@ -1,0 +1,31 @@
+.box1 {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  transform: translateY(-50%);
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+html[dir='rtl'] {
+  .box1 {
+    right: 0;
+  }
+
+  .pull-left {
+    float: right !important;
+  }
+
+  .pull-right {
+    float: left !important;
+  }
+}

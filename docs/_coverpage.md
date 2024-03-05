@@ -1,4 +1,4 @@
-<img src="./public/images/avatar_nobg.png" style="width: 200px; height: 200px;" />
+<img src="public/images/avatar_nobg.png" style="width: 200px; height: 200px;" />
 
 # Vfan Lee's 学习笔记
 
