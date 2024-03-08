@@ -1,5 +1,15 @@
 # Vue2 记录
 
+## Vue2 全家桶
+
+- [Vue2](https://v2.cn.vuejs.org/)
+- [Vue Router v3](https://v3.router.vuejs.org/zh/)
+- [Vuex v3](https://v3.vuex.vuejs.org/zh/)
+- PC UI
+  - [Element UI](https://element.eleme.io/#/zh-CN)
+- Mobile UI
+  - [Vant](https://vant-contrib.gitee.io/vant/v2/#/zh-CN/)
+
 ## Vue 执行顺序
 
 > 源码参考：https://github.com/vuejs/vue/blob/dev/src/core/instance/state.js#L49-L63

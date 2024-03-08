@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>下载文件</title>
+    <script>
+      shotDownload = function (_fileName, _dataURL) {
+        let da = document.createElement('a')
+        da.href = _dataURL
+        da.download = _fileName
+        document.body.append(da)
+        da.click()
+        da.remove()
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
