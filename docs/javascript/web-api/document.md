@@ -363,12 +363,16 @@ function getOffset (el) {
 ### 获取元素及后代的文本内容
 
 ```js
-el.textContent
+el.innerText // 受样式影响
+
+el.textContent // 不受样式影响
 ```
 
 ### 设置元素的文本内容
 
 ```js
+el.innerText = string
+
 el.textContent = string
 ```
 

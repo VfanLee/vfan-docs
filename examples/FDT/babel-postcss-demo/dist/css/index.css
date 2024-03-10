@@ -1,0 +1,30 @@
+body {
+  background-color: #fafafa;
+}
+
+@media (max-width: 500px) {
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 40px
+}
+  }
+
+.card h2 {
+    color: red;
+  }
+
+input::-moz-placeholder {
+  color: blue;
+}
+
+input::placeholder {
+  color: blue;
+}
+
+.container {
+  display: flex;
+}
+
+.box {
+  flex: 1;
+}
