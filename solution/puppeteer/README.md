@@ -1,4 +1,4 @@
-# puppeteer
+# Puppeteer
 
 ## 简介
 
@@ -10,3 +10,9 @@ Puppeteer 是一个 Node.js 库，它提供了一个高级 API，可通过 DevTo
 - 使用最新的 JavaScript 和浏览器功能创建自动化测试环境。
 - 捕获网站的性能分析时间轴，帮助诊断性能问题。
 - 测试 Chrome 扩展程序。
+
+## 
+
+## launch options
+
+> [PuppeteerLaunchOptions](https://pptr.dev/api/puppeteer.puppeteerlaunchoptions)
