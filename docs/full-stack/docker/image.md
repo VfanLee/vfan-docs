@@ -34,3 +34,31 @@ docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 # Upload an image to a registry
 docker image push [OPTIONS] NAME[:TAG]
 ```
+
+## 使用代理拉取镜像
+
+### 修改配置文件
+
+```sh
+sudo mkdir -p /etc/systemd/system/docker.service.d/
+sudo vim /etc/systemd/system/docker.service.d/http-proxy.conf
+
+# 添加以下内容
+[Service]
+Environment="HTTP_PROXY=http://192.168.1.100:8080"
+Environment="HTTPS_PROXY=http://192.168.1.100:8080"
+
+# 重启 Docker 服务
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+# 验证设置
+docker info
+```
+
+### 使用环境变量
+
+```sh
+export HTTP_PROXY=http://192.168.8.253:10809
+export HTTPS_PROXY=http://192.168.8.253:10809
+```

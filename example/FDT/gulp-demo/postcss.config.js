@@ -1,6 +1,13 @@
-const presetEnv = require('postcss-preset-env')
-var cssnano = require('cssnano')
-
 module.exports = {
-  plugins: [presetEnv, cssnano]
+  plugins: {
+    'postcss-preset-env': {
+      stage: 1
+    },
+    'postcss-rtl': {
+      addPrefixToSelector(selector, prefix) {
+        return `html${prefix} ${selector}`
+      }
+    },
+    'cssnano': {}
+  }
 }

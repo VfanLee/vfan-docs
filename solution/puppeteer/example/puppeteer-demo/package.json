@@ -1,14 +1,10 @@
 {
   "name": "puppeteer-demo",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "description": "",
   "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "dependencies": {
-    "puppeteer": "^22.4.0"
-  },
-  "devDependencies": {}
+    "puppeteer": "^22.4.1"
+  }
 }

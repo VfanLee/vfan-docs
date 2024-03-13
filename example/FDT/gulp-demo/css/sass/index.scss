@@ -1,0 +1,33 @@
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+@custom-media --viewport-small (width <= 500px);
+
+:--heading {
+  @media (--viewport-small) {
+    font-size: 40px;
+  }
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.card {
+  .title {
+    color: red;
+  }
+  &.title {
+    color: red;
+  }
+}
+
+input::placeholder {
+  color: blue;
+}
+
+.grid {
+  grid-template: 100% / 100%;
+}
