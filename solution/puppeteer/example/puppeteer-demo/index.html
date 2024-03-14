@@ -1,0 +1,675 @@
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en-US" dir="ltr"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ULearning</title>
+    <meta name="description" content="优学院门户">
+    <meta name="author" content="wenhua">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link type="favicon" rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="../common/css/normalize.css">
+    <link rel="stylesheet" href="../common/vendor/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../common/vendor/perfect-scrollbar-0.8.1/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../common/vendor/loaders.css-0.1.2/loaders.min.css">
+    <link rel="stylesheet" href="../common/component/fileSelector/fileSelector.css">
+    <link rel="stylesheet" href="../common/vendor/Jcrop-2.0.4/css/Jcrop.min.css">
+    <link rel="stylesheet" href="../common/vendor/cropper/cropper.min.css">
+    <link rel="stylesheet" href="../common/vendor/pagination/style/pagination.css">
+    <link rel="stylesheet" href="../common/vendor/My97DatePicker/skin/WdatePicker.css">
+    <link rel="stylesheet" href="../common/vendor/bootstrap-datetimepicker-4.17.47/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../common/css/main.css">
+    <link rel="stylesheet" href="../common/css/common.css?version=1.4.12">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../common/css/english.css?ver=1">
+    <link rel="stylesheet" href="../common/vendor/fullcalendar-4.4.0/core/main.min.css">
+    <link rel="stylesheet" href="../common/vendor/fullcalendar-4.4.0/daygrid/main.min.css">
+    <link rel="stylesheet" href="../common/vendor/fullcalendar-4.4.0/timegrid/main.min.css">
+    <!-- <link href='../common/vendor/wPaint/wPaint-min.css' rel='stylesheet' /> -->
+    <link rel="stylesheet" href="./component/gridStack/gridstack.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="../common/vendor/html5shiv-3.7.3/html5shiv.min.js"></script>
+      <script src="../common/vendor/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- google登录 -->
+    <!-- <script src="//accounts.google.com/gsi/client"></script> -->
+  <link href="../common/vendor/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css"><style type="text/css"></style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="init" src="./init.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="knockout" src="//www.ulearning.app/static/common/vendor/knockout-3.4.2/knockout-min.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="configJs" src="//www.ulearning.app/static/common/configs/config.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="obs" src="//www.ulearning.app/static/common/obs-international/obs-international.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="User" src="/distJs/ulearning/User.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Toast" src="/distJs/common/toast/Toast.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="domReady" src="//www.ulearning.app/static/common/vendor/require-domReady-2.0.1/domReady.min.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mainController.js" src="mainController.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="../common/vendor/require-css-0.1.10/require-css.min.js" src="../common/vendor/require-css-0.1.10/require-css.min.js?version=14"></script><link type="text/css" rel="stylesheet" href="/common/component/toast/Toast.css?version=14"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="i18n" src="//www.ulearning.app/static/common/vendor/require-i18n-2.0.6/i18n.min.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="../distJs/common/ko-i18n" src="./../distJs/common/ko-i18n.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="//www.ulearning.app/static/common/vendor/require-text-2.0.12/text.min.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="JqueryMessage" src="//www.ulearning.app/static/common/vendor/jquery-validate-1.17.0/messages_zh.min.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="JqueryValidatorUserExtend" src="//www.ulearning.app/static/common/vendor/jquery-validate-1.17.0/jquery.validate.userextend.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/public" src="./../common/nls/public.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/course" src="./../common/nls/course.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/classroom" src="./../common/nls/classroom.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/reponsitory" src="./../common/nls/reponsitory.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/en/classroom" src="./../common/nls/en/classroom.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/en/reponsitory" src="./../common/nls/en/reponsitory.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/en/public" src="./../common/nls/en/public.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/en/course" src="./../common/nls/en/course.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="../distJs/common/koView/koView.js" src="../distJs/common/koView/koView.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="director" src="//www.ulearning.app/static/common/vendor/director-1.2.8/director.min.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="module/asia/controller" src="./module/asia/controller.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Login" src="././module/user/component/login/Login.js?version=14"></script><link type="text/css" rel="stylesheet" href="./module/asia/style.css?version=14"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/asia-home" src="./../common/nls/asia-home.js?version=14"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nls/en/asia-home" src="./../common/nls/en/asia-home.js?version=14"></script><link type="text/css" rel="stylesheet" href="/ulearning/module/user/component/login/Login.css?version=14"></head>
+
+  <body class="ethiotelecom i18n-english">
+    <div data-bind="component: {
+    name: 'ko-view',
+    params: { routingRules: routingRules }
+  }"><!-- ko if: showViewPage() -->
+<div class="ko-view" data-bind="attr: { 'id': id }, component: {
+  name: 'ko-view-page',
+  params: { params: viewPageParams }
+}" id="koView903"><div class="page _asia" data-bind="template: { afterRender: mounted }">
+  <header>
+    <nav class="section-content nav-bar">
+      <a href="/" class="logo">
+        <!-- ko if: !isEthio() --><!-- /ko -->
+        <!-- ko if: isEthio() -->
+        <img src="/common/img/ethiotelecom/logo_ethio.png" alt="image">
+        <!-- /ko -->
+      </a>
+      <div class="user-action">
+        <div class="user-lang">
+          <div class="select-lang" data-toggle="dropdown">
+            <span data-bind="text: currentLangName">English</span>
+            <span class="caret"></span>
+          </div>
+          <div class="lang-list">
+            <!-- ko foreach: langs -->
+            <div data-bind="text: $data.name, click: $parent.switchLang, css: { 'lang__active': $data.id === $parent.currentLang() }" class="lang__active">English</div>
+            
+            <div data-bind="text: $data.name, click: $parent.switchLang, css: { 'lang__active': $data.id === $parent.currentLang() }">Indonesia</div>
+            
+            <div data-bind="text: $data.name, click: $parent.switchLang, css: { 'lang__active': $data.id === $parent.currentLang() }">ไทย</div>
+            
+            <div data-bind="text: $data.name, click: $parent.switchLang, css: { 'lang__active': $data.id === $parent.currentLang() }">Espanol</div>
+            
+            <div data-bind="text: $data.name, click: $parent.switchLang, css: { 'lang__active': $data.id === $parent.currentLang() }">عربى</div>
+            
+            <div data-bind="text: $data.name, click: $parent.switchLang, css: { 'lang__active': $data.id === $parent.currentLang() }">Français</div>
+            <!-- /ko -->
+          </div>
+        </div>
+        <!-- ko if: !isLogin() -->
+        <button class="login" data-bind="text: i18n.login, click: login">Log in</button>
+        <!-- /ko -->
+        <!-- ko if: isLogin() --><!-- /ko -->
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+  </section>
+  <section class="introduce">
+    <div class="section-content">
+      <div class="section-header">
+        <div class="section-title-marks">
+          <i class="title-mark"></i>
+          <i class="title-mark"></i>
+        </div>
+        <h2 class="section-title" data-bind="text: i18n.introduce">Cloud-Based Learning Management System</h2>
+      </div>
+    </div>
+    <div class="introduce-content">
+      <div class="section-content">
+        <img src="/ulearning/module/asia/img/introduce.png" alt="introduce-poster" class="introduce-poster" height="540">
+      </div>
+    </div>
+    <div class="section-content introduce-column">
+      <ul class="introduce-list">
+        <li>
+          <div class="introduce-title" data-toggle="collapse" data-bind="click: toggleIntro">
+            <i class="introduce-icon icon-portal"></i>
+            <span class="introduce-name" data-bind="text: i18n.introName1">Teaching Portal</span>
+            <!-- <span class="caret"></span> -->
+          </div>
+        </li>
+        <li>
+          <div class="introduce-title" data-toggle="collapse" data-bind="click: toggleIntro">
+            <i class="introduce-icon icon-online"></i>
+            <span class="introduce-name" data-bind="text: i18n.introName2">Online Teaching</span>
+            <span class="caret"></span>
+          </div>
+          <div class="collapse">
+            <div class="introduce-desc">
+              <!-- ko foreach: i18n.introDesc2 -->
+              <p data-bind="text: $data">Teaching Planning</p>
+              
+              <p data-bind="text: $data">Progress Monitoring</p>
+              
+              <p data-bind="text: $data">Live Class</p>
+              
+              <p data-bind="text: $data">Assignments/Exams</p>
+              
+              <p data-bind="text: $data">Discussion Forum</p>
+              
+              <p data-bind="text: $data">Teaching Evaluation</p>
+              <!-- /ko -->
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="introduce-title" data-toggle="collapse" data-bind="click: toggleIntro">
+            <i class="introduce-icon icon-course"></i>
+            <span class="introduce-name" data-bind="text: i18n.introName3">Course Authoring</span>
+            <span class="caret"></span>
+          </div>
+          <div class="collapse">
+            <div class="introduce-desc">
+              <!-- ko foreach: i18n.introDesc3 -->
+              <p data-bind="text: $data">One Click to Create Course</p>
+              
+              <p data-bind="text: $data">Collaborative Editing</p>
+              
+              <p data-bind="text: $data">Real-Time Update</p>
+              
+              <p data-bind="text: $data">Subject-Specific Tools</p>
+              
+              <p data-bind="text: $data">Data Report</p>
+              
+              <p data-bind="text: $data">Blended Publishing</p>
+              <!-- /ko -->
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="introduce-title" data-toggle="collapse" data-bind="click: toggleIntro">
+            <i class="introduce-icon icon-mobility"></i>
+            <span class="introduce-name" data-bind="text: i18n.introName4">Mobility</span>
+            <span class="caret"></span>
+          </div>
+          <div class="collapse">
+            <div class="introduce-desc">
+              <!-- ko foreach: i18n.introDesc4 -->
+              <p data-bind="text: $data">Learning Any Time</p>
+              
+              <p data-bind="text: $data">Progress Monitoring on the Go</p>
+              
+              <p data-bind="text: $data">Classroom Interaction	</p>
+              
+              <p data-bind="text: $data">Class Communication Any Time</p>
+              
+              <p data-bind="text: $data">Assignments Any Time, Any Place</p>
+              
+              <p data-bind="text: $data">Classroom Screen Casting</p>
+              <!-- /ko -->
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="introduce-title" data-toggle="collapse" data-bind="click: toggleIntro">
+            <i class="introduce-icon icon-teaching"></i>
+            <span class="introduce-name" data-bind="text: i18n.introName5">Teaching &amp; Learning Management</span>
+            <span class="caret"></span>
+          </div>
+          <div class="collapse">
+            <div class="introduce-desc">
+              <!-- ko foreach: i18n.introDesc5 -->
+              <p data-bind="text: $data">School Management</p>
+              
+              <p data-bind="text: $data">Class Management</p>
+              
+              <p data-bind="text: $data">User Management</p>
+              
+              <p data-bind="text: $data">Performance Management</p>
+              
+              <p data-bind="text: $data">Data Analytics</p>
+              
+              <p data-bind="text: $data">Progress Statistics</p>
+              <!-- /ko -->
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="introduce-title" data-toggle="collapse" data-bind="click: toggleIntro">
+            <i class="introduce-icon icon-live"></i>
+            <span class="introduce-name" data-bind="text: i18n.introName6">Live Class</span>
+            <span class="caret"></span>
+          </div>
+          <div class="collapse">
+            <div class="introduce-desc">
+              <!-- ko foreach: i18n.introDesc6 -->
+              <p data-bind="text: $data">Screen Share</p>
+              
+              <p data-bind="text: $data">Document Display</p>
+              
+              <p data-bind="text: $data">Online Whiteboard</p>
+              
+              <p data-bind="text: $data">Interactive Tools</p>
+              
+              <p data-bind="text: $data">Replay</p>
+              <!-- /ko -->
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="introduce-m-poster">
+        <img src="/ulearning/module/asia/img/mobile-introduce.png" alt="introduce-poster" height="150">
+      </div>
+    </div>
+    <div class="introduce-tip-box">
+      <div class="introduce-tip" data-bind="text: i18n.introduceTip">Not all features enabled at your school's ULearning platform - check with the platform admin for details.</div>
+    </div>
+  </section>
+  <section class="production">
+    <div class="section-content">
+      <div class="section-header">
+        <div class="section-title-marks">
+          <i class="title-mark"></i>
+          <i class="title-mark"></i>
+        </div>
+        <h2 class="section-title" data-bind="text: i18n.production">Product Highlights</h2>
+      </div>
+      <ul class="production-list">
+        <li>
+          <div class="production-item-head">
+            <i class="production-icon icon-mobile"></i>
+            <h3 class="production-name" data-bind="text: i18n.productionName1">Mobile Learning</h3>
+          </div>
+          <p class="production-desc" data-bind="text: i18n.productionDesc1">Automatic &amp; simultaneous synchronization of course and learning data across desktops and mobile devices</p>
+        </li>
+        <li>
+          <div class="production-item-head">
+            <i class="production-icon icon-bookmark"></i>
+            <h3 class="production-name" data-bind="text: i18n.productionName2">Covering whole teaching &amp; learning loop</h3>
+          </div>
+          <p class="production-desc" data-bind="text: i18n.productionDesc2">Content creation and management, registration and administration, teaching/learning delivery, communications, testing, tracking and reporting</p>
+        </li>
+        <li>
+          <div class="production-item-head">
+            <i class="production-icon icon-classroom"></i>
+            <h3 class="production-name" data-bind="text: i18n.productionName3">Integrated with classroom teaching</h3>
+          </div>
+          <p class="production-desc" data-bind="text: i18n.productionDesc3">Facilitate and enhance in-classroom interactions</p>
+        </li>
+        <li>
+          <div class="production-item-head">
+            <i class="production-icon icon-ai"></i>
+            <h3 class="production-name" data-bind="text: i18n.productionName4">AI Technology</h3>
+          </div>
+          <p class="production-desc" data-bind="text: i18n.productionDesc4">Use of AI technology applications such as AI face recognition, plagiarism detection, etc.</p>
+        </li>
+        <li>
+          <div class="production-item-head">
+            <i class="production-icon icon-dataset"></i>
+            <h3 class="production-name" data-bind="text: i18n.productionName5">Big Data</h3>
+          </div>
+          <p class="production-desc" data-bind="text: i18n.productionDesc5">Provide different levels of data analytics service</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="capability">
+    <div class="section-content">
+      <div class="capability-row">
+        <div>
+          <h2 class="capability-name" data-bind="text: i18n.capabilityName1">Intelligent Textbook Presented in Multiple Formats</h2>
+          <i class="title-mark"></i>
+          <div class="capability-desc">
+            <p data-bind="text: i18n.capabilityDesc1">An intelligent textbook is developed by aggregating and integrating rich media content including video, audio, animation, text, pictures, games, and AR/VR content. It’s then published and presented through mobile devices, desktops, and paper books. By using QR code, OCR etc., rich content is integrated and presented through multiple formats as an “Intelligent Textbook.”</p>
+            <p data-bind="text: i18n.capabilityDesc2">Enable you to provide interactive content in the format of intelligent textbook to your users.</p>
+          </div>
+        </div>
+        <div class="img-capability1">
+          <img src="/ulearning/module/asia/img/capability2.png" alt="capability" class="capability-map" height="350">
+        </div>
+      </div>
+      <div class="capability-row">
+        <div class="img-capability2">
+          <img src="/ulearning/module/asia/img/capability1.png" alt="capability" class="capability-map" height="330">
+        </div>
+        <div>
+          <h2 class="capability-name" data-bind="text: i18n.capabilityName2">Adaptive Learning Engine</h2>
+          <i class="title-mark"></i>
+          <div class="capability-desc">
+            <p data-bind="text: i18n.capabilityDesc3">Adaptive learning engine recommends personalized learning content and path to students, provides personalized teaching recommendation to teachers, helps teaching  institutes to upgrade to intelligent teaching.</p>
+            <p data-bind="text: i18n.capabilityDesc4">Construct Subject-Specific Knowledge Map.</p>
+            <p data-bind="text: i18n.capabilityDesc5">Depict learners’ personal knowledge structure.</p>
+            <p data-bind="text: i18n.capabilityDesc6">Learning Analytics &amp; Recommendation.</p>
+            <p data-bind="text: i18n.capabilityDesc7">Recommend Personalized Learning Content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="benefits">
+    <div class="section-content">
+      <div class="section-header">
+        <div class="section-title-marks">
+          <i class="title-mark"></i>
+          <i class="title-mark"></i>
+        </div>
+        <h2 class="section-title" data-bind="text: i18n.benefit">Product Benefits</h2>
+      </div>
+      <ul class="benefits-list">
+        <li>
+          <div class="benefit-item">
+            <div class="benefit-recap">
+              <h3 class="benerit-name" data-bind="text: i18n.benefitInstitute">Institute</h3>
+              <i class="benefit-icon icon-institute"></i>
+            </div>
+            <ul class="benefit-item-list">
+              <li data-bind="text: i18n.institute1">Enable institute in digital transformation of education</li>
+              <li data-bind="text: i18n.institute2">Help institute to enhance teaching quality</li>
+              <li data-bind="text: i18n.institute3">Reduce teaching costs</li>
+              <li data-bind="text: i18n.institute4">Able to acquire teaching &amp; learning data</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="benefit-item">
+            <div class="benefit-recap">
+              <h3 class="benerit-name" data-bind="text: i18n.benefitTeacher">Teacher</h3>
+              <i class="benefit-icon icon-teacher"></i>
+            </div>
+            <ul class="benefit-item-list">
+              <li data-bind="text: i18n.teacher1">Teaching at your fingertips</li>
+              <li data-bind="text: i18n.teacher2">Be able to know the learning status of your students in real-time and adjust teaching progress accordingly.</li>
+              <li data-bind="text: i18n.teacher3">Automatic marking and generating grade reports thus reducing teacher’s workload</li>
+              <li data-bind="text: i18n.teacher4">Acquire student learning data and support quantitative teaching research</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="benefit-item">
+            <div class="benefit-recap">
+              <h3 class="benerit-name" data-bind="text: i18n.benefitStudent">Student</h3>
+              <i class="benefit-icon icon-student"></i>
+            </div>
+            <ul class="benefit-item-list">
+              <li data-bind="text: i18n.student1">Learning any time, any place</li>
+              <li data-bind="text: i18n.student2">Blended Learning</li>
+              <li data-bind="text: i18n.student3">Richer experience than a traditional setting</li>
+              <li data-bind="text: i18n.student4">Personalized learning experiences</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="app">
+    <div class="section-header">
+      <div class="section-title-marks">
+        <i class="title-mark"></i>
+        <i class="title-mark"></i>
+      </div>
+      <h2 class="section-title" data-bind="text: i18n.downloadApp">Download APP</h2>
+    </div>
+    <div class="app-qr">
+      <div class="section-content">
+        <div class="app-list">
+          <div class="ulearning-app">
+            <h3 class="app-title" data-bind="text: i18n.downloadUlearningApp">Download ULearning APP</h3>
+            <div class="ulearning-app-list">
+              <!-- ko foreach: appList-->
+              <div class="app-content">
+                <img data-bind="attr: { src: $data.qr, alt: $data.name }" alt="Android" src="/ulearning/module/asia/img/QR-app-Android.png">
+                <p class="app-desc" data-bind="text: $data.desc">For Android</p>
+                <a data-bind="attr: { href: $data.download }" class="app-download" target="_blank" href="https://static.ulearning.app/static/asia-app/ulearning-app-latest.apk?ts=1710421358000">
+                  <i class="iconfont icon-ingroup"></i><span>Download</span>
+                </a>
+              </div>
+              
+              <div class="app-content">
+                <img data-bind="attr: { src: $data.qr, alt: $data.name }" alt="iOS" src="/ulearning/module/asia/img/QR-us-iOS.png">
+                <p class="app-desc" data-bind="text: $data.desc">For iOS</p>
+                <a data-bind="attr: { href: $data.download }" class="app-download" target="_blank" href="https://apps.apple.com/us/app/%E4%BC%98%E5%AD%A6%E9%99%A22-0/id1423488396">
+                  <i class="iconfont icon-ingroup"></i><span>Download</span>
+                </a>
+              </div>
+              <!-- /ko -->
+            </div>
+          </div>
+          <div class="uclass-app">
+            <h3 class="app-title" data-bind="text: i18n.downloadUClassApp">Download U-Class APP</h3>
+            <div class="app-content">
+              <img data-bind="attr: { src: uClass.qr, alt: uClass.name }" alt="u-class" src="/ulearning/module/asia/img/u-class-app.png">
+              <p class="app-desc" data-bind="text: uClass.desc">Android For IdeaHub/IdeaBoard</p>
+              <a class="app-download" target="_blank" data-bind="attr: { href: uClass.download }" href="//smartclassroom.ulearning.app/uclass.apk">
+                <i class="iconfont icon-ingroup"></i><span>Download</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="about-us">
+      <!-- <p><strong data-bind="text: i18n.proven">Used & proven by millions of users, proven secure and reliable </strong></p> -->
+      <p class="contact-us">
+        <span data-bind="text: i18n.contactUs">For further details, please contact</span><a href="mailto:sg.service@ulearning.asia"> sg.service@ulearning.asia</a>
+      </p>
+    </div>
+    <div class="copyright" data-bind="text: i18n.copyright">Copyright ULearning Technology (International) Pte. Ltd. All rights reserved.</div>
+  </footer>
+</div>
+</div>
+<!-- /ko -->
+ </div>
+    <div class="login-loading-wrapper" style="display: none;">
+      <div class="loading">
+        <div class="loader">
+          <div class="loader-inner line-scale-pulse-out">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cookies-confirm">
+      <div class="cookies-content">
+        <p data-bind="text: public18nText.cookiesSetting1"></p>
+        <p data-bind="text: public18nText.cookiesSetting2"></p>
+        <a data-bind="text: public18nText.cookiesPolicy" class="link-text" href="/ulearning/index.html#/policies?tab=cookies" target="_blank"></a>
+        <div class="cookies-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default refuse-cookies" data-bind="text: public18nText.refuse"></button>
+          <button type="button" class="btn btn-primary agree-cookies" data-bind="text: public18nText.agree"></button>
+          <span class="link-text cookies-setting" data-bind="text: public18nText.cookieSettings"></span>
+        </div>
+      </div>
+    </div>
+    <div class="index-dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-bind="click: closeCookieSetting" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel" data-bind="text: public18nText.cookieSettings"></h4>
+          </div>
+          <div class="modal-body">
+            <div class="cookies-item">
+              <div>
+                <p class="cookies-item-title" data-bind="text: public18nText.cookiesTitle1"></p>
+              </div>
+              <span data-bind="text: public18nText.cookiesTip1"></span>
+              <a class="cookies-link" target="_blank" href="/ulearning/index.html#/policies?tab=cookies" data-bind="text: public18nText.cookiesMore"></a>
+            </div>
+            <div class="cookies-item">
+              <div class="cookies-item-top">
+                <span class="cookies-item-title" data-bind="text: public18nText.cookiesTitle2"></span>
+                <span data-bind="text: public18nText.cookiesAll" class="cookies-link"></span>
+              </div>
+              <p data-bind="text: public18nText.cookiesTip2"></p>
+            </div>
+            <div class="cookies-item">
+              <div class="cookies-item-top">
+                <span class="cookies-item-title" data-bind="text: public18nText.cookiesTitle3"></span>
+                <input data-bind="checked: cookiesValue().type1" type="checkbox" class="switch">
+              </div>
+              <p data-bind="text: public18nText.cookiesTip3"></p>
+            </div>
+            <div class="cookies-item">
+              <div class="cookies-item-top">
+                <span class="cookies-item-title" data-bind="text: public18nText.cookiesTitle4"></span>
+                <input data-bind="checked: cookiesValue().type2" type="checkbox" class="switch">
+              </div>
+              <p data-bind="text: public18nText.cookiesTip4"></p>
+            </div>
+            <div>
+              <span class="cookies-item-title" data-bind="text: public18nText.cookiesTitle5"></span><span data-bind="text: public18nText.cookiesTip5"></span>
+            </div>
+            <div>
+              <span class="cookies-item-title" data-bind="text: public18nText.cookiesTitle6"></span><span data-bind="text: public18nText.cookiesTip6"></span>
+            </div>
+            <div>
+              <span class="cookies-item-title" data-bind="text: public18nText.cookiesTitle7"></span><span data-bind="text: public18nText.cookiesTip7"></span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bind="click: confirmCookieSetting, text: public18nText.confirm">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js 资源文件 -->
+    <script src="../common/vendor/jquery-3.4.1/jquery.min.js"></script>
+    <script src="../common/vendor/modernizr-2.8.3/modernizr.min.js"></script>
+    <!-- 日历 -->
+    <script src="../common/vendor/fullcalendar-4.4.0/core/main.min.js"></script>
+    <script src="../common/vendor/fullcalendar-4.4.0/daygrid/main.min.js"></script>
+    <script src="../common/vendor/fullcalendar-4.4.0/interaction/main.min.js"></script>
+    <script src="../common/vendor/fullcalendar-4.4.0/moment/main.min.js"></script>
+    <script src="../common/vendor/fullcalendar-4.4.0/list/main.min.js"></script>
+    <script src="../common/vendor/fullcalendar-4.4.0/timegrid/main.min.js"></script>
+    <script src="../common/vendor/fullcalendar-4.4.0/core/locales-all.min.js"></script>
+    <!-- 下载证书 -->
+    <script src="../common/vendor/html2canvas/html2canvas.min.js"></script>
+    <script src="../common/vendor/jsPDF-1.3.5/dist/jspdf.min.js"></script>
+    <!-- 导出pdf -->
+    <script src="../common/vendor/exportPdf/canvg/rgbcolor.min.js"></script>
+    <script src="../common/vendor/exportPdf/canvg/stackblur.min.js"></script>
+    <script src="../common/vendor/exportPdf/canvg/canvg.min.js"></script>
+    <script src="../common/vendor/exportPdf/canvas2image.js"></script>
+    <script src="../common/vendor/jquery-ajaxtransport-xdomainrequest-1.0.4/jquery.xdomainrequest.min.js"></script>
+    <!-- <script src="../common/vendor/wPaint/wPaint-min.js"></script> -->
+    <script src="../common/vendor/perfect-scrollbar-0.8.1/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../common/vendor/Jcrop-2.0.4/js/Jcrop.min.js"></script>
+    <script src="../common/vendor/pagination/script/jquery.pagination.js"></script>
+    <script src="../common/vendor/My97DatePicker/WdatePicker.js"></script>
+    <script src="../common/vendor/moment.js-2.22.1/moment.min.js"></script>
+    <script src="../common/vendor/moment.js-2.22.1/moment-with-locales.min.js"></script>
+    <script src="../common/vendor/bootstrap-datetimepicker-4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../common/vendor/cropper/cropper.min.js"></script>
+    <script src="../common/vendor/plupload/moxie.min.js"></script>
+    <script src="../common/vendor/plupload/plupload.full.min.js"></script>
+    <script src="../common/vendor/plupload/i18n/zh_CN.js"></script>
+    <script src="../common/vendor/qiniu/qiniu.min.js"></script>
+    <script src="../common/vendor/jwplayer/jwplayer-latest.js"></script>
+    <script src="../common/vendor/jwplayer/jwplayer.html5.js"></script>
+    <script src="../common/vendor/jwplayer/jwpsrv.js"></script>
+    <script src="../common/vendor/datepicker/js/datepicker.all.min.js"></script>
+    <script src="../common/vendor/jquery-circle-progress-1.2.2/circle-progress.min.js"></script>
+    <script src="../common/vendor/highcharts-6.0.4/highstock.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../common/vendor/highcharts-6.0.4/modules/oldie.js"></script>
+    <![endif]-->
+    <script src="../common/vendor/jquery-validate-1.17.0/jquery.validate.min.js"></script>
+    <script src="../common/vendor/jquery.qrcode-1.0/jquery.qrcode.min.js"></script>
+    <script src="../common/vendor/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="../common/vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <!-- 工具方法 -->
+    <script src="../distJs/common/plugins.js"></script>
+    <script data-main="./init.js" src="../common/vendor/require.js-2.3.5/require.min.js"></script>
+    <script>
+      function getCookie(c_name) {
+        if (document.cookie.length > 0) {
+          var c_start = document.cookie.indexOf(c_name + "=");
+          if (c_start != -1) {
+            c_start = c_start + c_name.length + 1;
+            var c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) c_end = document.cookie.length;
+            return unescape(
+              document.cookie
+                .substring(c_start, c_end)
+                .replace(/(%[0-9A-Z]{2})+/g, unescape)
+            );
+          }
+        }
+        return "";
+      }
+      if (!getCookie("local_deployment")) {
+        try {
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          let host = location.host;
+          if (host.indexOf("asia") != -1) {
+            gtag("config", "G-3PTTWW9TRR", {
+              linker: {
+                domain: ["ulearning.asia"],
+              },
+            });
+          } else if (host.indexOf("pro") != -1) {
+            gtag("config", "G-VVY88PQ5HF", {
+              linker: {
+                domain: ["ulearningsa.pro"],
+              },
+            });
+          } else if (host.indexOf("sa.net") != -1) {
+            gtag("config", "G-745R7H56Q7", {
+              linker: {
+                domain: ["ulearningsa.net"],
+              },
+            });
+          } else {
+            gtag("config", "G-B8W3XPL834", {
+              linker: {
+                domain: ["ulearning.app"],
+              },
+              debug_mode: true,
+            });
+          }
+          gtag("event", "page_view", location.href);
+          // Feature detects Navigation Timing API support.
+          if (window.performance) {
+            var timeSincePageLoad = Math.round(performance.now());
+            gtag("event", "timing", {
+              timingCategory: "JS Dependencies",
+              timingVar: "load",
+              timingValue: timeSincePageLoad,
+            });
+          }
+          window.onerror = function (msg, url, lineNo, columnNo, error) {
+            gtag("event", "JS_Error", {
+              exDescription: msg,
+              exFatal: false,
+              errUrl: url,
+              line: lineNo,
+            });
+            return false; // 返回 true 则错误消息不显示在控制台，返回 false，则错误消息将会展示在控制台
+          };
+        } catch (err) {
+          gtag("event", "exception", {
+            exDescription: err.message,
+            exFatal: false,
+          });
+        }
+      }
+    </script>
+
+    <!-- 配置参数 -->
+    <script>
+      var UA_HOST = isDev ? 'https://ua.ulearning.app' : '//ua' + i18nHost
+
+      var isIframe = false
+      try {
+        if (self != top) {
+          // 当前页面在iframe中打开时的特殊处理，如：避免重复加载cordova
+          isIframe = true
+        }
+      } catch (error) {
+        console.log(error)
+      }
+
+      // 判断是否在app内，是的话加载cordova
+      if (navigator.userAgent.indexOf('umoocApp') != -1 && !isIframe) {
+        window.appMode = true
+        $('body').addClass('app-mode')
+
+        if (getPlatform() == 'ios-platform') {
+          $('body').addClass('ios-platform')
+        }
+
+        var new_element = document.createElement('script')
+        new_element.type = 'text/javascript'
+        new_element.src = UA_HOST + '/learnCourse/common/cordova/cordova_init.js?version=2.0.38'
+        document.body.appendChild(new_element)
+      }
+    </script>
+  
+
+</body></html>
