@@ -1,1 +1,1 @@
-- [Jenkins 安装](expand/jenkins/install.md)
+- [Jenkins 安装](full-stack/jenkins/install.md)

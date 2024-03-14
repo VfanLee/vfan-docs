@@ -2,9 +2,9 @@
 
 ## 编程基础
 
-- [计算机基础](expand/computer-basis/操作系统.md)
-- [计算机网络](expand/computer-network/计算机网络.md)
-- [常见编程概念](expand/常见编程概念.md)
+- [计算机基础](full-stack/computer-basis/操作系统.md)
+- [计算机网络](full-stack/computer-network/DNS.md)
+- [常见编程概念](full-stack/常见编程概念.md)
 
 ## 前端基础
 
@@ -26,26 +26,26 @@
 ## 前端开发工具
 
 - [PostCSS](FDT/postcss/)
-- [Babel](FDT/babel)
-- [Gulp](FDT/gulp)
-- [Webpack](FDT/webpack)
-- [Vite](FDT/vite)
+- [Babel](FDT/babel/)
+- [Gulp](FDT/gulp/)
+- [Webpack](FDT/webpack/)
+- [Vite](FDT/vite/)
 
 ## 全栈开发
 
 - [Node.js](nodejs/npm.md)
-- [MySQL](expand/database/mysql/install.md)
+- [MySQL](full-stack/database/mysql/install.md)
 
 ## 服务器
 
-- [Linux【Ubuntu】](expand/linux/ubuntu.md)
-- [Docker](expand/docker/基本命令.md)
-- [Nginx](expand/nginx/基础.md)
-- [Jenkins](expand/jenkins/install.md)
+- [Linux【Ubuntu】](full-stack/linux/ubuntu.md)
+- [Docker](full-stack/docker/基本命令.md)
+- [Nginx](full-stack/nginx/基础.md)
+- [Jenkins](full-stack/jenkins/install.md)
 
 ## 其他
 
-- [Git](expand/git.md)
-- [GitHub](expand/github.md)
-- [正则表达式](expand/regular.md)
-- [常见开源协议](expand/regular.md)
+- [Git](full-stack/version-control/git.md)
+- [GitHub](full-stack/version-control/github.md)
+- [正则表达式](full-stack/regular.md)
+- [常见开源协议](full-stack/regular.md)

@@ -1,5 +1,5 @@
 
 - D:
-  - [Install](expand/nginx/install.md)
-  - [基础](expand/nginx/基础.md)
-  - [申请证书](expand/nginx/申请证书.md)
+  - [Install](full-stack/nginx/install.md)
+  - [基础](full-stack/nginx/基础.md)
+  - [申请证书](full-stack/nginx/申请证书.md)
