@@ -13,9 +13,7 @@
 
 ## Configuration
 
-> [Configuration options](https://pptr.dev/api/puppeteer.configuration)
->
-> 当配置不生效时，重新安装 puppeteer 即可生效。
+> [Configuration](https://pptr.dev/api/puppeteer.configuration)
 
 ### Configuration files
 
@@ -32,79 +30,36 @@ puppeteer 支持多种类类型的配置文件，如下：
 - `puppeteer.config.cjs`
 - `package.json` 指定 `puppeteer`
 
-```js
-const {join} = require('path')
-
-module.exports = {
-  cacheDirectory: join(os.homedir(), '.cache', 'puppeteer'), // 缓存目录
-  defaultProduct: 'chrome' // puppeteer 使用的浏览器
-}
-```
-
-### 自定义缓存目录
-
-默认缓存路径为用户家目录 `path.join(os.homedir(), '.cache', 'puppeteer')`。
-
-```js
-const {join} = require('path')
-
-module.exports = {
-  cacheDirectory: join(__dirname, '.cache', 'puppeteer')
-}
-```
-
-### 指定默认浏览器
-
-默认使用的是 chrome。
-
-```js
-const {join} = require('path')
-
-module.exports = {
-  defaultProduct: 'chrome' // or 'firefox'
-}
-```
+当配置不生效时，重新安装 puppeteer 即可生效。
 
 ## Browser
 
-> - [PuppeteerNode.launch()](https://pptr.dev/api/puppeteer.puppeteernode.launch)
-> - [Browser class](https://pptr.dev/api/puppeteer.browser)
+> [browser](https://pptr.dev/api/puppeteer.browser)
 
-### Launch options
+### 开启一个浏览器
+
+> [PuppeteerNode.launch()](https://pptr.dev/api/puppeteer.puppeteernode.launch)
+
+```js
+const browser = await puppeteer.launch()
+```
+
+### Launch Options
 
 > [PuppeteerLaunchOptions](https://pptr.dev/api/puppeteer.puppeteerlaunchoptions)
 
-### 启动不同的浏览器
-
-```js
-const browser = await puppeteer.launch({
-  product: 'firefox',
-  protocol: 'webDriverBiDi'
-})
-```
-
-product 用于指定启动的浏览器类型，默认为 chrome，显式指定会覆盖 `puppeteer.config.js` 中 `defaultProduct` 配置。
-
-protocol 用于指定 Puppeteer 与浏览器通信时使用的协议。用于访问浏览器中的各种功能，例如：
-
-- 导航到指定的 URL
-- 获取页面的标题和内容
-- 执行 JavaScript 代码
-- 模拟用户输入
-- 调试 JavaScript 代码
-
-protocol 有两种类型：
-
-- **cdp**: Chrome DevTools 协议是一种用于控制 Chrome 和 Chromium 的协议。这是 Puppeteer 默认使用的协议。
-- **webDriverBiDi**: WebDriver BiDi 协议是一种用于控制 Firefox 的协议。
-
-在大多数情况下，使用 cdp 协议是最佳选择。但是，如果您需要使用 Puppeteer 控制 Firefox，则需要使用 webDriverBiDi 协议。
-
-### 关闭浏览器
-
-```js
-browser.close()
-```
+- **product**：指定启动的浏览器类型，默认为 chrome，显式指定会覆盖 `puppeteer.config.js` 中 `defaultProduct` 配置。
+- **protocol**：指定 Puppeteer 与浏览器通信时使用的协议。
+  - 用于访问浏览器中的各种功能，例如：
+    - 导航到指定的 URL
+    - 获取页面的标题和内容
+    - 执行 JavaScript 代码
+    - 模拟用户输入
+    - 调试 JavaScript 代码
+  - protocol 有两种类型：
+    - **cdp**: Chrome DevTools 协议是一种用于控制 Chrome 和 Chromium 的协议。这是 Puppeteer 默认使用的协议。
+    - **webDriverBiDi**: WebDriver BiDi 协议是一种用于控制 Firefox 的协议。
+    - 在大多数情况下，使用 cdp 协议是最佳选择。但是，如果您需要使用 Puppeteer 控制 Firefox，则需要使用 webDriverBiDi 协议。
 
 ## Page
 
@@ -116,23 +71,52 @@ browser.close()
 const page = await browser.newPage()
 ```
 
-### 页面跳转
-
-```js
-await page.goto('YOUR_SITE')
-```
-
 ## 调试
 
 ### 适用于所有情况的调试方法
 
-> 无头模式：指 Puppeteer 在没有 GUI 的情况下运行。
+#### 无头模式
+
+无头模式指 Puppeteer 在没有 GUI 的情况下运行。
 
 ```js
 const browser = await puppeteer.launch({
   headless: false, // 关闭无头模式
+})
+```
+
+#### 减慢操作
+
+```js
+const browser = await puppeteer.launch({
+  headless: false,
   slowMo: 250, // 减慢操作 250ms
 });
 ```
 
 ### 客户端代码的调试方法
+
+#### 捕获 `console.*` output
+
+```js
+page.on('console', msg => console.log('PAGE LOG:', msg.text()));
+
+await page.evaluate(() => console.log(`url is ${location.href}`));
+```
+
+#### 在浏览器中使用 `debugger`
+
+1. 启动 Puppeteer 时将 devtools 设置为 true。
+
+    ```js
+    const browser = await puppeteer.launch({devtools: true})
+    ```
+
+2. 在要调试的任何客户端代码中添加调试器，例如：
+
+    ```js
+
+    await page.evaluate(() => {
+      debugger
+    })
+    ```

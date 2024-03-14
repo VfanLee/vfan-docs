@@ -1,4 +1,5 @@
-.cache
 node_modules
+.cache
 
-output
+google.png
+google.pdf
