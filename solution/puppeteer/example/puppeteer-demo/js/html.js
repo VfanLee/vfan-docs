@@ -1,7 +1,7 @@
 const fs = require('fs')
 const puppeteer = require('puppeteer')
 
-async function main() {
+;(async () => {
   const browser = await puppeteer.launch({ headless: false })
   const page = await browser.newPage()
 
@@ -16,6 +16,4 @@ async function main() {
   })
 
   await browser.close()
-}
-
-main()
+})()

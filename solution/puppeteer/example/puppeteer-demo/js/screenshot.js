@@ -7,10 +7,17 @@ const puppeteer = require('puppeteer')
   await page.goto('https://www.google.com')
 
   // 截屏
-  await page.screenshot({ path: `example.png`, fullPage: true })
+  await page.screenshot({
+    path: `example.png`,
+    type: 'png',
+    fullPage: true
+  })
 
   // pdf
-  await page.pdf({ path: 'example.pdf', format: 'A4' })
+  await page.pdf({
+    path: 'example.pdf',
+    format: 'A4'
+  })
 
   await browser.close()
 })()
