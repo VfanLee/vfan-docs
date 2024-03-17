@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copy Cut Paste Event</title>
+  </head>
+  <body>
+    <textarea cols="30" rows="10">Copy Cut Paste Event</textarea>
+
+    <script>
+      document.addEventListener('copy', e => {
+        console.log(e)
+        alert('复制成功')
+      })
+
+      document.addEventListener('cut', e => {
+        console.log(e)
+        alert('剪切成功')
+      })
+
+      document.addEventListener('paste', e => {
+        console.log(e)
+        alert('粘贴成功')
+      })
+    </script>
+  </body>
+</html>

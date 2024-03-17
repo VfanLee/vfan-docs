@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard API</title>
+  </head>
+  <body>
+    <input class="copy-text" type="text" value="Clipboard API" />
+    <button class="copy-btn" type="button">复制</button>
+
+    <hr />
+    <textarea class="paste-text" style="width: 100%" rows="10" placeholder="在此粘贴文本"></textarea>
+    <button class="paste-btn">粘贴</button>
+
+    <script>
+      const copyText = document.querySelector('.copy-text')
+      const copyBtn = document.querySelector('.copy-btn')
+      const pasteText = document.querySelector('.paste-text')
+      const pasteBtn = document.querySelector('.paste-btn')
+
+      copyBtn.addEventListener('click', e => {
+        const text = copyText.value
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            alert('复制成功')
+          })
+          .catch(reason => {
+            throw new Error(reason)
+            alert('复制失败')
+          })
+      })
+
+      pasteBtn.addEventListener('click', e => {
+        navigator.clipboard
+          .readText()
+          .then(value => {
+            pasteText.value = value
+            alert('粘贴成功')
+          })
+          .catch(reason => {
+            throw new Error(reason)
+            alert('粘贴失败')
+          })
+      })
+
+      document.addEventListener('copy', e => {
+        const selection = document.getSelection()
+        e.clipboardData.setData('text/plain', selection.toString().toUpperCase())
+        e.preventDefault()
+      })
+
+      document.addEventListener('paste', e => {
+        console.log('paste')
+      })
+    </script>
+  </body>
+</html>

@@ -1,8 +1,8 @@
 # JS 模块化
 
-> JS 模块化 [Example Demo](https://github.com/VfanLee/vfan-docs/tree/main/examples/modular)
+## ES Module
 
-## export 导出
+### export 导出
 
 ```js
 // 默认导出
@@ -17,7 +17,7 @@ export const myVariable = 42;
 export * from './myModule';
 ```
 
-## import 导入
+### import 导入
 
 ```js
 // 导入默认导出
@@ -44,13 +44,11 @@ import('./myModule')
   });
 ```
 
-
-
-# Node.js 模块系统
+## Node.js CommonJS
 
 在 Node.js 中，使用的是 CommonJS 模块化语法，它是一种在服务器端和后端应用中广泛使用的模块化规范。
 
-## 1. module.exports 导出
+### module.exports 导出
 
 ```js
 // 导出单个功能
@@ -62,7 +60,7 @@ module.exports.myFunction = myFunction;
 module.exports.myVariable = myVariable;
 ```
 
-## 2. require 导入
+### require 导入
 
 ```js
 // 导入整个模块

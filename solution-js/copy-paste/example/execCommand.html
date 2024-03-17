@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>execCommand</title>
+  </head>
+  <body>
+    <input class="copy-text" type="text" value="execCommand" />
+    <button class="copy-btn" type="button">复制</button>
+    <button class="cut-btn" type="button">剪切</button>
+
+    <hr />
+    <textarea class="paste-text" style="width: 100%" rows="10" placeholder="在此粘贴文本"></textarea>
+    <button class="paste-btn">粘贴</button>
+
+    <script>
+      const copyText = document.querySelector('.copy-text')
+      const copyBtn = document.querySelector('.copy-btn')
+      const cutBtn = document.querySelector('.cut-btn')
+      const pasteText = document.querySelector('.paste-text')
+      const pasteBtn = document.querySelector('.paste-btn')
+
+      copyBtn.addEventListener('click', e => {
+        copyText.select()
+        document.execCommand('copy')
+        alert('复制成功')
+      })
+
+      cutBtn.addEventListener('click', e => {
+        copyText.select()
+        document.execCommand('cut')
+        alert('剪切成功')
+      })
+
+      pasteBtn.addEventListener('click', e => {
+        pasteText.focus()
+        document.execCommand('paste')
+        alert('粘贴成功')
+      })
+    </script>
+  </body>
+</html>

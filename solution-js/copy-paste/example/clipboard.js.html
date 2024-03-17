@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clipboard.js</title>
+  </head>
+  <body>
+    <h2>从其他元素复制文本</h2>
+    <input id="foo" type="text" value="从其他元素复制文本" />
+    <button class="copy-btn" type="button" data-clipboard-target="#foo">复制</button>
+    <button class="cancel-copy-btn">取消复制</button>
+
+    <h2>从另一个元素剪切文本</h2>
+    <input id="bar" type="text" value="从另一个元素剪切文本" />
+    <button class="cut-btn" data-clipboard-action="cut" data-clipboard-target="#bar">剪切</button>
+
+    <h2>从属性复制文本</h2>
+    <button class="attribute-copy-btn" data-clipboard-text="从属性复制文本">复制</button>
+
+    <h2>动态设置</h2>
+    <input id="dynamic-input" type="text" value="clipboard.js" />
+    <button class="dynamic-copy-btn" type="button">复制</button>
+
+    <hr />
+    <textarea style="width: 100%" rows="10" placeholder="在此粘贴文本"></textarea>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+    <script>
+      // 从其他元素复制文本
+      const copyClipboard = new ClipboardJS('.copy-btn')
+      copyClipboard.on('success', e => {
+        console.log(e)
+        alert('复制成功')
+      })
+      copyClipboard.on('error', e => {
+        console.log(e)
+        alert('复制失败')
+      })
+      const cancelCopyBtn = document.querySelector('.cancel-copy-btn')
+      cancelCopyBtn.addEventListener('click', e => {
+        copyClipboard.destroy()
+      })
+
+      // 从另一个元素剪切文本
+      const cutClipboard = new ClipboardJS('.cut-btn')
+      cutClipboard.on('success', e => {
+        console.log(e)
+        alert('剪切成功')
+      })
+      cutClipboard.on('error', e => {
+        console.log(e)
+        alert('剪切失败')
+      })
+
+      // 从属性复制文本
+      const attributeClipboard = new ClipboardJS('.attribute-copy-btn')
+      attributeClipboard.on('success', e => {
+        console.log(e)
+        alert('复制成功')
+      })
+      attributeClipboard.on('error', e => {
+        console.log(e)
+        alert('复制失败')
+      })
+
+      // 动态设置
+      const dynamicInput = document.querySelector('#dynamic-input')
+      const dynamicClipboard = new ClipboardJS('.dynamic-copy-btn', {
+        // 指定要复制的文本的来源
+        target(trigger) {
+          console.log(trigger)
+          return dynamicInput
+        },
+        // 指定要复制的文本本身
+        text(trigger) {
+          console.log(trigger)
+          return dynamicInput.value + '\n --- vfanlee --- \n'
+        }
+      })
+      dynamicClipboard.on('success', e => {
+        console.log(e)
+        alert('复制成功')
+      })
+      dynamicClipboard.on('error', e => {
+        console.log(e)
+        alert('复制失败')
+      })
+    </script>
+  </body>
+</html>
