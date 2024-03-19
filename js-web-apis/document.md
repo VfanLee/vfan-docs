@@ -1,7 +1,5 @@
 # Document Object Model (DOM)
 
-> 参考：
->
 > - [MDN Document](https://developer.mozilla.org/zh-CN/docs/Web/API/Document)
 > - [MDN DocumentFragment](https://developer.mozilla.org/zh-CN/docs/Web/API/DocumentFragment)
 
@@ -501,7 +499,9 @@ el.contains(node)
 </script>
 ```
 
-### [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+### addEventListener
+
+> [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 
 ```html
 <button id="btn">btn</button>
