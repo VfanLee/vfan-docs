@@ -1,6 +1,0 @@
-- [文档类型声明](html/doctype.md)
-- [form 表单](html/form.md)
-- [table 表格](html/table.md)
-- [SEO 技巧](html/seo.md)
-- [script 元素加载](html/script.md)
-- [data-* 数据属性](html/data-attribute.md)

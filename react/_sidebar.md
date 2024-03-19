@@ -1,3 +1,0 @@
-- [React](react/)
-- [React Router](react/react-router.md)
-- [Redux](react/redux.md)

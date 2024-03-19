@@ -1,5 +1,0 @@
-- [DNS](full-stack/computer-network/DNS.md)
-- [HTTP](full-stack/computer-network/HTTP.md)
-- [URL](full-stack/computer-network/URL.md)
-- [VPN协议](full-stack/computer-network/VPN协议.md)
-- [其他](full-stack/computer-network/其他.md)

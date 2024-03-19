@@ -1,1 +1,0 @@
-- [Jenkins 安装](full-stack/jenkins/install.md)

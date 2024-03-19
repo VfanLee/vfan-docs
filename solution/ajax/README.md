@@ -26,7 +26,3 @@
 3. **jQuery Ajax**: jQuery Ajax 是 jQuery 库的一部分，封装了底层的 XMLHttpRequest，提供了更高级的接口，隐藏了许多底层细节，以简化异步请求的处理。
 
 4. **axios**: Axios 是一个基于 promise 网络请求库，作用于node.js 和浏览器中。 它是 isomorphic 的(即同一套代码可以运行在浏览器和node.js中)。在服务端它使用原生 node.js http 模块, 而在客户端 (浏览端) 则使用 XMLHttpRequests。
-
-## Ajax 示例参考
-
-[ajax 使用示例](https://github.com/VfanLee/vfan-docs/tree/main/examples/ajax)
