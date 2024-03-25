@@ -1,0 +1,34 @@
+.f-container {
+  display: flex;
+  height: 100vh;
+}
+
+.f-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 248px;
+  margin: 0;
+  padding: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.33);
+  list-style: none;
+}
+
+.f-item {
+  padding: 8px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.f-view {
+  flex: 1;
+  width: 0;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.f-view__inner {
+  width: 100%;
+  padding: 32px 32px 0;
+}

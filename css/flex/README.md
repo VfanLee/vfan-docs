@@ -17,7 +17,7 @@ flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一
 
 flex item 呈线形排列，并且把自己的大小作为主轴上的大小。如果有太多元素超出容器，它们会溢出而不会换行。如果一些元素比其他元素高，那么元素会沿交叉轴被拉伸来填满它的大小。
 
-<iframe width="100%" height="480" src="https://mdn.github.io/css-examples/flexbox/basics/the-flex-container.html" loading="lazy"> </iframe>
+<iframe width="100%" height="480" src="https://mdn.github.io/css-examples/flexbox/basics/the-flex-container.html" loading="lazy"></iframe>
 
 ## 2. `flex-direction`
 
