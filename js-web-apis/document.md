@@ -501,7 +501,7 @@ el.contains(node)
 
 ### addEventListener
 
-> [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+> [addEventListener](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
 
 ```html
 <button id="btn">btn</button>

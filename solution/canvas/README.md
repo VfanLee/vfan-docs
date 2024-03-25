@@ -1,6 +1,10 @@
 # Canvas
 
-> https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial
+> [Canvas_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial)
+
+## canvas 相关库
+
+- [roughjs](https://roughjs.com/)：手绘图形。
 
 ## 获取绘图上下文
 
@@ -22,13 +26,13 @@ const ctx = canvas.getContext('2d');
 
 ## 绘制路径
 
-- 开始路径: `ctx.beginPath();`
-- 移动到指定位置: `ctx.moveTo(x, y);`
-- 绘制直线: `ctx.lineTo(x, y);`
-- 绘制曲线: `ctx.quadraticCurveTo(cpx, cpy, x, y);` 或 `ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);`
-- 闭合路径: `ctx.closePath();`
-- 填充路径: `ctx.fill();`
-- 绘制路径边框: `ctx.stroke();`
+- 开始路径: `ctx.beginPath()`
+- 移动到指定位置: `ctx.moveTo(x, y)`
+- 绘制直线: `ctx.lineTo(x, y)`
+- 绘制曲线: `ctx.quadraticCurveTo(cpx, cpy, x, y)` 或 `ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)`
+- 闭合路径: `ctx.closePath()`
+- 填充路径: `ctx.fill()`
+- 绘制路径边框: `ctx.stroke()`
 
 ## 绘制文本
 

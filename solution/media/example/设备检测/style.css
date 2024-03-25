@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  display: flex;
+  gap: 16px;
+  .label {
+    flex-shrink: 0;
+    width: 96px;
+  }
+  .box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+video {
+  height: 200px;
+  object-fit: contain;
+  object-position: left top;
+}
