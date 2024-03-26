@@ -11,8 +11,8 @@ npm i react-router-dom
 ```jsx
 import { createBrowserRouter } from 'react-router-dom'
 
-import About from '@/page/About'
-import Article from '@/page/Article'
+import About from '@/pages/About'
+import Article from '@/pages/Article'
 
 const router = createBrowserRouter([
   {

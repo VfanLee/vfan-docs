@@ -1,0 +1,28 @@
+.wrapper > * {
+  padding: 10px;
+  border: 2px solid #ff9500;
+  border-radius: 5px;
+  background-color: #ffec99;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.item-1 {
+  grid-column: 1 / span 3;
+}
+
+.item-2 {
+  grid-area: 1 / 6 / 3 / span 4;
+}
+
+.item-3 {
+  grid-area: 2 / 2 / auto / span 2;
+}
+
+.item-4 {
+  grid-area: 3 / 3 / auto / -1;
+}
