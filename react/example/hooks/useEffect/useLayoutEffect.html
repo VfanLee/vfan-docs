@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React useLayoutEffect</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState, useLayoutEffect } = React
+      const app = document.getElementById('app')
+
+      function App() {
+        const [count, setCount] = useState(0)
+        const [num, setNum] = useState(0)
+
+        // useLayoutEffect 是 useEffect 的一个版本，在浏览器重新绘制屏幕之前触发。
+        useLayoutEffect(() => {
+          console.log('副作用函数执行')
+        })
+
+        return (
+          <>
+            <h1>App</h1>
+            <button onClick={() => setCount(count + 1)}>count: {count}</button>
+            <button onClick={() => setNum(num + 1)}>num: {num}</button>
+          </>
+        )
+      }
+
+      ReactDOM.createRoot(app).render(<App />)
+    </script>
+  </body>
+</html>
