@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>兄弟通信_状态提升</title>
+    <style>
+      #app {
+        padding: 30px;
+        background-color: antiquewhite;
+      }
+
+      .son1 {
+        padding: 30px;
+        background-color: lightblue;
+      }
+
+      .son2 {
+        padding: 30px;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState } = React
+      const app = document.getElementById('app')
+
+      function Son1({ title }) {
+        return (
+          <div className="son1">
+            <strong>这是 Son1</strong>
+            <p>{title}</p>
+          </div>
+        )
+      }
+
+      function Son2({ onTitle }) {
+        const [title, setTitle] = useState('')
+
+        return (
+          <div className="son2">
+            <strong>这是 Son2</strong>
+            <hr />
+            <input
+              type="text"
+              value={title}
+              onInput={e => {
+                setTitle(e.target.value)
+                onTitle(title)
+              }}
+            />
+          </div>
+        )
+      }
+
+      // 前提：props 可传递任意类型的数据（数字、字符串、布尔值、数组、对象、函数、JSX）
+      // 核心思路：借助“状态提升”机制，即把父组件作为“跳板”，在父组件中进行兄弟组件之间的数据传递
+      function App() {
+        const [title, setTitle] = useState('')
+
+        const changeTitle = title => {
+          setTitle(title)
+        }
+
+        return (
+          <>
+            <strong>这是 App</strong>
+            <Son1 title={title} />
+            <Son2 onTitle={changeTitle} />
+          </>
+        )
+      }
+
+      ReactDOM.createRoot(app).render(<App />)
+    </script>
+  </body>
+</html>

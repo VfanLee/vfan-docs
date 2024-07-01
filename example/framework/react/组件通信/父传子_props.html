@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>父传子_props</title>
+    <style>
+      #app {
+        padding: 30px;
+        background-color: antiquewhite;
+      }
+
+      .son {
+        padding: 30px;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const app = document.getElementById('app')
+
+      // 1. props 可传递任意类型的数据（数字、字符串、布尔值、数组、对象、函数、JSX）
+      // 2. 子组件只能读取 props 中的数据，父组件的数据只能在父组件中修改
+      function Son({ name }) {
+        return (
+          <div className="son">
+            <strong>这是 Son</strong>
+            <p>{name}</p>
+          </div>
+        )
+      }
+
+      function App() {
+        const name = '这是在 App 定义的 name'
+        return (
+          <>
+            <strong>这是 App</strong>
+            <Son name={name}></Son>
+          </>
+        )
+      }
+
+      ReactDOM.createRoot(app).render(<App />)
+    </script>
+  </body>
+</html>

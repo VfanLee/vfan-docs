@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React18</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState } = React
+      const app = document.getElementById('app')
+
+      function Header({ title }) {
+        return <h1>{title || 'Default Title'}</h1>
+      }
+
+      const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+      function List() {
+        return names.map((n, index) => <li key={index}>{n}</li>)
+      }
+
+      function LikeButton() {
+        const [likes, setLikes] = useState(0)
+        function handleClick() {
+          setLikes(likes + 1)
+        }
+
+        return <button onClick={handleClick}>like({likes})</button>
+      }
+
+      function App() {
+        return (
+          <>
+            <Header title="React" />
+            <List />
+            <LikeButton />
+          </>
+        )
+      }
+
+      ReactDOM.createRoot(app).render(<App />)
+    </script>
+  </body>
+</html>

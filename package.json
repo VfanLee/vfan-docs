@@ -1,0 +1,28 @@
+{
+  "name": "vfan-docs",
+  "version": "1.0.0",
+  "description": "学习记录，主要集中于前端。",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vitepress dev docs",
+    "dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "docs:build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "Learning Notes",
+    "Developing Technical Documentation"
+  ],
+  "author": "Vfan Lee",
+  "license": "MIT",
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "npm-run-all2": "^6.2.0",
+    "sass": "^1.77.2",
+    "vitepress": "^1.2.2"
+  }
+}

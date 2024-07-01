@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 4px;
+      }
+      th {
+        user-select: none;
+        cursor: pointer;
+      }
+      th:hover {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="grid">
+      <thead>
+        <tr>
+          <th data-type="age">Age</th>
+          <th data-type="name">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>5</td>
+          <td>John</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Pete</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Ann</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Eugene</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Ilya</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      const grid = document.querySelector('#grid')
+      grid.addEventListener('click', e => {
+        const target = e.target
+        if (target.tagName !== 'TH') {
+          return
+        }
+
+        sortGrid(target.cellIndex, target.dataset.type)
+
+        function sortGrid(cellIndex, type) {
+          const tbody = grid.querySelector('tbody')
+          let rows = Array.from(tbody.rows)
+
+          let compareFn
+          switch (type) {
+            case 'age':
+              compareFn = (rowA, rowB) => {
+                return rowA.cells[cellIndex].innerText - rowB.cells[cellIndex].innerText
+              }
+              break
+            case 'name':
+              compareFn = (rowA, rowB) => {
+                return rowA.cells[cellIndex].innerText > rowB.cells[cellIndex].innerText ? 1 : -1
+              }
+              break
+          }
+
+          rows.sort(compareFn)
+          tbody.append(...rows)
+        }
+      })
+    </script>
+  </body>
+</html>

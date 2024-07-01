@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knockout Form</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 data-bind="text: title"></h1>
+      <ul>
+        <!-- ko foreach: names -->
+        <li data-bind="text: $data"></li>
+        <!-- /ko  -->
+      </ul>
+      <button data-bind="click: handleClick">
+        like(
+        <span data-bind="text: likes"></span>
+        )
+      </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script>
+      const app = document.getElementById('app')
+
+      function AppViewModel() {
+        const self = this
+
+        self.title = ko.observable('Knockout.js')
+        self.names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+        self.likes = ko.observable(0)
+        self.handleClick = function () {
+          self.likes(self.likes() + 1)
+        }
+      }
+
+      ko.applyBindings(new AppViewModel(), app)
+    </script>
+  </body>
+</html>

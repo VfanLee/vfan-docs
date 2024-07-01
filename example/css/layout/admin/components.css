@@ -1,0 +1,73 @@
+.ch-logo {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  img {
+    height: 28px;
+  }
+  h1 {
+    margin-block: 0;
+    margin-inline-start: 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.ch-actions {
+  display: flex;
+  align-items: center;
+}
+
+.ch-actions-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  > * {
+    padding: 12px;
+    font-size: 18px;
+  }
+}
+
+.ch-actions-avatar {
+  display: flex;
+  align-items: center;
+  padding-inline: 16px;
+  height: 100%;
+  img {
+    height: 26px;
+  }
+  span {
+    margin-inline-start: 8px;
+  }
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin: 4px;
+  height: 40px;
+  padding-inline: 16px;
+  border-radius: 6px;
+  line-height: 40px;
+  cursor: pointer;
+  transition: color 0.3s;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: rgba(0, 0, 0, 0.88);
+  }
+  &:active {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  &.menu-item--selected {
+    background-color: rgba(0, 0, 0, 0.04);
+    color: rgba(0, 0, 0, 0.95);
+  }
+}

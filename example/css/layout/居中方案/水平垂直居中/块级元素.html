@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* ------ 默认 ------ */
+      .container {
+        position: relative;
+        height: 200px;
+        border: 1px solid black;
+      }
+
+      .container .item {
+        width: 200px;
+        height: 50px;
+        background-color: pink;
+      }
+      /* ------ 默认 ------ */
+
+      /* ------ 方案1：通过定位辅助 ------ */
+      /* .container--center .item { */
+        /* position: absolute; */
+
+        /* 定位偏移使用 calc()一步计算（需要知道自身大小） */
+        /* left: calc(50% - 100px);
+        top: calc(50% - 25px); */
+
+        /* margin 偏移（需要知道自身大小） */
+        /* top: 50%;
+        left: 50%;
+        margin-top: -25px;
+        margin-left: -100px; */
+
+        /* 定位偏移 + margin: auto; */
+        /* top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; */
+
+        /* transform 偏移 */
+        /* left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+      /* } */
+
+      /* ------ 方案2：flex ------ */
+
+
+      /* 传统的 flex 属性 */
+      /* .container--center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } */
+
+      /* flex + margin */
+      .container--center {
+        display: flex;
+      }
+
+      .container--center .item {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>水平垂直居中 - 块级元素</h1>
+    <div class="container container--center">
+      <div class="item">这是一段文字</div>
+    </div>
+  </body>
+</html>

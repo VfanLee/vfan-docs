@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormData</title>
+  </head>
+  <body>
+    <form class="my-form">
+      <div>
+        <label>
+          邮箱：
+          <input type="email" name="email" value="foo@mail.com" required />
+        </label>
+      </div>
+
+      <div>
+        <label>
+          密码：
+          <input type="password" name="password" value="foo" required />
+        </label>
+      </div>
+
+      <button type="submit" onclick="submitByGET(event)">GET 提交</button>
+      <button type="submit" onclick="submitByPOST(event)">POST 提交</button>
+      <button type="button" onclick="printFormData(event)">输出 FormData</button>
+      <button type="button" onclick="printJSON(event)">输出 JSON</button>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>

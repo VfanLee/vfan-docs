@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable Element</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+
+      .draggable {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        cursor: move;
+        user-select: none; /* 禁止用户选择文本 */
+      }
+    </style>
+  </head>
+  <body>
+    <p>111</p>
+    <div class="draggable" id="myElement">
+      <h2 id="myElementHeader">Header</h2>
+      可拖动的元素
+    </div>
+    <p>111</p>
+
+    <script>
+      function makeElementDraggable(element) {
+        element.style.position = 'fixed'
+        let pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0
+        if (document.getElementById(element.id + 'Header')) {
+          // 如果存在一个标识为 element.id + "Header" 的元素，就把它用作拖动句柄：
+          document.getElementById(element.id + 'Header').onmousedown = dragMouseDown
+        } else {
+          // 否则，用该元素作为拖动句柄：
+          element.onmousedown = dragMouseDown
+        }
+
+        function dragMouseDown(e) {
+          e = e || window.event
+          e.preventDefault()
+          // 获取鼠标点击位置的初始坐标：
+          pos3 = e.clientX
+          pos4 = e.clientY
+
+          document.addEventListener('mouseup', closeDragElement)
+          document.addEventListener('mousemove', elementDrag)
+        }
+
+        function elementDrag(e) {
+          e = e || window.event
+          e.preventDefault()
+          // 计算鼠标移动时的新位置：
+          pos1 = pos3 - e.clientX
+          pos2 = pos4 - e.clientY
+          pos3 = e.clientX
+          pos4 = e.clientY
+          // 将元素新的位置设置为鼠标当前位置减去鼠标点击位置的差值：
+          element.style.top = element.offsetTop - pos2 + 'px'
+          element.style.left = element.offsetLeft - pos1 + 'px'
+        }
+
+        function closeDragElement() {
+          // 鼠标释放时停止拖动：
+          document.removeEventListener('mouseup', closeDragElement)
+          document.removeEventListener('mousemove', elementDrag)
+        }
+      }
+
+      // 调用 makeElementDraggable 函数，使元素可拖动：
+      makeElementDraggable(document.getElementById('myElement'))
+    </script>
+  </body>
+</html>

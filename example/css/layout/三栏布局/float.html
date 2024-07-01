@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --left-width: 200px;
+        --right-width: 100px;
+        --left-background: #1abc9c;
+        --mid-background: #3498db;
+        --right-background: #2ecc71;
+      }
+
+      .container {
+        background-color: #95a5a6;
+        min-width: calc(var(--left-width) + 300px + var(--right-width));
+      }
+
+      .column {
+        height: 300px;
+      }
+
+      .side-left {
+        float: left;
+        width: var(--left-width);
+        background-color: var(--left-background);
+      }
+
+      .side-right {
+        float: right;
+        width: var(--right-width);
+        background-color: var(--right-background);
+      }
+
+      .mid {
+        float: left;
+        width: calc(100% - var(--left-width) - var(--right-width));
+        background-color: var(--mid-background);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column side-left">side-left</div>
+      <div class="column side-right">side-right</div>
+      <div class="column mid">mid</div>
+    </div>
+  </body>
+</html>

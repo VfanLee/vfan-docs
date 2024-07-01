@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>子传父_props_function</title>
+    <style>
+      #app {
+        padding: 30px;
+        background-color: antiquewhite;
+      }
+
+      .son {
+        padding: 30px;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState } = React
+      const app = document.getElementById('app')
+
+      // 前提：props 可传递任意类型的数据（数字、字符串、布尔值、数组、对象、函数、JSX）
+      // 核心思路：在子组件中调用父组件传递过来的函数并传入参数，以此来达到“子修改父的数据”
+      function Son({ onMsg }) {
+        const [msg, setMsg] = useState('')
+
+        return (
+          <div className="son">
+            <strong>这是 Son</strong>
+            <hr />
+            <input
+              type="text"
+              value={msg}
+              onInput={e => {
+                setMsg(e.target.value)
+                onMsg(msg)
+              }}
+            />
+          </div>
+        )
+      }
+
+      function App() {
+        const [msg, setMsg] = useState('')
+
+        return (
+          <>
+            <strong>这是 App</strong>
+            <p>{msg}</p>
+            <Son onMsg={msg => setMsg(msg)}></Son>
+          </>
+        )
+      }
+
+      ReactDOM.createRoot(app).render(<App />)
+    </script>
+  </body>
+</html>

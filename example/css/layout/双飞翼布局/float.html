@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --left-width: 200px;
+        --right-width: 100px;
+        --left-background: #1abc9c;
+        --mid-background: #3498db;
+        --right-background: #2ecc71;
+      }
+
+      body {
+        min-width: calc(var(--left-width) + 300px + var(--right-width));
+      }
+
+      .header,
+      .footer {
+        height: 50px;
+        background-color: #95a5a6;
+      }
+
+      .footer {
+        clear: both;
+      }
+
+      .column {
+        float: left;
+        height: 300px;
+      }
+
+      .mid {
+        width: 100%;
+        float: left;
+        background-color: var(--mid-background);
+      }
+
+      .mid-inner {
+        margin: 0 var(--right-width) 0 var(--left-width);
+      }
+
+      .left {
+        width: var(--left-width);
+        margin-left: -100%;
+        background-color: var(--left-background);
+      }
+
+      .right {
+        width: var(--right-width);
+        margin-left: calc(-1 * var(--right-width));
+        background-color: var(--right-background);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">header</div>
+    <div class="column mid">
+      <div class="mid-inner">mid-inner</div>
+    </div>
+    <div class="column left">left</div>
+    <div class="column right">right</div>
+    <div class="footer">footer</div>
+  </body>
+</html>

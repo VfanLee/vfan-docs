@@ -1,0 +1,48 @@
+# 声明文件
+
+类型声明文件的作用就是为已存在的 js 库提供类型信息。这样在 TS 项目中使用 js 库时，就可以像使用 TS 一样了。
+
+<https://github.com/DefinitelyTyped/DefinitelyTyped>
+
+## `.ts`
+
+`.ts`：代码实现文件。
+
+用途：编写程序代码。
+
+1. 包含：类型信息、可执行代码。
+2. 可以被编译成 `.js` 文件，执行代码。
+
+## `.d.ts`
+
+`.d.ts`：类型声明文件。
+
+用途：为 js 提供类型信息。
+
+1. 包含：类型信息。
+2. 不会生成 `.js` 文件，仅用于提供类型信息。
+
+### DefinitelyTyped
+
+[DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) 是一个 GitHub 仓库，用来提供高质量 TypeScript 类型声明。
+
+如果实际开发中使用的第三方库没有自带类型声明文件，可以尝试通过 npm 下载该仓库的 TS 类型声明包，这些包的名称格式为：`@types/*`，如：`npm i -D @types/lodash`。
+
+当安装 `@types/*` 后，TS 会自动加载该类声明包，来为该 js 库提供类型声明。
+
+### ts 中使用 js
+
+TS 项目中也是支持使用 `.js` 文件的，在导入 `.js` 文件的时候，TS 会自动加载与 `.js` 同名的 `.d.ts` 文件，以提供类型声明。
+
+`declare` 关键字：用于类型声明，为其他地方（比如：`.js` 文件）已存在的变量声明类型，而不是创建一个新的变量。
+
+1. 对于 type、interface 这些明确就是 TS 类型的（只能在 TS 中使用的），可以省略 `declare` 关键字。
+2. 对于 let、function 等育有双重含义（在 JS、TS 中都能使用的），应该使用 `declare` 关键字，明确指定此处用于类型声明。
+
+## import type
+
+```ts
+import type { Xxx } from "xxx"
+
+import type { Xxx } from 'xxx'
+```
