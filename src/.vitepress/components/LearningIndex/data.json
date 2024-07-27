@@ -1,0 +1,85 @@
+[
+  {
+    "title": "Windows",
+    "items": [
+      {
+        "title": "批处理脚本",
+        "link": "/learning/windows/batch"
+      }
+    ]
+  },
+
+  {
+    "title": "Linux",
+    "items": [
+      {
+        "title": "Linux",
+        "link": "/learning/linux/系统目录"
+      },
+      {
+        "title": "Ubuntu",
+        "link": "/learning/linux/ubuntu/apt"
+      },
+      {
+        "title": "Shell 脚本",
+        "link": "/learning/linux/shell/基本格式"
+      }
+    ]
+  },
+
+  {
+    "title": "版本管理",
+    "items": [
+      { "title": "约定式提交", "link": "https://www.conventionalcommits.org/zh-hans/v1.0.0/#%E6%A6%82%E8%BF%B0" },
+      { "title": "Git", "link": "git/command" },
+      { "title": "SVN", "link": "/quick-reference/svn/index" }
+    ]
+  },
+
+  {
+    "title": "站长必备",
+    "items": [
+      {
+        "title": "Docker",
+        "details": "🐋",
+        "link": "/learning/docker/container"
+      },
+      {
+        "title": "Nginx",
+        "details": "",
+        "link": "/learning/nginx/introduction"
+      },
+      {
+        "title": "Jenkins",
+        "details": "自动化构建",
+        "link": "/learning/jenkins/"
+      }
+    ]
+  },
+
+  {
+    "title": "SQL",
+    "items": [
+      {
+        "title": "MySQL",
+        "link": "/learning/mysql/DDL"
+      }
+    ]
+  },
+
+  {
+    "title": "学无止境",
+    "items": [
+      {
+        "title": "Restful API",
+        "details": "如何优雅地写一个 API？",
+        "link": "/learning/restful"
+      },
+      {
+        "title": "Puppeteer",
+        "details": "基于 Node.js 的爬虫工具",
+        "link": "/learning/puppeteer/"
+      }
+    ]
+  }
+]

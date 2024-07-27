@@ -1,0 +1,30 @@
+@import './vars.css';
+
+.index-layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.group-title {
+  margin: 4rem 0 1.8rem;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 1.8rem;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.group-title:nth-child(1) {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.card-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
