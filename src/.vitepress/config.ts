@@ -19,9 +19,14 @@ export default defineConfig({
   cleanUrls: false,
 
   // 构建
+  srcDir: '.',
+  srcExclude: ['./.vitepress/dist'],
+  outDir: './.vitepress/dist',
+  assetsDir: 'assets',
+  cacheDir: './.vitepress/cache',
   ignoreDeadLinks: false,
   metaChunk: true,
-  mpa: true,
+  mpa: false,
 
   // https://github.com/vuejs/vitepress/blob/main/src/node/markdown/markdown.ts
   markdown: {
