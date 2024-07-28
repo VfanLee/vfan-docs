@@ -400,22 +400,16 @@ const sidebar: DefaultTheme.Sidebar = {
     },
 
     {
-      text: '功能集成',
+      text: '集成',
       collapsed: true,
       items: [
         { text: 'Vue Router（官方）', link: '/web/vue/vue-router/' },
         { text: 'Pinia（官方）', link: '/web/vue/pinia/' },
         { text: 'Vue I18n', link: '/web/vue/vue-i18n/' },
         { text: 'VueUse', link: '/web/vue/vueuse/' },
-      ],
-    },
-    {
-      text: 'Vue3 组件库',
-      collapsed: true,
-      items: [
-        { text: 'PC - Element Plus', link: '/web/vue/element-plus' },
-        { text: 'Mobile - Vant', link: '/web/vue/vant' },
-        { text: 'tailwindcss', link: 'https://tailwindcss.com/docs/installation' },
+        { text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs/installation' },
+        { text: 'Element Plus - PC', link: '/web/vue/element-plus' },
+        { text: 'Vant - Mobile', link: '/web/vue/vant' },
       ],
     },
     { text: '选项式 API', link: '/web/vue/options' },
@@ -451,6 +445,11 @@ const sidebar: DefaultTheme.Sidebar = {
     { text: '样式化', link: '/web/nuxt/样式化' },
     { text: 'Server', link: '/web/nuxt/server' },
     { text: '数据获取', link: '/web/nuxt/数据获取' },
+    {
+      text: '集成',
+      collapsed: true,
+      items: [{ text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs/guides/nuxtjs' }],
+    },
   ],
 }
 
