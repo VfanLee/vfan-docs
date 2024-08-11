@@ -19,6 +19,7 @@
 - [OpenWeatherMap](https://openweathermap.org/api)：天气数据 API。
 - [Unsplash](https://unsplash.com/developers)：图片 API。
 - <https://dog.ceo/dog-api/>
+- <https://mockae.com/>
 
 ## 其他
 
