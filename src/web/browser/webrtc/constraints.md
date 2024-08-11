@@ -16,36 +16,51 @@ const supported = navigator.mediaDevices.getSupportedConstraints()
 
 ::: details
 
-**通用约束**
+- **音频约束**
+  - `autoGainControl`: 指定是否首选和/或需要自动增益控制。
+  - `channelCount`: 指定接受和/或需要的通道数量或通道数量范围。
+  - `echoCancellation`: 指定是否首选和/或需要回声消除。
+  - `latency`: 指定接受和/或需要的延迟或延迟范围。
+  - `noiseSuppression`: 指定是否首选和/或需要噪声抑制。
+  - `sampleRate`: 指定接受和/或需要的采样率或采样率范围。
+  - `sampleSize`: 指定接受和/或需要的样本大小或样本大小范围。
+  - `volume（已弃用、非标准）`: 指定接受和/或需要的音量或音量范围。
 
-- `deviceId`: 指定要使用的设备的 ID。
-- `groupId`: 如果有多个设备可用，可以通过此选项选择特定的设备组。
+- **视频约束**
+  - `aspectRatio`: 指定接受和/或需要的视频宽高比或宽高比范围。
+  - `facingMode`: 指定可接受和/或需要的摄像头朝向或朝向数组。
+    - `user` 视频源朝向用户；例如，智能手机上的前置摄像头。
+    - `environment` 视频源背对用户，从而可以查看他们的环境。这通常是智能手机上的后置摄像头。
+    - `left` 视频源朝向用户但位于其左侧，例如摄像头瞄准用户但越过其左肩。
+    - `right` 视频源朝向用户但位于其右侧，例如摄像头瞄准用户但越过其右肩。
+  - `frameRate`: 指定接受和/或需要的帧率或帧率范围。
+  - `height`: 指定接受和/或需要的视频高度或高度范围。
+  - `width`: 指定接受和/或需要的视频宽度或宽度范围。
+  - `resizeMode`: 指定 UA 可以用于推导视频轨道分辨率的模式或模式数组。
+    - `none` 表示用户代理使用相机、驱动程序或操作系统提供的分辨率。
+    - `crop-and-scale` 表示用户代理可以在相机输出上使用裁剪和缩小以满足影响分辨率的其他约束。
 
-**音频约束**
+- **通用约束**
+  - `deviceId`: 指定要使用的设备的 ID。
+  - `groupId`: 如果有多个设备可用，可以通过此选项选择特定的设备组。
 
-- `autoGainControl`: 指定是否首选和/或需要自动增益控制。
-- `channelCount`: 指定接受和/或需要的通道数量或通道数量范围。
-- `echoCancellation`: 指定是否首选和/或需要回声消除。
-- `latency`: 指定接受和/或需要的延迟或延迟范围。
-- `noiseSuppression`: 指定是否首选和/或需要噪声抑制。
-- `sampleRate`: 指定接受和/或需要的采样率或采样率范围。
-- `sampleSize`: 指定接受和/或需要的样本大小或样本大小范围。
-- `volume（已弃用、非标准）`: 指定接受和/或需要的音量或音量范围。
+- **用户隐私相关约束**
 
-**视频约束**
+    ```js
+    // https://developer.chrome.com/docs/web-platform/screen-sharing-controls?hl=zh-cn
+    {
+      audio: false,
+      systemAudio: 'exclude', // 确保 Chrome 仅向用户提供相关的音频捕获功能。
+      video: {
+        displaySurface: 'browser', // 指示 Web 应用倾向于提供特定的显示 surface 类型（标签页 browser、窗口 window 或屏幕 monitor）
+      },
+      monitorTypeSurfaces: 'include', // 用于防止用户共享整个屏幕。
+      surfaceSwitching: 'include', // 用于指明 Chrome 是否应允许用户在共享标签页之间动态切换。
+      selfBrowserSurface: 'include', // 用于禁止用户分享当前标签页。这可避开“镜厅”效果。
+      preferCurrentTab: false, // 是否以当前标签页为捕获源。
+    }
+    ```
 
-- `aspectRatio`: 指定接受和/或需要的视频宽高比或宽高比范围。
-- `facingMode`: 指定可接受和/或需要的摄像头朝向或朝向数组。
-  - `user` 视频源朝向用户；例如，智能手机上的前置摄像头。
-  - `environment` 视频源背对用户，从而可以查看他们的环境。这通常是智能手机上的后置摄像头。
-  - `left` 视频源朝向用户但位于其左侧，例如摄像头瞄准用户但越过其左肩。
-  - `right` 视频源朝向用户但位于其右侧，例如摄像头瞄准用户但越过其右肩。
-- `frameRate`: 指定接受和/或需要的帧率或帧率范围。
-- `height`: 指定接受和/或需要的视频高度或高度范围。
-- `width`: 指定接受和/或需要的视频宽度或宽度范围。
-- `resizeMode`: 指定 UA 可以用于推导视频轨道分辨率的模式或模式数组。
-  - `none` 表示用户代理使用相机、驱动程序或操作系统提供的分辨率。
-  - `crop-and-scale` 表示用户代理可以在相机输出上使用裁剪和缩小以满足影响分辨率的其他约束。
 :::
 
 ### 请求设置的特定值

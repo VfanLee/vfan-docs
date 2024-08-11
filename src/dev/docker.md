@@ -1,14 +1,39 @@
-# Docker 安装
+# Docker
 
-1. 安装 `docker`
+## 安装 `docker`
+
+```sh
+curl -fsSL https://get.docker.com | sh
+```
+
+::: details 国内环境
+
+```sh
+export DOWNLOAD_URL="https://mirrors.tuna.tsinghua.edu.cn/docker-ce"
+curl -fsSL https://get.docker.com | sh
+```
+
+:::
+
+## 为 docker 配置镜像地址
+
+1. 修改 docker 守护进程配置文件：
 
     ```sh
-    curl -fsSL https://get.docker.com | sh
+    vi /etc/docker/daemon.json
     ```
 
-2. 安装 `docker-compose`
+2. 添加以下内容：
 
-    ```sh
-    apt update
-    apt install docker-compose
+    ```json
+    {
+      "registry-mirrors": [ "https://example.com" ]
+    }
     ```
+
+## 安装 `docker-compose`
+
+```sh
+apt update
+apt install docker-compose
+```

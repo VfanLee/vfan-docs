@@ -155,7 +155,7 @@ const sidebar: DefaultTheme.Sidebar = {
   // browser 运行时
   '/web/browser/': [
     {
-      text: '🚀 DevTools 🚀',
+      text: '🚀 DevTools',
       link: 'https://developer.mozilla.org/zh-CN/docs/Glossary/Developer_Tools',
       collapsed: true,
       items: [],
@@ -180,7 +180,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'document', link: '/web/browser/document' },
         { text: 'window', link: '/web/browser/window' },
         { text: 'Ajax', link: '/web/browser/ajax' },
-        { text: 'Clipboard', link: '/web/browser/clipboard' },
+        { text: 'Clipboard API', link: '/web/browser/clipboard' },
         { text: 'History', link: '/web/browser/history' },
         { text: 'Location', link: '/web/browser/location' },
         { text: 'Navigator', link: '/web/browser/navigator' },
@@ -263,9 +263,11 @@ const sidebar: DefaultTheme.Sidebar = {
       text: '包管理',
       collapsed: true,
       items: [
-        { text: 'package.json', link: '/web/nodejs/package-manager/packagejson' },
-        { text: 'npm', link: '/web/nodejs/package-manager/npm' },
-        { text: 'pnpm', link: '/web/nodejs/package-manager/pnpm' },
+        { text: 'npm', link: '/web/nodejs/npm/npm' },
+        { text: 'package.json', link: '/web/nodejs/npm/packagejson' },
+        { text: 'CLI', link: '/web/nodejs/npm/cli' },
+        { text: 'pnpm', link: '/web/nodejs/npm/pnpm' },
+        { text: '全局库', link: '/web/nodejs/npm/useful-tools-library' },
       ],
     },
     {
@@ -281,7 +283,6 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '鉴权', link: '/web/nodejs/express/auth' },
       ],
     },
-    { text: '一些好用的工具库', link: '/web/nodejs/useful-tools-library', collapsed: true, items: [] },
   ],
 
   // vite
@@ -374,6 +375,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'SFC 单文件组件', link: '/web/vue/sfc-spec' },
         { text: 'props', link: '/web/vue/props' },
         { text: 'emit', link: '/web/vue/emit' },
+        { text: '透传 Attributes', link: '/web/vue/attr' },
         { text: 'slot', link: '/web/vue/slot' },
         { text: '“组件” v-model', link: '/web/vue/组件-v-model' },
         { text: 'context', link: '/web/vue/context' },
@@ -389,7 +391,11 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '插件', link: '/web/vue/plugins' },
       ],
     },
-
+    {
+      text: '过渡/动画',
+      collapsed: false,
+      items: [],
+    },
     {
       text: 'TypeScript',
       collapsed: true,

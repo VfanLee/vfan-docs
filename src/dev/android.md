@@ -11,10 +11,12 @@
    1. `GRADLE_HOME`，如：`D:\Software\Gradle\gradle-7.6.3`；
    2. 将 `ANDROID_HOME` 添加至 Path，`%GRADLE_HOME%\bin`。
 
-### Android Studio 安装文件路径
+::: details Android Studio 安装文件路径
 
 - 虚拟机：`~/.android/avd`
 - 默认 Gradle：`~/.gradle`
 - SDK Platforms：`ANDROID_HOME/platforms`
 - Android SDK Build-Tools：`ANDROID_HOME/build-tools`
 - Android 镜像：`ANDROID_HOME/system-images`
+
+:::

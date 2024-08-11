@@ -159,10 +159,24 @@ vue3 中复用逻辑通常采用 组合式函数。
 
 ## vue 组件通信
 
-## slot
+### props
+
+- props 可以传递任意类型吗？
+
+- props 会保持响应式吗？ -> 如何解决？
+
+    computed、watch
+
+### slot
+
+### provide / reject
+
+### 子组件
 
 ## method vs computed
 
-## watch
+## watch 侦听器
 
-监听一个对象的某个属性
+### 如何监听一个对象的某个属性？
+
+### watch vs watchEffect

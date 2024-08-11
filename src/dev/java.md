@@ -1,6 +1,6 @@
 # Java 开发环境
 
-## 编辑器
+## 代码编辑器
 
 - [IDEA](https://www.jetbrains.com/zh-cn/idea/download/?section=windows)
 

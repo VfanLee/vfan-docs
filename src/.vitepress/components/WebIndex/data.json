@@ -43,8 +43,8 @@
       { "title": "Babel", "details": "转换 JS 的神器 🚀", "link": "/web/engineering/babel" },
       { "title": "PostCSS", "details": "转换 CSS 的神器 🚀", "link": "/web/engineering/postcss" },
       { "title": "Sass", "details": "less? stylus? sass? scss!", "link": "/web/engineering/sass/introduction" },
-      { "title": "ESLint", "details": "代码风格 🥲", "link": "/web/engineering/eslint" },
-      { "title": "Prettier", "details": "代码格式化 🥲", "link": "/web/engineering/prettier" }
+      { "title": "ESLint", "details": "代码风格", "link": "/web/engineering/eslint" },
+      { "title": "Prettier", "details": "代码格式化", "link": "/web/engineering/prettier" }
     ]
   },
   {
@@ -68,15 +68,19 @@
   {
     "title": "🧀 涨点芝士",
     "items": [
-      { "title": "Tailwind CSS", "details": "CSS 原子化！", "link": "/web/engineering/tailwindcss" },
       {
         "title": "浏览器扩展",
-        "details": "开发个啥呢 🤔",
-        "link": "https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions"
+        "details": "Up! Up! Up!",
+        "link": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"
       },
       {
-        "title": "油猴脚本",
-        "details": "开发个啥呢 🤔",
+        "title": "PWA",
+        "details": "Up! Up! Up!",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+      },
+      {
+        "title": "油猴",
+        "details": "Up! Up! Up!",
         "link": "https://www.tampermonkey.net/documentation.php?locale=zh"
       }
     ]

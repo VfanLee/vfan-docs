@@ -1,4 +1,19 @@
-# 引入字体图标
+# 字体图标
+
+## 图标的发展
+
+1. 雪碧图 / 精灵图 / CSS sprites
+2. Font Icon
+   - 只能控制字体相关属性
+   - 通常下载的文件字体较大
+3. Inline SVG
+   - svg 可以完全控制
+
+## 常见图标库
+
+1. [iconfont](https://www.iconfont.cn/)
+2. [Font Awesome](https://fontawesome.com/)
+3. [Bootstrap Icons](https://icons.getbootstrap.com/)
 
 ## 引入字体
 

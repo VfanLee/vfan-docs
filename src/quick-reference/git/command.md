@@ -263,15 +263,15 @@ git add xxx
 `--squash` 选项会将源分支上的所有提交“压缩”成一个单独的合并提交。这意味着你不会在目标分支上看到源分支的所有独立提交记录，只会看到一个包含所有更改的提交。使用 `--squash` 后，你需要手动提交这些更改。
 
 ```sh
-git checkout master
+git switch main
 git merge --squash feature-branch
-git commit -m "合并 feature-branch 到 master"
+git commit -m "合并 feature-branch 到 main"
 ```
 
 默认的 `merge`（或 `merge --no-squash`） 行为会保留源分支上的所有提交历史。这意味着合并后的目标分支会包含源分支上所有独立的提交记录。
 
 ```sh
-git checkout master
+git switch main
 git merge feature-branch
 ```
 

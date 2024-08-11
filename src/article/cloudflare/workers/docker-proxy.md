@@ -11,7 +11,7 @@
 
     const hub_host = 'registry-1.docker.io'
     const auth_url = 'https://auth.docker.io'
-    const workers_url = 'https://自定义域名'
+    const workers_url = 'https://example.com' // 自定义域
 
     /**
     * static files (404.html, sw.js, conf.js)
@@ -212,18 +212,4 @@
 
     :::
 
-4. 修改 docker 全局镜像地址：
-
-    ```sh
-    vi /etc/docker/daemon.json
-    ```
-
-    添加以下内容：
-
-    ```json
-    {
-      "registry-mirrors": [ "https://自定义域名" ]
-    }
-    ```
-
-5. 大功告成！
+4. 现在，我们就成功配置了一个属于自己的 docker 加速镜像了。

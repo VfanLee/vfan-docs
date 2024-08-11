@@ -12,6 +12,7 @@ export default function nav(): DefaultTheme.NavItem[] {
         { text: 'Vue3', link: 'https://play.vuejs.org/' },
         { text: 'Element Plus', link: 'https://element-plus.run/' },
         { text: 'Sass', link: 'https://sass-lang.com/playground/' },
+        { text: 'Tailwind CSS', link: 'https://play.tailwindcss.com/' },
         { text: '正则表达式', link: 'https://regex101.com/' },
       ],
     },
