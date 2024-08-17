@@ -1,5 +1,7 @@
 # DNS
 
+https://www.yuque.com/doublefan-tdo7d/uxhcoy/dza3a7
+
 DNS（Domian Name System）域名系统，提供域名与 IP 地址的解析服务。
 
 ## 域名结构

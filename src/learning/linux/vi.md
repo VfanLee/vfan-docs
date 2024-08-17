@@ -81,3 +81,7 @@ vim 是 Linux 下的文本编辑工具。
 `:%s/foo/bar/g`：全局替换，将 foo 替换为 bar。
 
 `:%s/foo/bar/gc`：全局替换，将 foo 替换为 bar，每个匹配的字符都需要手动确认。
+
+### 粘贴模式
+
+`:set paste`

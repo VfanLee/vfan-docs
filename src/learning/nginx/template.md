@@ -1,6 +1,6 @@
-# template
+# 模板
 
-## 配置结构
+## 基本结构
 
 ```nginx
 ...              #全局块
@@ -82,6 +82,22 @@ server {
 ```
 
 ## 重定向
+
+### 将 HTTP 重定向到 HTTPS
+
+```nginx
+server {
+  listen 80;
+  listen [::]:80;
+  server_name www.example.com;
+
+  location ^~ / {
+    return 301 https://$server_name$request_uri;
+  }
+}
+```
+
+### url 重定向
 
 ```nginx
 server {

@@ -3,23 +3,29 @@
     "title": "💪 万丈高楼平地起",
     "items": [
       { "title": "计算机基础", "details": "头皮发麻", "link": "/web/computer-basis/introduction" },
-      { "title": "计算机网络", "details": "黑客是不是都爱这玩意儿？", "link": "/web/computer-network/introduction" },
-      { "title": "代码风格", "details": "“诗”一样的代码", "link": "/quick-reference/dev-style" }
+      { "title": "计算机网络", "details": "黑客是不是都爱这玩意儿？", "link": "/web/computer-network/introduction" }
     ]
   },
   {
-    "title": "⚔️ 三板斧",
+    "title": "🤝 多人协作",
+    "items": [
+      { "title": "Git", "details": "玩转 GitHub 的必备技能", "link": "/web/git/command" },
+      { "title": "SVN", "details": "工作需要", "link": "/web/svn/index" },
+      { "title": "约定式提交", "details": "约定式提交", "link": "https://www.conventionalcommits.org/zh-hans/v1.0.0/#%E6%A6%82%E8%BF%B0" }
+    ]
+  },
+  {
+    "title": "⚔️ 前端三板斧",
     "items": [
       { "title": "HTML", "details": "网页骨架", "link": "/web/html/" },
       { "title": "CSS", "details": "艺术就是 CSS", "link": "/web/css/" },
-      { "title": "ECMAScript", "details": "ECMAScript？JavaScript？傻傻分不清楚", "link": "/web/ecmascript/" },
-      { "title": "TypeScript", "details": "三板斧？四板斧！", "link": "/web/typescript/" }
+      { "title": "ECMAScript", "details": "ECMAScript？JavaScript？傻傻分不清楚", "link": "/web/ecmascript/" }
     ]
   },
   {
     "title": "✨ JS 运行时",
     "items": [
-      { "title": "什么是 JS 运行时？", "details": "所以，什么是 JS 运行时？", "link": "/web/js-runtime/" },
+      { "title": "前言", "details": "所以，什么是 JS 运行时？", "link": "/web/js-runtime/" },
       { "title": "浏览器 (Browser)", "details": "Niubility!", "link": "/web/browser/introduction" },
       { "title": "Node.js", "details": "Niubility too!", "link": "/web/nodejs/" }
     ]
@@ -27,39 +33,24 @@
   {
     "title": "🛠️ 工程化",
     "items": [
-      {
-        "title": "模块化",
-        "details": "IIFE? AMD? UMD? CommonJS? ES Module!",
-        "link": "/web/engineering/modular/introduction"
-      },
-      { "title": "Vite", "details": "侧重于前端项目，快！确实快！", "link": "/web/engineering/vite/introduction" },
-      { "title": "Webpack", "details": "侧重于前端项目", "link": "/web/engineering/webpack/introduction" },
-      {
-        "title": "Gulp",
-        "details": "一个基于流的构建工具，自动化任何类型的项目",
-        "link": "/web/engineering/gulp/introduction"
-      },
-      { "title": "Browserslist", "details": "定义浏览器兼容性", "link": "/web/engineering/browserslist" },
-      { "title": "Babel", "details": "转换 JS 的神器 🚀", "link": "/web/engineering/babel" },
-      { "title": "PostCSS", "details": "转换 CSS 的神器 🚀", "link": "/web/engineering/postcss" },
-      { "title": "Sass", "details": "less? stylus? sass? scss!", "link": "/web/engineering/sass/introduction" },
-      { "title": "ESLint", "details": "代码风格", "link": "/web/engineering/eslint" },
-      { "title": "Prettier", "details": "代码格式化", "link": "/web/engineering/prettier" }
+      { "title": "代码风格", "details": "风格统一，代码清晰", "link": "/quick-reference/dev-style" },
+      { "title": "模块化", "details": "工程化基石", "link": "/web/engineering/modular/introduction" },
+      { "title": "TypeScript", "details": "类型声明，提示友好", "link": "/web/typescript/" }
     ]
   },
   {
     "title": "🚀 SPA 单页面应用",
     "items": [
-      { "title": "Vue", "details": "尤雨溪，他懂个锤子 Vue！ [手动狗头]", "link": "/web/vue/introduction" },
+      { "title": "Vue", "details": "尤雨溪，他懂个锤子 Vue！ 😏", "link": "/web/vue/introduction" },
       { "title": "Vue (v2)", "details": "Options API", "link": "/web/vue2/" },
       { "title": "React", "details": "JSX？你也不赖", "link": "/web/react/" },
-      { "title": "angular.js", "details": "Emmm... 👀", "link": "/web/angularjs/" },
-      { "title": "knockout.js", "details": "Emmm... 👀", "link": "/web/knockoutjs/" }
+      { "title": "knockout.js", "details": "Emmm... 👀", "link": "/web/knockoutjs/" },
+      { "title": "angular.js", "details": "Emmm... 👀", "link": "/web/angularjs/" }
     ]
   },
   {
     "title": "🚀 SSR 服务端渲染",
-    "items": [{ "title": "Nuxt.js", "details": "全栈？分久必合？", "link": "/web/nuxt/introduction" }]
+    "items": [{ "title": "Nuxt.js", "details": "偏前端全栈？分久必合？", "link": "/web/nuxt/introduction" }]
   },
   {
     "title": "🚀 混合开发",
@@ -70,18 +61,23 @@
     "items": [
       {
         "title": "浏览器扩展",
-        "details": "Up! Up! Up!",
+        "details": "",
         "link": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"
       },
       {
         "title": "PWA",
-        "details": "Up! Up! Up!",
+        "details": "",
         "link": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
       },
       {
         "title": "油猴",
-        "details": "Up! Up! Up!",
+        "details": "",
         "link": "https://www.tampermonkey.net/documentation.php?locale=zh"
+      },
+      {
+        "title": "Puppeteer",
+        "details": "Node.js 版本的自动化工具",
+        "link": "/web/puppeteer/"
       }
     ]
   }

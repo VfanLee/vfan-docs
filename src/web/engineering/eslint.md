@@ -1,8 +1,8 @@
-## ESLint
+# ESLint
 
 代码风格
 
-安装
+## 安装
 
 ```sh
 npm install -D eslint
@@ -14,7 +14,7 @@ npm install -D eslint
 npm init @eslint/config
 ```
 
-Rules
+## Rules
 
 rule 有三个等级：
 
@@ -28,7 +28,7 @@ rules: {
 }
 ```
 
-Extends
+## Extends
 
 ```
 # eslint 推荐规则合集

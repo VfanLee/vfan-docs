@@ -12,13 +12,7 @@ defineOptions({
     <template v-for="(group, groupIndex) of data" :key="groupIndex">
       <h2 class="group-title">{{ group.title }}</h2>
       <div class="card-grid">
-        <Card
-          v-for="(item, itemIndex) of group.items"
-          :key="itemIndex"
-          :title="item.title"
-          :details="item.details"
-          :link="item.link"
-        />
+        <Card v-for="(item, itemIndex) of group.items" :key="itemIndex" :title="item.title" :details="item.details" :link="item.link" :target="item.target" />
       </div>
     </template>
   </div>

@@ -41,12 +41,12 @@ Nginx 默认目录
     docker container run -d \
                         --name nginx-server \
                         --network nginx-network \
-                        --publish 80:80 \
-                        --publish 443:443 \
-                        --volume /app/nginx/nginx.conf:/etc/nginx/nginx.conf \
-                        --volume /app/nginx/conf.d:/etc/nginx/conf.d \
-                        --volume /app/nginx/html:/usr/share/nginx/html \
-                        --volume /app/nginx/certs:/etc/nginx/certs \
+                        -p 80:80 \
+                        -p 443:443 \
+                        -v /app/nginx/nginx.conf:/etc/nginx/nginx.conf \
+                        -v /app/nginx/conf.d:/etc/nginx/conf.d \
+                        -v /app/nginx/html:/usr/share/nginx/html \
+                        -v /app/nginx/certs:/etc/nginx/certs \
                         --restart=always \
                         nginx:latest
     ```

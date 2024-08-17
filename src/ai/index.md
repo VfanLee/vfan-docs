@@ -1,1 +1,5 @@
-# AI
+---
+layout: page
+---
+
+<AiIndex />

@@ -1,4 +1,4 @@
-# Node.js CommonJS
+# CommonJS
 
 在 Node.js 中，使用的是 CommonJS 模块化语法，它是一种在服务器端和后端应用中广泛使用的模块化规范。
 

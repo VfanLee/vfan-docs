@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { EXTERNAL_URL_RE, normalizeLink } from '../utils'
+import { isExternal, normalizeLink } from '../utils'
 import { computed } from 'vue'
 
 defineOptions({
@@ -10,9 +10,10 @@ const props = defineProps<{
   title: string
   details?: string
   link: string
+  target?: string
 }>()
 
-const isExternal = computed(() => props.link && EXTERNAL_URL_RE.test(props.link))
+const isExternalLink = computed(() => isExternal(props.link))
 </script>
 
 <template>
@@ -22,9 +23,9 @@ const isExternal = computed(() => props.link && EXTERNAL_URL_RE.test(props.link)
     <div class="card__footer">
       <a
         class="link"
-        :href="link ? normalizeLink(link) : undefined"
-        :target="isExternal ? '_blank' : undefined"
-        :rel="isExternal ? 'noreferrer' : undefined"
+        :href="isExternalLink ? link : normalizeLink(link)"
+        :target="target ? target : isExternalLink ? '_blank' : undefined"
+        :rel="isExternalLink ? 'noreferrer' : undefined"
       >
         查看更多
       </a>

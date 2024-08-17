@@ -17,12 +17,12 @@ export default function nav(): DefaultTheme.NavItem[] {
       ],
     },
     { text: 'Web', link: '/web/' },
+    { text: '学无止境', link: '/learning/' },
     {
       text: '更多专题',
       items: [
-        { text: '👨‍💻 学无止境', link: '/learning/' },
         { text: '🤖 AI', link: '/ai/' },
-        { text: '✨ 珍藏网站', link: '/collection/' },
+        { text: '✨ 收藏', link: '/collection/' },
         { text: '📖 随记', link: '/article/' },
         { text: '✅ 面试题', link: '/interview/html' },
       ],

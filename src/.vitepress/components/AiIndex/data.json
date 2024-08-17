@@ -1,0 +1,18 @@
+[
+  {
+    "text": "AI 模型",
+    "link": "/ai/model"
+  },
+  {
+    "text": "chatgpt-web",
+    "link": "/ai/chatgpt-web"
+  },
+  {
+    "text": "AI 绘画",
+    "link": "/ai/stable-diffusion-webui/"
+  },
+  {
+    "text": "AI 语音",
+    "link": "/ai/voice"
+  }
+]

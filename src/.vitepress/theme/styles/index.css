@@ -1,5 +1,21 @@
 @import './vars.css';
 
+.tip .custom-block-title::before {
+  content: '💡 ';
+}
+.warning .custom-block-title::before {
+  content: '⚠️ ';
+}
+.danger .custom-block-title::before {
+  content: '💀 ';
+}
+.info .custom-block-title::before {
+  content: 'ℹ️ ';
+}
+.details .custom-block-title::before {
+  content: '📖 ';
+}
+
 .index-layout {
   max-width: 1280px;
   margin: 0 auto;

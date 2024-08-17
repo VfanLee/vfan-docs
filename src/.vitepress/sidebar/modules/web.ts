@@ -1,6 +1,53 @@
 import type { DefaultTheme } from 'vitepress'
 
 const sidebar: DefaultTheme.Sidebar = {
+  //#region 万丈高楼平地起
+  // 计算机基础
+  '/web/computer-basis/': [
+    {
+      text: '计算机基础',
+      items: [
+        { text: '计算机组成原理', link: '/web/computer-basis/计算机组成原理' },
+        { text: '操作系统', link: '/web/computer-basis/操作系统' },
+        { text: 'IO模型', link: '/web/computer-basis/IO模型' },
+      ],
+    },
+  ],
+  // 计算机网络
+  '/web/computer-network/': [
+    {
+      text: '计算机网络',
+      items: [
+        { text: '网络模型', link: '/web/computer-network/网络模型' },
+        { text: 'IP', link: '/web/computer-network/IP' },
+        { text: 'HTTP', link: '/web/computer-network/HTTP' },
+        { text: 'DNS', link: '/web/computer-network/DNS' },
+        { text: 'VPN 协议', link: '/web/computer-network/VPN协议' },
+        { text: '其他', link: '/web/computer-network/other' },
+      ],
+    },
+  ],
+  //#endregion
+
+  //#region 多人协作
+  '/web/git/': [
+    {
+      text: 'Git',
+      items: [
+        { text: '命令', link: '/web/git/command' },
+        { text: '.gitignore', link: '/web/git/gitignore' },
+      ],
+    },
+  ],
+  '/web/svn/': [
+    {
+      text: 'SVN',
+      items: [{ text: 'svn', link: '/web/svn/' }],
+    },
+  ],
+  //#endregion
+
+  //#region 前端三板斧
   // html
   '/web/html/': [
     {
@@ -111,34 +158,9 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [{ text: 'Promise', link: '/web/ecmascript/promise' }],
     },
   ],
-  // typescript
-  '/web/typescript/': [
-    {
-      text: 'TypeScript',
-      items: [
-        { text: '数据类型(待分类)', link: '/web/typescript/types' },
-        { text: '介绍', link: '/web/typescript' },
-        { text: '快速上手', link: '/web/typescript/quick-start' },
-        { text: '基本类型', link: '/web/typescript/basic-type' },
-        { text: '数组和元组', link: '/web/typescript/array-tuple' },
-        { text: 'function 函数类型', link: '/web/typescript/function-type' },
-        { text: 'object 对象类型', link: '/web/typescript/object-type' },
-        { text: 'class 类', link: '/web/typescript/class' },
-        { text: 'interface 接口', link: '/web/typescript/interface' },
-        { text: '类型推论', link: '/web/typescript/type-inference' },
-        { text: '联合类型', link: '/web/typescript/union-type' },
-        { text: '类型断言', link: '/web/typescript/type-assertions' },
-        { text: '类型守卫', link: '/web/typescript/typeof-type-guards' },
-        { text: '枚举', link: '/web/typescript/enum' },
-        { text: '泛型', link: '/web/typescript/generics' },
-        { text: '类型别名', link: '/web/typescript/type-alias' },
-        { text: '声明文件', link: '/web/typescript/declaration-files' },
-        { text: '内置对象', link: '/web/typescript/build-in-types' },
-        { text: '配置文件', link: '/web/typescript/tsconfig' },
-      ],
-    },
-  ],
+  //#endregion
 
+  //#region js 运行时
   '/web/js-runtime/': [
     {
       text: 'JS 运行时',
@@ -151,8 +173,7 @@ const sidebar: DefaultTheme.Sidebar = {
     { text: '浏览器 (Browser)', link: '/web/browser', target: '_blank', collapsed: true, items: [] },
     { text: 'Node.js', link: '/web/nodejs', target: '_blank', collapsed: true, items: [] },
   ],
-
-  // browser 运行时
+  // 浏览器运行时
   '/web/browser/': [
     {
       text: '🚀 DevTools',
@@ -248,8 +269,7 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
   ],
-
-  // nodejs 运行时
+  // node.js 运行时
   '/web/nodejs/': [
     {
       text: 'Node.js',
@@ -257,17 +277,6 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '介绍', link: '/web/nodejs' },
         { text: '异步机制', link: '/web/nodejs/异步机制' },
         { text: '调试技巧', link: '/web/nodejs/调试技巧' },
-      ],
-    },
-    {
-      text: '包管理',
-      collapsed: true,
-      items: [
-        { text: 'npm', link: '/web/nodejs/npm/npm' },
-        { text: 'package.json', link: '/web/nodejs/npm/packagejson' },
-        { text: 'CLI', link: '/web/nodejs/npm/cli' },
-        { text: 'pnpm', link: '/web/nodejs/npm/pnpm' },
-        { text: '全局库', link: '/web/nodejs/npm/useful-tools-library' },
       ],
     },
     {
@@ -284,26 +293,80 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
   ],
+  //#endregion
 
-  // vite
-  '/web/engineering/vite/': [
+  //#region 工程化
+  '/web/engineering/': [
     {
-      text: 'Vite',
+      text: '⭐前端模块化发展史',
+      link: '/web/engineering/modular/introduction',
+      collapsed: true,
+      items: [],
+    },
+    {
+      text: '包管理器',
+      collapsed: false,
       items: [
-        { text: '介绍', link: '/web/engineering/vite/introduction' },
-        { text: '配置', link: '/web/engineering/vite/config' },
-        { text: '插件', link: '/web/engineering/vite/plugins' },
+        { text: '⭐npm', link: '/web/engineering/npm/introduction' },
+        { text: 'pnpm', link: '/web/engineering/pnpm' },
+        { text: 'cnpm', link: 'https://github.com/cnpm/cnpm' },
+        { text: 'yarn', link: 'https://yarnpkg.com/' },
+        { text: 'bower', link: 'https://bower.io/' },
       ],
     },
     {
-      text: '基于',
+      text: '构建工具',
+      collapsed: false,
       items: [
-        { text: 'Rollup', link: 'https://github.com/rollup/rollup' },
-        { text: 'esbuild', link: 'https://github.com/evanw/esbuild' },
+        { text: '⭐webpack', link: '/web/engineering/webpack/introduction' },
+        { text: 'rollup', link: 'https://cn.rollupjs.org/' },
+        { text: 'esbuild', link: 'https://esbuild.github.io/' },
+        { text: 'gulp', link: '/web/engineering/gulp/introduction' },
+        { text: 'grunt', link: 'https://gruntjs.com/' },
+      ],
+    },
+    {
+      text: '⭐拓展',
+      collapsed: false,
+      items: [
+        { text: 'Browserslist', link: '/web/engineering/browserslist' },
+        { text: 'Babel', link: '/web/engineering/babel' },
+        {
+          text: 'CSS 预编译器',
+          items: [
+            { text: '⭐sass', link: '/web/engineering/sass/introduction' },
+            { text: 'less', link: 'https://lesscss.org/' },
+            { text: 'stylus', link: 'https://stylus-lang.com/' },
+          ],
+        },
+        { text: 'CSS 后处理器', items: [{ text: 'PostCSS', link: '/web/engineering/postcss' }] },
+        { text: 'ESLint', link: '/web/engineering/eslint' },
+        { text: 'Prettier', link: '/web/engineering/prettier' },
+      ],
+    },
+    {
+      text: '社区 CLI 脚手架',
+      collapsed: true,
+      items: [
+        { text: '⭐vite', link: '/web/engineering/vite/introduction' },
+        { text: 'vue-cli', link: 'https://cli.vuejs.org/zh/' },
+        { text: 'create-vue', link: 'https://github.com/vuejs/create-vue' },
+        { text: 'create-react-app', link: 'https://create-react-app.dev/' },
       ],
     },
   ],
-
+  // npm
+  '/web/engineering/npm/': [
+    {
+      text: '包管理',
+      items: [
+        { text: '介绍', link: '/web/engineering/npm/introduction' },
+        { text: 'package.json', link: '/web/engineering/npm/packagejson' },
+        { text: 'CLI 脚手架开发', link: '/web/engineering/npm/cli' },
+        { text: '一些有用的库（global）', link: '/web/engineering/npm/useful-tools-library' },
+      ],
+    },
+  ],
   // webpack
   '/web/engineering/webpack/': [
     {
@@ -317,7 +380,6 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
   ],
-
   // gulp
   '/web/engineering/gulp/': [
     {
@@ -332,7 +394,6 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
   ],
-
   // sass
   '/web/engineering/sass/': [
     {
@@ -352,7 +413,47 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
   ],
+  // vite
+  '/web/engineering/vite/': [
+    {
+      text: 'Vite',
+      items: [
+        { text: '介绍', link: '/web/engineering/vite/introduction' },
+        { text: '配置', link: '/web/engineering/vite/config' },
+        { text: '插件', link: '/web/engineering/vite/plugins' },
+      ],
+    },
+  ],
+  // typescript
+  '/web/typescript/': [
+    {
+      text: 'TypeScript',
+      items: [
+        { text: '数据类型(待分类)', link: '/web/typescript/types' },
+        { text: '介绍', link: '/web/typescript' },
+        { text: '快速上手', link: '/web/typescript/quick-start' },
+        { text: '基本类型', link: '/web/typescript/basic-type' },
+        { text: '数组和元组', link: '/web/typescript/array-tuple' },
+        { text: 'function 函数类型', link: '/web/typescript/function-type' },
+        { text: 'object 对象类型', link: '/web/typescript/object-type' },
+        { text: 'class 类', link: '/web/typescript/class' },
+        { text: 'interface 接口', link: '/web/typescript/interface' },
+        { text: '类型推论', link: '/web/typescript/type-inference' },
+        { text: '联合类型', link: '/web/typescript/union-type' },
+        { text: '类型断言', link: '/web/typescript/type-assertions' },
+        { text: '类型守卫', link: '/web/typescript/typeof-type-guards' },
+        { text: '枚举', link: '/web/typescript/enum' },
+        { text: '泛型', link: '/web/typescript/generics' },
+        { text: '类型别名', link: '/web/typescript/type-alias' },
+        { text: '声明文件', link: '/web/typescript/declaration-files' },
+        { text: '内置对象', link: '/web/typescript/build-in-types' },
+        { text: '配置文件', link: '/web/typescript/tsconfig' },
+      ],
+    },
+  ],
+  //#endregion
 
+  //#region SPA
   // vue
   '/web/vue/': [
     {
@@ -442,6 +543,9 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
   ],
+  //#endregion
+
+  //#region SSR
   // nuxt
   '/web/nuxt/': [
     { text: '介绍', link: '/web/nuxt/introduction' },
@@ -457,6 +561,7 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [{ text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs/guides/nuxtjs' }],
     },
   ],
+  //#endregion
 }
 
 export default sidebar

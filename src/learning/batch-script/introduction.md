@@ -1,5 +1,7 @@
 # 批处理脚本
 
+https://www.yiibai.com/batch_script
+
 ## 基本格式
 
 ```bat

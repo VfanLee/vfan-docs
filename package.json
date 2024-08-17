@@ -1,11 +1,6 @@
 {
   "name": "vfan-docs",
-  "description": "学习记录，主要集中于前端。",
-  "keywords": [
-    "学习笔记",
-    "开发技术文档"
-  ],
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.0",
   "private": true,
   "type": "module",
   "scripts": {

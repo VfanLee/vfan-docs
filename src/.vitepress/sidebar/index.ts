@@ -4,6 +4,7 @@ import quickReference from './modules/quick-reference'
 import web from './modules/web'
 import article from './modules/article'
 import interview from './modules/interview'
+import learning from './modules/learning'
 
 export default function sidebar(): DefaultTheme.Sidebar {
   return {
@@ -15,6 +16,9 @@ export default function sidebar(): DefaultTheme.Sidebar {
 
     // web(HTML, CSS, JS, ...)
     ...web,
+
+    // 学无止境
+    ...learning,
 
     // 随记
     ...article,

@@ -1,12 +1,18 @@
-# Nginx 命令
+# 命令
 
 ```sh
-nginx -s stop       # 快速关闭 Nginx，可能不保存相关信息，并迅速终止 web 服务。
-nginx -s quit       # 平稳关闭 Nginx，保存相关信息，有安排的结束 web 服务。
-nginx -s reload     # 因改变了 Nginx 相关配置，需要重新加载配置而重载。
-nginx -s reopen     # 重新打开日志文件。
-nginx -c filename   # 为 Nginx 指定一个配置文件，来代替缺省的。
-nginx -t            # 不运行，仅仅测试配置文件。Nginx 将检查配置文件的语法的正确性，并尝试打开配置文件中所引用到的文件。
-nginx -v            # 显示 Nginx 的版本。
-nginx -V            # 显示 Nginx 的版本，编译器版本和配置参数。
+nginx 版本: nginx/1.18.0 (Ubuntu)
+用法: nginx [-?hvVtTq] [-s signal] [-c filename] [-p prefix] [-g directives]
+
+选项:
+  -?,-h         : 显示此帮助信息
+  -v            : 显示版本并退出
+  -V            : 显示版本和配置选项并退出
+  -t            : 测试配置并退出
+  -T            : 测试配置，输出配置内容并退出
+  -q            : 测试配置时抑制非错误信息
+  -s signal     : 向主进程发送信号: stop（停止）, quit（退出）, reopen（重新打开日志）, reload（重新加载配置）
+  -p prefix     : 设置前缀路径（默认: /usr/share/nginx/）
+  -c filename   : 设置配置文件（默认: /etc/nginx/nginx.conf）
+  -g directives : 设置全局指令（在配置文件之外）
 ```

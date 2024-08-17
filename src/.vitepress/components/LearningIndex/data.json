@@ -4,44 +4,32 @@
     "items": [
       {
         "title": "批处理脚本",
-        "link": "/learning/windows/batch"
+        "details": "",
+        "link": "/learning/batch-script/introduction"
       }
     ]
   },
-
   {
     "title": "Linux",
     "items": [
       {
         "title": "Linux",
+        "details": "",
         "link": "/learning/linux/系统目录"
       },
       {
-        "title": "Ubuntu",
-        "link": "/learning/linux/ubuntu/apt"
-      },
-      {
         "title": "Shell 脚本",
-        "link": "/learning/linux/shell/基本格式"
+        "details": "",
+        "link": "/learning/shell/introduction"
       }
     ]
   },
-
   {
-    "title": "版本管理",
-    "items": [
-      { "title": "约定式提交", "link": "https://www.conventionalcommits.org/zh-hans/v1.0.0/#%E6%A6%82%E8%BF%B0" },
-      { "title": "Git", "link": "git/command" },
-      { "title": "SVN", "link": "/quick-reference/svn/index" }
-    ]
-  },
-
-  {
-    "title": "站长必备",
+    "title": "玩转服务器脱离不开的技术",
     "items": [
       {
         "title": "Docker",
-        "details": "🐋",
+        "details": "",
         "link": "/learning/docker/container"
       },
       {
@@ -51,34 +39,44 @@
       },
       {
         "title": "Jenkins",
-        "details": "自动化构建",
+        "details": "",
         "link": "/learning/jenkins/"
       }
     ]
   },
-
   {
-    "title": "SQL",
+    "title": "数据库",
     "items": [
       {
+        "title": "前言",
+        "details": "RDBMS vs NoSQL",
+        "link": "/learning/database/preface",
+        "target": "_blank"
+      },
+      {
         "title": "MySQL",
-        "link": "/learning/mysql/DDL"
+        "details": "",
+        "link": "/learning/database/mysql/DDL"
+      },
+      {
+        "title": "Redis",
+        "details": "",
+        "link": "/learning/database/redis/introduction"
       }
     ]
   },
-
   {
-    "title": "学无止境",
+    "title": "更多",
     "items": [
       {
-        "title": "Restful API",
-        "details": "如何优雅地写一个 API？",
-        "link": "/learning/restful"
+        "title": "软件架构",
+        "details": "",
+        "link": "/learning/software-architecture"
       },
       {
-        "title": "Puppeteer",
-        "details": "基于 Node.js 的爬虫工具",
-        "link": "/learning/puppeteer/"
+        "title": "Restful API",
+        "details": "",
+        "link": "/learning/restful"
       }
     ]
   }
