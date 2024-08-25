@@ -1,5 +1,45 @@
 # 事件处理
 
+## 使用示例
+
+```vue-html
+<!-- 方法处理函数 -->
+<button v-on:click="doThis"></button>
+
+<!-- 动态事件 -->
+<button v-on:[event]="doThis"></button>
+
+<!-- 内联声明 -->
+<button v-on:click="doThat('hello', $event)"></button>
+
+<!-- 缩写 -->
+<button @click="doThis"></button>
+
+<!-- 使用缩写的动态事件 -->
+<button @[event]="doThis"></button>
+
+<!-- 停止传播 -->
+<button @click.stop="doThis"></button>
+
+<!-- 阻止默认事件 -->
+<button @click.prevent="doThis"></button>
+
+<!-- 不带表达式地阻止默认事件 -->
+<form @submit.prevent></form>
+
+<!-- 链式调用修饰符 -->
+<button @click.stop.prevent="doThis"></button>
+
+<!-- 按键用于 keyAlias 修饰符-->
+<input @keyup.enter="onEnter" />
+
+<!-- 点击事件将最多触发一次 -->
+<button v-on:click.once="doThis"></button>
+
+<!-- 对象语法 -->
+<button v-on="{ mousedown: doThis, mouseup: doThat }"></button>
+```
+
 ## 在内联事件处理器中访问事件参数
 
 有时我们需要在内联事件处理器中访问原生 DOM 事件。

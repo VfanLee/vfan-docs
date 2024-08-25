@@ -7,7 +7,7 @@ export default defineConfig({
   // 站点元数据
   title: 'Vfan Docs',
   titleTemplate: false,
-  description: '个人定制化开发笔记，主要集中于前端知识',
+  description: '个人专属知识库，前端技术为主',
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/vitepress-logo-mini.png' }],

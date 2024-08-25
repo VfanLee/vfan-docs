@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: Vfan Docs
-  text: 个人专属的知识库
-  tagline: 前端知识为主
+  text: 个人专属知识库
+  tagline: 前端技术为主
   actions:
     - theme: brand
       text: 开启 Web 的世界

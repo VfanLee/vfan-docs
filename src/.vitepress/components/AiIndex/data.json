@@ -8,8 +8,12 @@
     "link": "/ai/chatgpt-web"
   },
   {
-    "text": "AI 绘画",
+    "text": "stable-diffusion-webui",
     "link": "/ai/stable-diffusion-webui/"
+  },
+  {
+    "text": "ComfyUI",
+    "link": "/ai/ComfyUI"
   },
   {
     "text": "AI 语音",
