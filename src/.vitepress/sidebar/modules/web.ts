@@ -210,7 +210,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'Web Worker', link: '/web/browser/web-worker' },
         { text: 'Canvas', link: '/web/browser/canvas' },
         { text: 'WebSocket', link: '/web/browser/websocket' },
-        { text: 'WebRTC', link: '/web/browser/webrtc' },
+        { text: 'WebRTC', link: '/web/browser/webrtc/introduction' },
         { text: 'WebGPU', link: '/web/browser/webgpu' },
       ],
     },
@@ -242,7 +242,13 @@ const sidebar: DefaultTheme.Sidebar = {
   ],
   // webrtc
   '/web/browser/webrtc/': [
-    { text: 'WebRTC 介绍', link: '/web/browser/webrtc' },
+    {
+      text: 'WebRTC',
+      items: [
+        { text: '介绍', link: '/web/browser/webrtc/introduction' },
+        { text: '概念', link: '/web/browser/webrtc/concepts' },
+      ],
+    },
     {
       text: 'GUM',
       items: [
@@ -256,16 +262,16 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: 'RTCPC',
       items: [
-        { text: 'RTCPeerConnection', link: '/web/browser/webrtc/browser/webrtcPeerConnection' },
+        { text: 'RTCPeerConnection', link: '/web/browser/webrtc/RTCPeerConnection' },
         { text: '信令服务器', link: '/web/browser/webrtc/signaling' },
       ],
     },
     {
       text: 'RTP',
       items: [
-        { text: 'RTCRtpSender', link: '/web/browser/webrtc/browser/webrtcRtpSender' },
-        { text: 'RTCRtpReceiver', link: '/web/browser/webrtc/browser/webrtcRtpReceiver' },
-        { text: 'RTCRtpTransceiver', link: '/web/browser/webrtc/browser/webrtcRtpTransceiver' },
+        { text: 'RTCRtpSender', link: '/web/browser/webrtc/RTCRtpSender' },
+        { text: 'RTCRtpReceiver', link: '/web/browser/webrtc/RTCRtpReceiver' },
+        { text: 'RTCRtpTransceiver', link: '/web/browser/webrtc/RTCRtpTransceiver' },
       ],
     },
   ],
