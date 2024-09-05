@@ -1,5 +1,11 @@
 # WebSocket
 
+## 介绍
+
+WebSocket 是一种在客户端与服务器之间保持 TCP 长连接的协议，这样它们就可以随时进行信息交换。
+
+虽然任何客户端或服务器上的应用都可以使用 WebSocket，但原则上还是指浏览器与服务器之间使用。通过 WebSocket，服务器无需客户端预先请求就可以直接向客户端发送数据，从而能动态地更新数据内容。
+
 ## `http/https` vs `ws/wss`
 
 `http/https` 和 `ws/wss` 是两种不同的网络协议：
@@ -23,3 +29,10 @@
 
 - `ws/wss` 是 **WebSocket** 协议的两种连接方式，而 **WebSocket** 协议是建立在 **HTTP** 协议之上的。
 - `wss` 是 **WebSocket** 协议的加密版本，而 **HTTPS** 是 **HTTP** 协议的加密版本。
+
+## 参阅
+
+- [WebSocket 介绍 - 维基百科](https://zh.wikipedia.org/wiki/WebSocket)
+- [WebSocket 参考 - MDN](https://developer.mozilla.org/zh-CN/docs/Glossary/WebSockets)
+- [WebSocket API - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket)
+- [Socket.IO](https://socket.io/)

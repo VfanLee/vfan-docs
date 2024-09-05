@@ -209,7 +209,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'URL', link: '/web/browser/URL' },
         { text: 'Web Worker', link: '/web/browser/web-worker' },
         { text: 'Canvas', link: '/web/browser/canvas' },
-        { text: 'WebSocket', link: '/web/browser/websocket' },
+        { text: 'WebSocket', link: '/web/browser/websocket/introduction' },
         { text: 'WebRTC', link: '/web/browser/webrtc/introduction' },
         { text: 'WebGPU', link: '/web/browser/webgpu' },
       ],
@@ -217,13 +217,13 @@ const sidebar: DefaultTheme.Sidebar = {
   ],
   // websocket
   '/web/browser/websocket/': [
-    { text: 'WebSocket 介绍', link: '/web/browser/websocket' },
+    { text: '介绍', link: '/web/browser/websocket/introduction' },
     {
       text: '普通 WebSocket',
       collapsed: false,
       items: [
-        { text: '服务端', link: '/web/browser/websocket/server' },
-        { text: '客户端', link: '/web/browser/websocket/client' },
+        { text: '服务端', link: '/web/browser/websocket/websocket/server' },
+        { text: '客户端', link: '/web/browser/websocket/websocket/client' },
       ],
     },
     {
@@ -242,33 +242,25 @@ const sidebar: DefaultTheme.Sidebar = {
   ],
   // webrtc
   '/web/browser/webrtc/': [
-    {
-      text: 'WebRTC',
-      items: [
-        { text: '介绍', link: '/web/browser/webrtc/introduction' },
-        { text: '概念', link: '/web/browser/webrtc/concepts' },
-      ],
-    },
+    { text: '介绍', link: '/web/browser/webrtc/introduction' },
     {
       text: 'GUM',
       items: [
-        { text: 'MediaDevices', link: '/web/browser/webrtc/MediaDevices' },
-        { text: 'Capabilities, constraints, Settings ', link: '/web/browser/webrtc/constraints' },
         { text: 'MediaStream', link: '/web/browser/webrtc/MediaStream' },
         { text: 'MediaStreamTrack', link: '/web/browser/webrtc/MediaStreamTrack' },
+        { text: 'MediaDevices', link: '/web/browser/webrtc/MediaDevices' },
+        { text: 'Capabilities, constraints, Settings ', link: '/web/browser/webrtc/constraints' },
         { text: 'MediaRecorder', link: '/web/browser/webrtc/MediaRecorder' },
       ],
     },
     {
-      text: 'RTCPC',
+      text: '网络传输',
       items: [
-        { text: 'RTCPeerConnection', link: '/web/browser/webrtc/RTCPeerConnection' },
+        { text: '相关协议及基本概念', link: '/web/browser/webrtc/protocol' },
         { text: '信令服务器', link: '/web/browser/webrtc/signaling' },
-      ],
-    },
-    {
-      text: 'RTP',
-      items: [
+        { text: '工作流程', link: '/web/browser/webrtc/workflow' },
+        { text: 'RTCPeerConnection', link: '/web/browser/webrtc/RTCPeerConnection' },
+        { text: 'RTCDataChannel', link: '/web/browser/webrtc/RTCDataChannel' },
         { text: 'RTCRtpSender', link: '/web/browser/webrtc/RTCRtpSender' },
         { text: 'RTCRtpReceiver', link: '/web/browser/webrtc/RTCRtpReceiver' },
         { text: 'RTCRtpTransceiver', link: '/web/browser/webrtc/RTCRtpTransceiver' },

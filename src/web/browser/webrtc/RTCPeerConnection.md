@@ -57,6 +57,12 @@ new configuration([configuration])
       urls: 'stun:stun.example.com',
     },
     {
+      urls: [
+        'stun:stun.example.com',
+        'stun:stun1.example.com',
+      ],
+    },
+    {
       urls: 'turn:turn.example.com',
       username: 'user', // 用户名
       credential: 'pass', // 密码
@@ -64,43 +70,6 @@ new configuration([configuration])
     },
   ]
   ```
-
-  ::: details 一些免费公共的 STUN 服务
-
-  ```js
-  iceServers:[
-    {
-      urls:[
-        'stun:stun.l.google.com:19302',
-        'stun:stun1.l.google.com:19302'
-      ]
-    }
-  ]
-  ```
-
-  ```sh
-  stun:stun.l.google.com:19302
-  stun:stun1.l.google.com:19302
-
-  stun.minisipserver.com
-  stun.zoiper.com
-  stun.voipbuster.com
-  stun.sipgate.net
-  stun.schlund.de
-  stun.voipstunt.com
-  stun.1und1.de
-  stun.gmx.net
-  stun.callwithus.com
-  stun.internetcalls.com
-  stun.voip.aebc.com
-  stun.internetcalls.com
-  stun.callwithus.com
-  stun.gmx.net
-  stun.1und1.de
-  stun.voxgratia.org
-  ```
-
-  :::
 
 - `iceTransportPolicy`
 
@@ -310,3 +279,7 @@ ICE 候选者收集状态改变时触发的事件处理程序。
 ### track
 
 当新的 `MediaStreamTrack` 添加到连接时触发的事件处理程序。
+
+## 第三方库
+
+[peerjs](https://peerjs.com/)

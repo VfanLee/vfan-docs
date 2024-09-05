@@ -1,7 +1,7 @@
 # Capabilities, constraints, Settings
 
 ::: tip
-参考于：[Capabilities, constraints, and settings](https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#determining_if_a_constraint_is_supported)
+参考于：[Capabilities, constraints, and settings](https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 :::
 
 ## 确定是否支持约束
@@ -158,7 +158,7 @@ function switchCameras(track, camera) {
 
 ### 获取轨道的当前设置
 
-除非您只使用精确的约束（这是相当严格的限制，所以请确保您是认真的！），否则无法保证应用约束后您实际会得到什么。结果媒体中实际存在的可约束属性的值称为设置。如果您需要知道媒体的真实格式和其他属性，您可以通过调用 `MediaStreamTrack.getSettings()` 来获取这些设置。这将返回一个基于字典 `MediaTrackSettings` 的对象。例如：
+除非您只使用精确的约束（这是相当严格的限制，所以请确保您是认真的！），否则无法保证应用约束后您实际会得到什么。结果媒体中实际存在的可约束属性的值称为设置。如果您需要知道媒体的真实格式和其他属性，您可以通过调用 `MediaStreamTrack.getSettings()` 来获取这些设置。这将返回一个基于字典 [`MediaTrackSettings`](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings) 的对象。例如：
 
 ```js
 MediaStreamTrack.getSettings()

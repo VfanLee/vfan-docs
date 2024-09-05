@@ -2,6 +2,7 @@ import type { DefaultTheme } from 'vitepress'
 
 export default function nav(): DefaultTheme.NavItem[] {
   return [
+    { text: '开发工具箱', link: 'https://toolbox.vfanlee.eu.org' },
     { text: '速查手册', link: '/quick-reference/vanilla-js/array', activeMatch: '/quick-reference/' },
     {
       text: '演练场',
@@ -16,8 +17,8 @@ export default function nav(): DefaultTheme.NavItem[] {
         { text: '正则表达式', link: 'https://regex101.com/' },
       ],
     },
-    { text: 'Web', link: '/web/' },
-    { text: '学无止境', link: '/learning/' },
+    { text: 'Web', link: '/web/', activeMatch: '/web/' },
+    { text: '学无止境', link: '/learning/', activeMatch: '/learning/' },
     {
       text: '更多专题',
       items: [
