@@ -1,7 +1,6 @@
 # XMLHTTPRequest
 
-> - [XMLHttpRequest API](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API)
-> - [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+## 介绍
 
 - **原生 JavaScript API**：XHR 是浏览器原生提供的 API，用于进行异步通信。
 - **回调风格**：XHR 使用回调函数的方式来处理异步操作，通常需要设置 `onreadystatechange` 事件回调。
@@ -72,3 +71,8 @@ xhr.open("GET", "http://example.com/", true)
 xhr.withCredentials = true
 xhr.send(null)
 ```
+
+## 参阅
+
+- [XMLHttpRequest API](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API)
+- [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)

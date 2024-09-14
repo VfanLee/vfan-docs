@@ -2,11 +2,11 @@
 outline: [2, 3]
 ---
 
-# Array 方法总结
+# Array Methods
 
-> [Array - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
-
+::: tip
 ⚠️ 表示会修改原数组，使用时请小心。
+:::
 
 ## 静态方法
 
@@ -705,3 +705,7 @@ const arr = [1, 2, 3, 4, 5];
 console.log(arr.with(2, 6)); // [1, 2, 6, 4, 5]
 console.log(arr); // [1, 2, 3, 4, 5]
 ```
+
+## 参阅
+
+- [Array - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)

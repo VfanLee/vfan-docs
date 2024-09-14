@@ -54,7 +54,7 @@ export default defineConfig({
       level: [2, 3],
     },
     editLink: {
-      pattern: 'https://github.com/VfanLee/vfan-docs/edit/main/docs/:path',
+      pattern: 'https://github.com/VfanLee/vfan-docs/edit/main/src/:path',
       text: '在 GitHub 上编辑此页面',
     },
     footer: {

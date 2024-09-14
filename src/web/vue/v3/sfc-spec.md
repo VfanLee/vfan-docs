@@ -31,3 +31,7 @@ export default {
   This could be e.g. documentation for the component.
 </custom1>
 ```
+
+## 其他
+
+- [@vue/compiler-sfc 在线预览](https://play.vuejs.org)

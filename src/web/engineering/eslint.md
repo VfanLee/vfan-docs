@@ -1,5 +1,7 @@
 # ESLint
 
+## 介绍
+
 代码风格
 
 ## 安装
@@ -8,7 +10,7 @@
 npm install -D eslint
 ```
 
-自动生成 eslint 配置文件
+## 生成 eslint 配置文件
 
 ```sh
 npm init @eslint/config

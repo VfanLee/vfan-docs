@@ -3,7 +3,7 @@
     "title": "💪 万丈高楼平地起",
     "items": [
       { "title": "计算机基础", "details": "头皮发麻", "link": "/web/computer-basis/introduction" },
-      { "title": "计算机网络", "details": "黑客是不是都爱这玩意儿？", "link": "/web/computer-network/introduction" }
+      { "title": "计算机网络", "details": "黑客是不是都爱倒腾这玩意儿？", "link": "/web/computer-network/introduction" }
     ]
   },
   {
@@ -33,7 +33,7 @@
   {
     "title": "🛠️ 工程化",
     "items": [
-      { "title": "代码风格", "details": "风格统一，代码清晰", "link": "/quick-reference/dev-style" },
+      { "title": "代码风格", "details": "风格统一，代码清晰", "link": "/engineering/dev-style/" },
       { "title": "模块化", "details": "工程化基石", "link": "/web/engineering/modular/introduction" },
       { "title": "TypeScript", "details": "类型声明，提示友好", "link": "/web/typescript/" }
     ]
@@ -41,11 +41,9 @@
   {
     "title": "🚀 SPA 单页面应用",
     "items": [
-      { "title": "Vue", "details": "尤雨溪，他懂个锤子 Vue！ 😏", "link": "/web/vue/introduction" },
-      { "title": "Vue (v2)", "details": "Options API", "link": "/web/vue2/" },
-      { "title": "React", "details": "JSX？你也不赖", "link": "/web/react/" },
-      { "title": "knockout.js", "details": "Emmm... 👀", "link": "/web/knockoutjs/" },
-      { "title": "angular.js", "details": "Emmm... 👀", "link": "/web/angularjs/" }
+      { "title": "Vue (v3)", "details": "Composition API", "link": "/web/vue/v3/introduction" },
+      { "title": "Vue (v2)", "details": "Options API", "link": "/web/vue/v2/introduction" },
+      { "title": "React", "details": "JSX？你也不赖", "link": "/web/react/" }
     ]
   },
   {

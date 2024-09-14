@@ -453,41 +453,41 @@ const sidebar: DefaultTheme.Sidebar = {
 
   //#region SPA
   // vue
-  '/web/vue/': [
+  '/web/vue/v3/': [
     {
       text: '基础',
       collapsed: false,
       items: [
-        { text: '介绍', link: '/web/vue/introduction' },
-        { text: '创建一个应用', link: '/web/vue/application' },
-        { text: 'State', link: '/web/vue/state' },
-        { text: 'Computed State', link: '/web/vue/computed' },
-        { text: '事件处理', link: '/web/vue/event' },
-        { text: '“原生” v-model', link: '/web/vue/原生-v-model' },
-        { text: '生命周期', link: '/web/vue/lifecycle' },
+        { text: '介绍', link: '/web/vue/v3/introduction' },
+        { text: '创建一个应用', link: '/web/vue/v3/application' },
+        { text: 'State', link: '/web/vue/v3/state' },
+        { text: 'Computed State', link: '/web/vue/v3/computed' },
+        { text: '事件处理', link: '/web/vue/v3/event' },
+        { text: '“原生” v-model', link: '/web/vue/v3/原生-v-model' },
+        { text: '生命周期', link: '/web/vue/v3/lifecycle' },
       ],
     },
     {
       text: '组件化',
       collapsed: false,
       items: [
-        { text: 'SFC 单文件组件', link: '/web/vue/sfc-spec' },
-        { text: 'props', link: '/web/vue/props' },
-        { text: 'emit', link: '/web/vue/emit' },
-        { text: '透传 Attributes', link: '/web/vue/attr' },
-        { text: 'slot', link: '/web/vue/slot' },
-        { text: '“组件” v-model', link: '/web/vue/组件-v-model' },
-        { text: 'context', link: '/web/vue/context' },
-        { text: '依赖注入', link: '/web/vue/provide-inject' },
+        { text: 'SFC 单文件组件', link: '/web/vue/v3/sfc-spec' },
+        { text: 'props', link: '/web/vue/v3/props' },
+        { text: 'emit', link: '/web/vue/v3/emit' },
+        { text: '透传 Attributes', link: '/web/vue/v3/attr' },
+        { text: 'slot', link: '/web/vue/v3/slot' },
+        { text: '“组件” v-model', link: '/web/vue/v3/组件-v-model' },
+        { text: 'context', link: '/web/vue/v3/context' },
+        { text: '依赖注入', link: '/web/vue/v3/provide-inject' },
       ],
     },
     {
       text: '逻辑复用',
       collapsed: false,
       items: [
-        { text: '组合式函数', link: '/web/vue/composables' },
-        { text: '自定义指令', link: '/web/vue/custom-directives' },
-        { text: '插件', link: '/web/vue/plugins' },
+        { text: '组合式函数', link: '/web/vue/v3/composables' },
+        { text: '自定义指令', link: '/web/vue/v3/custom-directives' },
+        { text: '插件', link: '/web/vue/v3/plugins' },
       ],
     },
     {
@@ -499,7 +499,7 @@ const sidebar: DefaultTheme.Sidebar = {
       text: 'TypeScript',
       collapsed: true,
       items: [
-        { text: '集成 Typescript', link: '/web/vue/typescript/integration' },
+        { text: '集成 Typescript', link: '/web/vue/v3/typescript/integration' },
         { text: '搭配 TypeScript 使用 Vue', link: 'https://cn.vuejs.org/guide/typescript/overview.html' },
       ],
     },
@@ -508,19 +508,19 @@ const sidebar: DefaultTheme.Sidebar = {
       text: '集成',
       collapsed: true,
       items: [
-        { text: 'Vue Router（官方）', link: '/web/vue/vue-router/' },
-        { text: 'Pinia（官方）', link: '/web/vue/pinia/' },
-        { text: 'Vue I18n', link: '/web/vue/vue-i18n/' },
-        { text: 'VueUse', link: '/web/vue/vueuse/' },
+        { text: 'Vue Router（官方）', link: '/web/vue/v3/vue-router/' },
+        { text: 'Pinia（官方）', link: '/web/vue/v3/pinia/' },
+        { text: 'Vue I18n', link: '/web/vue/v3/vue-i18n/' },
+        { text: 'VueUse', link: '/web/vue/v3/vueuse/' },
         { text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs/installation' },
-        { text: 'Element Plus - PC', link: '/web/vue/element-plus' },
-        { text: 'Vant - Mobile', link: '/web/vue/vant' },
+        { text: 'Element Plus - PC', link: '/web/vue/v3/element-plus' },
+        { text: 'Vant - Mobile', link: '/web/vue/v3/vant' },
       ],
     },
-    { text: '选项式 API', link: '/web/vue/options' },
+    { text: '选项式 API', link: '/web/vue/v3/options' },
     { text: '进阶主题', link: 'https://cn.vuejs.org/guide/extras/ways-of-using-vue.html' },
-    { text: 'Fetch data', link: '/web/vue/fetch-data' },
-    { text: 'Vue 解决方案', link: '/web/vue/solution/' },
+    { text: 'Fetch data', link: '/web/vue/v3/fetch-data' },
+    { text: 'Vue 解决方案', link: '/web/vue/v3/solution/' },
   ],
   // react
   '/web/react/': [

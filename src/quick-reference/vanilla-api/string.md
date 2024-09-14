@@ -2,11 +2,11 @@
 outline: [2, 3]
 ---
 
-# String 方法总结
+# String Methods
 
-> [String - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)
-
+::: tip
 对于一些官方弃用的方法（如：[substr](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substr)）不记录。
+:::
 
 ## 静态方法
 
@@ -606,3 +606,7 @@ console.log(stringObj);
 console.log(stringObj.valueOf());
 // Expected output: "foo"
 ```
+
+## 参阅
+
+- [String - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)
