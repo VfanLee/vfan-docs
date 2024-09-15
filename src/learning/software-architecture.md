@@ -24,7 +24,7 @@
 - View：视图
 - View Model：View Model 之间的连接器，如：Vue 实例……
 
-## 领域驱动模型
+## DDD 领域驱动模型
 
 - User Interface：面向客户端
 - Application：应用层

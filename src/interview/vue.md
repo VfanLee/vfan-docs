@@ -180,3 +180,13 @@ vue3 中复用逻辑通常采用 组合式函数。
 ### 如何监听一个对象的某个属性？
 
 ### watch vs watchEffect
+
+## `.vue` 文件中的 html 是真实的 html 吗？
+
+> 或者说：`.vue` 文件中的 template 中写入的 HTML 是真实的 THML 标签节点吗？
+
+不是的！
+
+## render 函数
+
+## h 函数

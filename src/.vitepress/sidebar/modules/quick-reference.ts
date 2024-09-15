@@ -1,17 +1,17 @@
 import type { DefaultTheme } from 'vitepress'
 
 const sidebar: DefaultTheme.Sidebar = {
-  '/quick-reference/vanilla-api/': [
+  '/quick-reference/native-api/': [
     {
       text: 'ES API',
       items: [
-        { text: 'Array', link: '/quick-reference/vanilla-api/array' },
-        { text: 'String', link: '/quick-reference/vanilla-api/string' },
+        { text: 'Array', link: '/quick-reference/native-api/array' },
+        { text: 'String', link: '/quick-reference/native-api/string' },
       ],
     },
     {
       text: 'Web API',
-      items: [{ text: 'DOM 操作', link: '/quick-reference/vanilla-api/dom-operation' }],
+      items: [{ text: 'DOM 操作', link: '/quick-reference/native-api/dom-operation' }],
     },
   ],
   '/quick-reference/snippet/': [

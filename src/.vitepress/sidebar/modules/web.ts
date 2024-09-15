@@ -170,8 +170,8 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'v8 引擎', link: '/web/js-runtime/v8' },
       ],
     },
-    { text: '浏览器 (Browser)', link: '/web/browser', target: '_blank', collapsed: true, items: [] },
-    { text: 'Node.js', link: '/web/nodejs', target: '_blank', collapsed: true, items: [] },
+    { text: '浏览器 (Browser)', link: '/web/browser/introduction', collapsed: true, items: [] },
+    { text: 'Node.js', link: '/web/nodejs/introduction', collapsed: true, items: [] },
   ],
   // 浏览器运行时
   '/web/browser/': [
@@ -186,8 +186,15 @@ const sidebar: DefaultTheme.Sidebar = {
       collapsed: false,
       items: [
         { text: '介绍', link: '/web/browser/introduction' },
-        { text: '浏览器的基本概念', link: '/web/browser/浏览器基本概念' },
         { text: '浏览器的渲染原理', link: '/web/browser/浏览器渲染原理' },
+      ],
+    },
+    {
+      text: 'DOM 与 BOM',
+      collapsed: false,
+      items: [
+        { text: 'Document', link: '/web/browser/document' },
+        { text: 'Window', link: '/web/browser/window' },
         { text: '事件处理', link: '/web/browser/事件处理' },
         { text: '交互', link: '/web/browser/交互' },
         { text: '元素大小和滚动', link: '/web/browser/元素大小和滚动' },
@@ -195,11 +202,9 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: 'Web APIs',
+      text: '更多的 Web APIs',
       collapsed: false,
       items: [
-        { text: 'document', link: '/web/browser/document' },
-        { text: 'window', link: '/web/browser/window' },
         { text: 'Ajax', link: '/web/browser/ajax' },
         { text: 'Clipboard API', link: '/web/browser/clipboard' },
         { text: 'History', link: '/web/browser/history' },
@@ -296,10 +301,8 @@ const sidebar: DefaultTheme.Sidebar = {
   //#region 工程化
   '/web/engineering/': [
     {
-      text: '⭐前端模块化发展史',
-      link: '/web/engineering/modular/introduction',
-      collapsed: true,
-      items: [],
+      text: '前言',
+      items: [{ text: '⭐前端模块化发展史', link: '/web/engineering/modular/introduction' }],
     },
     {
       text: '包管理器',

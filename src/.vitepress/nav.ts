@@ -6,7 +6,7 @@ export default function nav(): DefaultTheme.NavItem[] {
       text: '速查手册',
       activeMatch: '/quick-reference/',
       items: [
-        { text: '原生 API', link: '/quick-reference/vanilla-api/array' },
+        { text: '原生 API', link: '/quick-reference/native-api/array' },
         { text: '代码片段', link: '/quick-reference/snippet/array' },
         { text: '开发环境搭建', link: '/dev/front-end', target: '_blank' },
       ],

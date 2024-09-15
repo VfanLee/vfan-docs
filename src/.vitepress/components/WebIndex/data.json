@@ -10,24 +10,17 @@
     "title": "🤝 多人协作",
     "items": [
       { "title": "Git", "details": "玩转 GitHub 的必备技能", "link": "/web/git/command" },
-      { "title": "SVN", "details": "工作需要", "link": "/web/svn/index" },
-      { "title": "约定式提交", "details": "约定式提交", "link": "https://www.conventionalcommits.org/zh-hans/v1.0.0/#%E6%A6%82%E8%BF%B0" }
+      { "title": "SVN", "details": "", "link": "/web/svn/index" },
+      { "title": "约定式提交", "details": "", "link": "https://www.conventionalcommits.org/zh-hans/v1.0.0/#%E6%A6%82%E8%BF%B0" }
     ]
   },
   {
-    "title": "⚔️ 前端三板斧",
+    "title": "⚔️ 必知必会",
     "items": [
-      { "title": "HTML", "details": "网页骨架", "link": "/web/html/" },
-      { "title": "CSS", "details": "艺术就是 CSS", "link": "/web/css/" },
-      { "title": "ECMAScript", "details": "ECMAScript？JavaScript？傻傻分不清楚", "link": "/web/ecmascript/" }
-    ]
-  },
-  {
-    "title": "✨ JS 运行时",
-    "items": [
-      { "title": "前言", "details": "所以，什么是 JS 运行时？", "link": "/web/js-runtime/" },
-      { "title": "浏览器 (Browser)", "details": "Niubility!", "link": "/web/browser/introduction" },
-      { "title": "Node.js", "details": "Niubility too!", "link": "/web/nodejs/" }
+      { "title": "HTML", "details": "骨架", "link": "/web/html/" },
+      { "title": "CSS", "details": "艺术", "link": "/web/css/" },
+      { "title": "ECMAScript", "details": "ECMAScript or JavaScript", "link": "/web/ecmascript/" },
+      { "title": "JS 运行时", "details": "所以，什么是 JS 运行时？", "link": "/web/js-runtime/" }
     ]
   },
   {
@@ -63,14 +56,14 @@
         "link": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"
       },
       {
-        "title": "PWA",
-        "details": "",
-        "link": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
-      },
-      {
         "title": "油猴",
         "details": "",
         "link": "https://www.tampermonkey.net/documentation.php?locale=zh"
+      },
+      {
+        "title": "PWA",
+        "details": "",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
       },
       {
         "title": "Puppeteer",

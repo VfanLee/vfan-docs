@@ -10,7 +10,7 @@ defineOptions({
 <template>
   <div class="index-layout">
     <div class="card-grid">
-      <Card v-for="item of data" :title="item.text" :link="item.link" />
+      <Card v-for="item of data" :title="item.text" :link="item.link" :details="item.details" />
     </div>
   </div>
 </template>
