@@ -85,3 +85,7 @@ vim 是 Linux 下的文本编辑工具。
 ### 粘贴模式
 
 `:set paste`
+
+## visual block 可视块模式
+
+通过 `CTRL + V` 进入可视块模式，可视块模式下，文本下会有 `-- VISUAL BLOCK --` 标识。
