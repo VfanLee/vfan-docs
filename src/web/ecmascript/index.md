@@ -8,7 +8,7 @@ JavaScript 最初被创建的目的是“使网页更生动”。
 
 脚本被以纯文本的形式提供和执行。它们不需要特殊的准备或编译即可运行。
 
-::: tip 🤔 为什么叫 JavaScript？
+::: tip 🤔 趣味拓展：为什么取名为 JavaScript？
 JavaScript 在刚诞生的时候，它的名字叫 “LiveScript”。但是因为当时 [Java](https://zh.wikipedia.org/wiki/Java) 很流行，所以决定将一种新语言定位为 Java 的“弟弟”会有助于它的流行。
 
 随着 JavaScript 的发展，它已经成为了一门完全独立的语言，并且也拥有了自己的语言规范 [ECMAScript](https://zh.wikipedia.org/wiki/ECMAScript)。现在，它和 Java 之间没有任何关系。

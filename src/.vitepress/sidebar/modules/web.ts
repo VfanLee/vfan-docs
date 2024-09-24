@@ -140,11 +140,13 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '对象',
-      collapsed: true,
+      collapsed: false,
       items: [
-        { text: 'this', link: '/web/ecmascript/basic/' },
-        { text: 'new', link: '/web/ecmascript/basic/' },
-        { text: '?.', link: '/web/ecmascript/basic/' },
+        { text: 'object', link: '/web/ecmascript/object/object' },
+        { text: '对象方法，"this"', link: '/web/ecmascript/object/this' },
+        { text: '构造器和操作符 "new"', link: '/web/ecmascript/object/new' },
+        { text: '可选链 "?."', link: '/web/ecmascript/object/optional-chaining' },
+        { text: '对象属性配置', link: '/web/ecmascript/object/properties' },
       ],
     },
     {
@@ -153,9 +155,17 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [{ text: '老旧的 var', link: '/web/ecmascript/basic/var' }],
     },
     {
-      text: 'Promise',
+      text: '深入 Promise',
       collapsed: true,
-      items: [{ text: 'Promise', link: '/web/ecmascript/promise' }],
+      items: [
+        { text: 'Promise', link: '/web/ecmascript/promise/promise' },
+        { text: 'async/await', link: '/web/ecmascript/promise/async_await' },
+      ],
+    },
+    {
+      text: '持续进阶',
+      collapsed: true,
+      items: [{ text: 'Proxy 和 Reflect', link: '/web/ecmascript/proxy_reflect' }],
     },
   ],
   //#endregion

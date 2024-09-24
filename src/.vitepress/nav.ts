@@ -18,7 +18,7 @@ export default function nav(): DefaultTheme.NavItem[] {
       items: [
         { text: '📖 随记', link: '/article/' },
         { text: '🤖 AI', link: '/ai/' },
-        { text: '✅ 面试题', link: '/interview/html' },
+        // { text: '✅ 面试题', link: '/interview/html' },
       ],
     },
   ]

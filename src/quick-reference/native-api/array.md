@@ -2,10 +2,10 @@
 outline: [2, 3]
 ---
 
-# Array Methods
+# Array 方法
 
 ::: tip
-⚠️ 表示会修改原数组，使用时请小心。
+❗ 表示会修改原数组，使用时请小心。
 :::
 
 ## 静态方法
@@ -20,6 +20,18 @@ console.log(Array.from('foo'));
 
 console.log(Array.from([1, 2, 3], (x) => x + x));
 // Expected output: Array [2, 4, 6]
+```
+
+### Array.formAsync()
+
+[Array.fromAsync()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync) 静态方法可以由一个异步可迭代对象、可迭代对象或类数组对象创建一个新的、浅拷贝的 Array 实例。
+
+语法：
+
+```js
+Array.fromAsync(arrayLike)
+Array.fromAsync(arrayLike, mapFn)
+Array.fromAsync(arrayLike, mapFn, thisArg)
 ```
 
 ### Array.isArray()
@@ -85,7 +97,7 @@ console.log(array3);
 // Expected output: Array ["a", "b", "c", "d", "e", "f"]
 ```
 
-### ⚠️ copyWithin()
+### ❗ copyWithin()
 
 copyWithin() 方法浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度。
 
@@ -130,7 +142,7 @@ console.log(array1.every(isBelowThreshold));
 // Expected output: true
 ```
 
-### ⚠️ fill()
+### ❗ fill()
 
 fill() 方法用一个固定值填充一个数组中从起始索引（默认为 0）到终止索引（默认为 array.length）内的全部元素。它返回修改后的数组。
 
@@ -380,7 +392,7 @@ console.log(map1);
 // Expected output: Array [2, 8, 18, 32]
 ```
 
-### ⚠️ pop()
+### ❗ pop()
 
 pop() 方法从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。
 
@@ -399,7 +411,7 @@ console.log(plants);
 // Expected output: Array ["broccoli", "cauliflower", "cabbage"]
 ```
 
-### ⚠️ push()
+### ❗ push()
 
 push() 方法将指定的元素添加到数组的末尾，并返回新的数组长度。
 
@@ -458,7 +470,7 @@ console.log(result);
 // Expected output: Array [4, 5, 2, 3, 0, 1]
 ```
 
-### ⚠️ reverse()
+### ❗ reverse()
 
 reverse() 方法就地反转数组中的元素，并返回同一数组的引用。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。换句话说，数组中的元素顺序将被翻转，变为与之前相反的方向。
 
@@ -478,7 +490,7 @@ console.log('array1:', array1);
 // Expected output: "array1:" Array ["three", "two", "one"]
 ```
 
-### ⚠️ shift()
+### ❗ shift()
 
 shift() 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。
 
@@ -542,7 +554,7 @@ console.log(array.some(even));
 // Expected output: true
 ```
 
-### ⚠️ sort()
+### ❗ sort()
 
 sort() 方法就地对数组的元素进行排序，并返回对相同数组的引用。默认排序是将元素转换为字符串，然后按照它们的 UTF-16 码元值升序排序。
 
@@ -562,7 +574,7 @@ console.log(array1);
 // Expected output: Array [1, 100000, 21, 30, 4]
 ```
 
-### ⚠️ splice()
+### ❗ splice()
 
 splice() 方法通过移除或者替换已存在的元素和/或添加新元素就地改变一个数组的内容。
 
@@ -665,7 +677,7 @@ console.log(array1.toString());
 // Expected output: "1,2,a,1a"
 ```
 
-### ⚠️ unshift()
+### ❗ unshift()
 
 unshift() 方法将指定元素添加到数组的开头，并返回数组的新长度。
 
@@ -705,7 +717,3 @@ const arr = [1, 2, 3, 4, 5];
 console.log(arr.with(2, 6)); // [1, 2, 6, 4, 5]
 console.log(arr); // [1, 2, 3, 4, 5]
 ```
-
-## 参阅
-
-- [Array - MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)

@@ -7,6 +7,7 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [
         { text: 'Array', link: '/quick-reference/native-api/array' },
         { text: 'String', link: '/quick-reference/native-api/string' },
+        { text: 'Object', link: '/quick-reference/native-api/object' },
       ],
     },
     {

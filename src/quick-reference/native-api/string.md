@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# String Methods
+# String 方法
 
 ::: tip
 对于一些官方弃用的方法（如：[substr](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substr)）不记录。
