@@ -40,6 +40,14 @@ Object.defineProperty(obj, prop, descriptor)
 
 ### Object.entries()
 
+[Object.entries()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) 静态方法返回一个数组，包含给定对象自有的可枚举字符串键属性的键值对。
+
+语法：
+
+```js
+Object.entries(obj)
+```
+
 ### Object.freeze()
 
 ### Object.fromEntries()

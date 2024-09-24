@@ -465,11 +465,11 @@ const sidebar: DefaultTheme.Sidebar = {
   //#endregion
 
   //#region SPA
-  // vue
+  // vue3
   '/web/vue/v3/': [
     {
       text: '基础',
-      collapsed: false,
+      collapsed: true,
       items: [
         { text: '介绍', link: '/web/vue/v3/introduction' },
         { text: '创建一个应用', link: '/web/vue/v3/application' },
@@ -482,7 +482,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '组件化',
-      collapsed: false,
+      collapsed: true,
       items: [
         { text: 'SFC 单文件组件', link: '/web/vue/v3/sfc-spec' },
         { text: 'props', link: '/web/vue/v3/props' },
@@ -496,7 +496,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '逻辑复用',
-      collapsed: false,
+      collapsed: true,
       items: [
         { text: '组合式函数', link: '/web/vue/v3/composables' },
         { text: '自定义指令', link: '/web/vue/v3/custom-directives' },
@@ -505,7 +505,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '过渡/动画',
-      collapsed: false,
+      collapsed: true,
       items: [],
     },
     {
@@ -516,7 +516,6 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '搭配 TypeScript 使用 Vue', link: 'https://cn.vuejs.org/guide/typescript/overview.html' },
       ],
     },
-
     {
       text: '集成',
       collapsed: true,
@@ -531,9 +530,25 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     { text: '选项式 API', link: '/web/vue/v3/options' },
+    { text: '深入响应式', link: '/web/vue/v3/reactivity' },
     { text: '进阶主题', link: 'https://cn.vuejs.org/guide/extras/ways-of-using-vue.html' },
     { text: 'Fetch data', link: '/web/vue/v3/fetch-data' },
     { text: 'Vue 解决方案', link: '/web/vue/v3/solution/' },
+  ],
+  // vue2
+  '/web/vue/v2/': [
+    { text: '介绍（待整理）', link: '/web/vue/v2/' },
+    { text: '介绍', link: '/web/vue/v2/introduction' },
+    { text: '深入响应式', link: '/web/vue/v2/reactivity' },
+    {
+      text: '集成',
+      collapsed: true,
+      items: [
+        { text: 'Vue Router', link: 'https://v3.router.vuejs.org/zh/' },
+        { text: 'Vuex', link: 'https://vuex.vuejs.org/zh/' },
+        { text: 'Element UI', link: '/web/vue/v2/element-ui' },
+      ],
+    },
   ],
   // react
   '/web/react/': [

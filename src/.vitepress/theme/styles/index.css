@@ -4,16 +4,14 @@
   content: '💡 ';
 }
 .warning .custom-block-title::before {
-  content: '⚠️ ';
+  /* content: '⚠️ '; */
+  content: '🔔 ';
 }
 .danger .custom-block-title::before {
   content: '💀 ';
 }
 .info .custom-block-title::before {
   content: 'ℹ️ ';
-}
-.details .custom-block-title::before {
-  content: '📖 ';
 }
 
 .index-layout {

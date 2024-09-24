@@ -1,9 +1,5 @@
 # Vue2 记录
 
-::: warning
-[Vue 2](https://v2.cn.vuejs.org/) 已于 **2023 年 12 月 31 日** 停止维护。[详见 Vue 2 终止支持 (EOL)](https://v2.cn.vuejs.org/eol/)。
-:::
-
 ## Vue 执行顺序
 
 > 源码参考：<https://github.com/vuejs/vue/blob/dev/src/core/instance/state.js#L49-L63>
