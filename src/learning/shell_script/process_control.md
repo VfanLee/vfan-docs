@@ -2,6 +2,8 @@
 
 ## 条件语句（if-then-else）
 
+### 语法
+
 ```sh
 if [ 条件 ]; then
   # 条件成立时执行的代码块
@@ -18,9 +20,32 @@ fi
 var=10
 
 if [ "$var" -lt 10 ]; then
-    echo "Variable var is equal to 10."
+    echo "var 变量等于 10"
 else
-    echo "Variable var is not equal to 10."
+    echo "var 变量不等于 10"
+fi
+```
+
+### 常见条件判断
+
+```sh
+[ -e filename ] # 如果 filename 存在，则为真
+[ -d filename ] # 如果 filename 为目录，则为真
+[ -f filename ] # 如果 filename 为常规文件，则为真
+[ -L filename ] # 如果 filename 为符号链接，则为真
+[ -r filename ] # 如果 filename 可读，则为真
+[ -w filename ] # 如果 filename 可写，则为真
+[ -x filename ] # 如果 filename 可执行，则为真
+[ -s filename ] # 如果文件长度不为0，则为真
+[ -h filename ] # 如果文件是软链接，则为真
+```
+
+示例：
+
+```sh
+# 如果 /opt/test/aaa 文件夹不存在，创建文件夹
+if [ ! -d "/opt/test/aaa" ]; then
+  mkdir -p /opt/test/aaa
 fi
 ```
 
