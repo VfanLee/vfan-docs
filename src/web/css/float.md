@@ -1,7 +1,5 @@
 # float 浮动
 
-> 参考：[MDN float](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)
-
 ## 浮动特性
 
 1. 浮动会脱离文档流。
@@ -53,3 +51,7 @@
       visibility: hidden;
     }
     ```
+
+## 参考资料
+
+- [MDN float](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)

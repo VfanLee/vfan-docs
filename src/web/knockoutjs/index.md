@@ -1,10 +1,5 @@
 # Knockout
 
-> 参考：[Knockout 官方文档](https://knockoutjs.com/documentation/introduction.html)
-
-- http://www.aizhengli.com/knockoutjs/50/knockout.html
-- https://www.cnblogs.com/smallprogram/p/5976954.html
-
 ```html
 <div>
   <span data-bind="text: name"></span>
@@ -22,23 +17,22 @@
 ```
 
 数据绑定
-text: 
+text:
 数据双向绑定
 textInput:
 事件绑定
 event: { 事件名: 触发函数 }
 
-
 数据监测
 ko中数组的常见方法：
-● push()
-● pop()
-● unshift()
-● shift()
-● reverse()
-● sort()
-● remove()
-● removeAll()
+- push()
+- pop()
+- unshift()
+- shift()
+- reverse()
+- sort()
+- remove()
+- removeAll()
 
 ```js
 // 监听一个数据
@@ -88,33 +82,39 @@ self.fullName = ko.computed(function () {
 <div data-bind="component: {name: 'MessageAndList', params: 'jerry'}"></div>
 
 <script>
-	// 定义组件
-	ko.components.register("MessageAndList", {
-		viewModel: function (params) {
-			let self = this;
-			self.account = ko.observable(params != null ? params : "tom");
-			self.messageText = ko.observable("");
-			self.messageList = ko.observableArray([]);
-			self.send = function () {
-				self.messageList.push({
-					message: self.messageText(),
-					account: self.account(),
-				});
-				self.messageText("");
-			};
-		},
-		template: `<input type="text" data-bind="value: messageText" /><button data-bind="click: send">发送</button>
-					<ul data-bind="foreach: messageList">
-						<li>
-							<span data-bind="text: message"></span>
-							<span data-bind="text: account"></span>
-						</li>
-					</ul>`,
-	});
-	ko.applyBindings();
+ // 定义组件
+ ko.components.register("MessageAndList", {
+  viewModel: function (params) {
+   let self = this;
+   self.account = ko.observable(params != null ? params : "tom");
+   self.messageText = ko.observable("");
+   self.messageList = ko.observableArray([]);
+   self.send = function () {
+    self.messageList.push({
+     message: self.messageText(),
+     account: self.account(),
+    });
+    self.messageText("");
+   };
+  },
+  template: `<input type="text" data-bind="value: messageText" /><button data-bind="click: send">发送</button>
+     <ul data-bind="foreach: messageList">
+      <li>
+       <span data-bind="text: message"></span>
+       <span data-bind="text: account"></span>
+      </li>
+     </ul>`,
+ });
+ ko.applyBindings();
 </script>
 ```
 
 其他
 
 $component / $index()
+
+## 参考资料
+
+- [Knockout.js 官方文档](https://knockoutjs.com/documentation/introduction.html)
+- <http://www.aizhengli.com/knockoutjs/50/knockout.html>
+- <https://www.cnblogs.com/smallprogram/p/5976954.html>

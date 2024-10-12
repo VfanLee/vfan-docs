@@ -95,6 +95,14 @@ Object.hasOwn(obj, prop)
 
 ### Object.is()
 
+[Object.is()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) 静态方法确定两个值是否为[相同值](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)。
+
+语法：
+
+```js
+Object.is(value1, value2)
+```
+
 ### Object.isExtensible()
 
 ### Object.isFrozen()
@@ -141,7 +149,7 @@ Object.values(obj)
 
 [hasOwnProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 方法返回一个布尔值，表示对象自有属性（而不是继承来的属性）中是否具有指定的属性。
 
-::: tip 在 [支持](https://caniuse.com/?search=Object.hasOwn) Object.hasOwn 的浏览器中，建议使用 [Object.hasOwn()](#object-hasown)，而非 hasOwnProperty()。
+::: tip 在 [支持 Object.hasOwn](https://caniuse.com/?search=Object.hasOwn) 的浏览器中，建议使用 [Object.hasOwn()](#object-hasown)，而非 [hasOwnProperty()](#object-prototype-hasownproperty)。
 :::
 
 语法：

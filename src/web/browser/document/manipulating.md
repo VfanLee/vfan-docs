@@ -4,12 +4,6 @@ outline: [2, 3]
 
 # Document Object Model (DOM)
 
-> 参考：
->
-> - [Document - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Document)
-> - [You might not need jQuery](https://youmightnotneedjquery.com)
-> - [You-Dont-Need-jQuery](https://github.com/camsong/You-Dont-Need-jQuery)
-
 ## 选择器
 
 ### 获取 `document`
@@ -488,3 +482,9 @@ iframe.contentDocument
 ::: tip
 如果 `iframe` 及其父 `document` 处于同源，则返回一个 `document`（即嵌套浏览上下文中的活动文档）对象，否则返回 `null`。
 :::
+
+## 参考资料
+
+- [Document - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Document)
+- [You might not need jQuery](https://youmightnotneedjquery.com)
+- [You-Dont-Need-jQuery](https://github.com/camsong/You-Dont-Need-jQuery)

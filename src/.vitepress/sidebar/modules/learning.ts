@@ -65,22 +65,6 @@ const sidebar: DefaultTheme.Sidebar = {
     { text: '流程控制', link: '/learning/shell/process-control' },
   ],
 
-  // docker
-  '/learning/docker/': [
-    {
-      text: 'Docker',
-      items: [
-        { text: 'container 容器', link: '/learning/docker/container' },
-        { text: 'image 镜像', link: '/learning/docker/image' },
-        { text: 'network 网络', link: '/learning/docker/network' },
-        { text: 'volume 数据卷', link: '/learning/docker/volume' },
-        { text: 'dockerfile', link: '/learning/docker/dockerfile' },
-        { text: '其他命令', link: '/learning/docker/other-command' },
-        { text: 'Docker Compose', link: '/learning/docker/docker-compose' },
-      ],
-    },
-  ],
-
   // mysql
   '/learning/database/mysql/': [
     {
@@ -107,23 +91,6 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '持久化', link: '/learning/database/redis/storage' },
       ],
     },
-  ],
-
-  // nginx
-  '/learning/nginx/': [
-    {
-      text: 'Nginx',
-      items: [
-        { text: '介绍', link: '/learning/nginx/introduction' },
-        { text: '命令', link: '/learning/nginx/command' },
-        { text: '配置目录', link: '/learning/nginx/config-dir' },
-        { text: '变量', link: '/learning/nginx/variable' },
-        { text: 'server', link: '/learning/nginx/server' },
-        { text: 'location', link: '/learning/nginx/location' },
-        { text: '负载均衡', link: '/learning/nginx/load-balancing' },
-      ],
-    },
-    { text: '示例模板', link: '/learning/nginx/template' },
   ],
 }
 

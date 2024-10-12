@@ -6,8 +6,9 @@ export default function nav(): DefaultTheme.NavItem[] {
       text: '速查手册',
       activeMatch: '/quick-reference/',
       items: [
-        { text: '原生 API', link: '/quick-reference/native-api/array' },
-        { text: '代码片段', link: '/quick-reference/snippet/array' },
+        { text: '原生 API', link: '/quick-reference/native-api/array', activeMatch: '/quick-reference/native-api/' },
+        { text: '代码片段', link: '/quick-reference/snippet/array', activeMatch: '/quick-reference/snippet/' },
+        { text: 'CSS 相关', link: '/quick-reference/css/selector', activeMatch: '/quick-reference/css/' },
         { text: '开发环境搭建', link: '/dev/front-end', target: '_blank' },
       ],
     },
@@ -16,8 +17,8 @@ export default function nav(): DefaultTheme.NavItem[] {
     {
       text: '更多专题',
       items: [
-        { text: '📖 随记', link: '/article/' },
-        { text: '🤖 AI', link: '/ai/' },
+        { text: '📖 随记', link: '/article/', activeMatch: '/article/' },
+        { text: '🤖 AI', link: '/ai/', activeMatch: '/ai/' },
         // { text: '✅ 面试题', link: '/interview/html' },
       ],
     },

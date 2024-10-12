@@ -1,6 +1,6 @@
-# CSS Variable
+# CSS 变量
 
-## CSS 定义变量
+## 定义 CSS 变量
 
 ```css
 :root {
@@ -9,6 +9,14 @@
 
 .box {
   --height: 100px;
+}
+```
+
+## 使用 CSS 变量
+
+```css
+.box {
+  width: var(--height);
 }
 ```
 

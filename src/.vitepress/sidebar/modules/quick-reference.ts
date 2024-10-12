@@ -3,16 +3,12 @@ import type { DefaultTheme } from 'vitepress'
 const sidebar: DefaultTheme.Sidebar = {
   '/quick-reference/native-api/': [
     {
-      text: 'ES API',
+      text: '内置对象',
       items: [
         { text: 'Array', link: '/quick-reference/native-api/array' },
         { text: 'String', link: '/quick-reference/native-api/string' },
         { text: 'Object', link: '/quick-reference/native-api/object' },
       ],
-    },
-    {
-      text: 'Web API',
-      items: [{ text: 'DOM 操作', link: '/quick-reference/native-api/dom-operation' }],
     },
   ],
   '/quick-reference/snippet/': [
@@ -26,6 +22,15 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'Function', link: '/quick-reference/snippet/function' },
         { text: 'Object', link: '/quick-reference/snippet/object' },
         { text: 'Utils', link: '/quick-reference/snippet/utils' },
+      ],
+    },
+  ],
+  '/quick-reference/css/': [
+    {
+      text: 'CSS 相关',
+      items: [
+        { text: '选择器', link: '/quick-reference/css/selector' },
+        { text: '逻辑属性', link: '/quick-reference/css/logical-properties' },
       ],
     },
   ],

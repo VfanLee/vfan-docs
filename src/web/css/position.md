@@ -1,7 +1,5 @@
 # position 定位
 
-> 参考：[MDN position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
-
 ## 定位类型
 
 - `static`
@@ -39,6 +37,10 @@ top、right、bottom、left 来决定该元素的最终位置。
 - 比较元素先与其父元素比较层级
 - 若父元素层级没有设置 `z-index`，再与该元素进行比较。
 
-
+## 注意
 
 定位不包含 border
+
+## 参考资料
+
+- [position - MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)

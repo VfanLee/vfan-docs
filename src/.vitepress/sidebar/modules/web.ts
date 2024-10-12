@@ -53,9 +53,9 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: 'HTML',
       items: [
-        { text: 'HTML 特殊字符', link: '/web/html/special-characters' },
         { text: '&lt;DOCTYPE&gt;', link: '/web/html/doctype' },
         { text: '&lt;meta&gt;', link: '/web/html/meta' },
+        { text: 'HTML 特殊字符', link: '/web/html/special-characters' },
         { text: 'form 表单', link: '/web/html/form' },
         { text: 'table 表格', link: '/web/html/table' },
         { text: 'iframe', link: '/web/html/iframe' },
@@ -72,20 +72,11 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: 'CSS',
       items: [
-        { text: '设计模式', link: '/web/css/设计模式' },
-        { text: 'flex', link: '/web/css/' },
-        { text: 'float', link: '/web/css/' },
-        { text: 'grid', link: '/web/css/' },
-        { text: 'position', link: '/web/css/' },
-        { text: 'variable', link: '/web/css/' },
-        { text: '其他', link: '/web/css/' },
-        { text: '函数', link: '/web/css/' },
-        { text: '媒体查询', link: '/web/css/' },
-        { text: '引入字体图标', link: '/web/css/' },
-        { text: '文本', link: '/web/css/' },
-        { text: '滑动条', link: '/web/css/' },
-        { text: '盒子模型', link: '/web/css/' },
-        { text: '逻辑属性', link: '/web/css/' },
+        { text: '设计模式', link: '/web/css/design-patterns' },
+        { text: 'CSS 变量', link: '/web/css/variable' },
+        { text: 'Flex 弹性盒子', link: '/web/css/flex/' },
+        { text: 'Grid 网格布局', link: '/web/css/grid/' },
+        { text: '逻辑属性', link: '/web/css/logical-properties' },
       ],
     },
   ],
@@ -192,18 +183,19 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [],
     },
     {
-      text: 'Browser',
-      collapsed: false,
+      text: '浏览器（Browser）',
+      collapsed: true,
       items: [
         { text: '介绍', link: '/web/browser/introduction' },
         { text: '浏览器的渲染原理', link: '/web/browser/浏览器渲染原理' },
       ],
     },
     {
-      text: 'DOM 与 BOM',
-      collapsed: false,
+      text: '操作 Document（文档）',
+      collapsed: true,
       items: [
-        { text: 'Document', link: '/web/browser/document' },
+        { text: '介绍', link: '/web/browser/document/introduction' },
+        { text: '操作', link: '/web/browser/document/manipulating' },
         { text: 'Window', link: '/web/browser/window' },
         { text: '事件处理', link: '/web/browser/事件处理' },
         { text: '交互', link: '/web/browser/交互' },
@@ -212,21 +204,47 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: '更多的 Web APIs',
-      collapsed: false,
+      text: '从服务端获取数据',
+      collapsed: true,
       items: [
-        { text: 'Ajax', link: '/web/browser/ajax' },
-        { text: 'Clipboard API', link: '/web/browser/clipboard' },
+        { text: 'XMLHttpRequest', link: '/web/browser/ajax/xhr' },
+        { text: 'Fetch', link: '/web/browser/ajax/fetch' },
+        { text: 'Axios', link: '/web/browser/ajax/axios' },
+        { text: 'jQuery Ajax', link: '/web/browser/ajax/jquery' },
+      ],
+    },
+    {
+      text: '绘图',
+      collapsed: true,
+      items: [
+        { text: 'Canvas', link: '/web/browser/canvas' },
+        { text: 'WebGL', link: 'https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API' },
+        { text: 'WebGPU', link: 'https://developer.mozilla.org/zh-CN/docs/Web/API/WebGPU_API' },
+      ],
+    },
+    {
+      text: '视频和音频',
+      collapsed: true,
+      items: [{ text: '媒体技术', link: '/web/browser/media-technologies' }],
+    },
+    {
+      text: '客户端存储',
+      collapsed: true,
+      items: [],
+    },
+    {
+      text: '更多',
+      collapsed: true,
+      items: [
+        { text: 'Clipboard', link: '/web/browser/clipboard' },
         { text: 'History', link: '/web/browser/history' },
         { text: 'Location', link: '/web/browser/location' },
         { text: 'Navigator', link: '/web/browser/navigator' },
         { text: 'Screen', link: '/web/browser/screen' },
         { text: 'URL', link: '/web/browser/URL' },
         { text: 'Web Worker', link: '/web/browser/web-worker' },
-        { text: 'Canvas', link: '/web/browser/canvas' },
         { text: 'WebSocket', link: '/web/browser/websocket/introduction' },
         { text: 'WebRTC', link: '/web/browser/webrtc/introduction' },
-        { text: 'WebGPU', link: '/web/browser/webgpu' },
       ],
     },
   ],
@@ -312,13 +330,13 @@ const sidebar: DefaultTheme.Sidebar = {
   '/web/engineering/': [
     {
       text: '前言',
-      items: [{ text: '⭐前端模块化发展史', link: '/web/engineering/modular/introduction' }],
+      items: [{ text: '⭐ 前端模块化发展史', link: '/web/engineering/modular/introduction' }],
     },
     {
       text: '包管理器',
       collapsed: false,
       items: [
-        { text: '⭐npm', link: '/web/engineering/npm/introduction' },
+        { text: '⭐ npm', link: '/web/engineering/npm/introduction' },
         { text: 'pnpm', link: '/web/engineering/pnpm' },
         { text: 'cnpm', link: 'https://github.com/cnpm/cnpm' },
         { text: 'yarn', link: 'https://yarnpkg.com/' },
@@ -337,7 +355,7 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: '⭐拓展',
+      text: '⭐ 更进一步',
       collapsed: false,
       items: [
         { text: 'Browserslist', link: '/web/engineering/browserslist' },
@@ -345,7 +363,7 @@ const sidebar: DefaultTheme.Sidebar = {
         {
           text: 'CSS 预编译器',
           items: [
-            { text: '⭐sass', link: '/web/engineering/sass/introduction' },
+            { text: '⭐ sass', link: '/web/engineering/sass/introduction' },
             { text: 'less', link: 'https://lesscss.org/' },
             { text: 'stylus', link: 'https://stylus-lang.com/' },
           ],
@@ -359,7 +377,7 @@ const sidebar: DefaultTheme.Sidebar = {
       text: '社区 CLI 脚手架',
       collapsed: true,
       items: [
-        { text: '⭐vite', link: '/web/engineering/vite/introduction' },
+        { text: '⭐ vite', link: '/web/engineering/vite/introduction' },
         { text: 'vue-cli', link: 'https://cli.vuejs.org/zh/' },
         { text: 'create-vue', link: 'https://github.com/vuejs/create-vue' },
         { text: 'create-react-app', link: 'https://create-react-app.dev/' },
@@ -388,6 +406,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '配置', link: '/web/engineering/webpack/config' },
         { text: 'Loader', link: '/web/engineering/webpack/loader' },
         { text: '插件', link: '/web/engineering/webpack/plugins' },
+        { text: '版本迁移', link: '/web/engineering/webpack/migrate' },
       ],
     },
   ],
@@ -585,6 +604,50 @@ const sidebar: DefaultTheme.Sidebar = {
       text: '集成',
       collapsed: true,
       items: [{ text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs/guides/nuxtjs' }],
+    },
+  ],
+  //#endregion
+
+  //#region 部署篇
+  // docker
+  '/web/docker/': [
+    {
+      text: 'Docker',
+      items: [
+        { text: 'container 容器', link: '/web/docker/container' },
+        { text: 'image 镜像', link: '/web/docker/image' },
+        { text: 'network 网络', link: '/web/docker/network' },
+        { text: 'volume 数据卷', link: '/web/docker/volume' },
+        { text: 'dockerfile', link: '/web/docker/dockerfile' },
+        { text: '其他命令', link: '/web/docker/other-command' },
+        { text: 'Docker Compose', link: '/web/docker/docker-compose' },
+      ],
+    },
+  ],
+  // nginx
+  '/web/nginx/': [
+    {
+      text: 'Nginx',
+      items: [
+        { text: '介绍', link: '/web/nginx/introduction' },
+        { text: '命令', link: '/web/nginx/command' },
+        { text: '配置目录', link: '/web/nginx/config-dir' },
+        { text: '变量', link: '/web/nginx/variable' },
+        { text: 'server', link: '/web/nginx/server' },
+        { text: 'location', link: '/web/nginx/location' },
+        { text: '负载均衡', link: '/web/nginx/load-balancing' },
+      ],
+    },
+    { text: '示例模板', link: '/web/nginx/template' },
+  ],
+  // jenkins
+  '/web/jenkins/': [
+    {
+      text: 'Jenkins',
+      items: [
+        { text: '介绍', link: '/web/jenkins/introduction' },
+        { text: '安装', link: '/web/jenkins/install' },
+      ],
     },
   ],
   //#endregion

@@ -17,17 +17,17 @@
   {
     "title": "⚔️ 必知必会",
     "items": [
-      { "title": "HTML", "details": "骨架", "link": "/web/html/" },
-      { "title": "CSS", "details": "艺术", "link": "/web/css/" },
-      { "title": "ECMAScript", "details": "ECMAScript or JavaScript", "link": "/web/ecmascript/" },
-      { "title": "JS 运行时", "details": "所以，什么是 JS 运行时？", "link": "/web/js-runtime/" }
+      { "title": "HTML", "details": "骨架", "link": "/web/html/doctype" },
+      { "title": "CSS", "details": "艺术", "link": "/web/css/design-patterns" },
+      { "title": "ECMAScript", "details": "灵魂", "link": "/web/ecmascript/" },
+      { "title": "JS 运行时", "details": "有哪些 JS 运行时？", "link": "/web/js-runtime/" }
     ]
   },
   {
     "title": "🛠️ 工程化",
     "items": [
       { "title": "代码风格", "details": "风格统一，代码清晰", "link": "/engineering/dev-style/" },
-      { "title": "模块化", "details": "工程化基石", "link": "/web/engineering/modular/introduction" },
+      { "title": "模块化", "details": "工程化的起点", "link": "/web/engineering/modular/introduction" },
       { "title": "TypeScript", "details": "类型声明，提示友好", "link": "/web/typescript/" }
     ]
   },
@@ -36,40 +36,35 @@
     "items": [
       { "title": "Vue (v3)", "details": "Composition API", "link": "/web/vue/v3/introduction" },
       { "title": "Vue (v2)", "details": "Options API", "link": "/web/vue/v2/introduction" },
-      { "title": "React", "details": "JSX？你也不赖", "link": "/web/react/" }
+      { "title": "React", "details": "JSX", "link": "/web/react/" }
     ]
   },
   {
     "title": "🚀 SSR 服务端渲染",
-    "items": [{ "title": "Nuxt.js", "details": "偏前端全栈？分久必合？", "link": "/web/nuxt/introduction" }]
+    "items": [
+      { "title": "Nuxt.js", "details": "Vue 版 - 全栈框架", "link": "https://nuxt.com" },
+      { "title": "Next.js", "details": "React 版 - 全栈框架", "link": "https://nextjs.org" }
+    ]
   },
   {
     "title": "🚀 混合开发",
     "items": [{ "title": "Cordova", "details": "WebView 🤪", "link": "/web/hybrid/cordova" }]
   },
   {
+    "title": "🦄 部署篇",
+    "items": [
+      { "title": "Docker", "details": "容器化", "link": "/web/docker/container" },
+      { "title": "Nginx", "details": "高性能 Web 服务器", "link": "/web/nginx/introduction" },
+      { "title": "Jenkins", "details": "自动化部署平台", "link": "/web/jenkins/introduction" }
+    ]
+  },
+  {
     "title": "🧀 涨点芝士",
     "items": [
-      {
-        "title": "浏览器扩展",
-        "details": "",
-        "link": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"
-      },
-      {
-        "title": "油猴",
-        "details": "",
-        "link": "https://www.tampermonkey.net/documentation.php?locale=zh"
-      },
-      {
-        "title": "PWA",
-        "details": "",
-        "link": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
-      },
-      {
-        "title": "Puppeteer",
-        "details": "Node.js 版本的自动化工具",
-        "link": "/web/puppeteer/"
-      }
+      { "title": "浏览器扩展", "details": "", "link": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" },
+      { "title": "油猴", "details": "", "link": "https://www.tampermonkey.net/documentation.php?locale=zh" },
+      { "title": "PWA", "details": "", "link": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" },
+      { "title": "Puppeteer", "details": "Node.js 版本的自动化工具", "link": "/web/puppeteer/" }
     ]
   }
 ]

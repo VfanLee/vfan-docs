@@ -25,26 +25,6 @@
     ]
   },
   {
-    "title": "玩转服务器脱离不开的技术",
-    "items": [
-      {
-        "title": "Docker",
-        "details": "",
-        "link": "/learning/docker/container"
-      },
-      {
-        "title": "Nginx",
-        "details": "",
-        "link": "/learning/nginx/introduction"
-      },
-      {
-        "title": "Jenkins",
-        "details": "",
-        "link": "/learning/jenkins/"
-      }
-    ]
-  },
-  {
     "title": "数据库",
     "items": [
       {
