@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
-export default function nav(): DefaultTheme.NavItem[] {
+function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: '速查手册',
@@ -24,3 +24,5 @@ export default function nav(): DefaultTheme.NavItem[] {
     },
   ]
 }
+
+export default nav()
