@@ -1,6 +1,6 @@
 import { defineConfig, UserConfig, DefaultTheme } from 'vitepress'
 import nav from './nav'
-import sidebar from './sidebar/index'
+import sidebar from './sidebar'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -28,8 +28,8 @@ const themeConfig: DefaultTheme.Config = {
   darkModeSwitchLabel: '主题',
   lightModeSwitchTitle: '切换到浅色模式',
   darkModeSwitchTitle: '切换到深色模式',
-  nav: nav(),
-  sidebar: sidebar(),
+  nav,
+  sidebar,
   socialLinks: [{ icon: 'github', link: 'https://github.com/VfanLee/vfan-docs' }],
   search: isProd
     ? {

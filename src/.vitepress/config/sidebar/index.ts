@@ -6,7 +6,7 @@ import article from './modules/article'
 import interview from './modules/interview'
 import learning from './modules/learning'
 
-export default function sidebar(): DefaultTheme.Sidebar {
+function sidebar(): DefaultTheme.Sidebar {
   return {
     // 开发环境
     ...dev,
@@ -27,3 +27,5 @@ export default function sidebar(): DefaultTheme.Sidebar {
     ...interview,
   }
 }
+
+export default sidebar()
