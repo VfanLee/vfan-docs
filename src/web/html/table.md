@@ -12,8 +12,8 @@
 
 ## colgroup
 
-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup
-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col
+- <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup>
+- <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col>
 
 ## DOM 操作
 
@@ -59,5 +59,22 @@ for (const table of allTables) {
       tBody.append(...rows)
     })
   }
+}
+```
+
+## table 使 th、td 垂直居中
+
+```css
+table {
+  width: 100%;
+  border-collapse: collapse; /* 去除单元格之间的间隙 */
+}
+
+th,
+td {
+  vertical-align: middle; /* 垂直居中 */
+  text-align: center; /* 水平居中（可选） */
+  padding: 8px; /* 内边距（可选） */
+  border: 1px solid #ddd; /* 边框（可选） */
 }
 ```

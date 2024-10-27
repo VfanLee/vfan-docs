@@ -1,5 +1,7 @@
 # Knockout
 
+## 初始化
+
 ```html
 <div>
   <span data-bind="text: name"></span>
@@ -15,6 +17,8 @@
   ko.applyBindings(vm);
 </script>
 ```
+
+## state
 
 数据绑定
 text:
@@ -76,42 +80,13 @@ self.fullName = ko.computed(function () {
 // pureComputed()
 ```
 
-```html
-<!-- 使用组件 -->
-<div data-bind="component: 'MessageAndList'"></div>
-<div data-bind="component: {name: 'MessageAndList', params: 'jerry'}"></div>
+- 频繁访问、依赖较多的计算属性：如果需要高效管理订阅关系，可以选择 `ko.pureComputed`。
+- 复杂依赖、状态变化频繁：当有复杂的依赖链条，或者希望 computed 始终监听所有依赖时，选择 `ko.computed`。
 
-<script>
- // 定义组件
- ko.components.register("MessageAndList", {
-  viewModel: function (params) {
-   let self = this;
-   self.account = ko.observable(params != null ? params : "tom");
-   self.messageText = ko.observable("");
-   self.messageList = ko.observableArray([]);
-   self.send = function () {
-    self.messageList.push({
-     message: self.messageText(),
-     account: self.account(),
-    });
-    self.messageText("");
-   };
-  },
-  template: `<input type="text" data-bind="value: messageText" /><button data-bind="click: send">发送</button>
-     <ul data-bind="foreach: messageList">
-      <li>
-       <span data-bind="text: message"></span>
-       <span data-bind="text: account"></span>
-      </li>
-     </ul>`,
- });
- ko.applyBindings();
-</script>
-```
+$component / $index() / $data
 
-其他
-
-$component / $index()
+- `ko.toJS` 会递归地将 observable 的值转成普通值，生成一个包含当前 observable 值的 JavaScript 对象。
+- `ko.toJSON` 它与 `ko.toJS` 类似，但会将结果转换为 JSON 字符串格式。
 
 ## 参考资料
 
