@@ -14,7 +14,7 @@ hero:
       text: GitHub
       link: https://github.com/VfanLee/vfan-docs
   image:
-    src: /vitepress-logo-large.webp
+    src: /logo.gif
     alt: VitePress
 
 features:
