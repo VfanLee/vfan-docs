@@ -1,6 +1,6 @@
 {
   "name": "vfan-docs",
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@9.12.3",
   "private": true,
   "type": "module",
   "scripts": {

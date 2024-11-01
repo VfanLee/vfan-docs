@@ -19,8 +19,10 @@
     "items": [
       { "title": "HTML", "details": "骨架", "link": "/web/html/doctype" },
       { "title": "CSS", "details": "艺术", "link": "/web/css/design-patterns" },
-      { "title": "ECMAScript", "details": "灵魂", "link": "/web/ecmascript/" },
-      { "title": "JS 运行时", "details": "有哪些 JS 运行时？", "link": "/web/js-runtime/" }
+      { "title": "ECMAScript", "details": "灵魂", "link": "/web/ecmascript/introduction" },
+      { "title": "JS 运行时", "details": "有哪些 JS 运行时？", "link": "/web/js-runtime/" },
+      { "title": "浏览器", "details": "Chromium YYDS!", "link": "/web/browser/introduction" },
+      { "title": "Node.js", "details": "泰裤辣！", "link": "/web/nodejs/introduction" }
     ]
   },
   {
@@ -61,6 +63,7 @@
   {
     "title": "🧀 涨点芝士",
     "items": [
+      { "title": "Knockout.js", "details": "ko", "link": "/web/knockoutjs/quick-start" },
       { "title": "浏览器扩展", "details": "", "link": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" },
       { "title": "油猴", "details": "", "link": "https://www.tampermonkey.net/documentation.php?locale=zh" },
       { "title": "PWA", "details": "", "link": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" },

@@ -241,8 +241,6 @@ git fetch -p
 
 ### 合并分支
 
-> 备注：还有一种合并分支的方式是 rebase “变基”，会改变提交历史，以此来保持线性历史，个人不习惯，因此不记录。
-
 ```sh
 # 1. 切换到你需要更改的分支上，比如切换到 main 分支上
 git switch main
@@ -274,6 +272,21 @@ git commit -m "合并 feature-branch 到 main"
 git switch main
 git merge feature-branch
 ```
+
+还有一种合并分支的方式是 rebase “变基”，会改变提交历史，以此来保持线性历史。
+
+在 pr 时，为了保持与上游相同的提交记录，rebase 显的尤为好用：
+
+```sh
+git remote add upstream <源仓库的地址>
+
+git fetch upstream
+git switch main # 如果已经处于 main 分支，可忽略
+git rebase upstream/main
+git push origin main --force  # 更新 GitHub 仓库上的 main 分支
+```
+
+通过 rebase，你交历史会呈现线性的结构，因为它相当于在最新的源仓库基础上“重新排列”你的提交，而不是将两条提交历史合并（更干净）。这可以避免在 PR 中出现额外的合并提交记录，使提交历史更简洁，方便代码审查和维护。
 
 ## 回滚到某次提交
 

@@ -1,23 +1,52 @@
 /* https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */
 
-/**
- * Component: Home
- * -------------------------------------------------------------------------- */
+:root {
+  --vp-c-white: #ffffff;
+  --vp-c-black: #000000;
+  --vp-c-gray: #8e8e93;
+
+  --vp-c-text-light-1: #1f2328;
+  --vp-c-text-light-2: #454545;
+  --vp-c-text-light-3: #959595;
+  --vp-c-text-dark-1: rgba(255, 255, 245, 0.86);
+  --vp-c-text-dark-2: rgba(235, 235, 245, 0.6);
+  --vp-c-text-dark-3: rgba(235, 235, 245, 0.38);
+
+  --vp-c-orange: #e36002;
+  --vp-c-orange-soft: rgb(227, 96, 2, 0.1);
+  --vp-c-orange-light: #ff861d;
+  --vp-c-orange-lighter: #ff9c24;
+  --vp-c-orange-dark: #e07700;
+  --vp-c-orange-darker: #d68e22;
+}
+
+:root {
+  --vp-c-text-1: var(--vp-c-text-light-1);
+  --vp-c-text-2: var(--vp-c-text-light-2);
+  --vp-c-text-3: var(--vp-c-text-light-3);
+
+  --vp-c-brand: var(--vp-c-orange);
+  --vp-c-brand-light: var(--vp-c-orange-light);
+  --vp-c-brand-lighter: var(--vp-c-orange-lighter);
+  --vp-c-brand-dark: var(--vp-c-orange-dark);
+  --vp-c-brand-darker: var(--vp-c-orange-darker);
+  --vp-c-brand-1: var(--vp-c-brand);
+  --vp-c-brand-2: var(--vp-c-brand-light);
+  --vp-c-brand-3: var(--vp-c-brand-lighter);
+  --vp-c-brand-soft: var(--vp-c-orange-soft);
+}
+
+.dark {
+  --vp-c-text-1: var(--vp-c-text-dark-1);
+  --vp-c-text-2: var(--vp-c-text-dark-2);
+  --vp-c-text-3: var(--vp-c-text-dark-3);
+}
+
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #f37335 30%, #fdc830);
   --vp-home-hero-image-background-image: linear-gradient(-45deg, #f37335 50%, #fdc830 50%);
   --vp-home-hero-image-filter: blur(40px);
-
-  --vp-c-orange-1: #ff7c38;
-  --vp-c-orange-2: #ff8e51;
-  --vp-c-orange-3: #ffa46b;
-  --vp-c-orange-soft: rgba(255, 124, 56, 0.14);
-
-  --vp-c-brand-1: var(--vp-c-orange-1);
-  --vp-c-brand-2: var(--vp-c-orange-2);
-  --vp-c-brand-3: var(--vp-c-orange-3);
-  --vp-c-brand-soft: var(--vp-c-orange-soft);
 }
 
 @media (min-width: 640px) {

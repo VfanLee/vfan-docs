@@ -8,7 +8,7 @@ JavaScript 最初被创建的目的是“使网页更生动”。
 
 脚本被以纯文本的形式提供和执行。它们不需要特殊的准备或编译即可运行。
 
-::: tip 🤔 趣味拓展：为什么取名为 JavaScript？
+::: tip 趣味拓展：为什么取名为 JavaScript？🤔
 JavaScript 在刚诞生的时候，它的名字叫 “LiveScript”。但是因为当时 [Java](https://zh.wikipedia.org/wiki/Java) 很流行，所以决定将一种新语言定位为 Java 的“弟弟”会有助于它的流行。
 
 随着 JavaScript 的发展，它已经成为了一门完全独立的语言，并且也拥有了自己的语言规范 [ECMAScript](https://zh.wikipedia.org/wiki/ECMAScript)。现在，它和 Java 之间没有任何关系。
@@ -35,6 +35,25 @@ JavaScript 在刚诞生的时候，它的名字叫 “LiveScript”。但是因�
 
 引擎会对流程中的每个阶段都进行优化。它甚至可以在编译的脚本运行时监视它，分析流经该脚本的数据，并根据获得的信息进一步优化机器代码。
 :::
+
+## JavaScript 和 ECMAScript 的关系
+
+1. **ECMAScript 是 JavaScript 的标准规范**
+   - **ECMAScript**（简称 ES）是由 ECMA 国际组织定义的脚本语言标准。它定义了脚本语言的语法、功能和行为，用于确保不同实现之间的兼容性。
+   - **JavaScript** 是 ECMAScript 标准的一种实现。它最早由网景公司（Netscape）推出并逐渐流行开来。为使 JavaScript 在不同浏览器上运行一致，最终形成了 ECMAScript 标准。
+
+2. **JavaScript 是 ECMAScript 的实现**
+   - JavaScript 是基于 ECMAScript 的一种具体实现，它不仅实现了 ECMAScript 标准，还扩展了许多 Web 环境相关的特性，比如 DOM 操作、`setTimeout`、`console.log` 等，这些功能是 ECMAScript 中没有的。
+   - 浏览器环境中的 JavaScript 实际上是 ECMAScript + Web API 的集合，Web API 包含了浏览器提供的额外接口，方便开发者与浏览器交互。
+
+3. **ECMAScript 版本和 JavaScript 的发展**
+   - ECMAScript 标准从 ES3（1999）起发展到 ES6（2015），并自 2015 年开始每年更新一次（ES6 又称 ES2015，ES7 称为 ES2016，以此类推）。
+   - ECMAScript 的新版本规范发布后，JavaScript 引擎会陆续实现这些新功能，所以我们通常可以在 JavaScript 中逐步使用这些新增特性。
+
+简单来说，它俩可以理解为“实现与标准”的关系：
+
+- **ECMAScript** 是脚本语言的标准，定义了 JavaScript 的核心功能和语法。
+- **JavaScript** 是 ECMAScript 标准的实现，同时包括一些 ECMAScript 之外的特性，用于浏览器和服务器等不同环境中。
 
 ## 浏览器中的 JavaScript 能做什么？
 

@@ -2,7 +2,7 @@
 
 ## 定义组件
 
-最小方式
+### 最小方式
 
 ```js
 ko.components.register('like-widget', {
@@ -29,7 +29,7 @@ ko.components.register('like-widget', {
 })
 ```
 
-require.js 加载
+### require.js 加载
 
 ```js
 ko.components.register('like-or-dislike', {
@@ -44,30 +44,56 @@ ko.components.register('like-or-dislike', {
 <like-widget params="value: userRating"></like-widget>
 ```
 
-## 父传子
+## 组件通信
 
-Knockout.js 在组件声明时，使用 params 来传递数据。在定义子组件时，可以通过 params 来获取从父组件传递过来的数据。
+### 通过 params 传递
 
-::: code-group
+父组件通过 `params` 向子组件传递数据：这是 Knockout.js 中最常见的父子组件通信方式，父组件将 `observable` 或 `observableArray` 作为 `params` 参数传递给子组件。
 
-```html [父组件]
-<!-- 父组件传递 "message" 和 "count" 到子组件 -->
-<child-component params="message: 'Hello', count: 10"></child-component>
-```
+```js
+// 父组件
+function ParentViewModel() {
+    this.sharedData = ko.observable("Initial Data");
+}
 
-```js [子组件]
 ko.components.register('child-component', {
-  viewModel: function (params) {
-    this.message = ko.observable(params.message)
-    this.count = ko.observable(params.count)
-  },
-  template: `
-        <div>
-            <p>Message: <span data-bind="text: message"></span></p>
-            <p>Count: <span data-bind="text: count"></span></p>
-        </div>
-    `,
-})
+    viewModel: function(params) {
+        this.data = params.sharedData;
+    },
+    template: `<div data-bind="text: data"></div>`
+});
+
+// HTML
+<div data-bind="component: { name: 'child-component', params: { sharedData: sharedData } }"></div>
 ```
 
-:::
+### 使用 ko.subscribable
+
+ko.subscribable 提供了一种基于订阅-发布模式的通信机制，可以让不同组件之间发送和接收消息，类似于全局的事件系统。
+
+```js
+function EventManager() {
+    this.onDataChanged = ko.subscribable();
+}
+
+const eventManager = new EventManager();
+
+// 父组件监听事件
+eventManager.onDataChanged.subscribe((newData) => {
+    console.log("Data changed to:", newData);
+});
+
+// 子组件发送事件
+eventManager.onDataChanged.notifySubscribers("Updated Data");
+```
+
+### 全局状态管理
+
+可以将一些公用的属性放在全局下进行管理，例如：
+
+```js
+window.globalState = {
+  foo: ko.observable(false),
+  bar: ko.observable({}),
+}
+```

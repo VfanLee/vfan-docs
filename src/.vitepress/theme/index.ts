@@ -1,7 +1,6 @@
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
-import './styles/tailwind.css'
 import './styles/index.css'
 
 import Demo from '../components/Demo/index.vue'

@@ -1,4 +1,4 @@
-# [函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Functions)
+# 函数
 
 ## 定义函数
 

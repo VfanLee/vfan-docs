@@ -49,6 +49,10 @@ const handleSelectChange = e => {
 - `<select>` 会绑定 `value` 属性并监听 `change` 事件。
 
 ::: warning
+v-model 会忽略任何表单元素上初始的 `value`、`checked` 或 `selected` attribute。
+
+其实说白了就是原生组件的 “勾选交互” 通过 `v-model` 进行了加强，可以更方便地通过数据继续交互。所以在使用的时候，要么选择 v-model，要么选择手动控制（`value`、`checked` 或 `selected` attribute）。
+
 如下的 `非 v-model` 示例，只是简单的剖析 `v-model` 的原理，详细实现可见 [v-model 源码](https://github.com/vuejs/core/blob/main/packages/runtime-dom/src/directives/vModel.ts)。
 :::
 

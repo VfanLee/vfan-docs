@@ -84,15 +84,13 @@ const sidebar: DefaultTheme.Sidebar = {
   '/web/ecmascript/': [
     {
       text: '起步',
-      collapsed: false,
       items: [
-        { text: '简介', link: '/web/ecmascript/' },
+        { text: '认识 JavaScript', link: '/web/ecmascript/introduction' },
         { text: '运行 JavaScript', link: '/web/ecmascript/run' },
       ],
     },
     {
       text: '基础知识',
-      collapsed: true,
       items: [
         { text: '代码结构', link: '/web/ecmascript/basic/代码结构' },
         { text: '严格模式', link: '/web/ecmascript/basic/严格模式' },
@@ -102,51 +100,30 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '条件分支', link: '/web/ecmascript/basic/条件分支' },
         { text: '循环', link: '/web/ecmascript/basic/循环' },
 
-        { text: '使用对象', link: '/web/ecmascript/basic/使用对象' },
-        { text: '使用类', link: '/web/ecmascript/basic/使用类' },
-        { text: '其他', link: '/web/ecmascript/basic/其他' },
-        { text: '函数', link: '/web/ecmascript/basic/函数' },
         { text: '提交表单', link: '/web/ecmascript/basic/提交表单' },
-        { text: '日期比较', link: '/web/ecmascript/basic/日期比较' },
+        { text: '其他', link: '/web/ecmascript/basic/其他' },
       ],
     },
     {
       text: '数据类型',
+      link: '/web/ecmascript/data-types/introduction',
       collapsed: true,
-      items: [
-        { text: '类型介绍', link: '/web/ecmascript/data-types/类型介绍' },
-        { text: '类型判断', link: '/web/ecmascript/data-types/类型判断' },
-        { text: '类型转换', link: '/web/ecmascript/data-types/类型转换' },
-        { text: 'Number', link: '/web/ecmascript/basic/number' },
-        { text: 'BigInt', link: '/web/ecmascript/basic/bigint' },
-        { text: '字符串', link: '/web/ecmascript/basic/' },
-        { text: '数组', link: '/web/ecmascript/basic/' },
-        { text: '可迭代对象', link: '/web/ecmascript/basic/' },
-        { text: 'Map', link: '/web/ecmascript/basic/' },
-        { text: 'Set', link: '/web/ecmascript/basic/' },
-        { text: 'Object', link: '/web/ecmascript/basic/' },
-        { text: 'Date', link: '/web/ecmascript/basic/' },
-        { text: 'JSON', link: '/web/ecmascript/basic/' },
-      ],
+      items: [],
     },
     {
-      text: '对象',
-      collapsed: false,
-      items: [
-        { text: 'object', link: '/web/ecmascript/object/object' },
-        { text: '对象方法，"this"', link: '/web/ecmascript/object/this' },
-        { text: '构造器和操作符 "new"', link: '/web/ecmascript/object/new' },
-        { text: '可选链 "?."', link: '/web/ecmascript/object/optional-chaining' },
-        { text: '对象属性配置', link: '/web/ecmascript/object/properties' },
-      ],
-    },
-    {
-      text: '函数',
+      text: '深入对象',
+      link: 'web/ecmascript/object/object',
       collapsed: true,
-      items: [{ text: '老旧的 var', link: '/web/ecmascript/basic/var' }],
+      items: [],
     },
     {
-      text: '深入 Promise',
+      text: '深入函数',
+      link: 'web/ecmascript/function/function',
+      collapsed: true,
+      items: [],
+    },
+    {
+      text: 'Promise, async/await',
       collapsed: true,
       items: [
         { text: 'Promise', link: '/web/ecmascript/promise/promise' },
@@ -154,10 +131,66 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
+      text: '类',
+      collapsed: true,
+      items: [{ text: '类', link: '/web/ecmascript/class/class' }],
+    },
+    {
       text: '持续进阶',
       collapsed: true,
-      items: [{ text: 'Proxy 和 Reflect', link: '/web/ecmascript/proxy_reflect' }],
+      items: [
+        { text: 'Proxy 和 Reflect', link: '/web/ecmascript/proxy_reflect' },
+        { text: '正则表达式', link: '/web/ecmascript/regular_expression' },
+      ],
     },
+  ],
+  // 数据类型
+  '/web/ecmascript/data-types/': [
+    {
+      text: '认识类型',
+      items: [{ text: '介绍', link: '/web/ecmascript/data-types/introduction' }],
+    },
+    {
+      text: '类型操作',
+      items: [
+        { text: '类型判断', link: '/web/ecmascript/data-types/judgment' },
+        { text: '类型转换', link: '/web/ecmascript/data-types/conversion' },
+      ],
+    },
+    {
+      text: '类型详解',
+      items: [
+        { text: 'Number', link: '/web/ecmascript/data-types/number' },
+        { text: 'BigInt', link: '/web/ecmascript/data-types/bigint' },
+        { text: 'String', link: '/web/ecmascript/data-types/string' },
+        { text: 'Object', link: '/web/ecmascript/data-types/object' },
+        { text: 'Array', link: '/web/ecmascript/data-types/array' },
+        { text: 'Map', link: '/web/ecmascript/data-types/map' },
+        { text: 'Set', link: '/web/ecmascript/data-types/set' },
+        { text: 'Date', link: '/web/ecmascript/data-types/date' },
+        { text: 'JSON', link: '/web/ecmascript/data-types/json' },
+      ],
+    },
+
+    { text: '👉 返回', link: '/web/ecmascript/', collapsed: true, items: [] },
+  ],
+  // 深入对象
+  '/web/ecmascript/object/': [
+    { text: 'object', link: '/web/ecmascript/object/object' },
+    { text: '对象方法，"this"', link: '/web/ecmascript/object/this' },
+    { text: '构造器和操作符 "new"', link: '/web/ecmascript/object/new' },
+    { text: '可选链 "?."', link: '/web/ecmascript/object/optional-chaining' },
+    { text: '对象属性配置', link: '/web/ecmascript/object/properties' },
+
+    { text: '👉 返回', link: '/web/ecmascript/', collapsed: true, items: [] },
+  ],
+  // 深入函数
+  '/web/ecmascript/function/': [
+    { text: '认识函数', link: '/web/ecmascript/function/function' },
+    { text: '变量作用域，闭包', link: '/web/ecmascript/function/closure' },
+    { text: '老旧的 var', link: '/web/ecmascript/function/var' },
+
+    { text: '👉 返回', link: '/web/ecmascript/', collapsed: true, items: [] },
   ],
   //#endregion
 
@@ -305,7 +338,7 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: 'Node.js',
       items: [
-        { text: '介绍', link: '/web/nodejs' },
+        { text: '介绍', link: '/web/nodejs/introduction' },
         { text: '异步机制', link: '/web/nodejs/异步机制' },
         { text: '调试技巧', link: '/web/nodejs/调试技巧' },
       ],
@@ -587,6 +620,17 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '状态管理 - Redux', link: '/web/react/redux' },
       ],
     },
+  ],
+  // knockout.js
+  '/web/knockoutjs/': [
+    { text: '快速上手', link: '/web/knockoutjs/quick-start' },
+    { text: 'State', link: '/web/knockoutjs/state' },
+    { text: 'Attr', link: '/web/knockoutjs/attr' },
+    { text: '事件处理', link: '/web/knockoutjs/event' },
+    { text: '流程控制', link: '/web/knockoutjs/control-flow' },
+    { text: '绑定上下文', link: '/web/knockoutjs/binding-context' },
+    { text: '组件化', link: '/web/knockoutjs/component' },
+    { text: '更进一步', link: '/web/knockoutjs/further-techniques.md' },
   ],
   //#endregion
 

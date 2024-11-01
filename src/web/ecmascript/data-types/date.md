@@ -1,6 +1,8 @@
-# 日期比较
+# 日期
 
-## 比较 “字符串日期”
+## 日期比较
+
+### 比较 “字符串日期”
 
 ```js
 const dateStr1 = '2020-02-01'
@@ -9,7 +11,7 @@ const dateStr2 = '2020-02-02'
 console.log(dateStr2 > dateStr1) // true
 ```
 
-## 比较 “日期对象”
+### 比较 “日期对象”
 
 ```js
 const date1 = new Date('2020-02-01')
@@ -20,7 +22,7 @@ console.log(date2 > date1) // true
 console.log(date3 > date1) // true
 ```
 
-## 比较 “不同格式”
+### 比较 “不同格式”
 
 对于不同格式的日期进行比较，可以将格式统一后再进行比较，可参考 [MDN Date parse](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/parse)。
 
