@@ -115,3 +115,13 @@ server {
   return 301 https://www.example.com$request_uri;
 }
 ```
+
+### 某页面禁止访问 404
+
+```nginx
+server {
+  location = / {
+    return 404;
+  }
+}
+```

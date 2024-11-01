@@ -5,7 +5,7 @@
       {
         "title": "批处理脚本",
         "details": "",
-        "link": "/learning/batch-script/introduction"
+        "link": "/learning/batch_script/introduction"
       }
     ]
   },
@@ -20,7 +20,7 @@
       {
         "title": "Shell 脚本",
         "details": "",
-        "link": "/learning/shell/introduction"
+        "link": "/learning/shell_script/introduction"
       }
     ]
   },
