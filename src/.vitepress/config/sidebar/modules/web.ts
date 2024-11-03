@@ -408,7 +408,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '社区 CLI 脚手架',
-      collapsed: true,
+      collapsed: false,
       items: [
         { text: '⭐ vite', link: '/web/engineering/vite/introduction' },
         { text: 'vue-cli', link: 'https://cli.vuejs.org/zh/' },
@@ -428,6 +428,12 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '一些有用的库（global）', link: '/web/engineering/npm/useful-tools-library' },
       ],
     },
+    {
+      text: '👉 返回',
+      link: '/web/engineering/modular/introduction',
+      collapsed: false,
+      items: [],
+    },
   ],
   // webpack
   '/web/engineering/webpack/': [
@@ -442,6 +448,12 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '版本迁移', link: '/web/engineering/webpack/migrate' },
       ],
     },
+    {
+      text: '👉 返回',
+      link: '/web/engineering/modular/introduction',
+      collapsed: false,
+      items: [],
+    },
   ],
   // gulp
   '/web/engineering/gulp/': [
@@ -455,6 +467,12 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '处理文件', link: '/web/engineering/gulp/working-with-files' },
         { text: '使用插件', link: '/web/engineering/gulp/using-plugins' },
       ],
+    },
+    {
+      text: '👉 返回',
+      link: '/web/engineering/modular/introduction',
+      collapsed: false,
+      items: [],
     },
   ],
   // sass
@@ -475,6 +493,12 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '条件与循环', link: '/web/engineering/sass/flow-control' },
       ],
     },
+    {
+      text: '👉 返回',
+      link: '/web/engineering/modular/introduction',
+      collapsed: false,
+      items: [],
+    },
   ],
   // vite
   '/web/engineering/vite/': [
@@ -485,6 +509,12 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '配置', link: '/web/engineering/vite/config' },
         { text: '插件', link: '/web/engineering/vite/plugins' },
       ],
+    },
+    {
+      text: '👉 返回',
+      link: '/web/engineering/modular/introduction',
+      collapsed: false,
+      items: [],
     },
   ],
   // typescript
