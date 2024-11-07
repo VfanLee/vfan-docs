@@ -34,8 +34,24 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: 'Git',
       items: [
-        { text: '命令', link: '/web/git/command' },
+        { text: '安装 & 配置', link: '/dev/git', target: '_blank' },
         { text: '.gitignore', link: '/web/git/gitignore' },
+        {
+          text: '常见用法',
+          items: [
+            { text: '仓库管理', link: '/web/git/command/repo' },
+            { text: '代码提交', link: '/web/git/command/commit' },
+            { text: '分支管理', link: '/web/git/command/branch' },
+            { text: '“后悔药”', link: '/web/git/command/reset' },
+          ],
+        },
+      ],
+    },
+    {
+      text: 'GitHub',
+      items: [
+        { text: 'GitHub Pages', link: '/web/git/github/github_pages' },
+        { text: 'GitHub Actions', link: '/web/git/github/github_actions' },
       ],
     },
   ],
@@ -139,6 +155,7 @@ const sidebar: DefaultTheme.Sidebar = {
       text: '持续进阶',
       collapsed: true,
       items: [
+        { text: 'ESM', link: '/web/ecmascript/modular/index.md' },
         { text: 'Proxy 和 Reflect', link: '/web/ecmascript/proxy_reflect' },
         { text: '正则表达式', link: '/web/ecmascript/regular_expression' },
       ],
@@ -611,9 +628,11 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'Vant - Mobile', link: '/web/vue/v3/vant' },
       ],
     },
-    { text: '选项式 API', link: '/web/vue/v3/options' },
     { text: '深入响应式', link: '/web/vue/v3/reactivity' },
-    { text: '进阶主题', link: 'https://cn.vuejs.org/guide/extras/ways-of-using-vue.html' },
+    { text: '渲染机制', link: '/web/vue/v3/rendering-mechanism' },
+    { text: '渲染函数', link: '/web/vue/v3/render-function' },
+    { text: '选项式 API', link: '/web/vue/v3/options' },
+    { text: '使用 Vue 的多种方式', link: 'https://cn.vuejs.org/guide/extras/ways-of-using-vue.html' },
     { text: 'Fetch data', link: '/web/vue/v3/fetch-data' },
     { text: 'Vue 解决方案', link: '/web/vue/v3/solution/' },
   ],
@@ -634,33 +653,29 @@ const sidebar: DefaultTheme.Sidebar = {
   ],
   // react
   '/web/react/': [
+    { text: '快速开始', link: '/web/react/quick_start' },
+    { text: '响应式', link: '/web/react/quick_start/reactivity' },
+    { text: '模板化', link: '/web/react/quick_start/templating' },
+    { text: '组件化', link: '/web/react/quick_start/component' },
+    { text: '表单输入', link: '/web/react/quick_start/form_input' },
     {
-      text: '基础',
+      text: '更进一步',
       items: [
-        { text: 'State', link: '/web/react/state' },
-        { text: 'Computed State', link: '/web/react/computed' },
-      ],
-    },
-    { text: 'Render app', link: '/web/react/render-app' },
-    { text: 'Fetch data', link: '/web/react/fetch-data' },
-    {
-      text: 'React 集成',
-      items: [
-        { text: '路由管理 - React Router', link: '/web/react/react-router' },
-        { text: '状态管理 - Redux', link: '/web/react/redux' },
+        { text: '组件库', link: '/web/react/step_further/component_library' },
+        { text: '路由管理', link: '/web/react/step_further/react-router' },
+        { text: '全局状态管理', link: '/web/react/step_further/redux' },
+        { text: '国际化', link: '/web/react/step_further/react-i18next' },
       ],
     },
   ],
   // knockout.js
   '/web/knockoutjs/': [
-    { text: '快速上手', link: '/web/knockoutjs/quick-start' },
-    { text: 'State', link: '/web/knockoutjs/state' },
-    { text: 'Attr', link: '/web/knockoutjs/attr' },
-    { text: '事件处理', link: '/web/knockoutjs/event' },
-    { text: '流程控制', link: '/web/knockoutjs/control-flow' },
-    { text: '绑定上下文', link: '/web/knockoutjs/binding-context' },
+    { text: '快速开始', link: '/web/knockoutjs/quick_start' },
+    { text: '响应式', link: '/web/knockoutjs/reactivity' },
+    { text: '模板化', link: '/web/knockoutjs/templating' },
+    { text: '表单输入', link: '/web/knockoutjs/form_input' },
     { text: '组件化', link: '/web/knockoutjs/component' },
-    { text: '更进一步', link: '/web/knockoutjs/further-techniques.md' },
+    { text: '更进一步', link: '/web/knockoutjs/step_further' },
   ],
   //#endregion
 

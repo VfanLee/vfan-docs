@@ -1,12 +1,12 @@
 # React Router
 
-## 1. 安装
+## 安装
 
 ```sh
 npm i react-router-dom
 ```
 
-## 2. 定义路由
+## 定义路由
 
 ```jsx
 import { createBrowserRouter } from 'react-router-dom'
@@ -28,23 +28,23 @@ const router = createBrowserRouter([
 export default router
 ```
 
-### 2.1. 路由模式
+### 路由模式
 
-#### 2.1.1. history
+#### history
 
 - url 表现：`url/login`
 - 底层原理：history 对象 + pushState 事件
 - 需要后端支持
 - 使用 `createBrowserRouter`
 
-#### 2.1.2. hash
+#### hash
 
 - url 表现：`url/#/login`
 - 底层原理：hashChange 事件
 - 不需要后端支持
 - 使用 `createHashRouter`
 
-## 3. 使用路由
+## 使用路由
 
 ```jsx
 import router from './router'
@@ -57,9 +57,9 @@ function App() {
 export default App
 ```
 
-## 4. 路由导航
+## 路由导航
 
-### 4.1. 声明式
+### 声明式
 
 ```jsx
 import { Link } from 'react-router-dom'
@@ -67,7 +67,7 @@ import { Link } from 'react-router-dom'
 <Link to="/article">article</Link>
 ```
 
-### 4.2. 编程式
+### 编程式
 
 ```jsx
 import { useNavigate } from 'react-router-dom'
@@ -77,9 +77,9 @@ import { useNavigate } from 'react-router-dom'
 </button>
 ```
 
-## 5. 路由传参
+## 路由传参
 
-### 5.1. searchParams 传参
+### searchParams 传参
 
 ```jsx
 import { useSearchParams } from 'react-router-dom'
@@ -89,7 +89,7 @@ const id = params.get('id')
 const name = params.get('name')
 ```
 
-### 5.2. params 传参
+### params 传参
 
 1. 定义 params 路由
 
@@ -110,7 +110,7 @@ const name = params.get('name')
     const name = params.name
     ```
 
-## 6. 路由嵌套
+## 路由嵌套
 
 1. 定义路由
 
@@ -133,7 +133,7 @@ const name = params.get('name')
 
 2. 使用 `<Outlet />` 渲染位置
 
-## 7. 默认路由
+## 默认路由
 
 嵌套路由时，指定某个子路由为默认路由，案例如下：
 
@@ -159,7 +159,7 @@ const name = params.get('name')
 }
 ```
 
-## 8. 404 路由配置
+## 404 路由配置
 
 ```jsx
 {

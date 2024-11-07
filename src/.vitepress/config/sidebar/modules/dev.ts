@@ -13,7 +13,7 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: 'Windows',
       items: [
-        { text: 'Git', link: '/dev/git' },
+        { text: 'Git 环境', link: '/dev/git' },
         { text: '前端开发环境', link: '/dev/front-end' },
         { text: 'Java 开发环境', link: '/dev/java' },
         { text: 'Android 开发环境', link: '/dev/android' },

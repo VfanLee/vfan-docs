@@ -42,3 +42,27 @@ export default defineConfig({
 ```
 
 :::
+
+## vite-plugin-static-copy
+
+[vite-plugin-static-copy](https://github.com/sapphi-red/vite-plugin-static-copy) 用于复制文件。
+
+```js
+import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+
+export default defineConfig({
+  plugins: [
+    // ...
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'README.md',
+          dest: '',
+        },
+      ],
+    }),
+    // ...
+  ],
+})
+```

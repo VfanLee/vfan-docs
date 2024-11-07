@@ -1,7 +1,3 @@
----
-layout: home
----
-
 # Web 表单
 
 ## form

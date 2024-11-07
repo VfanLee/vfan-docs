@@ -483,6 +483,10 @@ iframe.contentDocument
 如果 `iframe` 及其父 `document` 处于同源，则返回一个 `document`（即嵌套浏览上下文中的活动文档）对象，否则返回 `null`。
 :::
 
+## DOMParser
+
+<https://developer.mozilla.org/zh-CN/docs/Web/API/DOMParser>
+
 ## 参考资料
 
 - [Document - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Document)

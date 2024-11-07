@@ -1,4 +1,10 @@
-# 渲染 app
+# React
+
+## 介绍
+
+...
+
+## Render App
 
 ::: code-group
 
@@ -31,3 +37,9 @@ ReactDOM.createRoot(document.getElementById('app')).render(
 ```
 
 :::
+
+## 参考资料
+
+- [React 中文官网](https://zh-hans.react.dev/)
+- [Redux 中文官网](https://cn.redux.js.org/)
+- [React Router 英文官网](https://reactrouter.com/)

@@ -1,5 +1,7 @@
 # Location
 
+## Location
+
 `window.location` 只读属性，返回一个 [Location](https://developer.mozilla.org/zh-CN/docs/Web/API/Location) 对象，其中包含有关文档当前位置的信息。
 
 - 获取或设置当前页面的完整 URL：`location.href`
@@ -13,3 +15,15 @@
 - 重新加载当前页面：`location.reload()`
 - 将页面导航到指定的 URL，可以使用后退按钮返回：`location.assign(url)`
 - 用指定的 URL 替换当前页面，无法使用后退按钮返回：`location.replace(url)`
+
+## URL
+
+```js
+new URL('https://example.com/wordpress/?s=url').searchParams.get('s');
+```
+
+## URLSearchParams
+
+```js
+new URLSearchParams('?s=url').get('s');
+```

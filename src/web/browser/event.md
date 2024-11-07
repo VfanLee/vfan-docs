@@ -73,6 +73,7 @@
   - [paste](https://developer.mozilla.org/en-US/docs/Web/API/Document/paste_event)：在用户通过浏览器的用户界面使用粘贴操作时触发。
 
 - [message](https://zh.javascript.info/cross-window-communication)
+- [storage](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/storage_event)
 
 ## `event` 事件对象
 
@@ -84,3 +85,23 @@
 ::: tip
 `event.currentTarget` 永远都是指向被监听的对象，而 `event.target` 会随着使用者触发的对象去改变。
 :::
+
+## 自定义事件
+
+```js
+// e 代表触发的事件对象
+window.addEventListener("test", function (e) {
+    if (e.myAttr === "demo") {
+        alert("key值为demo，添加成功！")
+    }
+}, false)
+
+// 创建一个事件对象，名字为 test
+let hbEventObj = new Event("test")
+
+// 给事件对象添加一个属性，叫做 myAttr
+hbEventObj.myAttr = "demo"
+
+// 触发事件
+window.dispatchEvent(hbEventObj)
+```

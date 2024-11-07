@@ -1,6 +1,4 @@
-# GitHub
-
-## GitHub Actions
+# GitHub Actions
 
 1. GitHub 进入 Account Settings；
 2. 找到 Developer settings，生成一个 token，并赋予 repo、workflow 的权限；

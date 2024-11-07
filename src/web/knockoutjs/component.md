@@ -1,6 +1,6 @@
-# 组件化
+# Component
 
-## 定义组件
+## Define
 
 ### 最小方式
 
@@ -38,13 +38,13 @@ ko.components.register('like-or-dislike', {
 })
 ```
 
-## 使用组件
+### 使用组件
 
 ```html
 <like-widget params="value: userRating"></like-widget>
 ```
 
-## 组件通信
+## Props
 
 ### 通过 params 传递
 
@@ -96,4 +96,14 @@ window.globalState = {
   foo: ko.observable(false),
   bar: ko.observable({}),
 }
+```
+
+## Context
+
+```
+$component
+
+$index()
+
+$data
 ```
