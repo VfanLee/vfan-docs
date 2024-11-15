@@ -1,3 +1,5 @@
 # react-i18next
 
-https://react.i18next.com/
+## 参考资料
+
+- [react-i18next（英文）](https://react.i18next.com/)

@@ -167,3 +167,7 @@ const name = params.get('name')
   element: <NotFound />
 }
 ```
+
+## 参考资料
+
+- [React Router（英文）](https://reactrouter.com/)

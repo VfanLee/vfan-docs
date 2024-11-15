@@ -12,13 +12,13 @@ outline: [2, 3]
 
 ### Array.form()
 
-Array.from() 静态方法从可迭代或类数组对象创建一个新的浅拷贝的数组实例。
+`Array.from()` 静态方法从可迭代或类数组对象创建一个新的浅拷贝的数组实例。
 
 ```js
-console.log(Array.from('foo'));
+console.log(Array.from('foo'))
 // Expected output: Array ["f", "o", "o"]
 
-console.log(Array.from([1, 2, 3], (x) => x + x));
+console.log(Array.from([1, 2, 3], x => x + x))
 // Expected output: Array [2, 4, 6]
 ```
 
@@ -36,31 +36,31 @@ Array.fromAsync(arrayLike, mapFn, thisArg)
 
 ### Array.isArray()
 
-Array.isArray() 静态方法用于确定传递的值是否是一个数组。
+`Array.isArray()` 静态方法用于确定传递的值是否是一个数组。
 
 ```js
-console.log(Array.isArray([1, 3, 5]));
+console.log(Array.isArray([1, 3, 5]))
 // Expected output: true
 
-console.log(Array.isArray('[]'));
+console.log(Array.isArray('[]'))
 // Expected output: false
 
-console.log(Array.isArray(new Array(5)));
+console.log(Array.isArray(new Array(5)))
 // Expected output: true
 
-console.log(Array.isArray(new Int16Array([15, 33])));
+console.log(Array.isArray(new Int16Array([15, 33])))
 // Expected output: false
 ```
 
 ### Array.of()
 
-Array.of() 静态方法通过可变数量的参数创建一个新的 Array 实例，而不考虑参数的数量或类型。
+`Array.of()` 静态方法通过可变数量的参数创建一个新的 Array 实例，而不考虑参数的数量或类型。
 
 ```js
-console.log(Array.of('foo', 2, 'bar', true));
+console.log(Array.of('foo', 2, 'bar', true))
 // Expected output: Array ["foo", 2, "bar", true]
 
-console.log(Array.of());
+console.log(Array.of())
 // Expected output: Array []
 ```
 
@@ -71,16 +71,16 @@ console.log(Array.of());
 at() 方法接收一个整数值并返回该索引对应的元素，允许正数和负数。负整数从数组中的最后一个元素开始倒数。
 
 ```js
-const array1 = [5, 12, 8, 130, 44];
+const array1 = [5, 12, 8, 130, 44]
 
-let index = 2;
+let index = 2
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
+console.log(`An index of ${index} returns ${array1.at(index)}`)
 // Expected output: "An index of 2 returns 8"
 
-index = -2;
+index = -2
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
+console.log(`An index of ${index} returns ${array1.at(index)}`)
 // Expected output: "An index of -2 returns 130"
 ```
 
@@ -89,11 +89,11 @@ console.log(`An index of ${index} returns ${array1.at(index)}`);
 concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
 
 ```js
-const array1 = ['a', 'b', 'c'];
-const array2 = ['d', 'e', 'f'];
-const array3 = array1.concat(array2);
+const array1 = ['a', 'b', 'c']
+const array2 = ['d', 'e', 'f']
+const array3 = array1.concat(array2)
 
-console.log(array3);
+console.log(array3)
 // Expected output: Array ["a", "b", "c", "d", "e", "f"]
 ```
 
@@ -102,14 +102,14 @@ console.log(array3);
 copyWithin() 方法浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度。
 
 ```js
-const array1 = ['a', 'b', 'c', 'd', 'e'];
+const array1 = ['a', 'b', 'c', 'd', 'e']
 
 // Copy to index 0 the element at index 3
-console.log(array1.copyWithin(0, 3, 4));
+console.log(array1.copyWithin(0, 3, 4))
 // Expected output: Array ["d", "b", "c", "d", "e"]
 
 // Copy to index 1 all elements from index 3 to the end
-console.log(array1.copyWithin(1, 3));
+console.log(array1.copyWithin(1, 3))
 // Expected output: Array ["d", "d", "e", "d", "e"]
 ```
 
@@ -118,27 +118,27 @@ console.log(array1.copyWithin(1, 3));
 entries() 方法返回一个新的数组迭代器对象，该对象包含数组中每个索引的键/值对。
 
 ```js
-const array1 = ['a', 'b', 'c'];
+const array1 = ['a', 'b', 'c']
 
-const iterator1 = array1.entries();
+const iterator1 = array1.entries()
 
-console.log(iterator1.next().value);
+console.log(iterator1.next().value)
 // Expected output: Array [0, "a"]
 
-console.log(iterator1.next().value);
+console.log(iterator1.next().value)
 // Expected output: Array [1, "b"]
 ```
 
 ### every()
 
-every() 方法测试一个数组内的所有元素是否都能通过指定函数的测试。它返回一个布尔值。
+`every()` 方法测试一个数组内的所有元素是否都能通过指定函数的测试。它返回一个布尔值。
 
 ```js
-const isBelowThreshold = (currentValue) => currentValue < 40;
+const isBelowThreshold = currentValue => currentValue < 40
 
-const array1 = [1, 30, 39, 29, 10, 13];
+const array1 = [1, 30, 39, 29, 10, 13]
 
-console.log(array1.every(isBelowThreshold));
+console.log(array1.every(isBelowThreshold))
 // Expected output: true
 ```
 
@@ -147,17 +147,17 @@ console.log(array1.every(isBelowThreshold));
 fill() 方法用一个固定值填充一个数组中从起始索引（默认为 0）到终止索引（默认为 array.length）内的全部元素。它返回修改后的数组。
 
 ```js
-const array1 = [1, 2, 3, 4];
+const array1 = [1, 2, 3, 4]
 
 // Fill with 0 from position 2 until position 4
-console.log(array1.fill(0, 2, 4));
+console.log(array1.fill(0, 2, 4))
 // Expected output: Array [1, 2, 0, 0]
 
 // Fill with 5 from position 1
-console.log(array1.fill(5, 1));
+console.log(array1.fill(5, 1))
 // Expected output: Array [1, 5, 5, 5]
 
-console.log(array1.fill(6));
+console.log(array1.fill(6))
 // Expected output: Array [6, 6, 6, 6]
 ```
 
@@ -166,44 +166,44 @@ console.log(array1.fill(6));
 filter() 方法创建给定数组一部分的浅拷贝，其包含通过所提供函数实现的测试的所有元素。
 
 ```js
-const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present']
 
-const result = words.filter((word) => word.length > 6);
+const result = words.filter(word => word.length > 6)
 
-console.log(result);
+console.log(result)
 // Expected output: Array ["exuberant", "destruction", "present"]
 ```
 
 ### find()
 
-find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
+`find()` 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 `undefined`。
 
-- 如果需要在数组中找到对应元素的索引，请使用 findIndex()。
-- 如果需要查找某个值的索引，请使用 indexOf()。（它类似于 findIndex()，但只是检查每个元素是否与值相等，而不是使用测试函数。）
-- 如果需要查找数组中是否存在某个值，请使用 includes()。同样，它检查每个元素是否与值相等，而不是使用测试函数。
-- 如果需要查找是否有元素满足所提供的测试函数，请使用 some()。
+- 如果需要在数组中找到对应元素的索引，请使用 `findIndex()`。
+- 如果需要查找某个值的索引，请使用 `indexOf()`。（它类似于 `findIndex()`，但只是检查每个元素是否与值相等，而不是使用测试函数。）
+- 如果需要查找数组中是否存在某个值，请使用 `includes()`。同样，它检查每个元素是否与值相等，而不是使用测试函数。
+- 如果需要查找是否有元素满足所提供的测试函数，请使用 `some()`。
 
 ```js
-const array1 = [5, 12, 8, 130, 44];
+const array1 = [5, 12, 8, 130, 44]
 
-const found = array1.find((element) => element > 10);
+const found = array1.find(element => element > 10)
 
-console.log(found);
+console.log(found)
 // Expected output: 12
 ```
 
 ### findIndex()
 
-findIndex() 方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回 -1。
+`findIndex()` 方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回 `-1`。
 
-另请参阅 find() 方法，它返回满足测试函数的第一个元素（而不是它的索引）。
+另请参阅 `find()` 方法，它返回满足测试函数的第一个元素（而不是它的索引）。
 
 ```js
-const array1 = [5, 12, 8, 130, 44];
+const array1 = [5, 12, 8, 130, 44]
 
-const isLargeNumber = (element) => element > 13;
+const isLargeNumber = element => element > 13
 
-console.log(array1.findIndex(isLargeNumber));
+console.log(array1.findIndex(isLargeNumber))
 // Expected output: 3
 ```
 
@@ -220,11 +220,11 @@ findLast() 方法反向迭代数组，并返回满足提供的测试函数的第
 - 是否有任意一个元素满足提供的测试函数，使用 some()。
 
 ```js
-const array1 = [5, 12, 50, 130, 44];
+const array1 = [5, 12, 50, 130, 44]
 
-const found = array1.findLast((element) => element > 45);
+const found = array1.findLast(element => element > 45)
 
-console.log(found);
+console.log(found)
 // Expected output: 130
 ```
 
@@ -235,11 +235,11 @@ findLastIndex() 方法反向迭代数组，并返回满足所提供的测试函�
 另请参见 findLast() 方法，该方法返回最后一个满足测试函数的元素的值（而不是它的索引）。
 
 ```js
-const array1 = [5, 12, 50, 130, 44];
+const array1 = [5, 12, 50, 130, 44]
 
-const isLargeNumber = (element) => element > 45;
+const isLargeNumber = element => element > 45
 
-console.log(array1.findLastIndex(isLargeNumber));
+console.log(array1.findLastIndex(isLargeNumber))
 // Expected output: 3
 // Index of element with value: 130
 ```
@@ -249,20 +249,20 @@ console.log(array1.findLastIndex(isLargeNumber));
 flat() 方法创建一个新的数组，并根据指定深度递归地将所有子数组元素拼接到新的数组中。
 
 ```js
-const arr1 = [0, 1, 2, [3, 4]];
+const arr1 = [0, 1, 2, [3, 4]]
 
-console.log(arr1.flat());
+console.log(arr1.flat())
 // expected output: Array [0, 1, 2, 3, 4]
 
-const arr2 = [0, 1, [2, [3, [4, 5]]]];
+const arr2 = [0, 1, [2, [3, [4, 5]]]]
 
-console.log(arr2.flat());
+console.log(arr2.flat())
 // expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
 
-console.log(arr2.flat(2));
+console.log(arr2.flat(2))
 // expected output: Array [0, 1, 2, 3, Array [4, 5]]
 
-console.log(arr2.flat(Infinity));
+console.log(arr2.flat(Infinity))
 // expected output: Array [0, 1, 2, 3, 4, 5]
 ```
 
@@ -271,11 +271,11 @@ console.log(arr2.flat(Infinity));
 flatMap() 方法对数组中的每个元素应用给定的回调函数，然后将结果展开一级，返回一个新数组。它等价于在调用 map() 方法后再调用深度为 1 的 flat() 方法（arr.map(...args).flat()），但比分别调用这两个方法稍微更高效一些。
 
 ```js
-const arr1 = [1, 2, 1];
+const arr1 = [1, 2, 1]
 
-const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+const result = arr1.flatMap(num => (num === 2 ? [2, 2] : 1))
 
-console.log(result);
+console.log(result)
 // Expected output: Array [1, 2, 2, 1]
 ```
 
@@ -284,9 +284,9 @@ console.log(result);
 forEach() 方法对数组的每个元素执行一次给定的函数。
 
 ```js
-const array1 = ['a', 'b', 'c'];
+const array1 = ['a', 'b', 'c']
 
-array1.forEach((element) => console.log(element));
+array1.forEach(element => console.log(element))
 
 // Expected output: "a"
 // Expected output: "b"
@@ -298,52 +298,52 @@ array1.forEach((element) => console.log(element));
 includes() 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回 false。
 
 ```js
-const array1 = [1, 2, 3];
+const array1 = [1, 2, 3]
 
-console.log(array1.includes(2));
+console.log(array1.includes(2))
 // Expected output: true
 
-const pets = ['cat', 'dog', 'bat'];
+const pets = ['cat', 'dog', 'bat']
 
-console.log(pets.includes('cat'));
+console.log(pets.includes('cat'))
 // Expected output: true
 
-console.log(pets.includes('at'));
+console.log(pets.includes('at'))
 // Expected output: false
 ```
 
 ### indexOf()
 
-indexOf() 方法返回数组中第一次出现给定元素的下标，如果不存在则返回 -1。
+`indexOf()` 方法返回数组中第一次出现给定元素的下标，如果不存在则返回 `-1`。
 
 ```js
-const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison']
 
-console.log(beasts.indexOf('bison'));
+console.log(beasts.indexOf('bison'))
 // Expected output: 1
 
 // Start from index 2
-console.log(beasts.indexOf('bison', 2));
+console.log(beasts.indexOf('bison', 2))
 // Expected output: 4
 
-console.log(beasts.indexOf('giraffe'));
+console.log(beasts.indexOf('giraffe'))
 // Expected output: -1
 ```
 
 ### join()
 
-join() 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串，用逗号或指定的分隔符字符串分隔。如果数组只有一个元素，那么将返回该元素而不使用分隔符。
+`join()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串，用逗号或指定的分隔符字符串分隔。如果数组只有一个元素，那么将返回该元素而不使用分隔符。
 
 ```js
-const elements = ['Fire', 'Air', 'Water'];
+const elements = ['Fire', 'Air', 'Water']
 
-console.log(elements.join());
+console.log(elements.join())
 // Expected output: "Fire,Air,Water"
 
-console.log(elements.join(''));
+console.log(elements.join(''))
 // Expected output: "FireAirWater"
 
-console.log(elements.join('-'));
+console.log(elements.join('-'))
 // Expected output: "Fire-Air-Water"
 ```
 
@@ -352,11 +352,11 @@ console.log(elements.join('-'));
 keys() 方法返回一个新的数组迭代器对象，其中包含数组中每个索引的键。
 
 ```js
-const array1 = ['a', 'b', 'c'];
-const iterator = array1.keys();
+const array1 = ['a', 'b', 'c']
+const iterator = array1.keys()
 
 for (const key of iterator) {
-  console.log(key);
+  console.log(key)
 }
 
 // Expected output: 0
@@ -369,45 +369,74 @@ for (const key of iterator) {
 lastIndexOf() 方法返回数组中给定元素最后一次出现的索引，如果不存在则返回 -1。该方法从 fromIndex 开始向前搜索数组。
 
 ```js
-const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo']
 
-console.log(animals.lastIndexOf('Dodo'));
+console.log(animals.lastIndexOf('Dodo'))
 // Expected output: 3
 
-console.log(animals.lastIndexOf('Tiger'));
+console.log(animals.lastIndexOf('Tiger'))
 // Expected output: 1
 ```
 
 ### map()
 
-map() 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
+`map()` 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
 
 ```js
-const array1 = [1, 4, 9, 16];
+const array1 = [1, 4, 9, 16]
 
 // Pass a function to map
-const map1 = array1.map((x) => x * 2);
+const map1 = array1.map(x => x * 2)
 
-console.log(map1);
+console.log(map1)
 // Expected output: Array [2, 8, 18, 32]
 ```
+
+::: tip
+注意：如果在 `map()` 的测试函数中返回 `undefined` / `null`，该子项的值也为 `undefined` / `null`，并不会直接过滤出去。
+
+若需要过滤一些子项时，`map` 可配合 `filter` 一起使用，或者直接使用 `reduce` 一步到位。
+
+::: code-group
+
+```js [for]
+const ids = []
+for (const o of objs) {
+  if (o.id) ids.push(o.id)
+}
+```
+
+```js [filter + map]
+const ids = objs.filter(o => o.id).map(o => o.id)
+```
+
+```js [reduce]
+const ids = objs.reduce((acc, o) => {
+  if (o.id) acc.push(o.id)
+  return acc
+}, [])
+```
+
+:::
+
+:::
 
 ### ❗ pop()
 
 pop() 方法从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。
 
 ```js
-const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato']
 
-console.log(plants.pop());
+console.log(plants.pop())
 // Expected output: "tomato"
 
-console.log(plants);
+console.log(plants)
 // Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
 
-plants.pop();
+plants.pop()
 
-console.log(plants);
+console.log(plants)
 // Expected output: Array ["broccoli", "cauliflower", "cabbage"]
 ```
 
@@ -416,16 +445,16 @@ console.log(plants);
 push() 方法将指定的元素添加到数组的末尾，并返回新的数组长度。
 
 ```js
-const animals = ['pigs', 'goats', 'sheep'];
+const animals = ['pigs', 'goats', 'sheep']
 
-const count = animals.push('cows');
-console.log(count);
+const count = animals.push('cows')
+console.log(count)
 // Expected output: 4
-console.log(animals);
+console.log(animals)
 // Expected output: Array ["pigs", "goats", "sheep", "cows"]
 
-animals.push('chickens', 'cats', 'dogs');
-console.log(animals);
+animals.push('chickens', 'cats', 'dogs')
+console.log(animals)
 // Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
 ```
 
@@ -436,16 +465,13 @@ reduce() 方法对数组中的每个元素按序执行一个提供的 reducer �
 第一次执行回调函数时，不存在“上一次的计算结果”。如果需要回调函数从数组索引为 0 的元素开始执行，则需要传递初始值。否则，数组索引为 0 的元素将被用作初始值，迭代器将从第二个元素开始执行（即从索引为 1 而不是 0 的位置开始）。
 
 ```js
-const array1 = [1, 2, 3, 4];
+const array1 = [1, 2, 3, 4]
 
 // 0 + 1 + 2 + 3 + 4
-const initialValue = 0;
-const sumWithInitial = array1.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  initialValue,
-);
+const initialValue = 0
+const sumWithInitial = array1.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue)
 
-console.log(sumWithInitial);
+console.log(sumWithInitial)
 // Expected output: 10
 ```
 
@@ -460,13 +486,11 @@ const array1 = [
   [0, 1],
   [2, 3],
   [4, 5],
-];
+]
 
-const result = array1.reduceRight((accumulator, currentValue) =>
-  accumulator.concat(currentValue),
-);
+const result = array1.reduceRight((accumulator, currentValue) => accumulator.concat(currentValue))
 
-console.log(result);
+console.log(result)
 // Expected output: Array [4, 5, 2, 3, 0, 1]
 ```
 
@@ -477,16 +501,16 @@ reverse() 方法就地反转数组中的元素，并返回同一数组的引用�
 要在不改变原始数组的情况下反转数组中的元素，使用 toReversed()。
 
 ```js
-const array1 = ['one', 'two', 'three'];
-console.log('array1:', array1);
+const array1 = ['one', 'two', 'three']
+console.log('array1:', array1)
 // Expected output: "array1:" Array ["one", "two", "three"]
 
-const reversed = array1.reverse();
-console.log('reversed:', reversed);
+const reversed = array1.reverse()
+console.log('reversed:', reversed)
 // Expected output: "reversed:" Array ["three", "two", "one"]
 
 // Careful: reverse is destructive -- it changes the original array.
-console.log('array1:', array1);
+console.log('array1:', array1)
 // Expected output: "array1:" Array ["three", "two", "one"]
 ```
 
@@ -495,14 +519,14 @@ console.log('array1:', array1);
 shift() 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。
 
 ```js
-const array1 = [1, 2, 3];
+const array1 = [1, 2, 3]
 
-const firstElement = array1.shift();
+const firstElement = array1.shift()
 
-console.log(array1);
+console.log(array1)
 // Expected output: Array [2, 3]
 
-console.log(firstElement);
+console.log(firstElement)
 // Expected output: 1
 ```
 
@@ -519,38 +543,38 @@ slice(start, end)
 ```
 
 ```js
-const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
 
-console.log(animals.slice(2));
+console.log(animals.slice(2))
 // Expected output: Array ["camel", "duck", "elephant"]
 
-console.log(animals.slice(2, 4));
+console.log(animals.slice(2, 4))
 // Expected output: Array ["camel", "duck"]
 
-console.log(animals.slice(1, 5));
+console.log(animals.slice(1, 5))
 // Expected output: Array ["bison", "camel", "duck", "elephant"]
 
-console.log(animals.slice(-2));
+console.log(animals.slice(-2))
 // Expected output: Array ["duck", "elephant"]
 
-console.log(animals.slice(2, -1));
+console.log(animals.slice(2, -1))
 // Expected output: Array ["camel", "duck"]
 
-console.log(animals.slice());
+console.log(animals.slice())
 // Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
 ```
 
 ### some()
 
-some() 方法测试数组中是否至少有一个元素通过了由提供的函数实现的测试。如果在数组中找到一个元素使得提供的函数返回 true，则返回 true；否则返回 false。它不会修改数组。
+`some()` 方法测试数组中是否至少有一个元素通过了由提供的函数实现的测试。如果在数组中找到一个元素使得提供的函数返回 true，则返回 true；否则返回 false。它不会修改数组。
 
 ```js
-const array = [1, 2, 3, 4, 5];
+const array = [1, 2, 3, 4, 5]
 
 // Checks whether an element is even
-const even = (element) => element % 2 === 0;
+const even = element => element % 2 === 0
 
-console.log(array.some(even));
+console.log(array.some(even))
 // Expected output: true
 ```
 
@@ -563,14 +587,14 @@ sort() 方法就地对数组的元素进行排序，并返回对相同数组的�
 如果想要不改变原数组的排序方法，可以使用 toSorted()。
 
 ```js
-const months = ['March', 'Jan', 'Feb', 'Dec'];
-months.sort();
-console.log(months);
+const months = ['March', 'Jan', 'Feb', 'Dec']
+months.sort()
+console.log(months)
 // Expected output: Array ["Dec", "Feb", "Jan", "March"]
 
-const array1 = [1, 30, 4, 21, 100000];
-array1.sort();
-console.log(array1);
+const array1 = [1, 30, 4, 21, 100000]
+array1.sort()
+console.log(array1)
 // Expected output: Array [1, 100000, 21, 30, 4]
 ```
 
@@ -594,15 +618,15 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ### 示例
 
 ```js
-const months = ['Jan', 'March', 'April', 'June'];
-months.splice(1, 0, 'Feb');
+const months = ['Jan', 'March', 'April', 'June']
+months.splice(1, 0, 'Feb')
 // Inserts at index 1
-console.log(months);
+console.log(months)
 // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
 
-months.splice(4, 1, 'May');
+months.splice(4, 1, 'May')
 // Replaces 1 element at index 4
-console.log(months);
+console.log(months)
 // Expected output: Array ["Jan", "Feb", "March", "April", "May"]
 ```
 
@@ -611,10 +635,10 @@ console.log(months);
 toLocaleString() 方法返回一个字符串，表示数组中的所有元素。每个元素通过调用它们自己的 toLocaleString 方法转换为字符串，并且使用特定于语言环境的字符串（例如逗号“,”）分隔开。
 
 ```js
-const array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
-const localeString = array1.toLocaleString('en', { timeZone: 'UTC' });
+const array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')]
+const localeString = array1.toLocaleString('en', { timeZone: 'UTC' })
 
-console.log(localeString);
+console.log(localeString)
 // Expected output: "1,a,12/21/1997, 2:12:00 PM",
 // This assumes "en" locale and UTC timezone - your results may vary
 ```
@@ -624,9 +648,9 @@ console.log(localeString);
 Array 实例的 toReversed() 方法是 reverse() 方法对应的复制版本。它返回一个元素顺序相反的新数组。
 
 ```js
-const items = [1, 2, 3];
-const reversedItems = items.toReversed();
-console.log(reversedItems); // [3, 2, 1]
+const items = [1, 2, 3]
+const reversedItems = items.toReversed()
+console.log(reversedItems) // [3, 2, 1]
 ```
 
 ### toSorted()
@@ -634,13 +658,13 @@ console.log(reversedItems); // [3, 2, 1]
 Array 实例的 toSorted() 方法是 sort() 方法的复制方法版本。它返回一个新数组，其元素按升序排列。
 
 ```js
-const months = ["Mar", "Jan", "Feb", "Dec"];
-const sortedMonths = months.toSorted();
-console.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']
+const months = ['Mar', 'Jan', 'Feb', 'Dec']
+const sortedMonths = months.toSorted()
+console.log(sortedMonths) // ['Dec', 'Feb', 'Jan', 'Mar']
 
-const values = [1, 10, 21, 2];
-const sortedValues = values.toSorted((a, b) => a - b);
-console.log(sortedValues); // [1, 2, 10, 21]
+const values = [1, 10, 21, 2]
+const sortedValues = values.toSorted((a, b) => a - b)
+console.log(sortedValues) // [1, 2, 10, 21]
 ```
 
 ### toSpliced()
@@ -648,22 +672,22 @@ console.log(sortedValues); // [1, 2, 10, 21]
 Array 实例的 toSpliced() 方法是 splice() 方法的复制版本。它返回一个新数组，并在给定的索引处删除和/或替换了一些元素。
 
 ```js
-const months = ["Jan", "Mar", "Apr", "May"];
+const months = ['Jan', 'Mar', 'Apr', 'May']
 
 // 在索引 1 处添加一个元素
-const months2 = months.toSpliced(1, 0, "Feb");
-console.log(months2); // ["Jan", "Feb", "Mar", "Apr", "May"]
+const months2 = months.toSpliced(1, 0, 'Feb')
+console.log(months2) // ["Jan", "Feb", "Mar", "Apr", "May"]
 
 // 从第 2 个索引开始删除两个元素
-const months3 = months2.toSpliced(2, 2);
-console.log(months3); // ["Jan", "Feb", "May"]
+const months3 = months2.toSpliced(2, 2)
+console.log(months3) // ["Jan", "Feb", "May"]
 
 // 在索引 1 处用两个新元素替换一个元素
-const months4 = months3.toSpliced(1, 1, "Feb", "Mar");
-console.log(months4); // ["Jan", "Feb", "Mar", "May"]
+const months4 = months3.toSpliced(1, 1, 'Feb', 'Mar')
+console.log(months4) // ["Jan", "Feb", "Mar", "May"]
 
 // 原数组不会被修改
-console.log(months); // ["Jan", "Mar", "Apr", "May"]
+console.log(months) // ["Jan", "Mar", "Apr", "May"]
 ```
 
 ### toString()
@@ -671,9 +695,9 @@ console.log(months); // ["Jan", "Mar", "Apr", "May"]
 toString() 方法返回一个字符串，表示指定的数组及其元素。
 
 ```js
-const array1 = [1, 2, 'a', '1a'];
+const array1 = [1, 2, 'a', '1a']
 
-console.log(array1.toString());
+console.log(array1.toString())
 // Expected output: "1,2,a,1a"
 ```
 
@@ -682,12 +706,12 @@ console.log(array1.toString());
 unshift() 方法将指定元素添加到数组的开头，并返回数组的新长度。
 
 ```js
-const array1 = [1, 2, 3];
+const array1 = [1, 2, 3]
 
-console.log(array1.unshift(4, 5));
+console.log(array1.unshift(4, 5))
 // Expected output: 5
 
-console.log(array1);
+console.log(array1)
 // Expected output: Array [4, 5, 1, 2, 3]
 ```
 
@@ -696,11 +720,11 @@ console.log(array1);
 values() 方法返回一个新的数组迭代器 (en-US)对象，该对象迭代数组中每个元素的值。
 
 ```js
-const array1 = ['a', 'b', 'c'];
-const iterator = array1.values();
+const array1 = ['a', 'b', 'c']
+const iterator = array1.values()
 
 for (const value of iterator) {
-  console.log(value);
+  console.log(value)
 }
 
 // Expected output: "a"
@@ -713,7 +737,7 @@ for (const value of iterator) {
 Array 实例的 with() 方法是使用方括号表示法修改指定索引值的复制方法版本。它会返回一个新数组，其指定索引处的值会被新值替换。
 
 ```js
-const arr = [1, 2, 3, 4, 5];
-console.log(arr.with(2, 6)); // [1, 2, 6, 4, 5]
-console.log(arr); // [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5]
+console.log(arr.with(2, 6)) // [1, 2, 6, 4, 5]
+console.log(arr) // [1, 2, 3, 4, 5]
 ```

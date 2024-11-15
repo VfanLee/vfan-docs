@@ -27,6 +27,6 @@ CSS 逻辑属性（Logical Properties）与逻辑值（Logical Values）是 CSS 
 - 开始（start）：内联轴或块轴的起始端。
 - 结束（end）：内联轴或块轴的末端。
 
-## 参考于
+## 参考资料
 
 - [逻辑属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)

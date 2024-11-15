@@ -1,7 +1,5 @@
 # CSS 选择器
 
-> <https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_selectors>
-
 ## 基础选择器
 
 - 通用选择器：选择所有元素。例如：`*`。
@@ -31,17 +29,20 @@
 
 ## 伪选择器
 
-- 伪类
-  - 动态伪类：用于选择元素在特定状态下的样式。
-    - `:hover`
-    - `:active`
-    - `:focus`
-    - `:focus-within`
-  - 结构伪类：
-    - `:nth-child(n)`、`:first-child`、`:last-child` 用于选择特定的子元素。
-    - `:nth-of-type(n)`、`:first-of-type`、`:last-of-type` 用于选择特定的子元素。
-  - `:not(selector)` 用于排除特定选择器。
-  - `:invalid`
+- 动态伪类：用于选择元素在特定状态下的样式。
+  - `:hover`
+  - `:active`
+  - `:focus`
+  - `:focus-within`
+- 结构伪类：
+  - `:nth-child(n)`、`:first-child`、`:last-child` 用于选择特定的子元素。
+  - `:nth-of-type(n)`、`:first-of-type`、`:last-of-type` 用于选择特定的子元素。
+- `:not(selector)` 用于排除特定选择器。
+- `:invalid`
 - 伪元素
   - `::before` 和 `::after`：用于在元素内容之前或之后插入内容。
   - `::first-line` 和 `::first-letter`：用于选择元素的首行或首字母。
+
+## 参考资料
+
+- [CSS Selector](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_selectors)

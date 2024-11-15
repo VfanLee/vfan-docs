@@ -1,0 +1,16 @@
+<script setup lang="ts">
+import Card from '../Card/index.vue'
+import data from './data.json'
+
+defineOptions({
+  name: 'ArticleIndex',
+})
+</script>
+
+<template>
+  <div class="index-layout">
+    <div class="card-grid">
+      <Card v-for="item of data" :title="item.text" :link="item.link" :details="item.details" />
+    </div>
+  </div>
+</template>
