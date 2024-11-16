@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 // https://vitepress.dev/zh/reference/default-theme-config
 const themeConfig: DefaultTheme.Config = {
-  logo: { src: '/vitepress-logo-mini.svg', alt: 'Logo' },
+  logo: { src: '/xiaohuolong.png', alt: 'Vfan Docs' },
   outline: {
     label: '页面导航',
     level: [2, 3],

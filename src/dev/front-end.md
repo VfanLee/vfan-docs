@@ -2,7 +2,8 @@
 
 ## 代码编辑器
 
-- [VS Code](https://code.visualstudio.com/)
+- [VS Code](https://code.visualstudio.com/) <Badge type="info" text="开源免费" />
+- [WebStorm](https://www.jetbrains.com/webstorm/) <Badge type="info" text="对非商业用途免费" />
 
 ## Node.js - Windows
 
@@ -74,7 +75,7 @@
 
 ### nvm
 
-> fnm 与 nvm 二选一即可
+> 我的评价是，不如 fnm！
 
 1. 下载 [nvm](https://github.com/nvm-sh/nvm)
 2. 安装所需版本：
@@ -95,14 +96,6 @@
 - `~/.nvmrc`：配置文件
 - `INSTALL_PATH/settings.txt`：配置文件
 :::
-
-### 包管理工具
-
-```
-npm i -g pnpm
-```
-
-[pnpm 版本兼容](https://pnpm.io/installation#compatibility)
 
 ## Node.js - Linux
 

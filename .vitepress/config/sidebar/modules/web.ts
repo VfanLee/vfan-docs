@@ -36,17 +36,17 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [
         { text: '安装 & 配置', link: '/dev/git', target: '_blank' },
         { text: '.gitignore', link: '/web/git/gitignore' },
-        {
-          text: '常用命令',
-          items: [
-            { text: '仓库管理', link: '/web/git/command/repo' },
-            { text: '代码提交', link: '/web/git/command/commit' },
-            { text: '分支管理', link: '/web/git/command/branch' },
-            { text: '“后悔药”', link: '/web/git/command/reset' },
-            { text: '打标签', link: '/web/git/command/tag' },
-            { text: '暂存', link: '/web/git/command/stash' },
-          ],
-        },
+      ],
+    },
+    {
+      text: '常用命令',
+      items: [
+        { text: '仓库管理', link: '/web/git/command/repo' },
+        { text: '代码提交', link: '/web/git/command/commit' },
+        { text: '分支管理', link: '/web/git/command/branch' },
+        { text: '“后悔药”', link: '/web/git/command/reset' },
+        { text: '打标签', link: '/web/git/command/tag' },
+        { text: '暂存', link: '/web/git/command/stash' },
       ],
     },
   ],
@@ -556,6 +556,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '类型别名', link: '/web/typescript/type-alias' },
         { text: '声明文件', link: '/web/typescript/declaration-files' },
         { text: '内置对象', link: '/web/typescript/build-in-types' },
+        { text: 'import', link: '/web/typescript/import' },
       ],
     },
     {

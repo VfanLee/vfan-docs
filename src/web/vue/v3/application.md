@@ -26,3 +26,9 @@ createApp(App).mount('#app')
 ```
 
 :::
+
+## 获取 attrs
+
+在 `<template>` 中可以使用 `$attrs`
+
+在 `<script>` 中可以使用 `useAttrs`

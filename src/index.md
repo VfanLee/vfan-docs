@@ -15,7 +15,7 @@ hero:
       link: https://github.com/VfanLee/vfan-docs
   image:
     src: /logo.gif
-    alt: VitePress
+    alt: Vfan Docs
 
 features:
   - icon: 🚀

@@ -28,3 +28,15 @@ pnpm config set store-dir "/d/.pnpm-store/v3"
 
 pnpm store path # 验证
 ```
+
+## 兼容性
+
+pnpm 与 Node.js 之间的兼容性：
+
+| Node.js    | pnpm 7 | pnpm 8 | pnpm 9 |
+| ---------- | ------ | ------ | ------ |
+| Node.js 12 | ❌     | ❌     | ❌     |
+| Node.js 14 | ✔️     | ❌     | ❌     |
+| Node.js 16 | ✔️     | ✔️     | ❌     |
+| Node.js 18 | ✔️     | ✔️     | ✔️     |
+| Node.js 20 | ✔️     | ✔️     | ✔️     |
