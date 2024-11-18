@@ -241,7 +241,7 @@ console.log(a.localeCompare(b, 'en', { sensitivity: 'base' }));
 
 ### match()
 
-match() 方法检索字符串与正则表达式进行匹配的结果。
+[match()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 方法检索字符串与正则表达式进行匹配的结果。
 
 ```js
 const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
@@ -252,9 +252,13 @@ console.log(found);
 // Expected output: Array ["T", "I"]
 ```
 
+- 如果你需要知道一个字符串是否与一个正则表达式 RegExp 匹配，请使用 [RegExp.prototype.test()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)。
+- 如果你只想获取第一个匹配项，你可能需要使用 [RegExp.prototype.exec()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)。
+- 如果你想要获取捕获组，并且全局标志已设置，你需要使用 [RegExp.prototype.exec()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 或 [String.prototype.matchAll()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)。
+
 ### matchAll()
 
-matchAll() 方法返回一个迭代器，该迭代器包含了检索字符串与正则表达式进行匹配的所有结果（包括捕获组）。
+[matchAll()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) 方法返回一个迭代器，该迭代器包含了检索字符串与正则表达式进行匹配的所有结果（包括捕获组）。
 
 ```js
 const regexp = /t(e)(st(\d?))/g;

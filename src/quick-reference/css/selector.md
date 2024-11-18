@@ -29,19 +29,32 @@
 
 ## 伪选择器
 
-- 动态伪类：用于选择元素在特定状态下的样式。
-  - `:hover`
-  - `:active`
-  - `:focus`
-  - `:focus-within`
-- 结构伪类：
-  - `:nth-child(n)`、`:first-child`、`:last-child` 用于选择特定的子元素。
-  - `:nth-of-type(n)`、`:first-of-type`、`:last-of-type` 用于选择特定的子元素。
-- `:not(selector)` 用于排除特定选择器。
-- `:invalid`
-- 伪元素
-  - `::before` 和 `::after`：用于在元素内容之前或之后插入内容。
-  - `::first-line` 和 `::first-letter`：用于选择元素的首行或首字母。
+动态伪类：
+
+- `:hover`：当用户将鼠标悬停在元素上时生效，常用于按钮或链接的交互效果。
+- `:active`：当用户点击并按住元素时生效，通常用于按钮或链接的按压效果。
+- `:focus`：当元素获得焦点时生效（如用户点击输入框或使用键盘导航到某个可聚焦元素）。
+- `:focus-within`：当某个元素本身或其子元素获得焦点时生效，适合用于父级元素的样式更新。
+
+子元素选择伪类：
+
+- `:nth-child(n)`：选择父元素中第 n 个子元素，n 可以是数字、odd（奇数）、even（偶数），或一个公式（如 2n+1）。
+- `:first-child`：选择父元素的第一个子元素。
+- `:last-child`：选择父元素的最后一个子元素。
+- `:nth-of-type(n)`：选择父元素中第 n 个指定类型（如 `<div>` 或 `<p>`）的子元素。
+- `:first-of-type`：选择父元素中第一个指定类型的子元素。
+- `:last-of-type`：选择父元素中最后一个指定类型的子元素。
+
+否定和验证伪类：
+
+- `:not(selector)`：匹配不符合 `selector` 的元素，适用于排除某些样式。
+- `:invalid`：匹配无效的表单输入元素（根据 `type`、`pattern` 或 `required` 等属性）。
+- `:lang`：根据元素的语言属性（`lang` 或 `xml:lang`）匹配特定语言的内容。
+
+伪元素：
+
+- `::before` / `::after`：用于在元素内容之前或之后插入内容。
+- `::first-line` / `::first-letter`：用于选择元素的首行或首字母。
 
 ## 参考资料
 

@@ -1,0 +1,19 @@
+@import './vars.css';
+
+.dark {
+  .vp-doc div[class*='language-'],
+  .vp-block {
+    background-color: #242424;
+  }
+
+  .vp-code-group {
+    .tabs {
+      input:checked + label {
+        background-color: #242424;
+      }
+      label {
+        background-color: #2f2f2f;
+      }
+    }
+  }
+}

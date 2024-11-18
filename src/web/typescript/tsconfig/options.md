@@ -1,5 +1,45 @@
 # TypeScript 配置项
 
+## `extend`
+
+通过 `extends` 字段，当前配置文件可以继承另一个配置文件的所有配置。
+
+如果在当前配置文件中定义了与继承文件相同的字段，当前配置将覆盖继承的值。
+
+## `include`
+
+指定需要编译的文件或目录的列表，使用通配符可以匹配多个文件。
+
+```json
+"include": ["src/**/*"]
+```
+
+## `exclude`
+
+指定需要排除在编译之外的文件或目录的列表。常见的排除项包括 `node_modules` 和输出目录（如 `dist`）。
+
+```json
+"exclude": ["node_modules", "dist"]
+```
+
+## `files`
+
+指定需要编译的特定文件列表。**注意：** 这个选项不支持通配符。
+
+```json
+"files": ["src/main.ts", "src/helper.ts"]
+```
+
+## `references`
+
+用于多项目工作区，允许一个 TypeScript 项目引用另一个项目。这对于在多个独立项目之间共享代码非常有用。
+
+```json
+"references": [
+  { "path": "../library" }
+]
+```
+
 ## `compilerOptions`
 
 `compilerOptions` 用于指定 TypeScript 编译器的配置选项。
@@ -175,39 +215,17 @@
 }
 ```
 
-## `include`
+### `composite`
 
-指定需要编译的文件或目录的列表，使用通配符可以匹配多个文件。
+启用项目的增量编译，常用于 `references` 配置的多项目环境。
 
-```json
-"include": ["src/**/*"]
-```
+### `noEmit`
 
-## `exclude`
+当 `noEmit` 设置为 true 时，TypeScript 编译器会跳过生成 `.js` 文件或其他输出文件（如 `.d.ts`），但仍会对代码进行类型检查。
 
-指定需要排除在编译之外的文件或目录的列表。常见的排除项包括 `node_modules` 和输出目录（如 `dist`）。
+### `tsBuildInfoFile`
 
-```json
-"exclude": ["node_modules", "dist"]
-```
-
-## `files`
-
-指定需要编译的特定文件列表。**注意：** 这个选项不支持通配符。
-
-```json
-"files": ["src/main.ts", "src/helper.ts"]
-```
-
-## `references`
-
-用于多项目工作区，允许一个 TypeScript 项目引用另一个项目。这对于在多个独立项目之间共享代码非常有用。
-
-```json
-"references": [
-  { "path": "../library" }
-]
-```
+设置 TypeScript 增量编译的缓存文件路径。
 
 ## 参考资料
 

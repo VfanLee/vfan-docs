@@ -16,7 +16,7 @@ const config: UserConfig = {
 
   // 构建
   srcDir: 'src',
-  srcExclude: ['.vitepress/dist'],
+  srcExclude: ['.vitepress/dist', '**/TODO.md'],
   outDir: '.vitepress/dist',
   assetsDir: 'assets',
   cacheDir: '.vitepress/cache',
@@ -24,12 +24,29 @@ const config: UserConfig = {
   metaChunk: true,
   mpa: false,
 
-  // https://github.com/vuejs/vitepress/blob/main/src/node/markdown/markdown.ts
-  markdown: {
-    theme: {
-      light: 'github-light',
-      dark: 'github-dark',
+  // [vue 配置](https://vitepress.dev/zh/reference/site-config#vue)
+  vue: {},
+
+  // [vite 配置](https://vitepress.dev/zh/reference/site-config#vite)
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler', // or "modern"
+        },
+      },
     },
+    build: {
+      chunkSizeWarningLimit: Infinity,
+    },
+    json: {
+      stringify: true,
+    },
+  },
+
+  // [markdown 配置](https://vitepress.dev/zh/reference/site-config#markdown)
+  markdown: {
+    theme: 'github-dark',
     codeCopyButtonTitle: '复制代码',
     lineNumbers: false,
     math: true,
@@ -39,17 +56,6 @@ const config: UserConfig = {
       dangerLabel: '危险',
       infoLabel: '信息',
       detailsLabel: '详情',
-    },
-  },
-
-  // https://cn.vitejs.dev/config/
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler', // or "modern"
-        },
-      },
     },
   },
 

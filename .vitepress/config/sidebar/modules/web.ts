@@ -539,7 +539,7 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: 'TypeScript',
       items: [
-        { text: '介绍', link: '/web/typescript' },
+        { text: '介绍', link: '/web/typescript/introduction' },
         { text: '快速上手', link: '/web/typescript/quick-start' },
         { text: '基本类型', link: '/web/typescript/basic-type' },
         { text: '数组和元组', link: '/web/typescript/array-tuple' },

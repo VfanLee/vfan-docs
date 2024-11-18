@@ -4,7 +4,7 @@
 
     ```sh
     npm install -D @tsconfig/node20 \
-                  @types/node \
+                  @types/node@20 \
                   @vue/tsconfig \
                   npm-run-all2 \
                   typescript \
@@ -13,7 +13,7 @@
 
     ::: details 依赖说明：
     - **@tsconfig/node20**：这是一个预定义的 TypeScript 配置文件，针对 Node.js 20 进行了优化。它提供了一组推荐的 TypeScript 编译选项，以确保项目与 Node.js 20 版本兼容。
-    - **@types/node**：这是 Node.js 的类型定义文件库。它提供了 Node.js 的所有类型声明，使 TypeScript 能够识别 Node.js 内置模块（如 `fs`、`path` 等）的类型。
+    - **@types/node@20**：这是 Node.js 的类型定义文件库。它提供了 Node.js 的所有类型声明，使 TypeScript 能够识别 Node.js 内置模块（如 `fs`、`path` 等）的类型。
     - **@vue/tsconfig**：这是 Vue 官方提供的一个 TypeScript 配置文件模板，专门用于 Vue 项目。它包含了推荐的 TypeScript 编译选项，适用于 Vue 的单文件组件（SFC）。
     - **npm-run-all**：这是一个命令行工具，允许你并行或串行运行多个 npm 脚本。
     - **typescript**：（必备、核心）这是 TypeScript 的编译器，它将 TypeScript 代码编译为 JavaScript 代码。
@@ -62,7 +62,7 @@
       "compilerOptions": {
         "composite": true,
         "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-
+        
         "baseUrl": ".",
         "paths": {
           "@/*": ["./src/*"]

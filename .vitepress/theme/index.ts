@@ -3,6 +3,7 @@ import DefaultTheme from 'vitepress/theme'
 import { DefineComponent } from 'vue'
 
 import './styles/index.scss'
+import './styles/dark.scss'
 
 export default {
   extends: DefaultTheme,

@@ -5,7 +5,7 @@ layout: home
 hero:
   name: Vfan Docs
   text: 开发技术知识库
-  tagline: 以前端技术为主的知识库
+  tagline: 一个以前端技术为主的知识库
   actions:
     - theme: brand
       text: 开启 Web 的世界
