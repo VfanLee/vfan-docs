@@ -2,14 +2,18 @@
   "compilerOptions": {
     "module": "ESNext",
     "target": "ESNext",
-    "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "strict": true,
     "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "@theme/*": [".vitepress/theme/*"]
     }
   },
-  "include": ["env.d.ts", "src/**/*", ".vitepress/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["env.d.ts", ".vitepress/**/*", ".vitepress/**/*.vue", "src/**/*"],
+  "exclude": ["node_modules", ".vitepress/cache", ".vitepress/dist"]
 }

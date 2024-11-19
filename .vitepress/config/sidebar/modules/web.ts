@@ -538,6 +538,7 @@ const sidebar: DefaultTheme.Sidebar = {
     { text: '数据类型(待分类)', link: '/web/typescript/types' },
     {
       text: 'TypeScript',
+      collapsed: false,
       items: [
         { text: '介绍', link: '/web/typescript/introduction' },
         { text: '快速上手', link: '/web/typescript/quick-start' },
@@ -564,7 +565,13 @@ const sidebar: DefaultTheme.Sidebar = {
       collapsed: false,
       items: [
         { text: 'tsconfig.json', link: '/web/typescript/tsconfig/file' },
-        { text: '配置项', link: '/web/typescript/tsconfig/options' },
+        {
+          text: '配置项',
+          items: [
+            { text: '顶层配置', link: '/web/typescript/tsconfig/top_level' },
+            { text: 'compilerOptions', link: '/web/typescript/tsconfig/compiler-options' },
+          ],
+        },
       ],
     },
   ],

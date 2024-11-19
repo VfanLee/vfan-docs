@@ -52,10 +52,10 @@ const config: UserConfig = {
     math: true,
     container: {
       tipLabel: '提示',
-      warningLabel: '警告',
-      dangerLabel: '危险',
-      infoLabel: '信息',
-      detailsLabel: '详情',
+      warningLabel: '注意',
+      dangerLabel: '当心',
+      infoLabel: '说明',
+      detailsLabel: '详细说明',
     },
   },
 

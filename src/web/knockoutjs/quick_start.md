@@ -5,7 +5,7 @@
 
 ## 介绍
 
-Knockout 是一个 JavaScript 库，可帮助您使用干净的底层数据模型创建丰富的响应式显示和编辑器用户界面。每当您的 UI 部分动态更新时（例如，根据用户的操作或外部数据源更改而变化），KO 都可以帮助您更简单、更易维护地实施它。
+[Knockout](https://knockoutjs.com) 是一个 JavaScript 库，可帮助您使用干净的底层数据模型创建丰富的响应式显示和编辑器用户界面。每当您的 UI 部分动态更新时（例如，根据用户的操作或外部数据源更改而变化），KO 都可以帮助您更简单、更易维护地实施它。
 
 ## Render App
 
@@ -15,7 +15,7 @@ Knockout 是一个 JavaScript 库，可帮助您使用干净的底层数据模�
 <span data-bind="text: msg"></span>
 ```
 
-```html [Script]
+```html [script]
 <script src="https://cdn.jsdelivr.net/npm/knockout@3.5.1/build/output/knockout-latest.min.js"></script>
 <script>
   function ViewModel() {
