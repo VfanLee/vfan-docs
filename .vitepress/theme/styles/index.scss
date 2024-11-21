@@ -70,6 +70,7 @@
       background-color: #292d3ef0;
       color: var(--vp-c-text-dark-1);
       border-bottom: 2px solid #ffffff4d;
+      user-select: none;
       &:first-of-type {
         border-start-start-radius: 8px;
       }

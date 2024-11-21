@@ -1,6 +1,10 @@
 # Element Plus
 
-## 按需引入 Element Plus
+## 引入 Element Plus
+
+### 按需引入
+
+::: code-group
 
 ```sh
 npm i element-plus
@@ -10,7 +14,11 @@ npm i element-plus
 npm i -D unplugin-vue-components unplugin-auto-import
 ```
 
-如果是基于 Vite 的项目，在 `vite.config.js` 文件中配置插件：
+:::
+
+### vite
+
+修改 `vite.config.js` 配置：
 
 ```js{2-4,9-14}
 import { defineConfig } from 'vite'
@@ -30,12 +38,7 @@ export default defineConfig({
 })
 ```
 
-> 参考：
->
-> - [vite: css.preprocessorOptions](https://cn.vitejs.dev/config/shared-options.html#css-preprocessoroptions)
-> - [Element Plus 按需导入](https://element-plus.org/zh-CN/guide/quickstart.html#%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5)
-> - [Element Plus 自定义主题](https://element-plus.org/zh-CN/guide/theming.html)
-> - [Element Plus 内置变量](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss)
+## 修改主题
 
 ```scss
 // src/styles/element/var.scss
@@ -87,6 +90,13 @@ export default defineConfig({
   "exclude": ["node_modules", "dist"]
 }
 ```
+
+### 参考资料
+
+- [vite: css.preprocessorOptions](https://cn.vitejs.dev/config/shared-options.html#css-preprocessoroptions)
+- [Element Plus 按需导入](https://element-plus.org/zh-CN/guide/quickstart.html#%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5)
+- [Element Plus 自定义主题](https://element-plus.org/zh-CN/guide/theming.html)
+- [Element Plus 内置变量](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss)
 
 ## 使用全局方法
 

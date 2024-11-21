@@ -28,11 +28,17 @@ const sidebar: DefaultTheme.Sidebar = {
   ],
   '/quick-reference/css/': [
     {
-      text: 'CSS 相关',
+      text: 'css 相关',
       items: [
         { text: '选择器', link: '/quick-reference/css/selector' },
         { text: '逻辑属性', link: '/quick-reference/css/logical-properties' },
       ],
+    },
+  ],
+  '/quick-reference/sass/': [
+    {
+      text: 'sass 相关',
+      items: [{ text: 'mixins', link: '/quick-reference/sass/mixins' }],
     },
   ],
 }

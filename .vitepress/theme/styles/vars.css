@@ -1,6 +1,4 @@
 /* https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */
-@import './vars.css';
-
 :root {
   --vp-c-white: #ffffff;
   --vp-c-black: #000000;
@@ -63,7 +61,7 @@
   --vp-code-copy-code-hover-bg: #343848;
 }
 
-:lang(zh-CN) {
+:lang(zh) {
   --vp-code-copy-code-active-text: var(--vp-c-text-dark-2);
 
   --vp-code-copy-copied-text-content: '已复制';

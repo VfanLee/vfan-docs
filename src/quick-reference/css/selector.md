@@ -45,16 +45,18 @@
 - `:first-of-type`：选择父元素中第一个指定类型的子元素。
 - `:last-of-type`：选择父元素中最后一个指定类型的子元素。
 
-否定和验证伪类：
-
-- `:not(selector)`：匹配不符合 `selector` 的元素，适用于排除某些样式。
-- `:invalid`：匹配无效的表单输入元素（根据 `type`、`pattern` 或 `required` 等属性）。
-- `:lang`：根据元素的语言属性（`lang` 或 `xml:lang`）匹配特定语言的内容。
-
 伪元素：
 
 - `::before` / `::after`：用于在元素内容之前或之后插入内容。
 - `::first-line` / `::first-letter`：用于选择元素的首行或首字母。
+
+其他：
+
+- `:not(selector)`：匹配不符合 `selector` 的元素，适用于排除某些样式。  
+- `:invalid`：匹配无效的表单输入元素（根据 `type`、`pattern` 或 `required` 等属性）。  
+- `:lang`：根据元素的语言属性（`lang` 或 `xml:lang`）匹配特定语言的内容。  
+- `:where(selector)`：匹配 `selector` 中指定的元素，优先级始终为零，适用于降低冲突风险或编写默认样式。  
+- `:is(selector)`：匹配 `selector` 中指定的元素，优先级由匹配的内部选择器决定，适用于优化选择器编写。  
 
 ## 参考资料
 

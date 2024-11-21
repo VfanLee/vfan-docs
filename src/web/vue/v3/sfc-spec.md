@@ -6,7 +6,7 @@
 
 每一个 `*.vue` 文件都由三种顶层语言块构成：`<template>`、`<script>` 和 `<style>`，以及一些其他的自定义块：
 
-```html
+```vue
 <template>
   <div class="example">{{ msg }}</div>
 </template>

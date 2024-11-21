@@ -201,6 +201,7 @@ const { name, doubleCount } = storeToRefs(store)
 const { increment } = store
 </script>
 ```
+
 :::
 
 ### 在组件外使用 store

@@ -1,26 +1,23 @@
 # Modules 模块化
 
-Sass Modules 是一种通过 `@use` 和 `@forward` 关键字实现的模块化系统，旨在 [替代旧的 `@import` 方法](https://sass-lang.com/documentation/at-rules/import/)。
-
 Sass Modules 能提供更好的命名空间管理和模块隔离，避免命名冲突，并支持更好的性能优化。
 
-## 默认命名空间
+::: warning 关于 `@import` 导入
+
+Sass Modules 是一种通过 `@use` 和 `@forward` 关键字实现的模块化系统，旨在 [替代旧的 `@import` 方法](https://sass-lang.com/documentation/at-rules/import/)。
+
+:::
+
+## 命名空间
+
+### 默认命名空间
 
 - 使用 `@use` 引入模块时，默认会使用文件名作为命名空间。
 - 这可以避免不同文件中同名变量、函数和混合宏的冲突。
 
-```scss
-// _variables.scss
-$primary-color: #3498db;
+::: code-group
 
-// _mixins.scss
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
-
-// styles.scss
+```scss [styles.scss]
 @use 'variables';
 @use 'mixins';
 
@@ -30,11 +27,27 @@ $primary-color: #3498db;
 }
 ```
 
-## 自定义命名空间
+```scss [_variables.scss]
+$primary-color: #3498db;
+```
+
+```scss [_mixins.scss]
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+```
+
+:::
+
+### 自定义命名空间
 
 使用 `as` 关键字，可以为引入的模块指定自定义命名空间
 
-```scss
+::: code-group
+
+```scss [styles.scss]
 @use 'variables' as vars;
 @use 'mixins' as mx;
 
@@ -44,11 +57,27 @@ $primary-color: #3498db;
 }
 ```
 
-## 全局命名空间
+```scss [_variables.scss]
+$primary-color: #3498db;
+```
+
+```scss [_mixins.scss]
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+```
+
+:::
+
+### 全局命名空间
 
 使用 `*`，可以在引入模块时不使用命名空间。
 
-```scss
+::: code-group
+
+```scss [styles.scss]
 @use 'variables' as *;
 
 .button {
@@ -56,38 +85,21 @@ $primary-color: #3498db;
 }
 ```
 
-*需要注意的是，这种做法会将所有引入的内容直接暴露在全局作用域中，可能会引发 **命名冲突**。*
-
-## 部分加载和重命名
-
-通过 `with` 关键字在加载模块时重命名变量或修改其值。
-
-```scss
-// _variables.scss
+```scss [_variables.scss]
 $primary-color: #3498db;
-$secondary-color: #2ecc71;
-
-// styles.scss
-@use 'variables' with (
-  $primary-color: red,
-  $secondary-color: blue
-);
-
-.button {
-  background-color: variables.$primary-color;
-}
 ```
+
+:::
+
+_需要注意的是，这种做法会将所有引入的内容直接暴露在全局作用域中，可能会引发 **命名冲突**。_
 
 ## 私有成员
 
 在模块中，可以通过前缀 `_` 将变量或混合宏标记为私有成员，这样它们就不会被 `@use` 引入。
 
-```scss
-// _variables.scss
-$primary-color: #3498db;
-$_private-color: #ff0000;
+::: code-group
 
-// styles.scss
+```scss [styles.scss]
 @use 'variables';
 
 .button {
@@ -96,16 +108,20 @@ $_private-color: #ff0000;
 }
 ```
 
+```scss [_variables.scss]
+$primary-color: #3498db;
+$_private-color: #ff0000;
+```
+
+:::
+
 ## 转发模块的命名空间管理
 
 使用 `@forward` 转发模块时，可以控制导出的命名空间和内容：
 
-```scss
-// _base.scss
-@forward 'variables';
-@forward 'mixins';
+::: code-group
 
-// styles.scss
+```scss [styles.scss]
 @use 'base';
 
 .button {
@@ -114,14 +130,30 @@ $_private-color: #ff0000;
 }
 ```
 
+```scss [_base.scss]
+@forward 'variables';
+@forward 'mixins';
+```
+
+```scss [_variables.scss]
+$primary-color: #3498db;
+```
+
+```scss [_mixins.scss]
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+```
+
+:::
+
 也可以在转发时选择性导出特定内容：
 
-```scss
-// _base.scss
-@forward 'variables' show $primary-color;
-@forward 'mixins' hide border-radius;
+::: code-group
 
-// styles.scss
+```scss [styles.scss]
 @use 'base';
 
 .button {
@@ -129,3 +161,22 @@ $_private-color: #ff0000;
   // @include base.border-radius(5px); // 会报错，因为 border-radius 没有被转发
 }
 ```
+
+```scss [_base.scss]
+@forward 'variables' show $primary-color;
+@forward 'mixins' hide border-radius;
+```
+
+```scss [_variables.scss]
+$primary-color: #3498db;
+```
+
+```scss [_mixins.scss]
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+```
+
+:::

@@ -4,14 +4,16 @@ Partials 是 Sass 文件的一种特殊形式，用于将代码分割成更小�
 
 Partials 文件通常以 `_` 开头，并且不会被编译成独立的 CSS 文件。
 
+## 定义 Partial 文件
+
 ::: code-group
 
-```scss [定义 Partial 文件]
-// _variables.scss
+```scss [_variables.scss]
 $primary-color: #3498db;
 $secondary-color: #2ecc71;
+```
 
-// _mixins.scss
+```scss [_mixins.scss]
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -20,8 +22,13 @@ $secondary-color: #2ecc71;
 }
 ```
 
-```scss [引用 Partial 文件]
-// styles.scss
+:::
+
+## 引用 Partial 文件
+
+::: code-group
+
+```scss [styles.scss]
 @use 'variables';
 @use 'mixins';
 

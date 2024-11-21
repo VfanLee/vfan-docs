@@ -11,7 +11,7 @@
 1. 安装 `vue-router`。
 
     ```sh
-    npm install vue-router@latest
+    npm i vue-router@latest
     ```
 
 2. 在 `src/router/index.js` 中创建一个路由器（`router`）实例。
@@ -107,6 +107,7 @@ const route = useRoute()
   {{ $route === route }}
 </template>
 ```
+
 :::
 
 ### 在组件外访问路由器实例（`router`）
@@ -138,6 +139,7 @@ console.log(router === _router) // true
   {{ $router === router }} <!-- true -->
 </template>
 ```
+
 :::
 
 ## 监听当前路由（`route`）的变化

@@ -11,7 +11,7 @@
 1. 安装 `vue-i18n`。
 
     ```sh
-    npm install vue-i18n@latest
+    npm i vue-i18n@latest
     ```
 
 2. 在 `i18n/index.js` 中创建 `i18n` 实例。

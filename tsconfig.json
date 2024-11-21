@@ -9,6 +9,7 @@
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "allowJs": true,
+
     "baseUrl": ".",
     "paths": {
       "@theme/*": [".vitepress/theme/*"]
