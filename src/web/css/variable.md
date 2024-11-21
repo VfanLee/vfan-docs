@@ -1,5 +1,9 @@
 # CSS 变量
 
+::: tip
+IE: 啊这？
+:::
+
 ## 定义 CSS 变量
 
 ```css
@@ -20,16 +24,16 @@
 }
 ```
 
-## JavaScript 使用 CSS 变量
+## 通过 JS 来使用 CSS 变量
 
-### JavaScript 获取变量
+### 获取变量
 
 ```js
 getComputedStyle(document.querySelector(':root')).getPropertyValue('--width')
 getComputedStyle(document.querySelector('.box')).getPropertyValue('--height')
 ```
 
-### JavaScript 设置变量值
+### 设置变量值
 
 ```js
 document.querySelector(':root').style.setProperty('--width', '50px')

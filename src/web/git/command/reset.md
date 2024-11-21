@@ -52,6 +52,97 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 :::
 
+### 撤销提交
+
+| 操作                         | 命令                                     |
+|------------------------------|------------------------------------------|
+| 撤销 commit，保留修改到暂存区 | `git reset --soft HEAD~1`               |
+| 撤销 commit，保留修改到工作区 | `git reset --mixed HEAD~1`              |
+| 撤销 commit，丢弃所有修改     | `git reset --hard HEAD~1`               |
+| 生成新的撤销 commit           | `git revert <commit-hash>`              |
+| 强制撤销远程提交              | `git reset --hard HEAD~1 && git push -f`|
+
+### 撤销最近一次 commit，但保留修改的文件
+
+如果你想撤销最近的 commit，同时保留已修改的文件和暂存状态：
+
+```bash
+git reset --soft HEAD~1
+```
+
+#### 说明
+
+- `HEAD~1` 表示上一个 commit。
+- `--soft` 会将 commit 的修改放回暂存区（staged）。
+
+### 撤销最近一次 commit，并将修改放回工作区
+
+如果你想撤销 commit，同时将修改的文件放回未暂存状态（working directory）：
+
+```bash
+git reset --mixed HEAD~1
+```
+
+#### 说明
+
+- `--mixed` 是默认选项，它会保留工作区中的修改，但清空暂存区。
+
+### 撤销最近一次 commit，并丢弃修改
+
+如果你想撤销 commit 并且丢弃修改的文件（无法恢复）：
+
+```bash
+git reset --hard HEAD~1
+```
+
+#### 注意
+
+- 这种操作会丢失修改，需谨慎使用。
+
+### **撤销已推送的 commit**
+
+如果 commit 已推送到远程仓库，可以使用以下步骤：
+
+#### 方法 1：使用 `git revert`
+
+`git revert` 会生成一个新的 commit，用于撤销指定的 commit。
+
+```bash
+git revert <commit-hash>
+```
+
+#### 方法 2：使用 `git reset`
+
+如果你需要强制撤销远程仓库的提交：
+
+```bash
+git reset --hard HEAD~1
+git push origin <branch-name> --force
+```
+
+**注意**:  
+- 强制推送可能会影响其他协作成员，需谨慎操作。
+
+### **撤销多次 commit**
+
+如果需要撤销多个 commit，比如最近的三次 commit，可以调整 `HEAD~<n>` 的值：
+
+```bash
+git reset --soft HEAD~3  # 撤销最近 3 次 commit，保留修改到暂存区
+git reset --mixed HEAD~3 # 撤销最近 3 次 commit，修改回到工作区
+git reset --hard HEAD~3  # 撤销最近 3 次 commit，丢弃所有修改
+```
+
+### **查看 commit 历史以选择需要撤销的 commit**
+
+在撤销之前，可以通过以下命令查看 commit 历史：
+
+```bash
+git log --oneline
+```
+
+选择需要撤销的 commit，使用对应的 hash 值进行操作。
+
 ## `git revert`
 
 `git revert` 是一种更安全的方法，它通过创建一个新的提交来撤销之前的提交。这样不会删除任何历史记录，并且所有的更改都可以被追踪。

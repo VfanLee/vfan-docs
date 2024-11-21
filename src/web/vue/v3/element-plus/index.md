@@ -4,23 +4,25 @@
 
 ### 按需引入
 
+安装依赖：
+
 ::: code-group
 
-```sh
+```sh [dependencies]
 npm i element-plus
 ```
 
-```sh
+```sh [devDependencies]
 npm i -D unplugin-vue-components unplugin-auto-import
 ```
 
 :::
 
-### vite
+修改项目配置：
 
-修改 `vite.config.js` 配置：
+::: code-group
 
-```js{2-4,9-14}
+```js [vite.config.js] {2-4,8-13}
 import { defineConfig } from 'vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -38,11 +40,29 @@ export default defineConfig({
 })
 ```
 
+```json [tsconfig.json] {5}
+{
+  // ...
+  "include": [
+    // ...
+    "auto-imports.d.ts"
+  ]
+}
+```
+
+:::
+
 ## 修改主题
 
-```scss
-// src/styles/element/var.scss
+### 通过 SCSS 变量
 
+[`theme-chalk`](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk) 使用 SCSS 编写而成。 可以在 [packages/theme-chalk/src/common/var.scss](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss) 文件中查找 SCSS 变量。
+
+#### 按需引入
+
+::: code-group
+
+```scss [styles/element/var.scss]
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   $colors: (
     'primary': (
@@ -52,7 +72,7 @@ export default defineConfig({
 );
 ```
 
-```js
+```js [vite.config.js] {10,17,20}
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -62,7 +82,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-        @use "@/styles/element/var.scss" as *;
+          @use "@/styles/element/var.scss" as *;
         `,
       },
     },
@@ -78,25 +98,32 @@ export default defineConfig({
 })
 ```
 
-```json
-{
-  "compilerOptions": {
-    "baseUrl": "/",
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  },
-  "include": ["src/**/*", "components.d.ts", "auto-imports.d.ts"],
-  "exclude": ["node_modules", "dist"]
+:::
+
+### 通过 CSS 变量
+
+::: tip
+它兼容 SCSS 变量系统。Element Plus 使用 SCSS 的函数自动生成需要用到的 css 变量。
+:::
+
+示例：
+
+```css
+:root {
+  --el-color-primary: green;
+
+  /* 更改某个组件的 CSS 变量 */
+  --el-tag-bg-color: red;
 }
 ```
 
-### 参考资料
+出于性能考虑，如果是部分地方需要自定义，更推荐在 **类名** 下定义，而不是 `:root`：
 
-- [vite: css.preprocessorOptions](https://cn.vitejs.dev/config/shared-options.html#css-preprocessoroptions)
-- [Element Plus 按需导入](https://element-plus.org/zh-CN/guide/quickstart.html#%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5)
-- [Element Plus 自定义主题](https://element-plus.org/zh-CN/guide/theming.html)
-- [Element Plus 内置变量](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss)
+```css
+.custom-class {
+  --el-tag-bg-color: red;
+}
+```
 
 ## 使用全局方法
 
@@ -164,8 +191,12 @@ Popper: Detected CSS transitions on at least one of the following CSS properties
    在 ElDropdown 组件中，你可以使用 popper-options 属性来指定 Popper 实例的选项。因此，要禁用 adaptive 选项，你可以将 popper-options 属性设置为一个对象，并在其中指定 modifiers 选项。示例如下：
 
    ```vue-html
-   <el-dropdown trigger="click" popper-class="my-dropdown" :popper-options="{ modifiers: [{ name: 'computeStyles', options: { adaptive: false } }] }">
-   <!-- Dropdown content -->
+   <el-dropdown
+     trigger="click"
+     popper-class="my-dropdown"
+     :popper-options="{ modifiers: [{ name: 'computeStyles', options: { adaptive: false } }] }"
+   >
+    <!-- Dropdown content -->
    </el-dropdown>
    ```
 

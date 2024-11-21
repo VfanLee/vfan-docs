@@ -115,7 +115,65 @@ $_private-color: #ff0000;
 
 :::
 
-## 转发模块的命名空间管理
+## `with`
+
+`@use with` 是 Sass 中的一个功能，用于在使用 `@use` 引入模块时，**修改或重命名模块中的变量**。它允许你在加载模块的同时，传递自定义的配置选项，如变量值，或者改变变量的默认值。
+
+### 修改模块中的变量
+
+::: code-group
+
+```scss [styles.scss]
+@use 'variables' with (
+  $primary-color: red,
+  $secondary-color: blue
+);
+
+.button {
+  background-color: variables.$primary-color;
+}
+```
+
+```scss [_variables.scss]
+$primary-color: #3498db !default;
+$secondary-color: #2ecc71 !default;
+```
+
+:::
+
+编译后的 `styles.scss`：
+
+```css
+.button {
+  background-color: red;
+}
+```
+
+### 重命名变量
+
+还可以使用 `with` 来重命名模块中的变量。
+
+例如，如果你不想使用原本的变量名，可以通过重命名来避免命名冲突：
+
+```scss [styles.scss]
+@use 'variables' with (
+  $primary-color as $my-primary-color
+);
+
+.button {
+  background-color: variables.$my-primary-color;
+}
+```
+
+编译后的 `styles.scss`：
+
+```scss
+.button {
+  background-color: #3498db; /* 原始的 $primary-color 的值 */
+}
+```
+
+## `@forward`
 
 使用 `@forward` 转发模块时，可以控制导出的命名空间和内容：
 
