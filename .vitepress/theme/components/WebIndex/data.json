@@ -29,7 +29,7 @@
     "title": "🛠️ 工程化",
     "items": [
       { "title": "代码风格", "details": "风格统一，代码清晰", "link": "/engineering/dev-style/" },
-      { "title": "模块化", "details": "工程化的起点", "link": "/web/engineering/modular/introduction" },
+      { "title": "模块化", "details": "工程化的起点", "link": "/web/engineering/modular" },
       { "title": "TypeScript", "details": "类型声明，提示友好", "link": "/web/typescript/introduction" }
     ]
   },

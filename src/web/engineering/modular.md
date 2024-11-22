@@ -73,6 +73,8 @@ const math = require('./math');
 console.log(math.add(2, 3)); // 5
 ```
 
+👉 [查看详情](/web/nodejs/commonjs)
+
 ### AMD（Asynchronous Module Definition）
 
 AMD 规范主要为了解决浏览器端异步加载模块的问题，由 RequireJS 团队提出。AMD 允许在浏览器端异步加载模块，提升页面加载性能。
@@ -159,6 +161,8 @@ export function add(a, b) {
 import { add } from './math.js';
 console.log(add(2, 3)); // 5
 ```
+
+👉 [查看详情](/web/ecmascript/modular/import)
 
 ## 时间顺序总览
 

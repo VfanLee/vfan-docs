@@ -142,15 +142,23 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: '类',
+      text: 'class 类',
       collapsed: true,
       items: [{ text: '类', link: '/web/ecmascript/class/class' }],
+    },
+    {
+      text: 'ESM',
+      collapsed: true,
+      items: [
+        { text: 'ES2015 规范', link: 'https://www.ecma-international.org/ecma-262/6.0/' },
+        { text: 'import', link: '/web/ecmascript/modular/import' },
+        { text: 'export', link: '/web/ecmascript/modular/export' },
+      ],
     },
     {
       text: '持续进阶',
       collapsed: true,
       items: [
-        { text: 'ESM', link: '/web/ecmascript/modular/index.md' },
         { text: 'Proxy 和 Reflect', link: '/web/ecmascript/proxy_reflect' },
         { text: '正则表达式', link: '/web/ecmascript/regular_expression' },
       ],
@@ -351,10 +359,11 @@ const sidebar: DefaultTheme.Sidebar = {
       text: 'Node.js',
       items: [
         { text: '介绍', link: '/web/nodejs/introduction' },
+        { text: 'CommonJS', link: '/web/nodejs/commonjs' },
+        { text: 'ESM 语法支持', link: '/web/nodejs/esm' },
         { text: '异步机制', link: '/web/nodejs/async_mechanisms' },
         { text: '子进程', link: '/web/nodejs/child_process' },
         { text: '环境变量', link: '/web/nodejs/env' },
-        { text: 'ESM 语法支持', link: '/web/nodejs/esm' },
       ],
     },
     {
@@ -377,7 +386,7 @@ const sidebar: DefaultTheme.Sidebar = {
   '/web/engineering/': [
     {
       text: '前言',
-      items: [{ text: '⭐ 前端模块化发展史', link: '/web/engineering/modular/introduction' }],
+      items: [{ text: '⭐ 前端模块化发展史', link: '/web/engineering/modular' }],
     },
     {
       text: '包管理器',
@@ -444,7 +453,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '👉 返回',
-      link: '/web/engineering/modular/introduction',
+      link: '/web/engineering/modular',
       collapsed: false,
       items: [],
     },
@@ -464,7 +473,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '👉 返回',
-      link: '/web/engineering/modular/introduction',
+      link: '/web/engineering/modular',
       collapsed: false,
       items: [],
     },
@@ -484,7 +493,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '👉 返回',
-      link: '/web/engineering/modular/introduction',
+      link: '/web/engineering/modular',
       collapsed: false,
       items: [],
     },
@@ -509,7 +518,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '👉 返回',
-      link: '/web/engineering/modular/introduction',
+      link: '/web/engineering/modular',
       collapsed: false,
       items: [],
     },
@@ -528,7 +537,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: '👉 返回',
-      link: '/web/engineering/modular/introduction',
+      link: '/web/engineering/modular',
       collapsed: false,
       items: [],
     },
