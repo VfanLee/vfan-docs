@@ -4,7 +4,7 @@
 
 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。
 
-## 1. flexbox
+## flexbox
 
 我们把一个容器的 `display` 属性值改为 `flex` 或者 `inline-flex`。完成这一步之后，容器中的直系子元素就会变为 **flex 元素**。由于所有 CSS 属性都会有一个初始值，所以 flexbox 中的所有 flex 元素都会有下列行为：
 
@@ -19,19 +19,19 @@ flex item 呈线形排列，并且把自己的大小作为主轴上的大小。�
 
 <iframe width="100%" height="480" src="https://mdn.github.io/css-examples/flexbox/basics/the-flex-container.html" loading="lazy"></iframe>
 
-## 2. `flex-direction`
+## `flex-direction`
 
 当使用 flexbox 时，首先想到的是两根轴线：**主轴** 和 **交叉轴**。
 
 **交叉轴垂直于主轴**。
 
-### 2.1. 主轴和交叉轴
+### 主轴和交叉轴
 
 主轴方向由 [`flex-direction`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-direction) 定义，默认值为 `row`。
 
 <iframe width="100%" height="400" src="https://interactive-examples.mdn.mozilla.net/pages/css/flex-direction.html" loading="lazy"></iframe>
 
-### 2.2. 起始线和终止线
+### 起始线和终止线
 
 过去，CSS 的书写模式主要被认为是水平的，从左到右的。现代的布局方式涵盖了书写模式的范围，所以我们不再假设一行文字是从文档的左上角开始向右书写，新的行也不是必须出现在另一行的下面。
 
@@ -43,33 +43,33 @@ flex item 呈线形排列，并且把自己的大小作为主轴上的大小。�
 
 ![](assets/起始线_rtl.png)
 
-## 3. 对齐 flexbox 中的 flex item
+## 对齐 flexbox 中的 flex item
 
-### 3.1. `justify-content`
+### `justify-content`
 
 主轴上所有 flex item 的对齐由 [`justify-content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content) 定义，默认值为 `normal`。
 
 <iframe width="100%" height="400 "src="https://interactive-examples.mdn.mozilla.net/pages/css/justify-content.html" loading="lazy"></iframe>
 
-### 3.2. `align-items`
+### `align-items`
 
 交叉轴 flexbox 上所有 flex item 的对齐由 [`align-items`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items) 定义，默认值为 `normal`。
 
 <iframe width="100%" height="400 "src="https://interactive-examples.mdn.mozilla.net/pages/css/align-items.html" loading="lazy"></iframe>
 
-### 3.3. `align-self`
+### `align-self`
 
 控制交叉轴 flexbox 上的单个 flex item 的对齐由 [`align-self`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-self) 定义，默认值为 `auto`。
 
 <iframe width="100%" height="400 "src="https://interactive-examples.mdn.mozilla.net/pages/css/align-self.html" loading="lazy"></iframe>
 
-### 3.4. `align-content`
+### `align-content`
 
 控制 **“多条主轴”** 的 flex item 在交叉轴的对齐由 [`align-content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-content) 定义，默认值为 `normal`。
 
 <iframe width="100%" height="400 "src="https://interactive-examples.mdn.mozilla.net/pages/css/align-content.html" loading="lazy"></iframe>
 
-## 4. 控制 flex item 在主轴上的比例
+## 控制 flex item 在主轴上的比例
 
 为了更好地控制 flex item，有三个属性可以作用于它们：
 
@@ -77,7 +77,7 @@ flex item 呈线形排列，并且把自己的大小作为主轴上的大小。�
 - [`flex-shrink`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink)：该元素要消除（收缩）多少负可用空间（negative free space）？
 - [`flex-basis`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis)：在该元素未伸张和收缩之前，它的大小是多少？
 
-### 4.1. 正负可用空间
+### 正负可用空间
 
 去谈论这些属性之前我们需要理解 **正负可用空间（positive and negative free space）** 的概念。当一个 flexbox 有正可用空间时，它就有更多的空间用于在容器内显示 flex item。
 
@@ -89,7 +89,7 @@ flex item 呈线形排列，并且把自己的大小作为主轴上的大小。�
 
 ![](assets/负可用空间.png)
 
-### 4.2. `flex-basis`
+### `flex-basis`
 
 `flex-basis` 属性在任何空间分配发生之前初始化 flex item 的尺寸。此属性的初始值为 `auto`。如果 `flex-basis` 设置为 `auto`，浏览器会先检查元素的主尺寸是否设置了绝对值再计算出它们的初始值。比如说你已经给你的元素设置了 200px 的宽，则 200px 就是这个元素的 `flex-basis`。
 
@@ -101,13 +101,13 @@ flex item 呈线形排列，并且把自己的大小作为主轴上的大小。�
 
 空间分配时，如果你想要弹性盒子完全忽略元素的尺寸就需要设置 `flex-basis` 为 0。这显式地说明弹性盒子可用抢占所有空间，并按比例进行分配。
 
-### 4.3. `flex-grow`
+### `flex-grow`
 
 `flex-grow` 属性指定了弹性增长因子（flex grow factor），这决定了在分配正可用空间时，弹性元素相对于弹性容器中的其余弹性元素的增长程度。
 
 如果你所有的元素都设置了相同的 `flex-grow` 属性值，那么空间将会在它们之间平均分配。如果你想要这种情形，通常你需要使用 1 作为值，但如果你喜欢你还可以将它们的 `flex-grow` 都设置为 88、100 或 1.2，这些只是个比例。如果 `flex-grow` 的值全部相同，并且在弹性容器中还有正可用空间，那么它就会被平均地分配给所有元素。
 
-#### 4.3.1. 结合 `flex-grow` 和 `flex-basis`
+#### 结合 `flex-grow` 和 `flex-basis`
 
 `flex: 1 1 auto;`：这个例子中设置 `flex-basis` 的值为 auto 且没有设置它们的宽，因此它们是自动调整大小的。这意味着弹性盒子的大小取决于元素的 [`max-content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/max-content) 大小。在布局完元素之后，弹性容器中还有一些正可用空间，展示在这幅图片的阴影区域中：
 
@@ -123,13 +123,13 @@ flex item 呈线形排列，并且把自己的大小作为主轴上的大小。�
 
 <iframe width="100%" height="520" src="https://mdn.github.io/css-examples/flexbox/ratios/flex-grow.html" loading="lazy"></iframe>
 
-#### 4.3.2. 为 flex item 设置不同的 `flex-grow` 因子
+#### 为 flex item 设置不同的 `flex-grow` 因子
 
 `flex-basis` 值为 0 意味着可用空间都可以被分配。我们需要将弹性增长因子相加，然后将弹性容器的正可用空间总量除以该值，在这个例子中为 4。而后我们就可以根据每一个的值分配空间（第一个元素得到一个单位、第二个元素得到一个单位、第三个元素得到二个单位）。也就是说第三个元素是第一个和第二个元素的两倍。
 
 <iframe width="100%" height="520" src="https://mdn.github.io/css-examples/flexbox/ratios/flex-grow-ratios.html" loading="lazy"></iframe>
 
-### 4.4. `flex-shrink`
+### `flex-shrink`
 
 `flex-shrink` 属性指定了弹性收缩因子（flex shrink factor），它确定在分配负可用空间时，弹性元素相对于弹性容器中其余弹性元素收缩的程度。
 
@@ -139,23 +139,23 @@ flex item 呈线形排列，并且把自己的大小作为主轴上的大小。�
 
 <iframe width="100%" height="500" src="https://mdn.github.io/css-examples/flexbox/ratios/flex-shrink-min-content.html" loading="lazy"></iframe>
 
-#### 4.4.1. 结合 `flex-shrink` 和 `flex-basis`
+#### 结合 `flex-shrink` 和 `flex-basis`
 
 在下面的例子中，在 `flex-basis` 解析为内容大小的位置你会看到 `min-content` 的铺设。如果你改变弹性容器的宽度——比如增加到 700px 宽，再减少弹性元素的宽度，你会看到前两个元素将换行，但是它们绝不会小于 `min-content` 的大小。随着盒子变得越来越小，第三个元素随后从空间中溢出。
 
 <iframe width="100%" height="500" src="https://mdn.github.io/css-examples/flexbox/ratios/flex-shrink-min-content.html" loading="lazy"></iframe>
 
-#### 4.4.2. 给 flex item 设置不同的 `flex-shrink` 因子
+#### 给 flex item 设置不同的 `flex-shrink` 因子
 
 在下面的示例中第一个元素设置 `flex-shrink` 的值为 1、第二个为 0（因此它将不会收缩）、第三个为 4。第三个元素比第一个收缩的更快。任意设置不同的值——你可以给 `flex-grow` 使用小数或者大一点的数。选择对于你来说任意合理的数。
 
 <iframe width="100%" height="570" src="https://mdn.github.io/css-examples/flexbox/ratios/flex-shrink-ratios.html" loading="lazy"></iframe>
 
-## 5. flex item 排序
+## flex item 排序
 
 除了颠倒显示弹性项目的顺序之外，还可以使用 [`order`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/order) 属性指定单个项目并更改其在视觉顺序中的显示位置。
 
-## 6. `flex-wrap`
+## `flex-wrap`
 
 虽然 flexbox 是一维模型，但可以使我们的 flex item 应用到多行中。在这样做的时候，应该把每一行看作一个新的 flexbox 。任何空间分布都将在该行上发生，而不影响该空间分布的其他行。
 
@@ -171,21 +171,21 @@ flex item 呈线形排列，并且把自己的大小作为主轴上的大小。�
 
 <iframe width="100%" height="400" src="https://mdn.github.io/css-examples/flexbox/basics/flex-wrap.html" loading="lazy"></iframe>
 
-## 7. 在 items 之间建立间隔
+## 在 items 之间建立间隔
 
 > [gap](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gap)
 
 <iframe width="100%" height="400" src="https://interactive-examples.mdn.mozilla.net/pages/css/gap.html" loading="lazy"></iframe>
 
-## 8. 简写属性
+## 简写属性
 
-### 8.1. `flex-flow`
+### `flex-flow`
 
 > [`flex-flow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-flow)
 
 <iframe width="100%" height="400" src="https://mdn.github.io/css-examples/flexbox/basics/flex-flow.html" loading="lazy"></iframe>
 
-### 8.2. `flex`
+### `flex`
 
 > [`flex`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex)
 

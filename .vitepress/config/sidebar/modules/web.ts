@@ -87,6 +87,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'CSS 变量', link: '/web/css/variable' },
         { text: 'Flex 弹性盒子', link: '/web/css/flex/' },
         { text: 'Grid 网格布局', link: '/web/css/grid/' },
+        { text: '文本处理', link: '/web/css/text' },
         { text: '逻辑属性', link: '/web/css/logical-properties' },
       ],
     },
