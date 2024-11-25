@@ -1,4 +1,6 @@
-# 集成 Typescript
+# 搭配 TypeScript 使用 Vue
+
+## 集成 TypeScript
 
 1. 安装 ts 相关依赖：
 
