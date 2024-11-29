@@ -190,3 +190,15 @@ flex item 呈线形排列，并且把自己的大小作为主轴上的大小。�
 > [`flex`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex)
 
 <iframe width="100%" height="400" src="https://interactive-examples.mdn.mozilla.net/pages/css/flex.html" loading="lazy"></iframe>
+
+## flex 问题记录
+
+### flex-end 为什么 overflow 无法滚动
+
+> 参考资料：<https://www.zhangxinxu.com/wordpress/2021/12/flex-end-overflow/>
+
+问题描述：在 `flex` 布局中，如果整体列表项元素的对齐方式是 `flex-end`，则当里面的内容超过容器的时候，即使容器设置了 `overflow:auto` 也是无法有滚动效果的。
+
+问题原因：`flex-end` 之所以不会出现滚动条，就是因为里面内容溢出容器的方向不是在容器的下方或者右侧，而是在容器的顶部和左侧，自然就无法触发滚动条的出现。
+
+解决方案：解决方法很简单，对齐方式开始默认的 flex 对齐，然后使用 margin: auto` 实现 **end 对齐** 就可以了。

@@ -12,7 +12,7 @@ function nav(): DefaultTheme.NavItem[] {
     {
       text: 'CSS 速查',
       items: [
-        { text: 'css', link: '/quick-reference/css/selector', activeMatch: '/quick-reference/css/' },
+        { text: 'css', link: '/web/css/design-patterns', activeMatch: '/web/css/' },
         { text: 'sass', link: '/quick-reference/sass/mixins', activeMatch: '/quick-reference/sass/' },
       ],
     },
@@ -24,7 +24,6 @@ function nav(): DefaultTheme.NavItem[] {
         { text: '开发环境搭建', link: '/dev/front-end', target: '_blank' },
         { text: '📖 随记', link: '/article/', activeMatch: '/article/' },
         { text: '🤖 AI', link: '/ai/', activeMatch: '/ai/' },
-        // { text: '✅ 面试题', link: '/interview/html' },
       ],
     },
   ]

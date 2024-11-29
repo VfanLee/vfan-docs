@@ -3,7 +3,6 @@ import dev from './modules/dev'
 import quickReference from './modules/quick-reference'
 import web from './modules/web'
 import article from './modules/article'
-import interview from './modules/interview'
 import learning from './modules/learning'
 
 function sidebar(): DefaultTheme.Sidebar {
@@ -22,9 +21,6 @@ function sidebar(): DefaultTheme.Sidebar {
 
     // 随记
     ...article,
-
-    // 面试题
-    ...interview,
   }
 }
 

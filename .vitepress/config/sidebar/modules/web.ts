@@ -69,26 +69,45 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'HTML 特殊字符', link: '/web/html/special-characters' },
         { text: 'form 表单', link: '/web/html/form' },
         { text: 'table 表格', link: '/web/html/table' },
-        { text: 'iframe', link: '/web/html/iframe' },
         { text: 'script', link: '/web/html/script' },
         { text: 'SEO', link: '/web/html/script' },
         { text: '媒体查询', link: '/web/html/media' },
         { text: '自定义属性', link: '/web/html/data-attribute' },
-        { text: '无障碍 | 可访问性', link: '/web/html/accessibility' },
+        { text: '无障碍/可访问性', link: '/web/html/accessibility' },
       ],
     },
   ],
   // css
   '/web/css/': [
     {
-      text: 'CSS',
+      text: '基础',
       items: [
         { text: '设计模式', link: '/web/css/design-patterns' },
+        { text: '选择器', link: '/web/css/selector' },
         { text: 'CSS 变量', link: '/web/css/variable' },
+      ],
+    },
+    {
+      text: '现代化布局',
+      items: [
+        { text: 'Position 定位', link: '/web/css/position' },
         { text: 'Flex 弹性盒子', link: '/web/css/flex/' },
         { text: 'Grid 网格布局', link: '/web/css/grid/' },
+      ],
+    },
+    {
+      text: '逻辑属性',
+      items: [
+        { text: '介绍', link: '/web/css/logical-properties/introduction' },
+        { text: '逻辑/实体 - 对应表', link: '/web/css/logical-properties/reference' },
+      ],
+    },
+    {
+      text: '更多专题',
+      items: [
         { text: '文本处理', link: '/web/css/text' },
-        { text: '逻辑属性', link: '/web/css/logical-properties' },
+        { text: '背景处理', link: '/web/css/background' },
+        { text: '滚动条', link: '/web/css/scrollbar' },
       ],
     },
   ],
@@ -287,6 +306,11 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [],
     },
     {
+      text: '安全/加密',
+      collapsed: true,
+      items: [{ text: 'crypto', link: '/web/browser/encryption/crypto' }],
+    },
+    {
       text: '更多',
       collapsed: true,
       items: [
@@ -406,6 +430,7 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [
         { text: '⭐webpack', link: '/web/engineering/webpack/introduction' },
         { text: 'rollup', link: 'https://cn.rollupjs.org/' },
+        { text: 'rolldown', link: 'https://rolldown.rs/' },
         { text: 'esbuild', link: 'https://esbuild.github.io/' },
         { text: 'gulp', link: '/web/engineering/gulp/introduction' },
         { text: 'grunt', link: 'https://gruntjs.com/' },
@@ -468,10 +493,37 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'CLI', link: '/web/engineering/webpack/cli' },
         { text: '配置', link: '/web/engineering/webpack/config' },
         { text: 'Loader', link: '/web/engineering/webpack/loader' },
-        { text: '插件', link: '/web/engineering/webpack/plugins' },
         { text: '版本迁移', link: '/web/engineering/webpack/migrate' },
       ],
     },
+    {
+      text: 'Awesome Loaders',
+      collapsed: true,
+      items: [
+        { text: 'assets', link: '/web/engineering/webpack/loaders/assets' },
+        { text: 'babel', link: '/web/engineering/webpack/loaders/babel-loader' },
+        { text: 'css', link: '/web/engineering/webpack/loaders/css-loader' },
+        { text: 'postcss', link: '/web/engineering/webpack/loaders/postcss-loader' },
+        { text: 'sass', link: '/web/engineering/webpack/loaders/sass-loader' },
+        { text: 'style', link: '/web/engineering/webpack/loaders/style-loader' },
+        { text: 'svg-sprite', link: '/web/engineering/webpack/loaders/svg-sprite-loader' },
+        { text: 'thread', link: '/web/engineering/webpack/loaders/thread-loader' },
+      ],
+    },
+    {
+      text: 'Awesome Plugins',
+      collapsed: true,
+      items: [
+        { text: 'case-sensitive-paths', link: '/web/engineering/webpack/plugins/case-sensitive-paths-webpack-plugin' },
+        { text: 'copy', link: '/web/engineering/webpack/plugins/copy-webpack-plugin' },
+        { text: 'css-minimizer', link: '/web/engineering/webpack/plugins/css-minimizer-webpack-plugin' },
+        { text: 'friendly-errors', link: '/web/engineering/webpack/plugins/friendly-errors-webpack-plugin' },
+        { text: 'html', link: '/web/engineering/webpack/plugins/html-webpack-plugin' },
+        { text: 'mini-css-extract', link: '/web/engineering/webpack/plugins/mini-css-extract-plugin' },
+        { text: 'terser', link: '/web/engineering/webpack/plugins/terser-webpack-plugin' },
+      ],
+    },
+
     {
       text: '👉 返回',
       link: '/web/engineering/modular',
@@ -533,7 +585,18 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '功能', link: '/web/engineering/vite/features' },
         { text: '配置', link: '/web/engineering/vite/config' },
         { text: '环境变量和模式', link: '/web/engineering/vite/env-and-mode' },
-        { text: '插件', link: '/web/engineering/vite/plugins' },
+        { text: '静态资源', link: '/web/engineering/vite/assets' },
+      ],
+    },
+    {
+      text: 'Awesome Plugins',
+      collapsed: true,
+      items: [
+        { text: 'unplugin-auto-import', link: '/web/engineering/vite/plugins/unplugin-auto-import' },
+        { text: 'unplugin-vue-components', link: '/web/engineering/vite/plugins/unplugin-vue-components' },
+        { text: 'vite-plugin-static-copy', link: '/web/engineering/vite/plugins/vite-plugin-static-copy' },
+        { text: 'vite-plugin-svg-icons', link: '/web/engineering/vite/plugins/vite-plugin-svg-icons' },
+        { text: 'vite-plugin-vue-devtools', link: '/web/engineering/vite/plugins/vite-plugin-vue-devtools' },
       ],
     },
     {

@@ -1,23 +1,34 @@
 # 滑动条
 
-## ::-webkit-scrollbar
-
-> 参考：
->
-> - [MDN `::-webkit-scrollbar`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::-webkit-scrollbar)
-> - WebKit 论坛 [设置滚动条样式](https://webkit.org/blog/363/styling-scrollbars/)
+## scrollbar
 
 ```css
-.customize::-webkit-scrollbar {
+html {
+  scrollbar-color: red orange;
+  /* auto | thin | none */
+  scrollbar-width: thin;
+}
+```
+
+## ::-webkit-scrollbar
+
+```css
+html::-webkit-scrollbar {
   width: 6px;
 }
 
-.customize::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background-color: #bbb;
   border-radius: 4px;
 }
 
-.customize::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background-color: transparent;
 }
 ```
+
+## 参考资料
+
+- [CSS_scrollbars_styling](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scrollbars_styling)
+- [-webkit-scrollbar](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::-webkit-scrollbar)
+- WebKit 论坛 [设置滚动条样式](https://webkit.org/blog/363/styling-scrollbars/)

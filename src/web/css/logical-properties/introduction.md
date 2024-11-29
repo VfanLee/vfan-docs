@@ -18,9 +18,11 @@ CSS 逻辑属性（Logical Properties）与逻辑值（Logical Values）是 CSS 
 
 <iframe width="100%" height="500" src="https://interactive-examples.mdn.mozilla.net/pages/tabbed/attribute-dir.html" loading="lazy"></iframe>
 
-## 逻辑维度（Logical Dimensions）
+## 逻辑维度
 
-取代了传统的物理维度（physical dimensions）概念，例如宽度（width）和高度（height）。逻辑维度包括：
+逻辑维度（Logical Dimensions） 取代了传统的物理维度（physical dimensions）概念，例如宽度（width）和高度（height）。
+
+逻辑维度包括：
 
 - 内联轴（inline axis）：文本在内联方向上的延伸方向。例如，在从左到右书写的语言中，内联轴为水平方向；在从右到左书写的语言中，则为垂直方向。
 - 块轴（block axis）：与内联轴垂直的方向。

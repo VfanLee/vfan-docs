@@ -2,17 +2,18 @@
 
 ## 判断对象是否为空
 
-方案 1：通过 JSON 自带的 stringify() 方法来判断
+::: code-group
 
-```js
+```js [stringify()]
 JSON.stringify(data) === '{}'
 ```
 
-方案 2：ES6 新增的方法 Object.keys()；如果我们的对象为空，他会返回一个空数组
-
-```js
-Object.keys(object).length === 0
+```js [Object.keys()]
+// 如果对象为空，他会返回一个空数组
+!!Object.keys(object).length
 ```
+
+:::
 
 ## for...in
 

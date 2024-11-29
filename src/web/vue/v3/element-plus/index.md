@@ -137,7 +137,7 @@ export default defineConfig({
 ElNotification({})
 ```
 
-## 表单
+## Form 表单
 
 ### 手动更改某个 FormItem 的状态和提示信息
 
@@ -153,6 +153,22 @@ passwordItemRef.value.validateMessage = '用户名或者密码错误' // 更改 
 ### el-form-item 校验问题
 
 <https://juejin.cn/post/6844903792605921294>
+
+## Menu 菜单
+
+### 子菜单高亮，保持所有父菜单高亮
+
+```html
+<el-menu :default-active="$route.path">
+  <!-- ... -->
+</el-menu>
+```
+
+```css
+.el-menu .el-sub-menu.is-active > .el-sub-menu__title {
+  color: orange;
+}
+```
 
 ## Element Plus 的一些警告
 
