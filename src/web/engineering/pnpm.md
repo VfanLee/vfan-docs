@@ -40,3 +40,13 @@ pnpm 与 Node.js 之间的兼容性：
 | Node.js 16 | ✔️     | ✔️     | ❌     |
 | Node.js 18 | ✔️     | ✔️     | ✔️     |
 | Node.js 20 | ✔️     | ✔️     | ✔️     |
+
+## 更新依赖版本
+
+```sh
+# 更新单个依赖到最新版本
+pnpm update <package-name>
+
+# 更新所有依赖到最新版本
+pnpm update
+```
