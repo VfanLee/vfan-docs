@@ -51,7 +51,10 @@
   },
   {
     "title": "🚀 混合开发",
-    "items": [{ "title": "Cordova", "details": "WebView 🤪", "link": "/web/hybrid/cordova" }]
+    "items": [
+      { "title": "uni-app", "details": "一套代码，运行到多个平台", "link": "/web/hybrid/uni-app/" },
+      { "title": "Cordova", "details": "跨平台", "link": "/web/hybrid/cordova" }
+    ]
   },
   {
     "title": "🦄 部署篇",

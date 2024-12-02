@@ -2,8 +2,9 @@
 
 ## 代码编辑器
 
-- [VS Code](https://code.visualstudio.com/) <Badge type="info" text="开源免费" />
+- [VS Code](https://code.visualstudio.com/) <Badge type="tip" text="开源免费" />
 - [WebStorm](https://www.jetbrains.com/webstorm/) <Badge type="info" text="对非商业用途免费" />
+- [Hbuilder X](https://www.dcloud.io/hbuilderx.html) <Badge type="info" text="DCloud 出品" />
 
 ## Node.js - Windows
 
