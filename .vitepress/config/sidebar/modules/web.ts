@@ -110,6 +110,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '滚动条', link: '/web/css/scrollbar' },
       ],
     },
+    { text: '疑难杂症', link: '/web/css/you-dont-konw' },
   ],
   // ecmascript
   '/web/ecmascript/': [

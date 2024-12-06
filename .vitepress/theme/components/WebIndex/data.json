@@ -39,7 +39,8 @@
       { "title": "Vue (v3)", "details": "Composition API", "link": "/web/vue/v3/introduction" },
       { "title": "Vue (v2)", "details": "Options API", "link": "/web/vue/v2/introduction" },
       { "title": "React", "details": "JSX", "link": "/web/react/quick_start" },
-      { "title": "angular.js", "details": "v1.8", "link": "/web/angularjs/quick_start" }
+      { "title": "angular.js", "details": "v1.8", "link": "/web/angularjs/quick_start" },
+      { "title": "Knockout.js", "details": "ko", "link": "/web/knockoutjs/quick_start" }
     ]
   },
   {
@@ -64,7 +65,6 @@
   {
     "title": "🧀 涨点芝士",
     "items": [
-      { "title": "Knockout.js", "details": "ko", "link": "/web/knockoutjs/quick_start" },
       { "title": "浏览器扩展", "details": "", "link": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" },
       { "title": "油猴", "details": "", "link": "https://www.tampermonkey.net/documentation.php?locale=zh" },
       { "title": "PWA", "details": "", "link": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" },
