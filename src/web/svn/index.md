@@ -1,5 +1,12 @@
 # SVN
 
+## 添加忽略列表
+
+### 全局
+
+1. 选中项目，右键 Subversion -> Properties
+2. 新增 `svn:global-ignores`，添加自定义内容
+
 ## 修改 SVN 的地址
 
 选中项目，右键 Subversion -> Relocate

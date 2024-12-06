@@ -16,7 +16,7 @@ jQuery Ajax 是 jQuery 库的一部分，封装了底层的 `XMLHttpRequest`，�
 
 ```js
 $.ajaxSetup({
-  beforeSend: function (xhr, ) {
+  beforeSend: function (xhr) {
     // 这里可以统一为所有请求发送 token、lang 等等公共参数
   },
   complete: function (xhr, status) {
@@ -33,16 +33,18 @@ $.ajaxSetup({
 ### 非 GET 请求中优雅地传递 query 参数
 
 ```js
-const params = $.param({ key1: 'value1', key2: 'value2' })
+const params = decodeURIComponent($.param({ key1: 'value1', key2: 'value2' }))
+const data = { otherKey: 'otherValue' }
+const url = `https://example.com/api?${params}`
 $.ajax({
-  url: `https://example.com/api?${params}`,
+  url,
   type: 'POST',
-  data: { otherKey: 'otherValue' }, // POST 请求体中的参数
-  success: function (response) {
-    console.log(response)
+  data,
+  success(data, status, xhr) {
   },
-  error: function (error) {
-    console.error(error)
+  error(xhr, status, error) {
   },
+  complete(xhr, status) {
+  }
 })
 ```

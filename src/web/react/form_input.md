@@ -1,6 +1,6 @@
 # 表单输入绑定
 
-## Input text
+## 单行文本
 
 ```jsx
 import { useState } from 'react'
@@ -23,35 +23,7 @@ function App() {
 export default App
 ```
 
-## Checkbox
-
-```jsx
-import { useState } from 'react'
-
-function App() {
-  const [isAvailable, setIsAvailable] = useState(false)
-
-  function handleChange() {
-    setIsAvailable(!isAvailable)
-  }
-
-  return (
-    <>
-      <input
-        id="is-available"
-        type="checkbox"
-        checked={isAvailable}
-        onChange={handleChange}
-      />
-      <label htmlFor="is-available">Is available</label>
-    </>
-  )
-}
-
-export default App
-```
-
-## Radio
+## 单选按钮
 
 ```jsx
 import { useState } from 'react'
@@ -89,7 +61,35 @@ function App() {
 export default App
 ```
 
-## Select
+## 复选框
+
+```jsx
+import { useState } from 'react'
+
+function App() {
+  const [isAvailable, setIsAvailable] = useState(false)
+
+  function handleChange() {
+    setIsAvailable(!isAvailable)
+  }
+
+  return (
+    <>
+      <input
+        id="is-available"
+        type="checkbox"
+        checked={isAvailable}
+        onChange={handleChange}
+      />
+      <label htmlFor="is-available">Is available</label>
+    </>
+  )
+}
+
+export default App
+```
+
+## 选择器
 
 ```jsx
 import { useState } from 'react'
