@@ -74,16 +74,3 @@ function removeFalsy(arr) {
 ```js
 removeFalsy([0, 'a string', '', NaN, true, 5, undefined, 'another string', false]) // [ 'a string', true, 5, 'another string' ]
 ```
-
-## 监听新窗口关闭
-
-```js
-function windowCloseCallback(newWindow) {
-  const createGroupHomeworkTimer = setInterval(function () {
-    if (newWindow.closed) {
-      // do ...
-      clearInterval(createGroupHomeworkTimer)
-    }
-  }, 1000)
-}
-```

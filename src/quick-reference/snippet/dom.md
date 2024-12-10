@@ -40,3 +40,16 @@ function getPlatform() {
   }
 }
 ```
+
+## 监听新窗口关闭
+
+```js
+function windowCloseCallback(newWindow) {
+  const timer = setInterval(function () {
+    if (newWindow.closed) {
+      // do ...
+      clearInterval(timer)
+    }
+  }, 1000)
+}
+```

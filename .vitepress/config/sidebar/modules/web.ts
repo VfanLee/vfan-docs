@@ -271,7 +271,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '介绍', link: '/web/browser/document/introduction' },
         { text: '操作', link: '/web/browser/document/manipulating' },
         { text: 'Window', link: '/web/browser/window' },
-        { text: '事件处理', link: '/web/browser/事件处理' },
+        { text: '事件处理', link: '/web/browser/event' },
         { text: '交互', link: '/web/browser/交互' },
         { text: '元素大小和滚动', link: '/web/browser/元素大小和滚动' },
         { text: '坐标', link: '/web/browser/坐标' },
