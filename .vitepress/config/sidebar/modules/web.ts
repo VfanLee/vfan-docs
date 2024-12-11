@@ -113,7 +113,7 @@ const sidebar: DefaultTheme.Sidebar = {
     { text: '疑难杂症', link: '/web/css/you-dont-konw' },
   ],
   // ecmascript
-  '/web/ecmascript/': [
+  '/web/ecmascript/introduction': [
     {
       text: '起步',
       items: [
@@ -192,28 +192,40 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [{ text: '介绍', link: '/web/ecmascript/data-types/introduction' }],
     },
     {
+      text: '原始类型',
+      collapsed: true,
+      items: [
+        { text: 'Number', link: '/web/ecmascript/data-types/number' },
+        { text: 'BigInt', link: '/web/ecmascript/data-types/bigint' },
+        { text: 'String', link: '/web/ecmascript/data-types/string' },
+        { text: 'Boolean', link: '/web/ecmascript/data-types/boolean' },
+        { text: 'Symbol', link: '/web/ecmascript/data-types/symbol' },
+        { text: 'undefined', link: '/web/ecmascript/data-types/undefined' },
+        { text: 'null', link: '/web/ecmascript/data-types/null' },
+      ],
+    },
+    {
+      text: '引用类型',
+      collapsed: true,
+      items: [
+        { text: 'Object', link: '/web/ecmascript/data-types/object' },
+        { text: 'Array', link: '/web/ecmascript/data-types/array' },
+        { text: 'Function', link: '/web/ecmascript/data-types/function' },
+        { text: 'Date', link: '/web/ecmascript/data-types/date' },
+        { text: 'JSON', link: '/web/ecmascript/data-types/json' },
+        { text: 'Set', link: '/web/ecmascript/data-types/set' },
+        { text: 'Map', link: '/web/ecmascript/data-types/map' },
+      ],
+    },
+    {
       text: '类型操作',
       items: [
         { text: '类型判断', link: '/web/ecmascript/data-types/judgment' },
         { text: '类型转换', link: '/web/ecmascript/data-types/conversion' },
       ],
     },
-    {
-      text: '类型详解',
-      items: [
-        { text: 'Number', link: '/web/ecmascript/data-types/number' },
-        { text: 'BigInt', link: '/web/ecmascript/data-types/bigint' },
-        { text: 'String', link: '/web/ecmascript/data-types/string' },
-        { text: 'Object', link: '/web/ecmascript/data-types/object' },
-        { text: 'Array', link: '/web/ecmascript/data-types/array' },
-        { text: 'Map', link: '/web/ecmascript/data-types/map' },
-        { text: 'Set', link: '/web/ecmascript/data-types/set' },
-        { text: 'Date', link: '/web/ecmascript/data-types/date' },
-        { text: 'JSON', link: '/web/ecmascript/data-types/json' },
-      ],
-    },
 
-    { text: '👉 返回', link: '/web/ecmascript/', collapsed: true, items: [] },
+    { text: '🔙 返回', link: '/web/ecmascript/introduction', collapsed: true, items: [] },
   ],
   // 深入对象
   '/web/ecmascript/object/': [
@@ -223,7 +235,7 @@ const sidebar: DefaultTheme.Sidebar = {
     { text: '可选链 "?."', link: '/web/ecmascript/object/optional-chaining' },
     { text: '对象属性配置', link: '/web/ecmascript/object/properties' },
 
-    { text: '👉 返回', link: '/web/ecmascript/', collapsed: true, items: [] },
+    { text: '🔙 返回', link: '/web/ecmascript/introduction', collapsed: true, items: [] },
   ],
   // 深入函数
   '/web/ecmascript/function/': [
@@ -231,7 +243,7 @@ const sidebar: DefaultTheme.Sidebar = {
     { text: '变量作用域，闭包', link: '/web/ecmascript/function/closure' },
     { text: '老旧的 var', link: '/web/ecmascript/function/var' },
 
-    { text: '👉 返回', link: '/web/ecmascript/', collapsed: true, items: [] },
+    { text: '🔙 返回', link: '/web/ecmascript/introduction', collapsed: true, items: [] },
   ],
   //#endregion
 
@@ -479,7 +491,7 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: '👉 返回',
+      text: '🔙 返回',
       link: '/web/engineering/modular',
       collapsed: false,
       items: [],
@@ -526,7 +538,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
 
     {
-      text: '👉 返回',
+      text: '🔙 返回',
       link: '/web/engineering/modular',
       collapsed: false,
       items: [],
@@ -546,7 +558,7 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: '👉 返回',
+      text: '🔙 返回',
       link: '/web/engineering/modular',
       collapsed: false,
       items: [],
@@ -571,7 +583,7 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: '👉 返回',
+      text: '🔙 返回',
       link: '/web/engineering/modular',
       collapsed: false,
       items: [],
@@ -601,7 +613,7 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: '👉 返回',
+      text: '🔙 返回',
       link: '/web/engineering/modular',
       collapsed: false,
       items: [],
