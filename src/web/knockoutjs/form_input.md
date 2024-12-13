@@ -34,15 +34,15 @@ this.textareaValue = ko.observable('textareaValue')
 
 ```html
 <label>
-  <input type="radio" value="1" data-bind="checked: radioValue" />
+  <input type="radio" data-bind="checkedValue: 1, checked: radioValue" />
   选项1
 </label>
 <label>
-  <input type="radio" value="2" data-bind="checked: radioValue" />
+  <input type="radio" data-bind="checkedValue: 2, checked: radioValue" />
   选项2
 </label>
 <label>
-  <input type="radio" value="3" data-bind="checked: radioValue" />
+  <input type="radio" data-bind="checkedValue: 3, checked: radioValue" />
   选项3
 </label>
 ```
@@ -78,15 +78,15 @@ this.checkboxValue1 = ko.observable(true)
 
 ```html
 <label>
-  <input type="checkbox" value="1" data-bind="checked: checkboxValue2" />
+  <input type="checkbox" data-bind="checkedValue: 1, checked: checkboxValue2" />
   选项1
 </label>
 <label>
-  <input type="checkbox" value="2" data-bind="checked: checkboxValue2" />
+  <input type="checkbox" data-bind="checkedValue: 2, checked: checkboxValue2" />
   选项2
 </label>
 <label>
-  <input type="checkbox" value="3" data-bind="checked: checkboxValue2" />
+  <input type="checkbox" data-bind="checkedValue: 3, checked: checkboxValue2" />
   选项3
 </label>
 ```
