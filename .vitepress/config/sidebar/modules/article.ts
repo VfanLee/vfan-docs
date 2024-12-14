@@ -8,7 +8,7 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [
         { text: 'DNS', link: `/article/cloudflare/dns` },
         { text: 'SSL/TLS', link: `/article/cloudflare/ssl` },
-        { text: 'Warp', link: `/article/cloudflare/warp` },
+        // { text: 'Warp', link: `/article/cloudflare/warp` },
         {
           text: 'Workers',
           items: [
