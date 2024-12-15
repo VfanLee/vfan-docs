@@ -59,7 +59,11 @@
     ```json [tsconfig.app.json]
     {
       "extends": "@vue/tsconfig/tsconfig.dom.json",
-      "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+      "include": [
+        "env.d.ts",
+        "src/**/*",
+        "src/**/*.vue"
+      ],
       "exclude": ["src/**/__tests__/*"],
       "compilerOptions": {
         "composite": true,

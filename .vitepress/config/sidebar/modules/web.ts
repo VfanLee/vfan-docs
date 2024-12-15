@@ -338,6 +338,8 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'WebRTC', link: '/web/browser/webrtc/introduction' },
       ],
     },
+
+    { text: '🔙 返回', link: '/web/js-runtime/' },
   ],
   // websocket
   '/web/browser/websocket/': [
@@ -417,6 +419,8 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '鉴权', link: '/web/nodejs/express/auth' },
       ],
     },
+
+    { text: '🔙 返回', link: '/web/js-runtime/' },
   ],
   //#endregion
 
