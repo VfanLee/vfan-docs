@@ -67,6 +67,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '&lt;DOCTYPE&gt;', link: '/web/html/doctype' },
         { text: '&lt;meta&gt;', link: '/web/html/meta' },
         { text: 'HTML 特殊字符', link: '/web/html/special-characters' },
+        { text: '文本级语义元素', link: '/web/html/text-level-semantics' },
         { text: 'form 表单', link: '/web/html/form' },
         { text: 'table 表格', link: '/web/html/table' },
         { text: 'script', link: '/web/html/script' },
@@ -715,7 +716,7 @@ const sidebar: DefaultTheme.Sidebar = {
           collapsed: true,
           items: [
             { text: '搭配 TypeScript 使用 Vue', link: '/web/vue/v3/typescript/' },
-            { text: 'TS 与组合式 API', link: 'https://cn.vuejs.org/guide/typescript/composition-api.html' },
+            { text: 'TS 与组合式 API', link: '/web/vue/v3/typescript/composition-api' },
             { text: 'TS 与选项式 API', link: 'https://cn.vuejs.org/guide/typescript/options-api.html' },
           ],
         },

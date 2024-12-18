@@ -34,9 +34,9 @@
 
     const i18n = createI18n({
       legacy: false,
-      locale: 'en', // 默认语言环境
-      fallbackLocale: 'zh', // 回退语言环境
-      messages // 语言环境字段
+      locale: 'en',
+      fallbackLocale: 'zh',
+      messages
     })
 
     export default i18n
