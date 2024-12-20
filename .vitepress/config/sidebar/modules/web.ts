@@ -708,18 +708,31 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: '集成',
+      text: 'TypeScript',
       collapsed: true,
       items: [
-        {
-          text: 'TypeScript',
-          collapsed: true,
-          items: [
-            { text: '搭配 TypeScript 使用 Vue', link: '/web/vue/v3/typescript/' },
-            { text: 'TS 与组合式 API', link: '/web/vue/v3/typescript/composition-api' },
-            { text: 'TS 与选项式 API', link: 'https://cn.vuejs.org/guide/typescript/options-api.html' },
-          ],
-        },
+        { text: '搭配 TypeScript 使用 Vue', link: '/web/vue/v3/typescript/' },
+        { text: 'TS 与组合式 API', link: '/web/vue/v3/typescript/composition-api' },
+        { text: 'TS 与选项式 API', link: 'https://cn.vuejs.org/guide/typescript/options-api.html' },
+      ],
+    },
+    {
+      text: '更多专题',
+      collapsed: true,
+      items: [
+        { text: '深入响应式', link: '/web/vue/v3/reactivity' },
+        { text: '渲染机制', link: '/web/vue/v3/rendering-mechanism' },
+        { text: '渲染函数', link: '/web/vue/v3/render-function' },
+        { text: '选项式 API', link: '/web/vue/v3/options' },
+        { text: '使用 Vue 的多种方式', link: 'https://cn.vuejs.org/guide/extras/ways-of-using-vue.html' },
+        { text: '动画技巧', link: 'https://cn.vuejs.org/guide/extras/animation.html' },
+        { text: 'Fetch data', link: '/web/vue/v3/fetch-data' },
+      ],
+    },
+    {
+      text: '功能集成',
+      collapsed: true,
+      items: [
         { text: 'Vue Router（官方）', link: '/web/vue/v3/vue-router/' },
         { text: 'Pinia（官方）', link: '/web/vue/v3/pinia/' },
         { text: 'Vue I18n', link: '/web/vue/v3/vue-i18n/' },
@@ -736,13 +749,6 @@ const sidebar: DefaultTheme.Sidebar = {
         },
       ],
     },
-    { text: '深入响应式', link: '/web/vue/v3/reactivity' },
-    { text: '渲染机制', link: '/web/vue/v3/rendering-mechanism' },
-    { text: '渲染函数', link: '/web/vue/v3/render-function' },
-    { text: '选项式 API', link: '/web/vue/v3/options' },
-    { text: '使用 Vue 的多种方式', link: 'https://cn.vuejs.org/guide/extras/ways-of-using-vue.html' },
-    { text: '动画技巧', link: 'https://cn.vuejs.org/guide/extras/animation.html' },
-    { text: 'Fetch data', link: '/web/vue/v3/fetch-data' },
     { text: 'Vue 解决方案', link: '/web/vue/v3/solution/' },
   ],
   // vue2

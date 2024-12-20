@@ -1,5 +1,4 @@
 {
-  "name": "vfan-docs",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,7 +6,7 @@
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@9.15.1",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -15,13 +14,13 @@
   "license": "MIT",
   "dependencies": {
     "gsap": "^3.12.5",
-    "vue": "^3.5.12"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@types/node": "^18.19.64",
+    "@types/node": "^18.19.68",
     "markdown-it-mathjax3": "^4.3.2",
-    "sass": "^1.81.0",
-    "typescript": "^5.6.3",
+    "sass": "^1.83.0",
+    "typescript": "^5.7.2",
     "vitepress": "^1.5.0",
     "vue-tsc": "^2.1.10"
   }
