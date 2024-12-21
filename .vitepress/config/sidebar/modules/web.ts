@@ -708,10 +708,9 @@ const sidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: 'TypeScript',
+      text: '搭配 TypeScript 使用 Vue',
       collapsed: true,
       items: [
-        { text: '搭配 TypeScript 使用 Vue', link: '/web/vue/v3/typescript/' },
         { text: 'TS 与组合式 API', link: '/web/vue/v3/typescript/composition-api' },
         { text: 'TS 与选项式 API', link: 'https://cn.vuejs.org/guide/typescript/options-api.html' },
       ],
@@ -729,27 +728,40 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'Fetch data', link: '/web/vue/v3/fetch-data' },
       ],
     },
+    { text: '功能集成', link: '/web/vue/v3-integration/typescript/', collapsed: true, items: [] },
+    // { text: 'Vue 解决方案', link: '/web/vue/v3/solution/' },
+  ],
+  // vue3 集成
+  '/web/vue/v3-integration/': [
     {
-      text: '功能集成',
+      text: '基础功能',
       collapsed: true,
       items: [
-        { text: 'Vue Router（官方）', link: '/web/vue/v3/vue-router/' },
-        { text: 'Pinia（官方）', link: '/web/vue/v3/pinia/' },
-        { text: 'Vue I18n', link: '/web/vue/v3/vue-i18n/' },
-        { text: 'VueUse', link: '/web/vue/v3/vueuse/' },
-        {
-          text: '组件库',
-          collapsed: true,
-          items: [
-            { text: 'Element Plus (PC)', link: '/web/vue/v3/element-plus/' },
-            { text: 'Vant (Mobile)', link: '/web/vue/v3/vant/' },
-            { text: 'tailwindcss', link: 'https://tailwindcss.com/docs/installation' },
-            { text: 'UnoCSS', link: 'https://unocss.dev/integrations/' },
-          ],
-        },
+        { text: 'TypeScript', link: '/web/vue/v3-integration/typescript/' },
+        { text: 'Vue Router（官方）', link: '/web/vue/v3-integration/vue-router/' },
+        { text: 'Pinia（官方）', link: '/web/vue/v3-integration/pinia/' },
       ],
     },
-    { text: 'Vue 解决方案', link: '/web/vue/v3/solution/' },
+    {
+      text: 'UI 组件库',
+      collapsed: true,
+      items: [
+        { text: 'Element Plus（PC）', link: '/web/vue/v3-integration/element-plus/' },
+        { text: 'Vant（Mobile）', link: '/web/vue/v3-integration/vant/' },
+        { text: 'Tailwind CSS', link: 'https://tailwindcss.com/docs/installation' },
+        { text: 'UnoCSS', link: 'https://unocss.dev/integrations/' },
+      ],
+    },
+    {
+      text: '更多功能',
+      collapsed: true,
+      items: [
+        { text: 'Vue I18n', link: '/web/vue/v3-integration/vue-i18n/' },
+        { text: 'VueUse', link: '/web/vue/v3-integration/vueuse/' },
+      ],
+    },
+
+    { text: '🔙 返回', link: '/web/vue/v3/introduction', collapsed: true, items: [] },
   ],
   // vue2
   '/web/vue/v2/': [

@@ -1,5 +1,9 @@
 # 搭配 TypeScript 使用 Vue
 
+::: tip Vue + TS 语法变化？
+👉 [点击这里](/web/vue/v3/typescript/composition-api)
+:::
+
 ## 集成 TypeScript
 
 1. 安装 ts 相关依赖：
